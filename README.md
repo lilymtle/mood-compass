@@ -1,6 +1,6 @@
 # Project Title
 
-![alt text](assets/images/capstone-project-banner.png)
+![alt text](assets/images/mood-compass-banner.png)
 
 ## Overview
 
