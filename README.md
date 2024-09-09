@@ -1,5 +1,8 @@
 # Project Title
 
+![alt text](assets/images/capstone-project-banner.png)
+
+
 ## Overview
 
 ### Problem Space
