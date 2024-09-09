@@ -62,6 +62,18 @@
 
 ### Endpoints
 
+```GET /api/moods```
+
+```GET /api/resources```
+
+```GET /api/resources/{mood}```
+
+```GET /api/resources/{id}```
+
+```GET /api/coping-strategies/{mood}```
+
+```GET /api/therapy-options/{mood}```
+
 ## Roadmap
 
 ---
