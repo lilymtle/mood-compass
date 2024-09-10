@@ -166,6 +166,9 @@ Favorites Page:
 ![alt text](assets/images/mood-compass-favorites-page.png)
 
 
+**Note**
+
+
 ### Data
 
 ![alt text](assets/images/database-table-schema.png)
