@@ -486,3 +486,5 @@ Response body example:
 - Mood journal/tracker associated with each user.
     - Allows users to track their mood.
     - Helps establish a pattern that users can show their healthcare provider and/or be used to help them identify triggers and protective factors.
+
+- Replace JWT with OAuth/SSO.
