@@ -2,8 +2,6 @@
 
 ![alt text](assets/images/mood-compass-banner.png)
 
-![## Overview](assets/images/overview-banner.png)
-
 **MoodCompass** is a safe space where individuals can learn more about their negative emotional states, as well as relevant coping strategies and therapy options to help them.
 
 MoodCompass is rooted in the following values:
