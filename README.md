@@ -166,7 +166,7 @@ Favorites Page:
 ![alt text](assets/images/mood-compass-favorites-page.png)
 
 
-**Note**
+**Note: The save/favorite button for each individual resource will be located either at the top or bottom of the page. Still deciding on location.**
 
 
 ### Data
