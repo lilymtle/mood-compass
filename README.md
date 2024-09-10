@@ -159,7 +159,7 @@ Emotion Regulation Page (specific coping strategy page):
 
 ![alt text](assets/images/mood-compass-emotion-regulation-page.png)
 
---
+---
 
 Favorites Page:
 
