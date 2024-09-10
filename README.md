@@ -71,27 +71,18 @@ As a user, I want to be able to...
 
 ### Sitemap
 
+- Register page
+- Login page
 - Home page
-- My Story
-    - A brief introduction about myself and why I wanted to create this web application.
-- Education
-    - Moods:
-        - Anxiety
-            - What is it?
-            - Signs and symptoms
-            - Resources
-        - Depression
-            - What is it?
-            - Signs and symptoms
-            - Resources
-- Resources
-    - Anxiety:
-        - Mindfulness
-        - Relaxation techniques
-        - DBT/CBT strategies
-    - Depression:
-        - Therapy options
-        - Self-care practices
+- About page
+- Moods page
+  - Anxiety
+  - Depression
+- Learn page
+  - Educational resources
+  - Coping strategies
+- Favorites page
+  - Will only render if a user is signed in
 
 ---
 
