@@ -91,6 +91,81 @@ As a user, I want to be able to...
 
 ### Mockups
 
+Register Page:
+
+![alt text](assets/images/mood-compass-register-page.png)
+
+---
+
+Login Page:
+
+![alt text](assets/images/mood-compass-login-page.png)
+
+---
+
+Homepage (not logged in):
+
+![alt text](assets/images/mood-compass-homepage.png)
+
+---
+
+Homepage (logged in):
+
+![alt text](assets/images/mood-compass-loggedin-homepage.png)
+
+Note: users can freely navigate through the app without logging in. However, favoriting resources will require logging in. Once logged in, the user will see the "Favorites" link pop up in the header navigation.
+
+The following mockups will be provided in the POV of a signed in user:
+
+---
+
+About Page:
+
+![alt text](assets/images/mood-compass-about-page.png)
+
+---
+
+Moods Page:
+
+![alt text](assets/images/mood-compass-moods-page.png)
+
+---
+
+Anxiety Page (specific mood page):
+
+![alt text](assets/images/mood-compass-anxiety-page.png)
+
+---
+
+Educational Resources Page:
+
+![alt text](assets/images/mood-compass-educational-resources-page.png)
+
+---
+
+Mind Connection Page (specific educational resource page):
+
+![alt text](assets/images/mood-compass-mind-connection-page.png)
+
+---
+
+Coping Strategies Page:
+
+![alt text](assets/images/mood-compass-coping-strategies-page.png)
+
+---
+
+Emotion Regulation Page (specific coping strategy page):
+
+![alt text](assets/images/mood-compass-emotion-regulation-page.png)
+
+--
+
+Favorites Page:
+
+![alt text](assets/images/mood-compass-favorites-page.png)
+
+
 ### Data
 
 ![alt text](assets/images/database-table-schema.png)
