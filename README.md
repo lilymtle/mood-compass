@@ -89,9 +89,8 @@ As a user, I want to be able to...
 ### Mockups
 
 ### Data
-![
-    
-](assets/images/database-table-schema.png)
+
+![alt text](assets/images/database-table-schema.png)
 ### Endpoints
 
 ```GET /api/moods```
