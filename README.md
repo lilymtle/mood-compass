@@ -38,24 +38,27 @@ As a user, I want to be able to...
 
 ### Tech Stack
 
-#### Client:
 
 - React
-- Libraries:
+- Express
+- MySQL
+- Client libraries:
     - react
     - react-router
     - axios
     - react-helmet-async
+    - sass
     - joi
-
-#### Server:
-
-- Express
-- MySQL
-- Libraries:
+    - dayjs
+    - react-redux
+    - jest
+- Server libraries:
     - Express.js
     - Knex.js
     - joi
+    - bcryptjs for password hashing
+    - jest
+    - helmet
 
 ### APIs
 
