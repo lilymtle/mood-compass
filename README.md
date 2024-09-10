@@ -36,6 +36,8 @@ As a user, I want to be able to...
 
 - Save different educational resources so I can easily come back to them as needed.
 
+---
+
 ![alt text](assets/images/implementation-banner.png)
 
 ### Tech Stack
@@ -69,101 +71,55 @@ As a user, I want to be able to...
 
 ---
 
-### Sitemap
+### Sitemap and Mockups
 
-- Register page
-- Login page
-- Home page
-- About page
-- Moods page
-  - Anxiety
-  - Depression
-- Learn page
-  - Educational resources
-  - Coping strategies
-- Favorites page
-  - Will only render if a user is signed in
+<details>
+<summary>Register Page</summary>
+<img src="assets/images/mood-compass-register-page.png" alt="register page mockup">
+</details>
 
----
+<details>
+<summary>Login Page</summary>
+<img src="assets/images/mood-compass-login-page.png" alt="login page mockup">
+</details>
 
-### Mockups
+<details>
+<summary>Home Page</summary>
+<img src="assets/images/mood-compass-homepage.png" alt="home page when not logged in mockup">
 
-Register Page:
+<img src="assets/images/mood-compass-loggedin-homepage.png" alt="home page when logged in mockup">
+</details>
 
-![alt text](assets/images/mood-compass-register-page.png)
+<details>
+<summary>About Page</summary>
+<img src="assets/images/mood-compass-about-page.png" alt="about page mockup">
+</details>
 
----
+<details>
+<summary>Moods Page</summary>
+<img src="assets/images/mood-compass-moods-page.png" alt="moods page mockup">
 
-Login Page:
+<img src="assets/images/mood-compass-anxiety-page.png" alt="anxiety information page mockup">
+</details>
 
-![alt text](assets/images/mood-compass-login-page.png)
+<details>
+<summary>Learn Page</summary>
+<img src="assets/images/mood-compass-educational-resources-page.png" alt="educational resources page mockup">
 
----
+<img src="assets/images/mood-compass-mind-connection-page.png" alt="mind connection page mockup">
 
-Homepage (not logged in):
+<hr>
 
-![alt text](assets/images/mood-compass-homepage.png)
+<img src="assets/images/mood-compass-coping-strategies-page.png" alt="coping strategies page mockup">
 
----
+<img src="assets/images/mood-compass-emotion-regulation-page.png" alt="emotion regulation page mockup">
+</details>
 
-Homepage (logged in):
+<details>
+<summary>Favorites Page</summary>
+<img src="assets/images/mood-compass-favorites-page.png" alt="favorites page mockup">
+</details>
 
-![alt text](assets/images/mood-compass-loggedin-homepage.png)
-
-Note: users can freely navigate through the app without logging in. However, favoriting resources will require logging in. Once logged in, the user will see the "Favorites" link pop up in the header navigation.
-
-The following mockups will be provided in the POV of a signed in user:
-
----
-
-About Page:
-
-![alt text](assets/images/mood-compass-about-page.png)
-
----
-
-Moods Page:
-
-![alt text](assets/images/mood-compass-moods-page.png)
-
----
-
-Anxiety Page (specific mood page):
-
-![alt text](assets/images/mood-compass-anxiety-page.png)
-
----
-
-Educational Resources Page:
-
-![alt text](assets/images/mood-compass-educational-resources-page.png)
-
----
-
-Mind Connection Page (specific educational resource page):
-
-![alt text](assets/images/mood-compass-mind-connection-page.png)
-
----
-
-Coping Strategies Page:
-
-![alt text](assets/images/mood-compass-coping-strategies-page.png)
-
----
-
-Emotion Regulation Page (specific coping strategy page):
-
-![alt text](assets/images/mood-compass-emotion-regulation-page.png)
-
----
-
-Favorites Page:
-
-![alt text](assets/images/mood-compass-favorites-page.png)
-
-
-**Note: The save/favorite button for each individual resource will be located either at the top or bottom of the page. Still deciding on location.**
 
 ---
 
