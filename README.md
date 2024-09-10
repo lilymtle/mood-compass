@@ -59,6 +59,8 @@ As a user, I want to be able to...
 
 ### APIs
 
+- No external APIs will be used for this. I will be making my own API.
+
 ### Sitemap
 
 - Home page
@@ -67,8 +69,13 @@ As a user, I want to be able to...
 - Education
     - Moods:
         - Anxiety
+            - What is it?
+            - Signs and symptoms
+            - Resources
         - Depression
-        - Stress
+            - What is it?
+            - Signs and symptoms
+            - Resources
 - Resources
     - Anxiety:
         - Mindfulness
@@ -77,10 +84,7 @@ As a user, I want to be able to...
     - Depression:
         - Therapy options
         - Self-care practices
-    - Stress:
-        - Coping mechanisms
-        - Relaxation exercises
-        - Stress reduction techniques
+
 
 ### Mockups
 
@@ -90,19 +94,384 @@ As a user, I want to be able to...
 
 ```GET /api/moods```
 
-```GET /api/resources```
+- Retrieve a list of all available moods.
 
-```GET /api/resources/{mood}```
+Response body example:
+```json
+[
+  { "id": "1", "name": "Anxiety" },
+  { "id": "2", "name": "Depression" },
+  { "id": "3", "name": "Stress" }
+]
+```
 
-```GET /api/resources/{id}```
+---
 
-```GET /api/coping-strategies/{mood}```
+```GET /api/moods/:id```
 
-```GET /api/therapy-options/{mood}```
+- Retrieve detailed information about a specific mood, including its educational resources and coping strategies.
+
+- Parameters:
+    - ```id``` (e.g., "1" for anxiety)
+
+Response body example:
+```json
+{
+  "mood": {
+    "id": "1",
+    "name": "Anxiety",
+    "description": "Anxiety is a feeling of worry, nervousness, or unease about something with an uncertain outcome.",
+    "educationalResources": [
+      {
+        "id": "101",
+        "title": "Understanding Anxiety",
+        "description": "An article explaining what anxiety is, its symptoms, and potential causes.",
+        "content": "Full text of the article about understanding anxiety."
+      },
+      {
+        "id": "102",
+        "title": "Managing Anxiety",
+        "description": "A guide to managing anxiety through various techniques and lifestyle changes.",
+        "content": "Detailed guide on techniques to manage anxiety."
+      }
+    ],
+    "copingStrategies": [
+      {
+        "id": "201",
+        "strategy": "Deep Breathing Exercises",
+        "description": "A technique to help calm the mind and body through controlled breathing.",
+        "content": "Detailed instructions on how to perform deep breathing exercises."
+      },
+      {
+        "id": "202",
+        "strategy": "Progressive Muscle Relaxation",
+        "description": "A method to reduce muscle tension and anxiety.",
+        "content": "Step-by-step guide to practicing progressive muscle relaxation."
+      }
+    ]
+  }
+}
+```
+
+---
+
+```GET /api/educational-resource```
+
+- Retrieve a list of all educational resources.
+
+Response body example:
+```json
+[
+  {
+    "id": "101",
+    "title": "Understanding Anxiety",
+    "description": "An article explaining what anxiety is, its symptoms, and potential causes.",
+    "content": "Full text of the article about understanding anxiety."
+  },
+  {
+    "id": "102",
+    "title": "Managing Anxiety",
+    "description": "A guide to managing anxiety through various techniques and lifestyle changes.",
+    "content": "Detailed guide on techniques to manage anxiety."
+  }
+]
+```
+
+---
+
+```GET /api/educational-resource/:id```
+
+- Retrieve detailed information about a specific educational resource.
+
+- Parameters:
+    - ```id``` (e.g., 101)
+
+Response body example:
+```json
+{
+  "id": "101",
+  "title": "Understanding Anxiety",
+  "description": "An article explaining what anxiety is, its symptoms, and potential causes.",
+  "content": "Full text of the article about understanding anxiety."
+}
+
+```
+
+---
+
+```GET /api/coping-strategies```
+
+- Retrieve a list of all coping strategies
+
+Response body example:
+```json
+[
+  {
+    "id": "201",
+    "strategy": "Deep Breathing Exercises",
+    "description": "A technique to help calm the mind and body through controlled breathing.",
+    "content": "Detailed instructions on how to perform deep breathing exercises."
+  },
+  {
+    "id": "202",
+    "strategy": "Progressive Muscle Relaxation",
+    "description": "A method to reduce muscle tension and anxiety.",
+    "content": "Step-by-step guide to practicing progressive muscle relaxation."
+  }
+]
+```
+
+--- 
+```GET /api/coping-strategies/:id```
+
+- Retrieve detailed information about a specific coping strategy.
+
+- Parameters:
+    - ```id``` (e.g., 201)
+
+Response body example:
+```json
+{
+  "id": "201",
+  "strategy": "Deep Breathing Exercises",
+  "description": "A technique to help calm the mind and body through controlled breathing.",
+  "content": "Detailed instructions on how to perform deep breathing exercises."
+}
+```
+
+--- 
+
+```POST /api/users/register```
+
+- Create a new user account
+
+Request body example:
+```json
+{
+  "username": "user123",
+  "email": "user@example.com",
+  "password": "securepassword"
+}
+```
+
+Response body example:
+```json
+{
+  "message": "User registered successfully.",
+  "user": {
+    "id": "123",
+    "username": "user123",
+    "email": "user@example.com"
+  }
+}
+```
+
+---
+
+```POST /api/users/login```
+
+- Authenticate a user and return a token
+
+Request body example:
+```json
+{
+  "email": "user@example.com",
+  "password": "securepassword"
+}
+```
+
+Response body example:
+```json
+{
+  "message": "Login successful.",
+  "token": "jwt-token-here",
+  "user": {
+    "id": "123",
+    "username": "user123",
+    "email": "user@example.com"
+  }
+}
+```
+
+---
+
+```POST /api/users/:id/favorites```
+
+- Saves a resource or coping strategy to the user's favorites
+
+- Parameters:
+    - ```id``` (user id)
+
+Request body example:
+```json
+{
+  "type": "educational-resource",  // or "coping-strategy"
+  "itemId": "101"  // ID of the resource or strategy to be saved
+}
+```
+
+Response body example:
+```json
+{
+  "message": "Item saved successfully.",
+  "savedItem": {
+    "id": "101",
+    "type": "educational-resource",  // or "coping-strategy"
+    "title": "Understanding Anxiety",  // Relevant for educational resources
+    "strategy": "Deep Breathing Exercises",  // Relevant for coping strategies
+    "description": "An article explaining what anxiety is.",  // Relevant for educational resources
+    "content": "Full text of the article about understanding anxiety."  // Relevant for educational resources
+  }
+}
+```
+
+---
+
+```GET /api/users/:id/favorites```
+
+- Retrieve all saved items for the user
+
+- Parameters:
+    - ```id``` (user id)
+
+Response body example:
+```json
+[
+  {
+    "id": "101",
+    "type": "educational-resource",  // or "coping-strategy"
+    "title": "Understanding Anxiety",  // Relevant for educational resources
+    "strategy": "Deep Breathing Exercises",  // Relevant for coping strategies
+    "description": "An article explaining what anxiety is.",  // Relevant for educational resources
+    "content": "Full text of the article about understanding anxiety.",  // Relevant for educational resources
+    "savedAt": "2024-09-09T12:00:00Z"
+  },
+  {
+    "id": "202",
+    "type": "coping-strategy",
+    "strategy": "Progressive Muscle Relaxation",
+    "description": "A method to reduce muscle tension and anxiety.",
+    "content": "Step-by-step guide to practicing progressive muscle relaxation.",
+    "savedAt": "2024-09-10T15:30:00Z"
+  }
+]
+```
+
+---
+
+```DELETE /api/users/:id/favorites/:itemId```
+
+- Deletes a specific item from the user's favorites
+
+- Parameters:
+    - ```id``` (user id)
+    - ```itemId``` (id of the item to be remvoed)
+
+Request body example:
+```json
+{
+  "type": "educational-resource"  // or "coping-strategy"
+}
+```
+
+Response body example:
+```json
+{
+  "message": "Item removed from favorites."
+}
+```
+
 
 ## Roadmap
 
----
+- Create repository
+
+- Create client
+    - React project with routes and boilerplate pages
+    - Update client folder structure
+
+- Create server
+    - Express project with routing and placeholder 200 responses
+    - Update server folder structure
+
+- Create migration
+
+- Gather data for the following:
+
+    - **Anxiety:**
+        - What it is
+        - Signs and symptoms
+        - **Resources:**
+            - Mindfulness
+            - Deep breathing
+            - Progressive muscle relaxation
+            - Grounding
+            - CBT/DBT
+    - **Depression:**
+        - What it is
+        - Signs and symptoms
+        - **Resources:**
+            - Mindfulness
+            - CBT/DBT
+
+- Create seeds with sample data
+
+- Deploy client and server projects so all commits will be reflected in production
+
+- Feature: Home page
+
+- Feature: My Story page
+
+- Feature: Mood list
+    - Implement moods list page
+    - Create ```GET /api/moods```
+
+- Feature: View mood
+    - Implement view mood page
+    - Create ```GET /api/moods/:id```
+
+- Feature: Educational resource list
+    - Implement educational resource list page
+    - Create ```GET /api/educational-resources```
+
+- Feature: View educational resource
+    - Implement view educational resource page
+    - Create ```GET /api/educational-resources/:id```
+
+- Feature: View coping strategies
+    - Implement view coping strategies page
+    - Create ```GET /api/coping-strategies```
+
+- Feature: View coping strategy
+    - Implement view coping strategy page
+    - Create ```GET /api/coping-strategies/:id```
+
+
+- Feature: Create account
+    - Implement register page and form
+    - Create ```POST /users/register```
+
+- Feature: Login
+    - Implement login page + form
+    - Create ```POST /users/login``` 
+
+- Feature: Implement JWT tokens
+
+- Feature: Add favorite
+    - Implement function for a user to favorite a resource or coping strategy
+    - Create ```POST /api/users/:id/favorites```
+
+- Feature: View favorites
+    - Implement a view favorites page
+    - Create ```GET /api/users/:id/favorites```
+
+- Feature: Delete favorite
+    - Implement function for a user to delete an item from their favorites page
+    - Create ```DELETE /api/users/:id/favorites/:itemId```
+
+- Bug fixes
+
+- DEMO DAY
 
 ## Nice-to-haves
 
