@@ -89,7 +89,9 @@ As a user, I want to be able to...
 ### Mockups
 
 ### Data
-
+![
+    
+](assets/images/database-table-schema.png)
 ### Endpoints
 
 ```GET /api/moods```
@@ -477,12 +479,7 @@ Response body example:
 
 - Integrate Google Maps (or another relevant API) to help users locate mental health supports within their radius.
 
-- Ability to register and login.
-
 - Ability for each user to track their own mood.
-
-- Authentication/authorization implementation.
-    - Either JWT or OAuth/SSO.
 
 - Mood journal/tracker associated with each user.
     - Allows users to track their mood.
