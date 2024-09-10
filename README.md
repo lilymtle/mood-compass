@@ -2,7 +2,7 @@
 
 ![alt text](assets/images/mood-compass-banner.png)
 
-## Overview
+![## Overview](assets/images/overview-banner.png)
 
 **MoodCompass** is a safe space where individuals can learn more about their negative emotional states, as well as relevant coping strategies and therapy options to help them.
 
@@ -16,6 +16,8 @@ There has been a sharp decline in mental health worldwide since the COVID-19 pan
 
 Currently, there are online resources available to help users learn about their negative moods, coping strategies, and more. However, many of these apps do not allow users to save educational resources in a centralized location for easy retrieval. As a result, users often need to search for these resources repeatedly, which can be time-consuming and discouraging.
 
+---
+
 ### User Profile
 
 - Individuals who want to learn more about their mood(s) or mood(s) in general.
@@ -23,6 +25,8 @@ Currently, there are online resources available to help users learn about their 
 - Individuals who want to learn about the different coping strategies and therapy options relevant to negative moods.
 
 - Individuals who want to keep track of the different educational resources they acess on MoodCompass.
+
+---
 
 ### Features
 
@@ -34,10 +38,9 @@ As a user, I want to be able to...
 
 - Save different educational resources so I can easily come back to them as needed.
 
-## Implementation
+![alt text](assets/images/implementation-banner.png)
 
 ### Tech Stack
-
 
 - React
 - Express
@@ -60,9 +63,13 @@ As a user, I want to be able to...
     - jest
     - helmet
 
+---
+
 ### APIs
 
 - No external APIs will be used for this. I will be making my own API.
+
+---
 
 ### Sitemap
 
@@ -88,6 +95,7 @@ As a user, I want to be able to...
         - Therapy options
         - Self-care practices
 
+---
 
 ### Mockups
 
@@ -168,10 +176,14 @@ Favorites Page:
 
 **Note: The save/favorite button for each individual resource will be located either at the top or bottom of the page. Still deciding on location.**
 
+---
 
 ### Data
 
 ![alt text](assets/images/database-table-schema.png)
+
+---
+
 ### Endpoints
 
 ```GET /api/moods```
@@ -464,7 +476,7 @@ Response body example:
 ```
 
 
-## Roadmap
+![## Roadmap](assets/images/roadmap-banner.png)
 
 - Create repository
 
@@ -555,7 +567,7 @@ Response body example:
 
 - DEMO DAY
 
-## Nice-to-haves
+![## Nice-to-haves](assets/images/nice-to-haves-banner.png)
 
 - Integrate Google Maps (or another relevant API) to help users locate mental health supports within their radius.
 
