@@ -5,3 +5,10 @@
     display: $flex;
     flex-direction: $direction;
 }
+
+@mixin btn($bg-color, $font-size, $font-color) {
+    background-color: $bg-color;
+    font-family: "Montserrat", sans-serif;
+    font-size: $font-size;
+    color: $font-color;
+}
