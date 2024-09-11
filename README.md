@@ -1,4 +1,4 @@
-# Table of Contents
+# <a name="top"></a> Table of Contents
 
 ## Overview
 
@@ -22,9 +22,9 @@
   - [Bug Fixes](#part-4-bug-fixes)
   - [Demo Day](#part-5-demo-day)
 
-## Nice-to-Haves
+## Last but not least...
 
-  - [Log Out](#log-out)
+  - [Nice-to-haves](#nice-to-haves)
 
 # Project Title
 
@@ -63,6 +63,8 @@ As a user, I want to be able to...
 - Learn about the relevant coping strategies to address my negative mood.
 
 - Save different educational resources so I can easily come back to them as needed.
+
+*[Back to the top](#top)*
 
 ---
 
@@ -547,6 +549,8 @@ Response body example:
 ```
 </details>
 
+*[Back to the top](#top)*
+
 ---
 
 ![## Roadmap](assets/images/roadmap-banner.png)
@@ -691,11 +695,12 @@ Response body example:
     Finally! Demo day! So excited. :D
 </details>
 
-![## Nice-to-haves](assets/images/nice-to-haves-banner.png)
+*[Back to the top](#top)*
+
+<a name="nice-to-haves"></a> ![## Nice-to-haves](assets/images/nice-to-haves-banner.png)
 
 Below are a few things I would like to implement in the future:
-
-<a name="log-out"></a> <details>
+<details>
 <summary>Log Out Functionality</summary>
 
   It makes sense for users to be able to log out if they can log in. I am hoping to implement this during my capstone, but if not I will implement it afterwards.
@@ -752,3 +757,5 @@ Below are a few things I would like to implement in the future:
 
   However, this may be a late feature due to legislation surrounding the privacy and confidentiality of patient health information. A lot of care will need to go into implementing this.
 </details>
+
+*[Back to the top](#top)*
