@@ -74,52 +74,135 @@ As a user, I want to be able to...
 ### Sitemap and Mockups
 
 <details>
-<summary>Register Page</summary>
-<img src="assets/images/mood-compass-register-page.png" alt="register page mockup">
-</details>
-
-<details>
-<summary>Login Page</summary>
-<img src="assets/images/mood-compass-login-page.png" alt="login page mockup">
-</details>
-
-<details>
 <summary>Home Page</summary>
 <img src="assets/images/mood-compass-homepage.png" alt="home page when not logged in mockup">
 
+Above is an example of the homepage when a user is not logged in. Users will be able to freely navigate the web app without having an account. However, current and future features will require users to have an account.
+
+The homepage will consist of a welcome message, as well as a space for me to put updates (e.g., new added feature). 
+
+I also did some visual chunking for my mockup here:
+
+<h4>Header Component:</h4>
+  <details>
+    <ul>
+      <li>MoodCompass logo</li>
+      <li>Navigation bar</li>
+        <ul>
+          <li>A dropdown menu with links will appear when a user hovers over "Learn".</li>
+        </ul>
+      <li>Login button</li>
+    </ul>
+    </details>
+
+<h4>Hero Component:</h4>
+  <details>
+    <ul>
+      <li>Hero image</li>
+      <li>MoodCompass catchline</li>
+    </ul>
+  </details>
+
+<h4>Footer Component:</h4>
+  <details>
+    <ul>
+      <li>Connect</li>
+        <ul>
+          <li>I will provide ways for users to connect with me.</li>
+        </ul>
+      <li>MoodCompass logo</li>
+    </ul>
+  </details>
+
+<h4>Main Body/Content:</h4>
+<details>
+  This is where the content of each page will be rendered.
+</details>
+
+---
+
 <img src="assets/images/mood-compass-loggedin-homepage.png" alt="home page when logged in mockup">
+
+This is an example of what the homepage would look like when a user is signed in. The login button will now say **"Hi, user"**, and the **"Favorites"** link will appear. This feature is only available for users.
 </details>
 
 <details>
 <summary>About Page</summary>
 <img src="assets/images/mood-compass-about-page.png" alt="about page mockup">
+
+This page will provide more information on MoodCompass, such as why it was created, its purpose, values, etc. I will also provide a blurb about myself as well to connect with my users.
 </details>
 
 <details>
 <summary>Moods Page</summary>
 <img src="assets/images/mood-compass-moods-page.png" alt="moods page mockup">
 
+This page will list cards of different moods that users can click to learn more about. For this capstone, I will be working with two moods. I plan on adding more in the future.
+
+<h4>Specific Mood Page Example</h4>
 <img src="assets/images/mood-compass-anxiety-page.png" alt="anxiety information page mockup">
 </details>
 
 <details>
 <summary>Learn Page</summary>
+
+Currently there isn't a "Learn" page since it is a hoverable dropdown menu. This dropdown menu will provide links to two pages: educational resources and coping strategies.
+
+Although not depicted in the mockups, I plan on adding a favorite button or icon on each resource page. Favoriting a resource will add it to a user's favorites list. A modal prompting user registration will be activated if a user attempts to favorite a resource without an account.
+
+<h4>Educational Resources Page</h4>
 <img src="assets/images/mood-compass-educational-resources-page.png" alt="educational resources page mockup">
 
+This page display educational resources as cards. The educational resources will provide more information on negative emotional states, as well as health promotion education. Users can click on the card to be redirected to the resource.
+
+<h5>Specific Educational Resource Page</h5>
 <img src="assets/images/mood-compass-mind-connection-page.png" alt="mind connection page mockup">
 
-<hr>
-
+<h4>Coping Strategies Page</h4>
 <img src="assets/images/mood-compass-coping-strategies-page.png" alt="coping strategies page mockup">
 
+This page is similar to the educational resource page, but its content differs. Here, users can click on a card to learn more about different coping strategies.
+
+<h5>Specific Coping Strategies Page</h5>
 <img src="assets/images/mood-compass-emotion-regulation-page.png" alt="emotion regulation page mockup">
 </details>
 
 <details>
 <summary>Favorites Page</summary>
 <img src="assets/images/mood-compass-favorites-page.png" alt="favorites page mockup">
+
+This page is only accessible to users who are registered and signed it, and therefore will be conditionally rendered. 
+
+This page provides a centralized location for users to revisit to find the list of resources they saved on their account.
+
+Users will have the ability to unfavorite (delete) resources.
 </details>
 
+<details>
+<summary>Register Page</summary>
+<img src="assets/images/mood-compass-register-page.png" alt="register page mockup">
+
+This is a simple page for users to register for an account. In order to register, users will have to complete the form by filling out the username, email, and password input fields.
+
+I am currently undecided on what I want to place on the right. Below are my current ideas for that space:
+
+<ul>
+ <li>Image</li>
+ <li>Quote</li>
+ <li>A blurb about the features users will have access to with an account, <i>albeit it is not a lot at the moment.</i>
+</ul>
+
+If I use an image or quote, I would like it to be something empowering.
+</details>
+
+<details>
+<summary>Login Page</summary>
+<img src="assets/images/mood-compass-login-page.png" alt="login page mockup">
+
+This page will allow users to log into the web app with their username and password. Below the login button is an option for users to register for an account if they do not have one yet.
+
+I wanted to keep the register and login page similar. However, the login page will have some kind of welcome back message to the right of the login form.
+</details>
 
 ---
 
