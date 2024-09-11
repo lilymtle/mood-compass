@@ -1,3 +1,31 @@
+# Table of Contents
+
+## Overview
+
+  - [Problem](#problem)
+  - [User Profile](#user-profile)
+  - [Features](#features)
+
+## Implementation
+
+  - [Tech Stack](#tech-stack)
+  - [APIs](#apis)
+  - [Sitemap and Mockups](#sitemap-and-mockups)
+  - [Data](#data)
+  - [Endpoints](#endpoints)
+
+## Roadmap
+
+  - [Initial Setup](#part-1-initial-setup)
+  - [Data Prep](#part-2-data-prep)
+  - [Create Features](#part-3-create-features)
+  - [Bug Fixes](#part-4-bug-fixes)
+  - [Demo Day](#part-5-demo-day)
+
+## Nice-to-Haves
+
+  - [Log Out](#log-out)
+
 # Project Title
 
 ![moodcompass banner](assets/images/mood-compass-banner.png)
@@ -8,7 +36,7 @@ MoodCompass is rooted in the following values:
 
 ![moodcompass values](assets/images/mood-compass-values.png)
 
-### Problem
+### <a name="problem"></a>Problem
 
 There has been a sharp decline in mental health worldwide since the COVID-19 pandemic. The increased prevalence of anxiety, depression, and stress has led to a high demand for mental health services. However, there is a well-documented shortage of such services.
 
@@ -16,7 +44,7 @@ Currently, there are online resources available to help users learn about their 
 
 ---
 
-### User Profile
+### <a name="user-profile"></a> User Profile
 
 - Individuals who want to learn more about their mood(s) or mood(s) in general.
 
@@ -26,7 +54,7 @@ Currently, there are online resources available to help users learn about their 
 
 ---
 
-### Features
+### <a name="features"></a> Features
 
 As a user, I want to be able to...
 
@@ -40,7 +68,7 @@ As a user, I want to be able to...
 
 ![implementation banner](assets/images/implementation-banner.png)
 
-### Tech Stack
+### <a name="tech-stack"></a> Tech Stack
 
 - React
 - Express
@@ -70,13 +98,13 @@ As a user, I want to be able to...
 
 ---
 
-### APIs
+### <a name="apis"></a> APIs
 
 - No external APIs will be used for this. I will be making my own API.
 
 ---
 
-### Sitemap and Mockups
+### <a name="sitemap-and-mockups"></a> Sitemap and Mockups
 
 <details>
 <summary>Home Page</summary>
@@ -218,13 +246,13 @@ I wanted to keep the register and login page similar. However, the login page wi
 
 ---
 
-### Data
+### <a name="data"></a> Data
 
 ![database table schema](assets/images/database-table-schema.png)
 
 ---
 
-### Endpoints
+### <a name="endpoints"></a> Endpoints
 
 <details>
 <summary>GET</summary><br>
@@ -523,10 +551,10 @@ Response body example:
 
 ![## Roadmap](assets/images/roadmap-banner.png)
 
-### Step 1: Initial Setup
+### <a name="part-1-initial-setup"></a> Part 1: Initial Setup
 
 <details>
-<summary>Details</summary>
+<summary>Steps</summary>
 
   - Create repository
     - Within the root directory is:
@@ -540,10 +568,10 @@ Response body example:
   - Set up routes and placeholder 200 responses in server
 </details>
 
-### Step 2: Data Prep
+### <a name="part-2-data-prep"></a> Part 2: Data Prep
 
 <details>
-<summary>Details</summary>
+<summary>Steps</summary>
 
   - Create migration tables
 
@@ -552,10 +580,10 @@ Response body example:
   - Create seeds with sample data
 </details>
 
-### Step 3: Create Features
+### <a name="part-3-create-features"></a> Part 3: Create Features
 
 <details>
-  <summary>Details</summary>
+  <summary>Steps</summary>
   
   - Feature: Home page
 
@@ -645,15 +673,29 @@ Response body example:
   </details>
 </details>
 
-- Bug fixes
+### <a name="part-4-bug-fixes"></a> Step 4: Bug fixes
 
-- DEMO DAY
+<details>
+  <summary>Steps</summary>
+
+    - Test web app links/navigation
+    - Test web app functionality
+    - Refactor and organize code
+</details>
+
+### <a name="part-5-demo-day"></a> Step 5: DEMO DAY
+
+<details>
+  <summary>Details</summary>
+
+    Finally! Demo day! So excited. :D
+</details>
 
 ![## Nice-to-haves](assets/images/nice-to-haves-banner.png)
 
 Below are a few things I would like to implement in the future:
 
-<details>
+<a name="log-out"></a> <details>
 <summary>Log Out Functionality</summary>
 
   It makes sense for users to be able to log out if they can log in. I am hoping to implement this during my capstone, but if not I will implement it afterwards.
