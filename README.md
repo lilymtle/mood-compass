@@ -609,37 +609,37 @@ Below are a few things I would like to implement in the future:
 
   It makes sense for users to be able to log out if they can log in. I am hoping to implement this during my capstone, but if not I will implement it afterwards.
 </details>
-<br>
+
 <details>
   <summary>Contact Page</summary>
 
   Although users can connect with me via socials, it would be more convenient if there is a page with a form they can use to contact me when they have questions, feedback, etc.
 </details>
-<br>
+
 <details>
   <summary>Search Functionality</summary>
 
   It would be great if users can search for resources available. This would be useful when more content is added. It would make things more accessible as the web app grows larger.
 </details>
-<br>
+
 <details>
   <summary>Share Functionality</summary>
 
   Mental health education and resources should be available for <i>everyone</i>. One way to spread available education and resources is to add a share button. By clicking that, users can share it with others through things such as social media, email, etc.
 </details>
-<br>
+
 <details>
   <summary>Sort Functionality</summary>
 
   It would be useful for users to be able to sort moods and resources (alphabetically, newest to oldest, oldest to newest, etc). I would also like to add an option for users to reorganize and sort their favorites list.
 </details>
-<br>
+
 <details>
   <summary>Google Maps (or another relevant API)</summary>
 
   I would love to add a page where users can input their location to find the closest mental health supports. I think this would be a great feature and make MoodCompass more of a "one-stop-shop" for mental health education and resources.
 </details>
-<br>
+
 <details>
   <summary>Mood Tracker</summary>
 
