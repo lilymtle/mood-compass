@@ -566,14 +566,14 @@ Response body example:
 
       - Implement moods list page
       - Create ```GET /api/moods```
-    </details>
+  </details>
 
   <details>
       <summary>Feature: View mood</summary>
 
       - Implement view mood page
       - Create ```GET /api/moods/:id```
-    </details>
+  </details>
 
   <details>
       <summary>Feature: Educational resource list</summary>
