@@ -2,7 +2,8 @@
 @use "../../styles/partials/mixins" as *;
 
 .nav-bar {
-    padding: 0 1rem 1rem 1rem;
+    font-size: 1rem;
+    padding: 0 1rem;
 
     &__list {
         @include flex-box(flex, row);
@@ -34,7 +35,8 @@
     &__btn {
         @include btn(transparent, 1rem, $global-text);
         border: none;
-        padding-bottom: 0.5rem;
+        padding: 0;
+        margin-bottom: 0.5rem;
 
         &:hover {
             color: $pale-green;
