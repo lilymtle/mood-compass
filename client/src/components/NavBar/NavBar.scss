@@ -1,3 +1,9 @@
+.nav-bar {
+    &__list {
+        list-style-type: none;
+    }
+}
+
 .dropdown {
     position: relative;
     display: inline-block;
@@ -24,7 +30,7 @@
         z-index: 1;
     }
 
-    &__link {
-        text-decoration: none;;
+    &__list {
+        list-style-type: none;
     }
 }
