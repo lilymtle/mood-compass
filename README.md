@@ -1,12 +1,12 @@
 # Project Title
 
-![alt text](assets/images/mood-compass-banner.png)
+![moodcompass banner](assets/images/mood-compass-banner.png)
 
 **MoodCompass** is a safe space where individuals can learn more about their negative emotional states, as well as relevant coping strategies and therapy options to help them.
 
 MoodCompass is rooted in the following values:
 
-![alt text](assets/images/mood-compass-values.png)
+![moodcompass values](assets/images/mood-compass-values.png)
 
 ### Problem
 
@@ -38,14 +38,15 @@ As a user, I want to be able to...
 
 ---
 
-![alt text](assets/images/implementation-banner.png)
+![implementation banner](assets/images/implementation-banner.png)
 
 ### Tech Stack
 
 - React
 - Express
 - MySQL
-- Client libraries:
+<details>
+  <summary>Client Libraries</summary>
     - react
     - react-router
     - axios
@@ -55,13 +56,17 @@ As a user, I want to be able to...
     - dayjs
     - react-redux
     - jest
-- Server libraries:
+</details>
+
+<details>
+  <summary>Server Libraries</summary>
     - Express.js
     - Knex.js
     - joi
     - bcryptjs for password hashing
     - jest
     - helmet
+</details>
 
 ---
 
@@ -75,7 +80,9 @@ As a user, I want to be able to...
 
 <details>
 <summary>Home Page</summary>
-<img src="assets/images/mood-compass-homepage.png" alt="home page when not logged in mockup">
+
+![home page when not logged in mockup](assets/images/mood-compass-homepage.png)
+
 
 Above is an example of the homepage when a user is not logged in. Users will be able to freely navigate the web app without having an account. However, current and future features will require users to have an account.
 
@@ -83,64 +90,64 @@ The homepage will consist of a welcome message, as well as a space for me to put
 
 I also did some visual chunking for my mockup here:
 
-<h4>Header Component:</h4>
-  <details>
-    <ul>
-      <li>MoodCompass logo</li>
-      <li>Navigation bar</li>
-        <ul>
-          <li>A dropdown menu with links will appear when a user hovers over "Learn".</li>
-        </ul>
-      <li>Login button</li>
-    </ul>
-    </details>
-
-<h4>Hero Component:</h4>
-  <details>
-    <ul>
-      <li>Hero image</li>
-      <li>MoodCompass catchline</li>
-    </ul>
-  </details>
-
-<h4>Footer Component:</h4>
-  <details>
-    <ul>
-      <li>Connect</li>
-        <ul>
-          <li>I will provide ways for users to connect with me.</li>
-        </ul>
-      <li>MoodCompass logo</li>
-    </ul>
-  </details>
-
-<h4>Main Body/Content:</h4>
 <details>
+  <summary>Header Component</summary>
+
+  - MoodCompass logo
+  - Navigation bar
+    - A dropdown menu with links will appear when a user hovers over "Learn"
+  - Login button
+    - Will look different depending on whether a user is signed in or not
+</details>
+
+<details>
+  <summary>Hero Component</summary>
+
+  - Hero image
+  - MoodCompass catchline
+</details>
+
+<details>
+  <summary>Footer Component</summary>
+
+  - Connect
+    - LinkedIn, GitHub
+  - MoodCompass logo
+</details>
+
+<details>
+  <summary>Main Body/Content</summary>
+
   This is where the content of each page will be rendered.
 </details>
 
 ---
 
-<img src="assets/images/mood-compass-loggedin-homepage.png" alt="home page when logged in mockup">
+#### Logged in User Homepage
+
+![home page when logged in mockup](assets/images/mood-compass-loggedin-homepage.png)
 
 This is an example of what the homepage would look like when a user is signed in. The login button will now say **"Hi, user"**, and the **"Favorites"** link will appear. This feature is only available for users.
 </details>
 
 <details>
 <summary>About Page</summary>
-<img src="assets/images/mood-compass-about-page.png" alt="about page mockup">
+
+![about page mockup](assets/images/mood-compass-about-page.png)
 
 This page will provide more information on MoodCompass, such as why it was created, its purpose, values, etc. I will also provide a blurb about myself as well to connect with my users.
 </details>
 
 <details>
 <summary>Moods Page</summary>
-<img src="assets/images/mood-compass-moods-page.png" alt="moods page mockup">
+
+![moods page mockup](assets/images/mood-compass-moods-page.png)
 
 This page will list cards of different moods that users can click to learn more about. For this capstone, I will be working with two moods. I plan on adding more in the future.
 
 <h4>Specific Mood Page Example</h4>
-<img src="assets/images/mood-compass-anxiety-page.png" alt="anxiety information page mockup">
+
+![anxiety information page mockup](assets/images/mood-compass-anxiety-page.png)
 </details>
 
 <details>
@@ -151,25 +158,30 @@ Currently there isn't a "Learn" page since it is a hoverable dropdown menu. This
 Although not depicted in the mockups, I plan on adding a favorite button or icon on each resource page. Favoriting a resource will add it to a user's favorites list. A modal prompting user registration will be activated if a user attempts to favorite a resource without an account.
 
 <h4>Educational Resources Page</h4>
-<img src="assets/images/mood-compass-educational-resources-page.png" alt="educational resources page mockup">
+
+![educational resources page mockup](assets/images/mood-compass-educational-resources-page.png)
 
 This page display educational resources as cards. The educational resources will provide more information on negative emotional states, as well as health promotion education. Users can click on the card to be redirected to the resource.
 
 <h5>Specific Educational Resource Page</h5>
-<img src="assets/images/mood-compass-mind-connection-page.png" alt="mind connection page mockup">
+
+![mind connection educational resource page mockup](assets/images/mood-compass-mind-connection-page.png)
 
 <h4>Coping Strategies Page</h4>
-<img src="assets/images/mood-compass-coping-strategies-page.png" alt="coping strategies page mockup">
+
+![coping strategies page mockup](assets/images/mood-compass-coping-strategies-page.png)
 
 This page is similar to the educational resource page, but its content differs. Here, users can click on a card to learn more about different coping strategies.
 
 <h5>Specific Coping Strategies Page</h5>
-<img src="assets/images/mood-compass-emotion-regulation-page.png" alt="emotion regulation page mockup">
+
+![emotion regulation page mockup](assets/images/mood-compass-emotion-regulation-page.png)
 </details>
 
 <details>
 <summary>Favorites Page</summary>
-<img src="assets/images/mood-compass-favorites-page.png" alt="favorites page mockup">
+
+![favorites page mockup](assets/images/mood-compass-favorites-page.png)
 
 This page is only accessible to users who are registered and signed it, and therefore will be conditionally rendered. 
 
@@ -180,24 +192,24 @@ Users will have the ability to unfavorite (delete) resources.
 
 <details>
 <summary>Register Page</summary>
-<img src="assets/images/mood-compass-register-page.png" alt="register page mockup">
+
+![register page mockup](assets/images/mood-compass-register-page.png)
 
 This is a simple page for users to register for an account. In order to register, users will have to complete the form by filling out the username, email, and password input fields.
 
 I am currently undecided on what I want to place on the right. Below are my current ideas for that space:
 
-<ul>
- <li>Image</li>
- <li>Quote</li>
- <li>A blurb about the features users will have access to with an account, <i>albeit it is not a lot at the moment.</i>
-</ul>
+- Image
+- Quote
+- A blurb about the features users will have access to with an account, *albeit it is not a lot at the moment...*
 
 If I use an image or quote, I would like it to be something empowering.
 </details>
 
 <details>
 <summary>Login Page</summary>
-<img src="assets/images/mood-compass-login-page.png" alt="login page mockup">
+
+![login page mockup](assets/images/mood-compass-login-page.png)
 
 This page will allow users to log into the web app with their username and password. Below the login button is an option for users to register for an account if they do not have one yet.
 
@@ -208,7 +220,7 @@ I wanted to keep the register and login page similar. However, the login page wi
 
 ### Data
 
-![alt text](assets/images/database-table-schema.png)
+![database table schema](assets/images/database-table-schema.png)
 
 ---
 
