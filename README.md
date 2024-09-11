@@ -505,7 +505,7 @@ Response body example:
   "message": "Item removed from favorites."
 }
 ```
-</summary>
+</details>
 
 
 ![## Roadmap](assets/images/roadmap-banner.png)
