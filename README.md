@@ -214,9 +214,11 @@ I wanted to keep the register and login page similar. However, the login page wi
 
 ### Endpoints
 
-```GET /api/moods```
+<details>
+<summary>GET</summary><br>
 
-- Retrieve a list of all available moods.
+```GET /api/moods```
+- Retrieve a list of all available moods
 
 Response body example:
 ```json
@@ -277,11 +279,10 @@ Response body example:
 
 ---
 
-```GET /api/educational-resource```
+```GET /api/educational/resources```
 
-- Retrieve a list of all educational resources.
+- Retrieve a list of all educational resources available.
 
-Response body example:
 ```json
 [
   {
@@ -297,11 +298,10 @@ Response body example:
     "content": "Detailed guide on techniques to manage anxiety."
   }
 ]
+
 ```
 
----
-
-```GET /api/educational-resource/:id```
+```GET /api/educational-resources/:id```
 
 - Retrieve detailed information about a specific educational resource.
 
@@ -316,7 +316,6 @@ Response body example:
   "description": "An article explaining what anxiety is, its symptoms, and potential causes.",
   "content": "Full text of the article about understanding anxiety."
 }
-
 ```
 
 ---
@@ -361,7 +360,41 @@ Response body example:
 }
 ```
 
---- 
+---
+
+```GET /api/users/:id/favorites```
+
+- Retrieve all saved items for the user
+
+- Parameters:
+    - ```id``` (user id)
+
+Response body example:
+```json
+[
+  {
+    "id": "101",
+    "type": "educational-resource",  // or "coping-strategy"
+    "title": "Understanding Anxiety",  // Relevant for educational resources
+    "strategy": "Deep Breathing Exercises",  // Relevant for coping strategies
+    "description": "An article explaining what anxiety is.",  // Relevant for educational resources
+    "content": "Full text of the article about understanding anxiety.",  // Relevant for educational resources
+    "savedAt": "2024-09-09T12:00:00Z"
+  },
+  {
+    "id": "202",
+    "type": "coping-strategy",
+    "strategy": "Progressive Muscle Relaxation",
+    "description": "A method to reduce muscle tension and anxiety.",
+    "content": "Step-by-step guide to practicing progressive muscle relaxation.",
+    "savedAt": "2024-09-10T15:30:00Z"
+  }
+]
+```
+</details>
+
+<details>
+<summary>POST</summary><br>
 
 ```POST /api/users/register```
 
@@ -446,40 +479,10 @@ Response body example:
   }
 }
 ```
+</details>
 
----
-
-```GET /api/users/:id/favorites```
-
-- Retrieve all saved items for the user
-
-- Parameters:
-    - ```id``` (user id)
-
-Response body example:
-```json
-[
-  {
-    "id": "101",
-    "type": "educational-resource",  // or "coping-strategy"
-    "title": "Understanding Anxiety",  // Relevant for educational resources
-    "strategy": "Deep Breathing Exercises",  // Relevant for coping strategies
-    "description": "An article explaining what anxiety is.",  // Relevant for educational resources
-    "content": "Full text of the article about understanding anxiety.",  // Relevant for educational resources
-    "savedAt": "2024-09-09T12:00:00Z"
-  },
-  {
-    "id": "202",
-    "type": "coping-strategy",
-    "strategy": "Progressive Muscle Relaxation",
-    "description": "A method to reduce muscle tension and anxiety.",
-    "content": "Step-by-step guide to practicing progressive muscle relaxation.",
-    "savedAt": "2024-09-10T15:30:00Z"
-  }
-]
-```
-
----
+<details>
+  <summary>DELETE</summary><br>
 
 ```DELETE /api/users/:id/favorites/:itemId```
 
@@ -502,6 +505,7 @@ Response body example:
   "message": "Item removed from favorites."
 }
 ```
+</summary>
 
 
 ![## Roadmap](assets/images/roadmap-banner.png)
