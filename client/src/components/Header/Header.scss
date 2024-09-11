@@ -4,13 +4,35 @@
 .header {
     background-color: $white;
     @include flex-box(flex, column);
+    justify-content: center;
     align-items: center;
+    padding: 1rem;
 
     &__logo {
+        order: 1;
         
         &-img {
             width: auto;
             height: 10rem;
+        }
+    }
+
+    &__navigation {
+        order: 3;
+        height: 2rem;
+    }
+
+    &__login {
+        width: 100%;
+        text-align: center;
+        order: 2;
+
+        &-btn {
+            width: 95%;
+            @include btn($pale-green, 1rem, $white);
+            border: 0;
+            border-radius: 1.25rem;
+            padding: 0.5rem 0;
         }
     }
 }
