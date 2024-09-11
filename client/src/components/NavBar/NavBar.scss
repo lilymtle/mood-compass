@@ -1,6 +1,23 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
 .nav-bar {
+    padding: 0 1rem 1rem 1rem;
+
     &__list {
+        @include flex-box(flex, row);
+        gap: 1rem;
         list-style-type: none;
+        padding: 0;
+    }
+
+    &__link {
+        color: $global-text;
+
+        &:hover {
+            color: $pale-green;
+            transition: 0.3s ease-in-out;
+        }
     }
 }
 
@@ -10,27 +27,50 @@
 
     &:hover {
         display: block;
+        transition: color 0.3s ease-in-out;
 
-        .dropdown__content {
-            display: block;
+    }
+
+    &__btn {
+        @include btn(transparent, 1rem, $global-text);
+        border: none;
+        padding-bottom: 0.5rem;
+
+        &:hover {
+            color: $pale-green;
+            transition: 0.3s ease-in-out;
+        }
+    }
+    &__content {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        background-color: $pale-green;
+        font-size: .75rem;
+        min-width: 10px;
+        padding: 0.5rem;
+        box-shadow: 0 .5rem 1rem $sage-green;
+        z-index: 1;
+        top: 100%;
+        left: -1rem;
+        right: auto;
+        transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+
+        & a {
+            color: $white;
         }
     }
 
-    &__button {
-        background-color: red;
-        padding: 1rem;
-        border: none;
-    }
-    &__content {
-        display: none;
-        position: absolute;
-        background-color: red;
-        min-width: 10px;
-        box-shadow: 0 .5rem 1rem blue;
-        z-index: 1;
+    &:hover .dropdown__content {
+        opacity: 1;
+        visibility: visible;
     }
 
     &__list {
+        @include flex-box(flex, column);
+        gap: 0.5rem;
         list-style-type: none;
+        padding: 0;
     }
 }
