@@ -1,0 +1,7 @@
+@use "./variables" as *;
+
+/* flex-box mixin*/
+@include flex-box($flex, $direction) {
+    display: $flex;
+    flex-direction: $direction;
+}
