@@ -523,90 +523,127 @@ Response body example:
 
 ![## Roadmap](assets/images/roadmap-banner.png)
 
-- Create repository
+### Step 1: Initial Setup
 
-- Create client
-    - React project with routes and boilerplate pages
-    - Update client folder structure
+<details>
+<summary>Details</summary>
 
-- Create server
-    - Express project with routing and placeholder 200 responses
-    - Update server folder structure
+  - Create repository
+    - Within the root directory is:
+      - Client directory
+      - Server directory
+  - Create relavant folders and files in client and server directory (e.g., components, styles, controllers, middlewares, etc)
+  - Delete generated Vite files and folders that will not be used
+  - Implement boilerplate codes
+  - Create components *(informed by visual chunking)*
+  - Set up BrowserRouter and routes in client
+  - Set up routes and placeholder 200 responses in server
+</details>
 
-- Create migration
+### Step 2: Data Prep
 
-- Gather data for the following:
+<details>
+<summary>Details</summary>
 
-    - **Anxiety:**
-        - What it is
-        - Signs and symptoms
-        - **Resources:**
-            - Mindfulness
-            - Deep breathing
-            - Progressive muscle relaxation
-            - Grounding
-            - CBT/DBT
-    - **Depression:**
-        - What it is
-        - Signs and symptoms
-        - **Resources:**
-            - Mindfulness
-            - CBT/DBT
+  - Create migration tables
 
-- Create seeds with sample data
+  ![alt text](assets/images/data-collection-plan.png)
 
-- Deploy client and server projects so all commits will be reflected in production
+  - Create seeds with sample data
+</details>
 
-- Feature: Home page
+### Step 3: Create Features
 
-- Feature: My Story page
+<details>
+  <summary>Details</summary>
+  
+  - Feature: Home page
 
-- Feature: Mood list
-    - Implement moods list page
-    - Create ```GET /api/moods```
+  - Feature: My Story page
 
-- Feature: View mood
-    - Implement view mood page
-    - Create ```GET /api/moods/:id```
+  <details>
+      <summary>Feature: Mood list</summary>
 
-- Feature: Educational resource list
-    - Implement educational resource list page
-    - Create ```GET /api/educational-resources```
+      - Implement moods list page
+      - Create ```GET /api/moods```
+    </details>
 
-- Feature: View educational resource
-    - Implement view educational resource page
-    - Create ```GET /api/educational-resources/:id```
+  <details>
+      <summary>Feature: View mood</summary>
 
-- Feature: View coping strategies
-    - Implement view coping strategies page
-    - Create ```GET /api/coping-strategies```
+      - Implement view mood page
+      - Create ```GET /api/moods/:id```
+    </details>
 
-- Feature: View coping strategy
-    - Implement view coping strategy page
-    - Create ```GET /api/coping-strategies/:id```
+  <details>
+      <summary>Feature: Educational resource list</summary>
 
+      - Implement educational resource list page
+      - Create ```GET /api/educational-resources```
+  </details>
 
-- Feature: Create account
-    - Implement register page and form
-    - Create ```POST /users/register```
+  <details>
+    <summary>Feature: View educational resource</summary>
 
-- Feature: Login
-    - Implement login page + form
-    - Create ```POST /users/login``` 
+      - Implement view educational resource page
+      - Create ```GET /api/educational-resources/:id```
+  </details>
 
-- Feature: Implement JWT tokens
+  <details>
+    <summary>Feature: View coping strategies</summary>
 
-- Feature: Add favorite
-    - Implement function for a user to favorite a resource or coping strategy
-    - Create ```POST /api/users/:id/favorites```
+      - Implement view coping strategies page
+      - Create ```GET /api/coping-strategies```
+  </details>
 
-- Feature: View favorites
-    - Implement a view favorites page
-    - Create ```GET /api/users/:id/favorites```
+  <details>
+    <summary>Feature: View coping strategy</summary>
 
-- Feature: Delete favorite
-    - Implement function for a user to delete an item from their favorites page
-    - Create ```DELETE /api/users/:id/favorites/:itemId```
+      - Implement view coping strategy page
+      - Create ```GET /api/coping-strategies/:id```
+  </details>
+
+  <details>
+    <summary>Feature: Create account</summary>
+
+      - Implement register page and form
+      - Create ```POST /users/register```
+  </details>
+
+  <details>
+    <summary>Feature: Login</summary>
+
+      - Implement login page + form
+      - Create ```POST /users/login```
+  </details>
+
+  <details>
+    <summary>Feature: Implement JWT tokens</summary>
+
+      - Implement bryptjs for password hashing
+  </details>
+
+  <details>
+    <summary>Feature: Add favorite</summary>
+
+      - Implement function for a user to favorite a resource or coping strategy
+      - Create ```POST /api/users/:id/favorites```
+  </details>
+
+  <details>
+    <summary>Feature: View favorites</summary>
+
+      - Implement a view favorites page
+      - Create ```GET /api/users/:id/favorites```
+  </details>
+
+  <details>
+    <summary>Feature: Delete favorite</summary>
+
+      - Implement function for a user to delete an item from their favorites page
+      - Create ```DELETE /api/users/:id/favorites/:itemId```
+  </details>
+</details>
 
 - Bug fixes
 
@@ -644,6 +681,18 @@ Below are a few things I would like to implement in the future:
   <summary>Sort Functionality</summary>
 
   It would be useful for users to be able to sort moods and resources (alphabetically, newest to oldest, oldest to newest, etc). I would also like to add an option for users to reorganize and sort their favorites list.
+</details>
+
+<details>
+  <summary>Forgot Password</summary>
+
+  I do not want users to *ever* lose access to their saves resources. Therefore, it would be useful to have way for them to retrieve their lost password.
+</details>
+
+<details>
+  <summary>Deploy on Netlify or Heroku</summary>
+
+  I would love to deploy my web app for others to use. However, before that, I would like to gather feedback from key stakeholders within the healthcare and mental health sector. I think it would be helpful to deploy my web app and provide them with the URL so that they can review it.
 </details>
 
 <details>
