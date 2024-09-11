@@ -507,6 +507,7 @@ Response body example:
 ```
 </details>
 
+---
 
 ![## Roadmap](assets/images/roadmap-banner.png)
 
@@ -601,12 +602,50 @@ Response body example:
 
 ![## Nice-to-haves](assets/images/nice-to-haves-banner.png)
 
-- Integrate Google Maps (or another relevant API) to help users locate mental health supports within their radius.
+Below are a few things I would like to implement in the future:
 
-- Ability for each user to track their own mood.
+<details>
+<summary>Log Out Functionality</summary>
 
-- Mood journal/tracker associated with each user.
-    - Allows users to track their mood.
-    - Helps establish a pattern that users can show their healthcare provider and/or be used to help them identify triggers and protective factors.
+  It makes sense for users to be able to log out if they can log in. I am hoping to implement this during my capstone, but if not I will implement it afterwards.
+</details>
+<br>
+<details>
+  <summary>Contact Page</summary>
 
-- Replace JWT with OAuth/SSO.
+  Although users can connect with me via socials, it would be more convenient if there is a page with a form they can use to contact me when they have questions, feedback, etc.
+</details>
+<br>
+<details>
+  <summary>Search Functionality</summary>
+
+  It would be great if users can search for resources available. This would be useful when more content is added. It would make things more accessible as the web app grows larger.
+</details>
+<br>
+<details>
+  <summary>Share Functionality</summary>
+
+  Mental health education and resources should be available for <i>everyone</i>. One way to spread available education and resources is to add a share button. By clicking that, users can share it with others through things such as social media, email, etc.
+</details>
+<br>
+<details>
+  <summary>Sort Functionality</summary>
+
+  It would be useful for users to be able to sort moods and resources (alphabetically, newest to oldest, oldest to newest, etc). I would also like to add an option for users to reorganize and sort their favorites list.
+</details>
+<br>
+<details>
+  <summary>Google Maps (or another relevant API)</summary>
+
+  I would love to add a page where users can input their location to find the closest mental health supports. I think this would be a great feature and make MoodCompass more of a "one-stop-shop" for mental health education and resources.
+</details>
+<br>
+<details>
+  <summary>Mood Tracker</summary>
+
+  A feature where users can track their mood would be useful in establishing patterns (e.g., triggers, negative thinking, protective factors, etc). Users can also share this data with their healthcare provider.
+
+  To encourage daily use of a mood tracker, it would be beneficial to add an incentive. For example, medals or even a game! A fun game would be growing your own garden. For example, every mood a user tracks will take care of a plant in their garden.
+
+  However, this may be a late feature due to legislation surrounding the privacy and confidentiality of patient health information. A lot of care will need to go into implementing this.
+</details>
