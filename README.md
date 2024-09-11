@@ -145,7 +145,7 @@ This page will provide more information on MoodCompass, such as why it was creat
 
 This page will list cards of different moods that users can click to learn more about. For this capstone, I will be working with two moods. I plan on adding more in the future.
 
-<h4>Specific Mood Page Example</h4>
+#### Specific Mood Page Example
 
 ![anxiety information page mockup](assets/images/mood-compass-anxiety-page.png)
 </details>
@@ -157,23 +157,23 @@ Currently there isn't a "Learn" page since it is a hoverable dropdown menu. This
 
 Although not depicted in the mockups, I plan on adding a favorite button or icon on each resource page. Favoriting a resource will add it to a user's favorites list. A modal prompting user registration will be activated if a user attempts to favorite a resource without an account.
 
-<h4>Educational Resources Page</h4>
+#### Educational Resources Page
 
 ![educational resources page mockup](assets/images/mood-compass-educational-resources-page.png)
 
 This page display educational resources as cards. The educational resources will provide more information on negative emotional states, as well as health promotion education. Users can click on the card to be redirected to the resource.
 
-<h5>Specific Educational Resource Page</h5>
+##### Specific Educational Resource Page
 
 ![mind connection educational resource page mockup](assets/images/mood-compass-mind-connection-page.png)
 
-<h4>Coping Strategies Page</h4>
+#### Coping Strategies Page
 
 ![coping strategies page mockup](assets/images/mood-compass-coping-strategies-page.png)
 
 This page is similar to the educational resource page, but its content differs. Here, users can click on a card to learn more about different coping strategies.
 
-<h5>Specific Coping Strategies Page</h5>
+##### Specific Coping Strategies Page
 
 ![emotion regulation page mockup](assets/images/mood-compass-emotion-regulation-page.png)
 </details>
