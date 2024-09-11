@@ -1,3 +1,4 @@
+import { Button } from "../Button/Button";
 import "./NavBar.scss";
 
 export function NavBar() {
@@ -14,7 +15,19 @@ export function NavBar() {
                     <a className="nav-bar__link" href="/">Moods</a>
                 </li>
                 <li className="nav-bar__item">
-                    <a className="nav-bar__link" href="/">Learn</a>
+                    <div className="dropdown">
+                        <Button className="dropdown__btn" text="Learn" />
+                        <div className="dropdown__content">
+                            <ul className="dropdown__list">
+                                <li className="dropdown__item">
+                                    <a className="dropdown__link" href="/">Educational Resources</a>
+                                </li>
+                                <li className="dropdown__item">
+                                    <a className="dropdown__link" href="/">Coping Strategies</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </li>
             </ul>
         </nav>

@@ -1,0 +1,30 @@
+.dropdown {
+    position: relative;
+    display: inline-block;
+
+    &:hover {
+        display: block;
+
+        .dropdown__content {
+            display: block;
+        }
+    }
+
+    &__button {
+        background-color: red;
+        padding: 1rem;
+        border: none;
+    }
+    &__content {
+        display: none;
+        position: absolute;
+        background-color: red;
+        min-width: 10px;
+        box-shadow: 0 .5rem 1rem blue;
+        z-index: 1;
+    }
+
+    &__link {
+        text-decoration: none;;
+    }
+}
