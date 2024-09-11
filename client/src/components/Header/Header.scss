@@ -1,10 +1,16 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
 .header {
+    background-color: $white;
+    @include flex-box(flex, column);
+    align-items: center;
 
     &__logo {
         
         &-img {
             width: auto;
-            height: 6.25rem;
+            height: 10rem;
         }
     }
 }
