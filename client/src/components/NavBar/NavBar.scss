@@ -32,6 +32,13 @@
             color: $pale-green;
             transition: 0.3s ease-in-out;
         }
+
+        &-dropdown {
+            &:hover {
+                color: $grey;
+                transition: 0.3s ease-in-out;
+            }
+        }
     }
 }
 
