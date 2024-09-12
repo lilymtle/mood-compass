@@ -49,7 +49,71 @@ export function HomePage() {
 
             <section className="home__education">
                 <div className="home__education-container">
-                    f
+                    <h2 className="home__education-header">
+                        The Value of <span className="home__education-header--script">Education</span>
+                    </h2>
+
+                    <div className="home__education-cards">
+                        <ul className="card__list">
+                            <li className="card">
+                                <div className="card__container">
+                                    <img
+                                    className="card__icon"
+                                    src="src/assets/icons/potted-plant.svg"
+                                    alt="potted plant icon" />
+
+                                    <h3 className="card__header">
+                                        Supports Growth and Resilience
+                                    </h3>
+
+                                    <p className="card__text">
+                                            Mental health education provides tools like mindfulness and stress
+                                            management, enabling individuals to handle emotions effectively.
+                                            This proactive approach builds resilience, improves well-being,
+                                            and reduces the risk of severe issues.
+                                    </p>
+                                </div>
+                            </li>
+                            <li className="card">
+                                <div className="card__container">
+                                    <img
+                                    className="card__icon"
+                                    src="src/assets/icons/lightbulb.svg"
+                                    alt="potted plant icon" />
+
+                                    <h3 className="card__header">
+                                        Increases Understanding
+                                    </h3>
+
+                                    <p className="card__text">
+                                        Education enhances understanding of mental health issues, helping
+                                        individuals recognize symptoms, reduce stigma, and seek help more
+                                        compassionately. It also aids in distinguishing mental health
+                                        problems from daily stressors, leading to timely intervention.
+                                    </p>
+                                </div>
+                            </li>
+                            <li className="card">
+                                <div className="card__container">
+                                    <img
+                                    className="card__icon"
+                                    src="src/assets/icons/sentiment-calm.svg"
+                                    alt="potted plant icon" />
+
+                                    <h3 className="card__header"> 
+                                        Promotes Effective Coping Strategies
+                                    </h3>
+
+                                    <p className="card__text">
+                                        Mental health education promotes self-reflection and growth,
+                                        helping individuals manage challenges, boost resilience, and
+                                        improve emotional regulation, leading to greater self-esteem
+                                        and a positive outlook.
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </section>
         </main>
