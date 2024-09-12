@@ -1,3 +1,4 @@
+@use "../../styles/partials/fonts" as *;
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 
@@ -23,7 +24,7 @@
         height: auto;
         position: relative;
         top: 1.5rem;
-        left: 5rem;
+        left: 4rem;
         z-index: 2;
 
         &-img {
@@ -43,5 +44,16 @@
             box-sizing: border-box;
             z-index: 1;
         }
+    }
+
+    &__header {
+        font-family: "Garet Book", sans-serif;
+        color: $sage-green;
+        font-size: 15px;
+        position: absolute;
+        top: 2rem;
+        left: 11rem;
+        text-transform: uppercase;
+        padding: 1rem;
     }
 }
