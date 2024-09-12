@@ -1,5 +1,8 @@
-import { Button } from "../Button/Button";
+// import styling
 import "./NavBar.scss";
+
+// import components
+import { Button } from "../Button/Button";
 
 export function NavBar() {
     return (
@@ -37,4 +40,4 @@ export function NavBar() {
             </div>
         </nav>
     )
-}
+};
