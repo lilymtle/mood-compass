@@ -1,2 +1,10 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
+
+.home {
+    &__welcome {
+        background-color: $pale-green;
+        color: $white;
+        padding: 1rem;
+    }
+}
