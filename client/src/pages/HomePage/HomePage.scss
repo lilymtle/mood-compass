@@ -60,6 +60,7 @@ main {
             background-color: $white;
             @include flex-box(flex, column);
             gap: 0.5rem;
+            border-radius: 1.25rem;
             width: 75%;
             height: 65%;
             z-index: 2;
@@ -108,9 +109,48 @@ main {
             }
         }
     }
+
+    &__quote {
+
+        &-container {
+            background-color: $pale-green;
+            background-image: url("src/assets/images/home-quote-img.jpg");
+            background-size:contain;
+            background-repeat: no-repeat;
+            background-position: right;
+            height: 20vh;
+            padding: 1rem;
+        }
+
+        &-text {
+            font-family: "Garet Book", sans-serif;
+            color: $white;
+            font-size: 14px;
+            width: 50%;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        &-author {
+            width: 50%;
+            font-family: "Garet Book", sans-serif;
+            font-size: 11px;
+            font-style: italic;
+            text-align: center;
+        }
+    }
 }
 
 .card {
+    background-color: $white;
+    opacity: 70%;
+    border-radius: 1.25rem;
+    padding: 1rem;
+
+    &__list {
+        @include flex-box(flex, column);
+        gap: 1rem;
+    }
 
     &__header {
         font-size: 14px;
