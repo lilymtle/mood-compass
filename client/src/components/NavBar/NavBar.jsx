@@ -13,6 +13,9 @@ export function NavBar() {
                         <a className="nav-bar__link" href="/">About</a>
                     </li>
                     <li className="nav-bar__item">
+                        <a className="nav-bar__link" href="/">Profile</a>
+                    </li>
+                    <li className="nav-bar__item">
                         <a className="nav-bar__link" href="/">Moods</a>
                     </li>
                     <li className="nav-bar__item">
