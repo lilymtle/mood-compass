@@ -11,6 +11,7 @@
     @include tablet {
         @include flex-box(flex, row);
         justify-content: space-between;
+        padding: 1.5rem;
     }
 
     &__logo {
@@ -36,7 +37,7 @@
         height: 2rem;
 
         @include tablet {
-            width: 50%;
+            width: 20.5rem;
             order: 2;
         }
     }
@@ -47,7 +48,7 @@
         order: 2;
 
         @include tablet { 
-            max-width: 100%;
+            width: 9rem;
             order: 3;
             padding-top: 1rem;
         }
@@ -60,7 +61,8 @@
             padding: 0.5rem 0;
 
             @include tablet {
-                width: 50%;
+                width: 100%;
+                font-size: .9375rem;
             }
 
             &:hover {
