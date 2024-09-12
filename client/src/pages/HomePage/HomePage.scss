@@ -3,22 +3,98 @@
 
 main {
     font-size: .8125rem;
+    // box-sizing: border-box;
 }
 
 .home {
     &__welcome {
-        background-color: $pale-green;
-        color: $white;
-        padding: 1rem;
+        
+        &-container {
+            background-color: $pale-green;
+            color: $white;
+            padding: 1rem;
+        }
 
         &-header {
             font-family: "Brittany Signature", sans-serif;
-            font-size: 32px;
+            font-size: 48px;
             margin: 0;
         }
 
         &-message {
+            width: 100%;
             margin-bottom: 0;
+        }
+
+        &-img {
+            width: auto;
+            height: 200px;
+        }
+    }
+
+    &__about {
+        &-container {
+            background-image: url("src/assets/images/home-about-bg.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 30vh;
+            @include flex-box(flex, row);
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.2);
+                z-index: 1;
+                box-sizing: border-box;
+            }
+        }
+
+        &-box {
+            background-color: $white;
+            @include flex-box(flex, column);
+            gap: 0.5rem;
+            width: 75%;
+            height: 65%;
+            z-index: 2;
+            padding: 1rem;
+        }
+
+        &-header {
+            font-family: "Brittany Signature", sans-serif;
+            font-size: 24px;
+            text-align: right;
+            margin: 0;
+        }
+
+        &-message { 
+            margin-top: 1.5rem;
+        }
+
+        &-btn {
+            @include btn($pale-green, .8125rem, $white);
+            width: 100%;
+            border: none;
+            border-radius: 1.25rem;
+            padding: 0.5rem 0;
+
+            &:hover {
+                background-color: $sage-green;
+                transition: 0.3s ease-in-out;
+            }
+        }
+    }
+
+    &__education {
+        
+        &-container {
+            background-color: $beige;
         }
     }
 }
