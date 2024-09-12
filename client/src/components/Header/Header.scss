@@ -11,13 +11,23 @@
     @include tablet {
         @include flex-box(flex, row);
         justify-content: space-between;
-        padding: 1.5rem;
+        padding: 1rem 1.5rem 1rem 1rem;
+    }
+
+    @include desktop {
+        @include flex-box(flex, row);
+        justify-content: space-between;
+        padding: 1rem 1.5rem 1rem 1rem;
     }
 
     &__logo {
         order: 1;
 
         @include tablet {
+            order: 1;
+        }
+
+        @include desktop {
             order: 1;
         }
         
@@ -27,7 +37,12 @@
 
             @include tablet {
                 width: auto;
-                height: 6.5rem;
+                height: 7rem;
+            }
+
+            @include desktop {
+                width: auto;
+                height: 7rem;
             }
         }
     }
@@ -38,6 +53,10 @@
 
         @include tablet {
             width: 20.5rem;
+            order: 2;
+        }
+
+        @include desktop {
             order: 2;
         }
     }
@@ -53,6 +72,11 @@
             padding-top: 1rem;
         }
 
+        @include desktop {
+            width: 9rem;
+            order: 3;
+        }
+
         &-btn {
             width: 95%;
             @include btn($pale-green, .8125rem, $white);
@@ -63,6 +87,11 @@
             @include tablet {
                 width: 100%;
                 font-size: .9375rem;
+            }
+
+            @include desktop {
+                width: 100%;
+                font-size: 0.9375rem;
             }
 
             &:hover {
