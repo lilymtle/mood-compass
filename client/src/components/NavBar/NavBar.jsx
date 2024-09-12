@@ -38,10 +38,18 @@ export function NavBar() {
                             <div className="dropdown__content">
                                 <ul className="dropdown__list">
                                     <li className="dropdown__item">
-                                        <a className="dropdown__link" href="/">Educational Resources</a>
+                                        <NavLink
+                                        to="/educational-resources"
+                                        className={({ isActive }) => `nav-bar__link ${isActive ? "active" : ""}`}>
+                                            Educational Resources
+                                        </NavLink>
                                     </li>
                                     <li className="dropdown__item">
-                                        <a className="dropdown__link" href="/">Coping Strategies</a>
+                                        <NavLink
+                                        to="/coping-strategies"
+                                        className={({ isActive }) => `nav-bar__link ${isActive ? "active" : ""}`}>
+                                            Coping Strategies
+                                        </NavLink>                                    
                                     </li>
                                 </ul>
                             </div>
