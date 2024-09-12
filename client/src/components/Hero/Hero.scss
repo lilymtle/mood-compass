@@ -46,14 +46,22 @@
         }
     }
 
-    &__header {
-        font-family: "Garet Book", sans-serif;
-        color: $sage-green;
-        font-size: 15px;
-        position: absolute;
-        top: 2rem;
-        left: 11rem;
-        text-transform: uppercase;
-        padding: 1rem;
+    &__text {
+        
+        &-container {
+            font-family: "Garet Book", sans-serif;
+            color: $sage-green;
+            font-size: 15px;
+            position: absolute;
+            top: 2rem;
+            left: 11rem;
+            text-transform: uppercase;
+            padding: 1rem;
+        }
+
+        &-important {
+            color: $forest-green;
+            font-style: italic;
+        }
     }
 }
