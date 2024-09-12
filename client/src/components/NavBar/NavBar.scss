@@ -5,6 +5,10 @@
     font-size: .8125rem;
     padding: 0 1rem;
 
+    @include tablet {
+        font-size: .9375rem;
+    }
+
     &__list {
         @include flex-box(flex, row);
         gap: 1rem;
@@ -38,6 +42,10 @@
         padding: 0;
         margin-bottom: 0.5rem;
 
+        @include tablet { 
+            font-size: .9375rem;
+        }
+
         &:hover {
             color: $pale-green;
             transition: 0.3s ease-in-out;
@@ -48,7 +56,7 @@
         visibility: hidden;
         position: absolute;
         background-color: $pale-green;
-        font-size: .8125rem;
+        font-size: .9375rem;
         min-width: 10px;
         padding: 0.5rem;
         box-shadow: 0 .5rem 1rem $sage-green;
@@ -58,6 +66,9 @@
         right: auto;
         transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 
+        @include tablet {
+            left: auto;
+        }
 
         & a {
             color: $white;
