@@ -1,10 +1,24 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 
+main {
+    font-size: .8125rem;
+}
+
 .home {
     &__welcome {
         background-color: $pale-green;
         color: $white;
         padding: 1rem;
+
+        &-header {
+            font-family: "Brittany Signature", sans-serif;
+            font-size: 32px;
+            margin: 0;
+        }
+
+        &-message {
+            margin-bottom: 0;
+        }
     }
 }
