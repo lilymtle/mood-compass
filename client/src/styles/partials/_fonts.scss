@@ -26,3 +26,10 @@
         url("../../assets/fonts/Garet-Book.woff") format("woff");
     font-display: swap;
 }
+
+@font-face {
+    font-family: "Brittany Signature";
+    src: url("../../assets/fonts/BrittanySignatureRegular.woff2") format("woff2"),
+        url("../../assets/fonts/BrittanySignatureRegular.woff") format("woff");
+    font-display: swap;
+}
