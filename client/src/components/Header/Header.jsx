@@ -1,6 +1,9 @@
+// import styling
+import "./Header.scss";
+
+// import components
 import { Button } from "../Button/Button";
 import { NavBar } from "../NavBar/NavBar";
-import "./Header.scss";
 
 export function Header() {
     return (
@@ -23,4 +26,4 @@ export function Header() {
             </div>
         </header>
     )
-}
+};
