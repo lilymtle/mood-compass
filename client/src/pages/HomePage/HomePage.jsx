@@ -2,8 +2,12 @@ import "./HomePage.scss";
 
 export function HomePage() {
     return (
-        <>
-            Home page placeholder
-        </>
+        <main>
+            <section className="home__container">
+                <div className="home__welcome">
+                    Hi.
+                </div>
+            </section>
+        </main>
     )
 }
