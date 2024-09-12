@@ -3,10 +3,11 @@
 
 .hero {
     &__container {
-        background-color: $silver;
-        background-image: url("/src/assets/images/hero.jpg");
-        background-size: cover;
+        background-image: url("src/assets/images/hero-bg.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
         height: 25vh;
+        position: relative;
 
         @include tablet {
             height: 50vh;
@@ -14,6 +15,33 @@
 
         @include desktop {
             height: 50vh;
+        }
+    }
+
+    &__overlay {
+        width: 100px;
+        height: auto;
+        position: relative;
+        top: 1.5rem;
+        left: 5rem;
+        z-index: 2;
+
+        &-img {
+            width: 100%;
+            height: 100%;
+            z-index: 3;
+        }
+
+        &::before {
+            content: "";
+            position: absolute; 
+            top: -12px;
+            left: -25px;
+            width: calc(100% + 20px);
+            height: calc(100% + 20px);
+            border: 2px solid white;
+            box-sizing: border-box;
+            z-index: 1;
         }
     }
 }
