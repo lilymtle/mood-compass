@@ -18,3 +18,11 @@
         url("../../assets/fonts/Montserrat-Medium.woff") format("woff");
     font-display: swap;
 }
+
+
+@font-face {
+    font-family: "Garet Book";
+    src: url("../../assets/fonts/Garet-Book.woff2") format("woff2"),
+        url("../../assets/fonts/Garet-Book.woff") format("woff");
+    font-display: swap;
+}
