@@ -11,7 +11,7 @@ export function Header() {
             <div className="header__logo">
                 <img
                 className="header__logo-img"
-                src="/src/assets/logo/mood-compass-logo.png"
+                src="/src/assets/logos/mood-compass-logo.png"
                 alt="moodcompass logo" />
             </div>
 
