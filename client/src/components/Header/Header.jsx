@@ -7,6 +7,8 @@ import { NavBar } from "../NavBar/NavBar";
 
 import { navigationHandler } from "../../utils/navigationHandler";
 
+import { Link } from "react-router-dom";
+
 
 export function Header() {
 
@@ -18,10 +20,12 @@ export function Header() {
     return (
         <header className="header">
             <div className="header__logo">
-                <img
-                className="header__logo-img"
-                src="/src/assets/logos/mood-compass-logo.png"
-                alt="moodcompass logo" />
+                <Link to="/">
+                    <img
+                    className="header__logo-img"
+                    src="/src/assets/logos/mood.png"
+                    alt="moodcompass logo" />
+                </Link>
             </div>
 
             <section className="header__navigation">
