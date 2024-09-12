@@ -101,7 +101,7 @@ export function HomePage() {
                                     alt="potted plant icon" />
 
                                     <h3 className="card__header"> 
-                                        Promotes Effective Coping Strategies
+                                        Promotes Effective Coping
                                     </h3>
 
                                     <p className="card__text">
@@ -114,6 +114,17 @@ export function HomePage() {
                             </li>
                         </ul>
                     </div>
+                </div>
+            </section>
+            <section className="home__quote">
+                <div className="home__quote-container">
+                    <p className="home__quote-text">
+                        Healing takes time, and asking for help is a 
+                        courageous step.
+                    </p>
+                    <p className="home__quote-author">
+                        –Mariska Hargitay
+                    </p>
                 </div>
             </section>
         </main>
