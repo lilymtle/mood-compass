@@ -5,7 +5,16 @@ import "./Header.scss";
 import { Button } from "../Button/Button";
 import { NavBar } from "../NavBar/NavBar";
 
+import { navigationHandler } from "../../utils/navigationHandler";
+
+
 export function Header() {
+
+    const navigateTo = navigationHandler();
+    const handleClick = () => {
+        navigateTo("/login");
+    };
+
     return (
         <header className="header">
             <div className="header__logo">
@@ -22,7 +31,8 @@ export function Header() {
             <div className="header__login">
                 <Button 
                 className="header__login-btn"
-                text="Login" />
+                text="Login"
+                onClick={handleClick} />
             </div>
         </header>
     )
