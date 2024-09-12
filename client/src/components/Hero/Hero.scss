@@ -32,7 +32,13 @@
             height: auto;
             top: 2.5rem;
             left: 7rem;
+        }
 
+        @include desktop {
+            width: 220px;
+            height: auto;
+            top: 2.25rem;
+            left: 7rem;
         }
 
         &-img {
@@ -55,6 +61,10 @@
             @include tablet {
                 left: -30px;
             }
+
+            @include desktop {
+                left: -30px;
+            }
         }
     }
 
@@ -75,6 +85,13 @@
                 top: 5rem;
                 left: 22rem;
                 padding: 0.5rem;
+            }
+
+            @include desktop {
+                font-size: 3rem;
+                top: 5rem;
+                left: 23.5rem;
+                padding: 1rem;
             }
         }
 
