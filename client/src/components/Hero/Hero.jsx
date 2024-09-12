@@ -3,7 +3,11 @@ import "./Hero.scss";
 export function Hero() {
     return (
         <>
-        <p>Placeholder for Hero</p>
+        <section className="hero">
+            <div className="hero__container">
+
+            </div>
+        </section>
         </>
     )
 }
