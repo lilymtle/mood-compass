@@ -9,11 +9,20 @@
         font-size: .9375rem;
     }
 
+    @include desktop {
+        font-size: .9375rem;
+    }
+
     &__list {
         @include flex-box(flex, row);
         gap: 1rem;
         list-style-type: none;
         padding: 0;
+
+        @include desktop {
+            @include flex-box(flex, row);
+            gap: 2rem;
+        }
     }
 
     &__link {
@@ -46,6 +55,10 @@
             font-size: .9375rem;
         }
 
+        @include desktop {
+            font-size: .9375rem;
+        }
+
         &:hover {
             color: $pale-green;
             transition: 0.3s ease-in-out;
@@ -56,7 +69,7 @@
         visibility: hidden;
         position: absolute;
         background-color: $pale-green;
-        font-size: .9375rem;
+        font-size: .8125rem;
         min-width: 10px;
         padding: 0.5rem;
         box-shadow: 0 .5rem 1rem $sage-green;
@@ -67,6 +80,12 @@
         transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 
         @include tablet {
+            font-size: .9375rem;
+            left: auto;
+        }
+
+        @include desktop {
+            font-size: .9375rem;
             left: auto;
         }
 
