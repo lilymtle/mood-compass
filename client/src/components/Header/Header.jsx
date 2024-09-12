@@ -23,7 +23,7 @@ export function Header() {
                 <Link to="/">
                     <img
                     className="header__logo-img"
-                    src="/src/assets/logos/mood.png"
+                    src="/src/assets/logos/mood-compass-logo.png"
                     alt="moodcompass logo" />
                 </Link>
             </div>
