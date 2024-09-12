@@ -14,21 +14,21 @@ export function NavBar() {
                     <li className="nav-bar__item">
                         <NavLink
                         to="/"
-                        className={({ isActive }) => `nav-bar__item ${isActive ? "active" : ""}`}>
+                        className={({ isActive }) => `nav-bar__link ${isActive ? "active" : ""}`}>
                             Home
                         </NavLink>
                     </li>
                     <li className="nav-bar__item">
                         <NavLink
                         to="/about"
-                        className={({ isActive}) => `nav-bar__item ${isActive ? "active" : ""}`}>
+                        className={({ isActive}) => `nav-bar__link ${isActive ? "active" : ""}`}>
                             About
                         </NavLink>
                     </li>
                     <li className="nav-bar__item">
                         <NavLink
                         to="/moods-list"
-                        className={({ isActive }) => `nav-bar__item ${isActive ? "active" : ""}`}>
+                        className={({ isActive }) => `nav-bar__link ${isActive ? "active" : ""}`}>
                             Moods
                         </NavLink>
                     </li>
@@ -40,14 +40,14 @@ export function NavBar() {
                                     <li className="dropdown__item">
                                         <NavLink
                                         to="/educational-resources"
-                                        className={({ isActive }) => `nav-bar__link ${isActive ? "active" : ""}`}>
+                                        className={({ isActive }) => `nav-bar__link-dropdown ${isActive ? "active" : ""}`}>
                                             Educational Resources
                                         </NavLink>
                                     </li>
                                     <li className="dropdown__item">
                                         <NavLink
                                         to="/coping-strategies"
-                                        className={({ isActive }) => `nav-bar__link ${isActive ? "active" : ""}`}>
+                                        className={({ isActive }) => `nav-bar__link-dropdown ${isActive ? "active" : ""}`}>
                                             Coping Strategies
                                         </NavLink>                                    
                                     </li>
