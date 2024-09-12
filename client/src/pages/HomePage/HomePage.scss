@@ -95,6 +95,40 @@ main {
         
         &-container {
             background-color: $beige;
+            padding: 1rem;
         }
+
+        &-header {
+            font-family: "Garet Book", sans-serif;
+            font-size: 24px;
+
+            &--script {
+                font-family: "Brittany Signature", sans-serif;
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+.card {
+
+    &__header {
+        font-size: 14px;
+    }
+
+    &__container {
+        @include flex-box(flex, column);
+        align-items: center;
+    }
+
+    &__list {
+        // align-items: center;
+        list-style-type: none;
+        padding: 0;
+    }
+
+    &__icon {
+        width: 1.5rem;
+        height: 1.5rem;
     }
 }
