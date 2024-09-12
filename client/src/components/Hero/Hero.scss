@@ -1,2 +1,19 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
+
+.hero {
+    &__container {
+        background-color: $silver;
+        background-image: url("/src/assets/images/hero.jpg");
+        background-size: cover;
+        height: 25vh;
+
+        @include tablet {
+            height: 50vh;
+        }
+
+        @include desktop {
+            height: 50vh;
+        }
+    }
+}
