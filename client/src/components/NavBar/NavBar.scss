@@ -2,7 +2,7 @@
 @use "../../styles/partials/mixins" as *;
 
 .nav-bar {
-    font-size: 1rem;
+    font-size: .8125rem;
     padding: 0 1rem;
 
     &__list {
@@ -33,7 +33,7 @@
     }
 
     &__btn {
-        @include btn(transparent, 1rem, $global-text);
+        @include btn(transparent, .8125rem, $global-text);
         border: none;
         padding: 0;
         margin-bottom: 0.5rem;
@@ -48,13 +48,13 @@
         visibility: hidden;
         position: absolute;
         background-color: $pale-green;
-        font-size: .75rem;
+        font-size: .8125rem;
         min-width: 10px;
         padding: 0.5rem;
         box-shadow: 0 .5rem 1rem $sage-green;
         z-index: 1;
         top: 100%;
-        left: -1rem;
+        left: -3rem;
         right: auto;
         transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 
