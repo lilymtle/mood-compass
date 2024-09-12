@@ -1,6 +1,8 @@
 // import styling
 import "./NavBar.scss";
 
+import { NavLink } from "react-router-dom";
+
 // import components
 import { Button } from "../Button/Button";
 
@@ -10,16 +12,25 @@ export function NavBar() {
             <div className="nav-bar__container">
                 <ul className="nav-bar__list">
                     <li className="nav-bar__item">
-                        <a className="nav-bar__link" href="/">Home</a>
+                        <NavLink
+                        to="/"
+                        className={({ isActive }) => `nav-bar__item ${isActive ? "active" : ""}`}>
+                            Home
+                        </NavLink>
                     </li>
                     <li className="nav-bar__item">
-                        <a className="nav-bar__link" href="/">About</a>
+                        <NavLink
+                        to="/about"
+                        className={({ isActive}) => `nav-bar__item ${isActive ? "active" : ""}`}>
+                            About
+                        </NavLink>
                     </li>
                     <li className="nav-bar__item">
-                        <a className="nav-bar__link" href="/">Profile</a>
-                    </li>
-                    <li className="nav-bar__item">
-                        <a className="nav-bar__link" href="/">Moods</a>
+                        <NavLink
+                        to="/moods-list"
+                        className={({ isActive }) => `nav-bar__item ${isActive ? "active" : ""}`}>
+                            Moods
+                        </NavLink>
                     </li>
                     <li className="nav-bar__item">
                         <div className="dropdown">
