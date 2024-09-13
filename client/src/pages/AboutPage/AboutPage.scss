@@ -1,2 +1,27 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
+
+.about {
+    &__mood-compass {
+        &-container {
+            background-color: $sage-green;
+            color: $white;
+            padding: 1rem;
+        }
+    }
+
+    &__me { 
+        &-container {
+            background-color: $beige;
+            padding: 1rem;
+        }
+    }
+
+    &__values {
+        &-container {
+            background-color: $forest-green;
+            color: $white;
+            padding: 1rem;
+        }
+    }
+}
