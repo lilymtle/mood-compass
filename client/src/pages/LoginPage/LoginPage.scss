@@ -47,6 +47,23 @@
             font-size: .8125rem;
         }
     }
+
+    &__btn {
+        width: 100%;
+        background-color: $beige;
+        font-family: "Garet Book", sans-serif;
+        font-size: .8125rem;
+        color: $global-text;
+        border-radius: 1.25rem;
+        border: 0;
+        padding: 0.5rem 0;
+
+        &:hover {
+            background-color: $white;
+            transition: 0.3s ease-in-out;
+            cursor: pointer;
+        }
+    }
     
     &__message {
         min-width: 100%;
@@ -81,6 +98,7 @@
             padding: 1rem;
             z-index: 2;
             color: $white;
+            text-align: center;
             // box-sizing: border-box;
         }
 
@@ -88,7 +106,20 @@
             font-family: "Brittany Signature", sans-serif;
             font-size: 48px;
             margin: 0;
-
         }
+
+        &-text {
+            margin-top: 1rem;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.register {
+    &__text {
+        color: $white;
+        font-size: .8125rem;
+        text-align: center;
+        margin: 0;
     }
 }
