@@ -9,6 +9,18 @@
         padding: 1rem;
     }
 
+    &__content-container {
+        &--box {
+            width: 90%;
+            height: 90%;
+            background-color: $white;
+            color: $global-text;
+            padding: 0.5rem 1rem;
+            border-radius: 1.25rem;
+            opacity: 80%;
+        }
+    }
+
     &__header {
         font-family: "Brittany Signature", sans-serif;
         font-size: 48px;
@@ -19,11 +31,12 @@
         font-family: "Garet Book", sans-serif;
         font-size: 16px;
         font-style: italic;
-        margin: 1.5rem 0 0.5rem 0;
+        margin: 1rem 0 0.5rem 0;
     }
 
-    &-text {
+    &__text {
         margin: 0;
+        padding-bottom: 1rem;
     }
 
     &__values {
