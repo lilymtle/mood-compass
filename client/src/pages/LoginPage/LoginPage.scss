@@ -6,7 +6,46 @@
     @include flex-box(flex, column);
 
     &__container {
+        background-color: $pale-green;
+        padding: 1rem;
         order: 2;
+    }
+
+    &__header {
+        color: $white;
+        font-family: "Brittany Signature", sans-serif;
+        font-size: 32px;
+        text-align: center;
+        margin: 0;
+    }
+
+    &__form {
+        text-align: center;
+        margin: 1.5rem 0;
+    }
+
+    &__label {
+        color: $white;
+        font-family: "Garet Book", sans-serif;
+        text-transform: uppercase;
+        margin: 0;
+        padding-bottom: .25rem;
+    }
+
+    &__input {
+        width: 100%;
+        font-family: "Garet Book", sans-serif;
+        font-size: .8125rem;
+        color: $forest-green;
+        padding: 0.5rem 1rem;
+        border-radius: 1.25rem;
+        border: none;
+        margin-bottom: 1rem;
+
+        &::placeholder {
+            font-family: "Garet Book", sans-serif;
+            font-size: .8125rem;
+        }
     }
     
     &__message {
@@ -49,7 +88,7 @@
             font-family: "Brittany Signature", sans-serif;
             font-size: 48px;
             margin: 0;
-            
+
         }
     }
 }
