@@ -2,13 +2,16 @@
 @use "./variables" as *;
 @use "./mixins" as *;
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: $light-grey;
     font-family: "Montserrat", sans-serif;
     color: $global-text;
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
 }
 
 a {
