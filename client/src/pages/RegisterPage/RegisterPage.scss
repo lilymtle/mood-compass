@@ -135,38 +135,4 @@
             margin: 0;
         }
     }
-
-    // &__quote {
-    //     order: 3;
-
-    //     &-container {
-    //         background-image: url("src/assets/images/register-page-img-2.jpg");
-    //         background-size: cover;
-    //         background-position: center;    
-    //         width: 100%;
-    //         height: 80%;
-    //         padding: 1rem;
-    //         position: relative;
-
-    //         &::before {
-    //             content: "";
-    //             position: absolute;
-    //             top: 0;
-    //             left: 0;
-    //             width: 100%;
-    //             height: 100%;
-    //             background-color: rgba(0, 0, 0, 0.1);
-    //             z-index: 1;
-    //         }
-    //     }
-
-    //     &-box {
-    //         background-color: $white;
-    //         width: 100%;
-    //         height: 100%;
-    //         text-align: center;
-    //         position: relative;
-    //         z-index: 2;
-    //     }
-    // }
 }

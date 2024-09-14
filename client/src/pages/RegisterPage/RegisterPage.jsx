@@ -68,17 +68,6 @@ export function RegisterPage() {
                         </div>
                     </div>
                 </div>
-
-
-                {/* <div className="register__quote">
-                    <div className="register__quote-container">
-                        <div className="register__quote-box">
-                            <p className="register__quote-text">
-                            Text
-                            </p>
-                        </div>
-                    </div>
-                </div> */}
             </section>
         </main>
     )
