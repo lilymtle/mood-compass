@@ -1,10 +1,15 @@
+// import styling
+import "./styles/partials/_global.scss";
+
+// import browsers
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+// import components
 import { Footer } from "./components/Footer/Footer";
 import { Header } from "./components/Header/Header";
 import { Hero } from "./components/Hero/Hero";
-import "./styles/partials/_global.scss";
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-
+// import pages
 import { HomePage } from "./pages/HomePage/HomePage.jsx";
 import { AboutPage } from "./pages/AboutPage/AboutPage.jsx";
 import { MoodsPage } from "./pages/MoodsPage/MoodsPage.jsx";
