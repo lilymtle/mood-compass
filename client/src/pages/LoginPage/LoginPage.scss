@@ -2,6 +2,16 @@
 @use "../../styles/partials/variables.scss" as *;
 @use "../../styles/partials/mixins.scss" as *;
 
+a {
+    color: $forest-green;
+
+    &:hover {
+        color: $light-grey;
+        text-decoration: underline;
+        transition: 0.3s ease-in-out;
+    }
+}
+
 .login {
     @include flex-box(flex, column);
 
@@ -39,12 +49,17 @@
         color: $forest-green;
         padding: 0.5rem 1rem;
         border-radius: 1.25rem;
-        border: none;
+        border: .125rem solid transparent;
         margin-bottom: 1rem;
 
         &::placeholder {
             font-family: "Garet Book", sans-serif;
             font-size: .8125rem;
+        }
+
+        &:focus {
+            border: .125rem solid $grey;
+            outline: none;
         }
     }
 
