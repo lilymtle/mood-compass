@@ -21,15 +21,20 @@ export function AboutPage() {
                         </p>
                     </div>
 
-                    <div className="about__content-container">
+                    <div className="about__content-container--box">
                         <h2 className="about__subheader">
-                                The Person
+                                Why MoodCompass?
                         </h2>
                         <p className="about__text">
-                            My name is Lily, and I worked as a 
-                            registered nurse for over 5 years. I specialized
-                            in mental health and addicitons, and dedicated
-                            my entire nursing career to it.
+                            I worked as a registered nurse for over 5 years and I specialized in
+                            mental health and addictions. As someone who worked with individuals
+                            who experienced mental health issues, and as someone with lived 
+                            experience, advocating for mental health is close to my heart. 
+                        </p>
+                        <p className="about__text">
+                            One of my goals with MoodCompass is to create a safe space where
+                            individuals can navigate through difficult emotions. I strongly
+                            believe that knowledge is a powerful tool that can change lives.
                         </p>
                     </div>
                 </div>
