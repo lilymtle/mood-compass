@@ -17,14 +17,14 @@ export function LoginPage() {
                         Login
                     </h1>
                     <form className="login__form">
-                        <div className="login__username">
+                        <div className="login__email">
                             <p className="login__label">
-                                Username
+                                Email
                             </p>
                             <InputFormField 
                             className="login__input"
-                            type="text"
-                            placeholder="Enter username" />
+                            type="email"
+                            placeholder="Email" />
                         </div>
                         <div className="login__password">
                             <p className="login__label">
@@ -33,7 +33,7 @@ export function LoginPage() {
                             <InputFormField
                             className="login__input"
                             type="password"
-                            placeholder="Enter password" />
+                            placeholder="Password" />
                         </div>
                         <div className="login__btn-container">
                             <Button 
