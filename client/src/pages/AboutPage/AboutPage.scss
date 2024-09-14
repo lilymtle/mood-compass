@@ -3,60 +3,27 @@
 @use "../../styles/partials/mixins" as *;
 
 .about {
-    &__mood-compass {
-        &-container {
-            background-color: $sage-green;
-            color: $white;
-            padding: 1rem;
-        }
-
-        &-header {
-            font-family: "Brittany Signature", sans-serif;
-            font-size: 48px;
-            margin: 0;
-        }
+    &__container {
+        background-color: $sage-green;
+        color: $white;
+        padding: 1rem;
     }
 
-    &__me { 
-        &-container {
-            background-color: $beige;
-            @include flex-box(flex,row);
-            justify-content: space-between;
-            flex-wrap: wrap;
-            padding: 1rem;
+    &__header {
+        font-family: "Brittany Signature", sans-serif;
+        font-size: 48px;
+        margin: 0;
+    }
 
-            &--left {
-                @include flex-box(flex, column);
-                justify-content: center;
-                order: 1;
-            }
+    &__subheader {
+        font-family: "Garet Book", sans-serif;
+        font-size: 16px;
+        font-style: italic;
+        margin: 1.5rem 0 0.5rem 0;
+    }
 
-            &--right {
-                width: 68%;
-                order: 2;
-            }
-
-            &--bottom {
-                order: 3;
-            }
-        }
-
-        &-header {
-            font-family: "Brittany Signature", sans-serif;
-            font-size: 24px;
-            text-align: right;
-            margin: 0;
-        }
-
-        &-placeholder {
-            width: 75px;
-            height: 75px;
-            background-color: $grey;
-            border-radius: 50%;
-        }
-
-        &-text {
-        }
+    &-text {
+        margin: 0;
     }
 
     &__values {
@@ -64,7 +31,7 @@
             background-color: $forest-green;
             background-image: url("src/assets/images/about-values-img.jpg");
             background-size: cover;
-            height: 98vh;
+            height: 30vh;
             padding: 1rem;
         }
 
@@ -79,74 +46,6 @@
             font-family: "Brittany Signature", sans-serif;
             font-size: 24px;
             margin: 0;
-        }
-    }
-
-    &__cards {
-        &-list {
-            @include flex-box(flex, column);
-            gap: 1rem;
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-    }
-
-    &__card {
-        display: block;
-        position: relative;
-        top: 7vw;
-        width: 90%;
-        height: 125px;
-        margin: auto;
-        box-shadow: 0 2px 10px rgba(#000, 0.85);
-        transition: all 450ms ease-out 0s;
-        overflow: hidden;
-        font-family: "Garet Book", sans-serif;
-
-        &-img {
-            position: absolute;
-            min-width: 100%;
-            min-height: 100%;
-            height: 100%;
-            top: -9999px;
-            left: -9999px;
-            right: -9999px;
-            bottom: -9999px;
-            margin: auto;
-            overflow: hidden;
-        }
-
-        &:hover {
-            box-shadow: 0 2px 35px rgba(#000, 0.85);
-
-            .about__card-text-overlay {
-                background: rgba(#fff, 0.8);
-                height: 50%;
-                top: 50%;
-                transition: all 450ms ease-in-out 0s;
-            }
-        }
-
-        &-text-overlay {
-            position: relative;
-            background: rgba(#fff, 0.6);
-            width: 100%;
-            height: 40%;
-            top: 60%;
-            box-shadow: 0 -2px 12px rgba(#000, 0.3);
-            padding: 10px 12px;
-            overflow: hidden;
-            transition: all 450ms ease-in-out 0s;
-            cursor: pointer;
-        }
-
-        &-title {
-            font-size: .875rem;
-        }
-
-        &-text {
-            font-size: .8125rem;
         }
     }
 }
