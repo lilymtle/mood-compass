@@ -56,14 +56,29 @@ export function RegisterPage() {
                 <div className="register__message">
                     <div className="register__message-container">
                         <h1 className="register__message-header">
-                            Header
+                            Thank you,
                         </h1>
 
-                        <p className="register__message-text">
-                            Text
-                        </p>
+                        <div className="register__message-box">
+                            <p className="register__message-text">
+                                One of the hardest things to do is taking that first step.
+                                You showed tremendous strength by registering today. That is 
+                                something you should be proud of, and I hope you are.
+                            </p>
+                        </div>
                     </div>
                 </div>
+
+
+                {/* <div className="register__quote">
+                    <div className="register__quote-container">
+                        <div className="register__quote-box">
+                            <p className="register__quote-text">
+                            Text
+                            </p>
+                        </div>
+                    </div>
+                </div> */}
             </section>
         </main>
     )
