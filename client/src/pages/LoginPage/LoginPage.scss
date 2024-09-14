@@ -3,6 +3,11 @@
 @use "../../styles/partials/mixins.scss" as *;
 
 .login {
+    @include flex-box(flex, column);
+
+    &__container {
+        order: 2;
+    }
     
     &__message {
         min-width: 100%;
@@ -11,9 +16,10 @@
             background-image: url("src/assets/images/login-page-img.jpg");
             background-size: cover;
             background-position: bottom;
-            height: 20vh;
+            height: 100%;
             position: relative;
             padding: 1rem;
+            order: 1;
             // box-sizing: border-box;
 
             &::before {
@@ -30,12 +36,20 @@
         }
 
         &-box {
-            background-color: $white;
+            background-color: rgba(0, 0, 0, 0.4);
             width: 100%;
             position: relative;
             padding: 1rem;
             z-index: 2;
+            color: $white;
             // box-sizing: border-box;
+        }
+
+        &-header {
+            font-family: "Brittany Signature", sans-serif;
+            font-size: 48px;
+            margin: 0;
+            
         }
     }
 }
