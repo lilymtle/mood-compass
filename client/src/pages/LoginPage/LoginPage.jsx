@@ -1,7 +1,10 @@
 // import styling
 import "./LoginPage.scss";
 
-// import 
+// import libraries
+import { Link } from "react-router-dom";
+
+// import components
 import { Button } from "../../components/Button/Button";
 import { InputFormField } from "../../components/FormFields/InputFormField/InputFormField";
 
@@ -45,7 +48,7 @@ export function LoginPage() {
                                 Don't have an account?
                             </p>
                             <p className="register__text">
-                                No worries, you can register here!
+                                No worries, you can register <Link to="/register">here</Link>.
                             </p>
                         </div>
                     </section>
