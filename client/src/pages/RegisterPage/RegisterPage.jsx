@@ -18,7 +18,7 @@ export function RegisterPage() {
                             <label htmlFor="name">
                                 <p className="register__label">Name</p>
                                 <InputFormField
-                                className="register__input"
+                                className="register__input-name"
                                 type="text"
                                 placeholder="Name" />
                             </label>
@@ -28,7 +28,7 @@ export function RegisterPage() {
                             <label htmlFor="email">
                                 <p className="register__label">Email</p>
                                 <InputFormField
-                                className="register__input"
+                                className="register__input-email"
                                 type="email"
                                 placeholder="Email" />
                             </label>
@@ -38,7 +38,7 @@ export function RegisterPage() {
                             <label htmlFor="password">
                                 <p className="register__label">Password</p>
                                 <InputFormField
-                                className="register__input"
+                                className="register__input-password"
                                 type="password"
                                 placeholder="Password" />
                             </label>

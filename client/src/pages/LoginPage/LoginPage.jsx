@@ -22,7 +22,7 @@ export function LoginPage() {
                                 Email
                             </p>
                             <InputFormField 
-                            className="login__input"
+                            className="login__input-email"
                             type="email"
                             placeholder="Email" />
                         </div>
@@ -31,7 +31,7 @@ export function LoginPage() {
                                 Password
                             </p>
                             <InputFormField
-                            className="login__input"
+                            className="login__input-password"
                             type="password"
                             placeholder="Password" />
                         </div>
