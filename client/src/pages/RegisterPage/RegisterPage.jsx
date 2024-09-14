@@ -24,6 +24,16 @@ export function RegisterPage() {
                             </label>
                         </div>
 
+                        <div className="register__username-container">
+                            <label htmlFor="name">
+                                <p className="register__label">Username</p>
+                                <InputFormField
+                                className="register__input"
+                                type="text"
+                                placeholder="Enter your username" />
+                            </label>
+                        </div>
+
                         <div className="register__email-container">
                             <label htmlFor="email">
                                 <p className="register__label">Email</p>
