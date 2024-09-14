@@ -16,7 +16,7 @@ export function LoginPage() {
                     <form className="login__form">
                         <div className="login__username">
                             <p className="login__label">
-                                Username:
+                                Username
                             </p>
                             <InputFormField 
                             className="login__input"
@@ -25,7 +25,7 @@ export function LoginPage() {
                         </div>
                         <div className="login__password">
                             <p className="login__label">
-                                Password:
+                                Password
                             </p>
                             <InputFormField
                             className="login__input"
@@ -58,8 +58,8 @@ export function LoginPage() {
                                 Welcome back!
                             </h2>
                             <p className="login__message-text">
-                            Happy to see you back at MoodCompass. May today bring you additional
-                            comfort and progress in your healing journey.
+                            I am happy to see you back at MoodCompass. May today bring you
+                            additional comfort and progress in your healing journey.
                             </p>
                         </div>
                     </div>
