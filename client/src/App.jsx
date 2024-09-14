@@ -17,6 +17,7 @@ import { EducationalResourcesPage } from "./pages/EducationalResourcesPage/Educa
 import { CopingStrategiesPage } from "./pages/CopingStrategiesPage/CopingStrategiesPage.jsx";
 import { LoginPage } from "./pages/LoginPage/LoginPage.jsx";
 import { NotFoundPage } from "./pages/NotFoundPage/NotFoundPage.jsx";
+import { RegisterPage } from "./pages/RegisterPage/RegisterPage.jsx";
 
 function App() {
 
@@ -32,6 +33,7 @@ function App() {
         <Route path="/educational-resources" element={ <EducationalResourcesPage /> } />
         <Route path="/coping-strategies" element={ <CopingStrategiesPage /> } />
         <Route path="/login" element={ <LoginPage /> } />
+        <Route path="/register" element={ <RegisterPage /> } />
         <Route path="*" element={ <NotFoundPage /> } />
       </Routes>
 
