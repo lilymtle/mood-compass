@@ -36,7 +36,7 @@ export function RegisterPage() {
 
                         <div className="register__password-container">
                             <label htmlFor="password">
-                                <p className="regiser__label">Password</p>
+                                <p className="register__label">Password</p>
                                 <InputFormField
                                 className="register__input"
                                 type="password"
