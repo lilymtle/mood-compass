@@ -11,8 +11,8 @@
 
     &__content-container {
         &--box {
-            width: 90%;
-            height: 90%;
+            width: 100%;
+            height: 100%;
             background-color: $white;
             color: $global-text;
             padding: 0.5rem 1rem;
@@ -49,8 +49,8 @@
         }
 
         &-box {
-            width: 90%;
-            height: 96%;
+            width: 100%;
+            height: 100%;
             background-color: $white;
             padding: 1rem;
         }
