@@ -1,2 +1,131 @@
+@use "../../styles/partials/fonts" as *;
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
+
+.moods {
+    &__container {
+        background-color: $forest-green;
+        padding: 1rem;
+    }
+
+    &__header {
+        font-family: "Brittany Signature", sans-serif;
+        color: $white;
+        font-size: 48px;
+        margin: 0;
+    }
+
+    &__text {
+        color: $white;
+        margin-top: 1.5rem;
+    }
+    
+}
+
+.moods-list {
+    list-style: none;
+    margin: 0;
+    padding: 1rem;
+    
+    &__container {
+        background-image: url("src/assets/images/moods-list-bg.jpg");
+        background-size: cover;
+        background-position: bottom;
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        min-height: 11rem;
+        overflow: hidden;
+        border-radius: 1.25rem;
+        text-decoration: none;
+        background: white;
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+        box-shadow: 0 1.5em 2.5em -.5em rgba(#000000, .1);
+        transition: transform .45s ease, background .45s ease;
+
+        &:hover {
+            background: $forest-green;
+            transform: scale(1.02);
+            
+            .moods-list__number {
+                color: #FFFFFF;
+                border-bottom-color: $pale-green;
+            }
+        
+            .moods-list__title {
+                color: #FFFFFF;
+            }
+        
+            .moods-list__text {
+                opacity: 1;
+                transform: none;
+            }
+        
+            .moods-list-_link {
+                color: #FFFFFF;
+            }
+        }
+    }
+
+    &__number {
+        color: #2E3C40;
+        font-size: 3.5em;
+        font-weight: 600;
+        line-height: 1;
+        padding-bottom: .5em;
+        margin: 0 0 0.142857143em;
+        border-bottom: 2px solid $pale-green;
+        transition: color .45s ease, border .45s ease;
+    }
+
+    &__title {
+        color: #627084;
+        text-transform: uppercase;
+        font-size: 1.125em;
+        font-weight: 700;
+        line-height: 1;
+        letter-spacing: 0.1em;
+        margin: 0 0 1.777777778em;
+        transition: color .45s ease;
+    }
+
+    &__text {
+        opacity: 0;
+        color: #FFFFFF;
+        font-weight: 600;
+        line-height: 1.8;
+        margin: 0 0 1.25em;
+        transform: translateY(-1em);
+        transition: opacity .45s ease, transform .5s ease;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: $pale-green;
+        font-size: 1.125em;
+        font-weight: 600;
+        line-height: 1.2;
+        margin: auto 0 0;
+        transition: color .45s ease;
+        }
+    
+    &__icon {
+        width: 1rem;
+        height: 1rem;
+    }
+}
+
+@keyframes point {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(.125em);
+    }
+}
