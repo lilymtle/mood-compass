@@ -43,23 +43,40 @@ a {
     }
 
     &__input {
-        width: 100%;
-        font-family: "Garet Book", sans-serif;
-        font-size: .8125rem;
-        color: $forest-green;
-        padding: 0.5rem 1rem;
-        border-radius: 1.25rem;
-        border: .125rem solid transparent;
-        margin-bottom: 1rem;
 
-        &::placeholder {
+        &-email, &-password {
+            width: 100%;
             font-family: "Garet Book", sans-serif;
             font-size: .8125rem;
+            color: $forest-green;
+            padding: 0.5rem 3rem 0.5rem 1rem;
+            border-radius: 1.25rem;
+            border: .125rem solid transparent;
+            margin-bottom: 1rem;
+    
+            &::placeholder {
+                font-family: "Garet Book", sans-serif;
+                font-size: .8125rem;
+            }
+    
+            &:focus {
+                border: .125rem solid $grey;
+                outline: none;
+            }
         }
 
-        &:focus {
-            border: .125rem solid $grey;
-            outline: none;
+        &-email {
+            background-image: url("src/assets/icons/login-email-icon.svg");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 1.2rem;
+        }
+
+        &-password {
+            background-image: url("src/assets/icons/login-password-icon.svg");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 1.2rem;
         }
     }
 

@@ -53,26 +53,50 @@
     }
 
     &__input {
-        width: 100%;
-        background-color: $forest-green;
-        font-family: "Garet Book", sans-serif;
-        font-size: .8125rem;
-        color: $white;
-        padding: 0.5rem 1rem;
-        border-radius: 1.25rem;
-        border: .125rem solid transparent;
-        margin-bottom: 1rem;
 
-        &::placeholder {
+        &-name, &-email, &-password {
+            width: 100%;
+            background-color: $forest-green;
             font-family: "Garet Book", sans-serif;
-            color: $white;
             font-size: .8125rem;
+            color: $white;
+            padding: 0.5rem 3rem 0.5rem 1rem;
+            border-radius: 1.25rem;
+            border: .125rem solid transparent;
+            margin-bottom: 1rem;
+
+            &::placeholder {
+                font-family: "Garet Book", sans-serif;
+                color: $white;
+                font-size: .8125rem;
+            }
+
+            &:focus {
+                background-color: $sage-green;
+                border: .125rem solid $grey;
+                outline: none;
+            }
         }
 
-        &:focus {
-            background-color: $sage-green;
-            border: .125rem solid $grey;
-            outline: none;
+        &-name {
+            background-image: url("src/assets/icons/register-name-icon.svg");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 1.2rem;
+        }
+
+        &-email {
+            background-image: url("src/assets/icons/register-email-icon.svg");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 1.2rem;
+        }
+
+        &-password {
+            background-image: url("src/assets/icons/register-password-icon.svg");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 1.2rem;
         }
     }
 
