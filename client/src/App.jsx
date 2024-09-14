@@ -18,6 +18,7 @@ import { CopingStrategiesPage } from "./pages/CopingStrategiesPage/CopingStrateg
 import { LoginPage } from "./pages/LoginPage/LoginPage.jsx";
 import { NotFoundPage } from "./pages/NotFoundPage/NotFoundPage.jsx";
 import { RegisterPage } from "./pages/RegisterPage/RegisterPage.jsx";
+import { ProfilePage } from "./pages/ProfilePage/ProfilePage.jsx";
 
 function App() {
 
@@ -34,6 +35,7 @@ function App() {
         <Route path="/coping-strategies" element={ <CopingStrategiesPage /> } />
         <Route path="/login" element={ <LoginPage /> } />
         <Route path="/register" element={ <RegisterPage /> } />
+        <Route path="/profile" element={ <ProfilePage /> } />
         <Route path="*" element={ <NotFoundPage /> } />
       </Routes>
 
