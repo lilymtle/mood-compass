@@ -44,6 +44,16 @@ export function RegisterPage() {
                             </label>
                         </div>
 
+                        <div className="register__password-container">
+                            <label htmlFor="confirm-password">
+                                <p className="register__label">Confirm Password</p>
+                                <InputFormField
+                                className="register__input-password"
+                                type="password"
+                                placeholder="Password" />
+                            </label>
+                        </div>
+
                         <div className="register__btn-container">
                             <Button
                             className="register__btn"
