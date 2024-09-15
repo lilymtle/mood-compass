@@ -27,7 +27,7 @@ export function NavBar() {
                     </li>
                     <li className="nav-bar__item">
                         <NavLink
-                        to="/moods-list"
+                        to="/moods"
                         className={({ isActive }) => `nav-bar__link ${isActive ? "active" : ""}`}>
                             Moods
                         </NavLink>
