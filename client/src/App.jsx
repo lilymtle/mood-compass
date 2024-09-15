@@ -13,6 +13,7 @@ import { Hero } from "./components/Hero/Hero";
 import { HomePage } from "./pages/HomePage/HomePage.jsx";
 import { AboutPage } from "./pages/AboutPage/AboutPage.jsx";
 import { MoodsPage } from "./pages/MoodsPage/MoodsPage.jsx";
+import { MoodPage } from "./pages/MoodsPage/MoodPage/MoodPage.jsx";
 import { EducationalResourcesPage } from "./pages/EducationalResourcesPage/EducationalResourcesPage.jsx";
 import { CopingStrategiesPage } from "./pages/CopingStrategiesPage/CopingStrategiesPage.jsx";
 import { LoginPage } from "./pages/LoginPage/LoginPage.jsx";
@@ -34,7 +35,8 @@ function App() {
         <Routes>
           <Route path="/" element={ <HomePage /> } />
           <Route path="/about" element={ <AboutPage /> } />
-          <Route path="/moods-list" element={ <MoodsPage /> } />
+          <Route path="/moods" element={ <MoodsPage /> } />
+          <Route path="/moods/:id" element={ <MoodPage /> } />
           <Route path="/educational-resources" element={ <EducationalResourcesPage /> } />
           <Route path="/coping-strategies" element={ <CopingStrategiesPage /> } />
           <Route path="/login" element={ <LoginPage /> } />
