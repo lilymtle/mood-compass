@@ -2,7 +2,7 @@
 import "./styles/partials/_global.scss";
 
 // import browsers
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // import components
 import { Footer } from "./components/Footer/Footer";
@@ -19,28 +19,39 @@ import { LoginPage } from "./pages/LoginPage/LoginPage.jsx";
 import { NotFoundPage } from "./pages/NotFoundPage/NotFoundPage.jsx";
 import { RegisterPage } from "./pages/RegisterPage/RegisterPage.jsx";
 import { ProfilePage } from "./pages/ProfilePage/ProfilePage.jsx";
+import { AuthProvider } from "./auth/AuthProvider.jsx";
+
+import { ProtectedRoute } from "./auth/ProtectedRoute.jsx";
 
 function App() {
 
   return (
-    <BrowserRouter>
-      <Header />
-      <Hero />
+    <AuthProvider>
+      <Router>
+        <Header />
+        <Hero />
 
-      <Routes>
-        <Route path="/" element={ <HomePage /> } />
-        <Route path="/about" element={ <AboutPage /> } />
-        <Route path="/moods-list" element={ <MoodsPage /> } />
-        <Route path="/educational-resources" element={ <EducationalResourcesPage /> } />
-        <Route path="/coping-strategies" element={ <CopingStrategiesPage /> } />
-        <Route path="/login" element={ <LoginPage /> } />
-        <Route path="/register" element={ <RegisterPage /> } />
-        <Route path="/profile" element={ <ProfilePage /> } />
-        <Route path="*" element={ <NotFoundPage /> } />
-      </Routes>
+        <Routes>
+          <Route path="/" element={ <HomePage /> } />
+          <Route path="/about" element={ <AboutPage /> } />
+          <Route path="/moods-list" element={ <MoodsPage /> } />
+          <Route path="/educational-resources" element={ <EducationalResourcesPage /> } />
+          <Route path="/coping-strategies" element={ <CopingStrategiesPage /> } />
+          <Route path="/login" element={ <LoginPage /> } />
+          <Route path="/register" element={ <RegisterPage /> } />
+          <Route 
+          path="profile"
+          element={
+            <ProtectedRoute>
+              <ProfilePage />
+            </ProtectedRoute>
+          } />
+          <Route path="*" element={ <NotFoundPage /> } />
+        </Routes>
 
-      <Footer />
-    </BrowserRouter>
+        <Footer />
+      </Router>
+    </AuthProvider>
   )
 }
 
