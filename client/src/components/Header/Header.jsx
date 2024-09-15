@@ -7,14 +7,30 @@ import { NavBar } from "../NavBar/NavBar";
 
 import { navigationHandler } from "../../utils/navigationHandler";
 
-import { Link } from "react-router-dom";
+
+import { useEffect, useState } from "react";
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "../../auth/firebaseAuth.js";
+import { Link, useNavigate } from "react-router-dom";
 
 
 export function Header() {
+    const [user, setUser] = useState(null);
+
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+            setUser(currentUser);
+        });
+        return () => unsubscribe;
+    }, []);
 
     const navigateTo = navigationHandler();
     const handleClick = () => {
-        navigateTo("/login");
+        if (user) {
+            navigateTo("/profile");
+        } else {
+            navigateTo("/login");
+        };
     };
 
     return (
@@ -35,7 +51,7 @@ export function Header() {
             <div className="header__login">
                 <Button 
                 className="header__login-btn"
-                text="Login"
+                text={user ? "Profile" : "Login"}
                 onClick={handleClick} />
             </div>
         </header>
