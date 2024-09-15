@@ -1,6 +1,56 @@
+/* this page displays a list of moods users can select to learn more about */
+
+// import styling
 import "./MoodsPage.scss";
 
+// import environment variable
+const baseURL = import.meta.env.VITE_API_BASE_URL;
+
+// import dependency
+import axios from "axios";
+
+// import hooks
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+
+// import component
+import { MoodCard } from "../../components/Cards/MoodCard/MoodCard";
+
 export function MoodsPage() {
+    const [moodsData, setMoodsData] = useState([]);
+    const [selectedMood, setSelectedMood] = useState({});
+    const { moodId } = useParams();
+
+    useEffect(() => {
+        const getMoods = async () => {
+            try {
+                const response = await axios.get(`${baseURL}/api/moods`);
+                console.log(response.data); 
+                setMoodsData(response.data);
+            } catch (error) {
+                console.error("Error retrieving moods:", error);
+            };
+        };
+        getMoods();
+    }, []);
+
+    // useEffect(() => {
+    //     if (!moodsData.length) {
+    //         return;
+    //     };
+
+    //     const selected = moodsData.find(mood => mood.id === moodId);
+    //     const getMood = async (id) => {
+    //         try {
+    //             const response = await axios.get(`${baseURL}/api/moods/${id}`);
+    //             setSelectedMood(response.data);
+    //         } catch (error) {
+    //             console.error("Error retrieveing specific mood:", error);
+    //         };
+    //     };
+    //     getMood(selected.id);
+    // }, [moodId, moodsData]);
+
 return (
     <main>
         <section className="moods">
@@ -18,44 +68,15 @@ return (
 
         <section className="moods-list__container">
             <ul className="moods-list">
-                <li className="moods-list__card">
-                    <h2 className="moods-list__number">
-                        01
-                    </h2>
-                    <h3 className="moods-list__title">
-                        Anxiety
-                    </h3>
-                    <p className="moods-list__text">
-                        Test
-                    </p>
-                    <span className="moods-list__link">
-                        Read More 
-                        <img 
-                        className="moods-list__icon"
-                        src="/src/assets/icons/arrow-forward.svg"
-                        alt="forward arrow icon" />
-                    </span>
-                </li>
-                <li className="moods-list__card">
-                    <h2 className="moods-list__number">
-                        02
-                    </h2>
-                    <h3 className="moods-list__title">
-                        Depression
-                    </h3>
-                    <p className="moods-list__text">
-                        Test
-                    </p>
-                    <span className="moods-list__link">
-                        Read More 
-                        <img 
-                        className="moods-list__icon"
-                        src="/src/assets/icons/arrow-forward.svg"
-                        alt="forward arrow icon" />
-                    </span>
-                </li>
+                {moodsData.map((mood) => (
+                    <MoodCard
+                    key={mood.id}
+                    id={mood.id}
+                    name={mood.name}
+                    shortDescription={mood.shortDescription} />
+                ))}
             </ul>
         </section>
     </main>
-    )
+    );
 };
