@@ -1,10 +1,12 @@
 import "./InputFormField.scss";
 
-export function InputFormField({ className, type, placeholder, onChange }) {
+export function InputFormField({ className, type, value, placeholder, onChange }) {
     return (
         <input
         className={className}
         type={type}
-        placeholder={placeholder} />
+        value={value}
+        placeholder={placeholder}
+        onChange={onChange} />
     )
 };
