@@ -3,7 +3,8 @@ import express from "express";
 import cors from "cors";
 import "dotenv/config";
 
-// import router
+// import routers
+import moodsRoute from "./routes/moods.js";
 
 // instantiate express
 const app = express();
@@ -14,9 +15,14 @@ const port = PORT || 8080;
 
 app.use(cors({ origin: CORS_ORIGIN }))
 
-app.get("/", (req, res) => {
-    res.send("Get works!");
-});
+// parses JSON bodies
+app.use(express.json());
+
+// app.get("/", (req, res) => {
+//     res.send("Get works!");
+// });
+
+app.use("/api/moods", moodsRoute);
 
 
 app.listen(port, () => {
