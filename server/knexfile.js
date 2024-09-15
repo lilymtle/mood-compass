@@ -6,5 +6,12 @@ export default {
     password: "rootroot",
     database: "mood_compass",
     charset: "utf8"
+  },
+  migrations: {
+    directory: "./migrations",
+    tableName: "knex_migrations"
+  },
+  seeds: {
+    directory: "./seeds"
   }
 };
