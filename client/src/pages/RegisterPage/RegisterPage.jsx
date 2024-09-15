@@ -5,7 +5,44 @@ import "./RegisterPage.scss";
 import { InputFormField } from "../../components/FormFields/InputFormField/InputFormField";
 import { Button } from "../../components/Button/Button";
 
+// import libraries/hooks
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../auth/firebaseAuth.js";
+
 export function RegisterPage() {
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [confirmPassword, setConfirmPassword] = useState("");
+    const [error, setError] = useState("");
+    const navigate = useNavigate();
+
+    const handleRegister = async (e) => {
+        e.preventDefault();
+
+        if (password !== confirmPassword) {
+            setError("Passwords do not match.");
+            return;
+        }
+
+        try {
+            await createUserWithEmailAndPassword(auth, email, password);
+            navigate("/profile");
+        } catch (error) {
+            console.error("Registration Error:", error);
+            setError(error.message);
+        };
+    };
+
+    // handle input changes
+    const handleNameChange = (e) => setName(e.target.value);
+    const handleEmailChange = (e) => setEmail(e.target.value);
+    const handlePasswordChange = (e) => setPassword(e.target.value);
+    const handleConfirmPasswordChange = (e) => setConfirmPassword(e.target.value);
+
     return (
         <main>
             <section className="register">
@@ -13,14 +50,19 @@ export function RegisterPage() {
                     <h2 className="register__header">
                         Register Now
                     </h2>
-                    <form className="register__form">
+                    {error && <p>Error</p>}
+                    <form 
+                    className="register__form"
+                    onSubmit={handleRegister}>
                         <div className="register__name-container">
                             <label htmlFor="name">
                                 <p className="register__label">Name</p>
                                 <InputFormField
                                 className="register__input-name"
                                 type="text"
-                                placeholder="Name" />
+                                value={name}
+                                placeholder="Name"
+                                onChange={handleNameChange} />
                             </label>
                         </div>
 
@@ -30,7 +72,9 @@ export function RegisterPage() {
                                 <InputFormField
                                 className="register__input-email"
                                 type="email"
-                                placeholder="Email" />
+                                value={email}
+                                placeholder="Email"
+                                onChange={handleEmailChange} />
                             </label>
                         </div>
 
@@ -40,7 +84,9 @@ export function RegisterPage() {
                                 <InputFormField
                                 className="register__input-password"
                                 type="password"
-                                placeholder="Password" />
+                                value={password}
+                                placeholder="Password"
+                                onChange={handlePasswordChange} />
                             </label>
                         </div>
 
@@ -50,7 +96,9 @@ export function RegisterPage() {
                                 <InputFormField
                                 className="register__input-password"
                                 type="password"
-                                placeholder="Password" />
+                                value={confirmPassword}
+                                placeholder="Password"
+                                onChange={handleConfirmPasswordChange} />
                             </label>
                         </div>
 

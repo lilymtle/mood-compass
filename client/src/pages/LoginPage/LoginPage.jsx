@@ -1,14 +1,39 @@
 // import styling
 import "./LoginPage.scss";
 
-// import libraries
-import { Link } from "react-router-dom";
+// import libraries/hooks
+import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
+
+// import authentication
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../auth/firebaseAuth.js";
 
 // import components
 import { Button } from "../../components/Button/Button";
 import { InputFormField } from "../../components/FormFields/InputFormField/InputFormField";
 
 export function LoginPage() {
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [error, setError] = useState("");
+    const navigate = useNavigate();
+
+    const handleLogin = async (e) => {
+        e.preventDefault();
+
+        try {
+            await signInWithEmailAndPassword(auth, email, password);
+            navigate("/profile");
+        } catch (error) {
+            setError(error.message);
+        };
+    };
+
+    // handle input change
+    const handleEmailChange = (e) => setEmail(e.target.value);
+    const handlePasswordChange = (e) => setPassword(e.target.value);
+
     return (
         <main>
             <section className="login">
@@ -16,7 +41,10 @@ export function LoginPage() {
                     <h1 className="login__header">
                         Login
                     </h1>
-                    <form className="login__form">
+                    {error && <p>Error</p>}
+                    <form 
+                    className="login__form"
+                    onSubmit={handleLogin}>
                         <div className="login__email">
                             <p className="login__label">
                                 Email
@@ -24,7 +52,9 @@ export function LoginPage() {
                             <InputFormField 
                             className="login__input-email"
                             type="email"
-                            placeholder="Email" />
+                            value={email}
+                            placeholder="Email"
+                            onChange={handleEmailChange} />
                         </div>
                         <div className="login__password">
                             <p className="login__label">
@@ -33,7 +63,9 @@ export function LoginPage() {
                             <InputFormField
                             className="login__input-password"
                             type="password"
-                            placeholder="Password" />
+                            value={password}
+                            placeholder="Password"
+                            onChange={handlePasswordChange} />
                         </div>
                         <div className="login__btn-container">
                             <Button 
