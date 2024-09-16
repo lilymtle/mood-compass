@@ -5,6 +5,7 @@ import "dotenv/config";
 
 // import routers
 import moodsRoute from "./routes/moods.js";
+import educationalResourcesRoute from "./routes/educationalResources.js";
 
 // instantiate express
 const app = express();
@@ -26,6 +27,7 @@ app.use("/images", express.static("public/images"));
 // });
 
 app.use("/api/moods", moodsRoute);
+app.use("/api/educational-resources", educationalResourcesRoute);
 
 
 app.listen(port, () => {
