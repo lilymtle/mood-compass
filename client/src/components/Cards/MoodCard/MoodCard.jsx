@@ -1,4 +1,8 @@
+// import styling
 import "./MoodCard.scss";
+
+// import dependency
+import { Link } from "react-router-dom";
 
 export function MoodCard({ baseURL, id, name, image, shortDescription }) {
     
@@ -19,13 +23,13 @@ export function MoodCard({ baseURL, id, name, image, shortDescription }) {
                 {shortDescription}
             </p>
         </div>
-        <span className="moods-list__link">
+        <Link to={`/moods/${id}`} className="moods-list__link">
             Read More 
             <img 
             className="moods-list__icon"
             src="/src/assets/icons/arrow-forward.svg"
             alt="forward arrow icon" />
-        </span>
+        </Link>
     </li>
     )
 }
