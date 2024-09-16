@@ -23,6 +23,7 @@ import { ProfilePage } from "./pages/ProfilePage/ProfilePage.jsx";
 import { AuthProvider } from "./auth/AuthProvider.jsx";
 
 import { ProtectedRoute } from "./auth/ProtectedRoute.jsx";
+import { EducationalResourcePage } from "./pages/EducationalResourcesPage/EducationalResourcePage/EducationalResourcePage.jsx";
 
 function App() {
 
@@ -38,6 +39,7 @@ function App() {
           <Route path="/moods" element={ <MoodsPage /> } />
           <Route path="/moods/:id" element={ <MoodPage /> } />
           <Route path="/educational-resources" element={ <EducationalResourcesPage /> } />
+          <Route path="/educational-resources/:id" element={ <EducationalResourcePage /> } />
           <Route path="/coping-strategies" element={ <CopingStrategiesPage /> } />
           <Route path="/login" element={ <LoginPage /> } />
           <Route path="/register" element={ <RegisterPage /> } />
