@@ -17,13 +17,13 @@ import { useEffect, useState } from "react";
 import { Card } from "../../components/Cards/Card.jsx";
 
 export function EducationalResourcesPage() {
-    const [resourceData, setResourceData] = useState([]);
+    const [resourcesData, setResourcesData] = useState([]);
 
     useEffect(() => {
         const getResourcesData = async () => {
             try {
                 const { data } = await axios.get(`${baseURL}/api/educational-resources`);
-                setResourceData(data);
+                setResourcesData(data);
             } catch (error) {
                 console.error("Error retrieving educational resources:", error);
             };
@@ -48,7 +48,7 @@ return (
 
         <section className="resources-list__container">
             <ul className="resources-list">
-                {resourceData.map((resource) => (
+                {resourcesData.map((resource) => (
                     <Card
                     listItemClassname="resources-list__card"
                     h2ClassName="resources-list__number"
