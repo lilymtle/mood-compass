@@ -4,7 +4,7 @@ import "./MoodCard.scss";
 // import dependency
 import { Link } from "react-router-dom";
 
-export function MoodCard({ baseURL, id, name, image, shortDescription }) {
+export function MoodCard({ baseURL, id, name, images, shortDescription }) {
     
     return (
         <li className="moods-list__card">
@@ -17,7 +17,7 @@ export function MoodCard({ baseURL, id, name, image, shortDescription }) {
         <div className="moods-list__content">
             <img
             className="moods-list__img"
-            src={`${baseURL}${image}`}
+            src={`${baseURL}${images[0]}`}
             alt={name} />
             <p className="moods-list__text">
                 {shortDescription}
