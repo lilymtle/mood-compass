@@ -21,6 +21,13 @@
             color: $white;
             margin: 0;
         }
+
+        &--green {
+            font-family: "Garet Book", sans-serif;
+            font-size: 24px;
+            color: $forest-green;
+            margin: 0;
+        }
     }
 
     &__box {
@@ -86,12 +93,14 @@
     }
 
     &__description {
-        color: $white;
-        margin-bottom: 0;
-
         &-container {
             background-color: $pale-green;
             padding: 1rem;
+        }
+
+        &-text {
+            color: $white;
+            margin-bottom: 0;
         }
     }
 
@@ -122,12 +131,14 @@
     }
 
     &__causes {
-        color: $white; 
-
         &-container {
             background-color: $sage-green;
             position: relative;
             padding: 6rem 1rem 1rem 1rem;
+        }
+
+        &-text {
+            color: $white; 
         }
     }
 
@@ -151,21 +162,25 @@
     }
 
     &__help {
-        color: $white;
-        
         &-container {
             background-color: $forest-green;
             padding: 1rem;
         }
+
+        &-text {
+            color: $white;
+        }
     }
 
     &__resources {
-        color: $white;
-
         &-container {
             background-color: $silver;
             position: relative;
             padding: 9rem 1rem 1rem 1rem;
+        }
+
+        &-text {
+            color: $forest-green;
         }
     }
 }
