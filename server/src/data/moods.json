@@ -1,6 +1,6 @@
 [
     {
-        "id": 1,
+        "id": "1",
         "name": "Anxiety",
         "image": "/images/anxiety-card.jpg",
         "shortDescription": "Anxiety is characterized by intense, persistent worry or fear about everyday situations. It often includes physical symptoms and can interfere significantly with daily life and well-being.",
@@ -39,7 +39,7 @@
         "whenToSeekHelp": "If anxiety is persistent, interferes with daily activities, or causes significant distress, it is important to seek help from a mental health professional."
     },
     {
-        "id": 2,
+        "id": "2",
         "name": "Depression",
         "image": "/images/depression-card.jpg",
         "shortDescription": "Depression is a mood disorder characterized by persistent sadness, loss of interest in activities, and a range of emotional and physical symptoms that impact daily life. It affects how a person feels, thinks, and functions.",
