@@ -17,6 +17,7 @@ const baseURL = import.meta.env.VITE_API_BASE_URL;
 export function MoodPage() {
     const { id } = useParams();
     const [mood, setMood] = useState({
+        descriptions: [],
         types: [],
         signsSymptoms: [],
         causes: [],
@@ -45,9 +46,11 @@ export function MoodPage() {
                         {mood.name}
                     </h1>
 
-                    <p className="mood__description">
-                        {mood.description}
-                    </p>
+                    {mood.descriptions.map((description, index) => (
+                        <p key={index} className="mood_description">
+                            {description}
+                        </p>
+                    ))}
                 </div>
 
                 <div className="mood__types-container">
