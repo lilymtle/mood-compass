@@ -70,9 +70,11 @@ return (
             <ul className="moods-list">
                 {moodsData.map((mood) => (
                     <MoodCard
+                    baseURL={baseURL}
                     key={mood.id}
                     id={mood.id}
                     name={mood.name}
+                    image={mood.image}
                     shortDescription={mood.shortDescription} />
                 ))}
             </ul>
