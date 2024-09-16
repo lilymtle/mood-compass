@@ -4,16 +4,168 @@
 
 .mood { 
     &__header {
+        color: $white;
         font-family: "Brittany Signature", sans-serif;
         font-size: 48px;
+        margin: 0.5rem 0 2rem 0;
     }
 
     &__subheader {
         font-family: "Garet Book", sans-serif;
         font-size: 24px;
+        margin: 0;
 
-        &--h3 {
-            font-size: 1rem;
+        &--white {
+            font-family: "Garet Book", sans-serif;
+            font-size: 24px;
+            color: $white;
+            margin: 0;
+        }
+    }
+
+    &__box {
+        &--types, &--treatment {
+            background-color: $white;
+            position: relative;
+            border-radius: 1.25rem;
+            z-index: 2;
+            padding: 1rem;
+        }
+    }
+
+    &__list {
+        padding: 0 1rem;
+    }
+
+    &__item {
+        &--white {
+            color: $white;
+        }
+    }
+
+    &__divider {
+        &-wavy {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+    
+            svg { 
+                position: relative;
+                display: block;
+                width: calc(100% + 1.3px);
+                height: 150px;
+            }
+    
+            .shape-fill {
+                fill: $beige;
+            }
+        }
+
+        &-multi-waves {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+
+            svg { 
+                position: relative;
+                display: block;
+                width: calc(100% + 1.3px);
+                height: 150px;
+            }
+
+            .shape-fill {
+                fill: $forest-green;
+            }
+        }
+    }
+
+    &__description {
+        color: $white;
+        margin-bottom: 0;
+
+        &-container {
+            background-color: $pale-green;
+            padding: 1rem;
+        }
+    }
+
+    &__types {
+        &-container {
+            background-size: cover;
+            position: relative;
+            padding: 1rem;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.2);
+                z-index: 1;
+            }
+        }
+    }
+
+    &__signs-symptoms {
+        &-container {
+            background-color: $beige;
+            padding: 1rem;
+        }
+    }
+
+    &__causes {
+        color: $white; 
+
+        &-container {
+            background-color: $sage-green;
+            position: relative;
+            padding: 5rem 1rem 1rem 1rem;
+        }
+    }
+
+    &__treatment {
+        &-container {
+            background-size: cover;
+            position: relative;
+            padding: 1rem;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.2);
+                z-index: 1;
+            }
+        }
+    }
+
+    &__help {
+        color: $white;
+        
+        &-container {
+            background-color: $forest-green;
+            padding: 1rem;
+        }
+    }
+
+    &__resources {
+        color: $white;
+
+        &-container {
+            background-color: $silver;
+            position: relative;
+            padding: 9rem 1rem 1rem 1rem;
         }
     }
 }
