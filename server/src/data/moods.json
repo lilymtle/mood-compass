@@ -2,6 +2,7 @@
     {
         "id": 1,
         "name": "Anxiety",
+        "image": "/images/anxiety-card.jpg",
         "shortDescription": "Anxiety is characterized by intense, persistent worry or fear about everyday situations. It often includes physical symptoms and can interfere significantly with daily life and well-being.",
         "description": "Anxiety is a mental health condition that involves intense, excessive, and prolonged worry and fear about everyday situations. Individuals with anxiety often experience persistent and overwhelming feelings of apprehension, worry, or fear that may be disproportionate to the actual situation. This condition can interfere with daily functioning, relationships, and overall quality of life. Anxiety can manifest in various forms, ranging from generalized anxiety disorder to specific phobias, and may present with both psychological and physical symptoms. It's important to recognize that anxiety is not just occasional worry but a chronic condition that requires appropriate management and treatment.",
         "signsSymptoms": [
@@ -40,6 +41,7 @@
     {
         "id": 2,
         "name": "Depression",
+        "image": "/images/depression-card.jpg",
         "shortDescription": "Depression is a mood disorder characterized by persistent sadness, loss of interest in activities, and a range of emotional and physical symptoms that impact daily life. It affects how a person feels, thinks, and functions.",
         "description": "Depression, also known as major depressive disorder (MDD), is a common but serious mood disorder that affects how a person feels, thinks, and handles daily activities. It involves persistent feelings of sadness, hopelessness, and a lack of interest or pleasure in activities once enjoyed. Depression can have a profound impact on a person's ability to function in various aspects of life, including work, relationships, and personal well-being. It often includes both emotional and physical symptoms and may require a combination of therapeutic approaches for effective management.",
         "signsSymptoms": [
