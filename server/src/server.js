@@ -12,9 +12,14 @@ const app = express();
 
 // import environment variables
 const { PORT, CORS_ORIGIN } = process.env;
+
 const port = PORT || 8080;
 
-app.use(cors({ origin: CORS_ORIGIN }))
+app.use(cors({ 
+    origin: CORS_ORIGIN,
+    credentials: true,
+    methods: "GET,POST,PUT,DELETE" 
+}));
 
 // parses JSON bodies
 app.use(express.json());
