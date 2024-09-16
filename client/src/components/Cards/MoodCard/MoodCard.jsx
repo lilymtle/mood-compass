@@ -1,6 +1,6 @@
 import "./MoodCard.scss";
 
-export function MoodCard({ id, name, shortDescription }) {
+export function MoodCard({ baseURL, id, name, image, shortDescription }) {
     
     return (
         <li className="moods-list__card">
@@ -10,9 +10,15 @@ export function MoodCard({ id, name, shortDescription }) {
         <h3 className="moods-list__title">
             {name}
         </h3>
-        <p className="moods-list__text">
-            {shortDescription}
-        </p>
+        <div className="moods-list__content">
+            <img
+            className="moods-list__img"
+            src={`${baseURL}${image}`}
+            alt={name} />
+            <p className="moods-list__text">
+                {shortDescription}
+            </p>
+        </div>
         <span className="moods-list__link">
             Read More 
             <img 
