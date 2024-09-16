@@ -1,0 +1,201 @@
+@use "../../../styles/partials/fonts.scss" as *;
+@use "../../../styles/partials/variables.scss" as *;
+@use "../../../styles/partials/mixins.scss" as *;
+
+.coping{ 
+    &__header {
+        color: $white;
+        font-family: "Brittany Signature", sans-serif;
+        font-size: 48px;
+        margin: 0.5rem 0 2rem 0;
+    }
+
+    &__subheader {
+        font-family: "Garet Book", sans-serif;
+        font-size: 24px;
+        margin: 0;
+
+        &--green {
+            font-family: "Garet Book", sans-serif;
+            font-size: 24px;
+            color: $forest-green;
+            margin: 0;
+        }
+    }
+
+    &__box {
+        background-color: $white;
+        position: relative;
+        border-radius: 1.25rem;
+        z-index: 2;
+        padding: 1rem;
+    }
+
+    &__list {
+        padding: 0 1rem;
+    }
+
+    &__item {
+        &--white {
+            color: $white;
+        }
+    }
+
+    &__divider {
+        &-multi-waves {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+
+            svg {
+                position: relative;
+                display: block;
+                width: calc(100% + 1.3px);
+                height: 150px;
+            }
+
+            .shape-fill {
+                fill: $beige;
+            }
+        }
+
+        &-curve {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            transform: rotate(180deg);
+
+            svg {
+                position: relative;
+                display: block;
+                width: calc(100% + 1.3px);
+                height: 60px;
+            }
+    
+            .shape-fill {
+                fill: $beige;
+            }
+        }
+
+        &-book {
+            position: absolute;
+            top: 0;
+            left: 4rem;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            transform: rotate(180deg);
+
+            svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 30px;
+            }
+
+            .shape-fill {
+                fill: $light-grey;
+            }
+        }
+    }
+
+    &__description {
+        &-container {
+            background-color: $pale-green;
+            position: relative;
+            padding: 1rem;
+        }
+
+        &-text {
+            color: $white;
+            margin-bottom: 0;
+        }
+    }
+
+    &__steps {
+        &-container {
+            background-size: cover;
+            position: relative;
+            padding: 1rem;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.2);
+                z-index: 1;
+            }
+        }
+    }
+
+    &__benefits {
+        &-container {
+            background-color: $forest-green;
+            position: relative;
+            padding: 1rem 1rem 6rem 1rem;
+        }
+
+        &-text {
+            color: $white;
+        }
+    }
+
+    &__extra-resources {
+        &-container {
+            background-color: $beige;
+            padding: 0 1rem 0.1rem 1rem;
+        }
+    }
+}
+
+.learn-more {
+    &__container {
+        background-color: $sage-green;
+        position: relative;
+        padding: 9rem 1rem 1rem 1rem;
+    }
+
+    &__subheader {
+        font-family: "Garet Book", sans-serif;
+        font-size: 24px;
+        color: $white;
+        text-align: center;
+        margin: 0;
+    }
+
+    &__box {
+        background-color: $white;
+        padding: 1rem;
+        border-radius: 1.25rem;
+        opacity: 80%;
+        margin: 1rem 0;
+    }
+
+    &__text {
+        color: $forest-green; 
+    }
+
+    &__btn {
+        @include btn($light-grey, .8125rem, $global-text);
+        width: 100%;
+        border: none;
+        border-radius: 1.25rem;
+        padding: 0.5rem 0;
+
+        &:hover {
+            background-color: $pale-green;
+            color: $white;
+            transition: 0.3s ease-in-out;
+            cursor: pointer;
+        }
+    }
+}
