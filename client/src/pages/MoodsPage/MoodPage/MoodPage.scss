@@ -1,3 +1,19 @@
 @use "../../../styles/partials/fonts.scss" as *;
 @use "../../../styles/partials/variables.scss" as *;
 @use "../../../styles/partials/mixins" as *;
+
+.mood { 
+    &__header {
+        font-family: "Brittany Signature", sans-serif;
+        font-size: 48px;
+    }
+
+    &__subheader {
+        font-family: "Garet Book", sans-serif;
+        font-size: 24px;
+
+        &--h3 {
+            font-size: 1rem;
+        }
+    }
+}
