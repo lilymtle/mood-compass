@@ -34,23 +34,6 @@ export function MoodsPage() {
         getMoods();
     }, []);
 
-    // useEffect(() => {
-    //     if (!moodsData.length) {
-    //         return;
-    //     };
-
-    //     const selected = moodsData.find(mood => mood.id === moodId);
-    //     const getMood = async (id) => {
-    //         try {
-    //             const response = await axios.get(`${baseURL}/api/moods/${id}`);
-    //             setSelectedMood(response.data);
-    //         } catch (error) {
-    //             console.error("Error retrieveing specific mood:", error);
-    //         };
-    //     };
-    //     getMood(selected.id);
-    // }, [moodId, moodsData]);
-
 return (
     <main>
         <section className="moods">
@@ -74,7 +57,7 @@ return (
                     key={mood.id}
                     id={mood.id}
                     name={mood.name}
-                    image={mood.image}
+                    images={mood.images}
                     shortDescription={mood.shortDescription} />
                 ))}
             </ul>
