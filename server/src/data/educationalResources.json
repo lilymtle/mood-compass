@@ -3,8 +3,11 @@
         "id": "1",
         "name": "Self-care",
         "shortDescription": "Self-care involves taking deliberate actions to maintain or improve your physical, emotional, and mental well-being.",
-        "descriptions": "Self-care refers to the conscious efforts individuals make to protect and enhance their physical, emotional, and mental health. It encompasses a wide range of practices such as maintaining a balanced lifestyle, seeking relaxation, managing stress, and setting boundaries to prioritize personal well-being. Self-care is essential for preventing burnout, improving resilience, and ensuring overall health in both the short and long term. It can include small daily routines or larger lifestyle changes tailored to individual needs and circumstances.",
-        "images": [
+        "descriptions": [
+            "Self-care refers to the conscious efforts individuals make to protect and enhance their physical, emotional, and mental health. It encompasses a wide range of practices such as maintaining a balanced lifestyle, seeking relaxation, managing stress, and setting boundaries to prioritize personal well-being.",
+            "Self-care is essential for preventing burnout, improving resilience, and ensuring overall health in both the short and long term. It can include small daily routines or larger lifestyle changes tailored to individual needs and circumstances."
+        ],
+            "images": [
             "/images/self-care-card.jpg"
         ],
         "strategies": [
@@ -29,8 +32,11 @@
         "id": "2",
         "name": "Healthy Living",
         "shortDescription": "Healthy living focuses on habits that promote a balanced and sustainable lifestyle for optimal physical, mental, and emotional health.",
-        "descriptions": "Healthy living is a holistic approach to lifestyle choices that contribute to overall well-being. It includes regular physical activity, balanced nutrition, and mental health care, all of which are crucial for preventing disease, increasing longevity, and improving quality of life. A healthy lifestyle also emphasizes moderation in activities, maintaining proper hydration, and adopting stress-relief practices such as relaxation techniques. Consistently making healthy choices not only strengthens the immune system and reduces the risk of chronic illnesses but also contributes to better mental and emotional stability.",
-        "images": [
+        "descriptions": [
+            "Healthy living is a holistic approach to lifestyle choices that contribute to overall well-being. It includes regular physical activity, balanced nutrition, and mental health care, all of which are crucial for preventing disease, increasing longevity, and improving quality of life.",
+            "A healthy lifestyle also emphasizes moderation in activities, maintaining proper hydration, and adopting stress-relief practices such as relaxation techniques. Consistently making healthy choices not only strengthens the immune system and reduces the risk of chronic illnesses but also contributes to better mental and emotional stability."
+        ],
+            "images": [
             "/images/healthy-living-card.jpg"
         ],
         "strategies": [
@@ -55,8 +61,11 @@
         "id": "3",
         "name": "Mind-Body Connection",
         "shortDescription": "The mind-body connection emphasizes the link between mental states and physical well-being, and vice versa.",
-        "descriptions": "The mind-body connection is the scientific and philosophical understanding that mental states—such as thoughts, emotions, and stress—directly affect physical health. Likewise, the condition of the body can influence mood, cognitive functioning, and emotional balance. When an individual experiences stress or negative emotions, it can lead to physical symptoms like headaches, fatigue, or weakened immune responses. Conversely, physical practices like exercise, yoga, and relaxation techniques can improve mood, enhance mental clarity, and reduce anxiety. Strengthening the mind-body connection is crucial for promoting holistic health and achieving balance between mental and physical wellness.",
-        "images": [
+        "descriptions": [
+            "The mind-body connection is the scientific and philosophical understanding that mental states—such as thoughts, emotions, and stress—directly affect physical health. Likewise, the condition of the body can influence mood, cognitive functioning, and emotional balance.",
+            "When an individual experiences stress or negative emotions, it can lead to physical symptoms like headaches, fatigue, or weakened immune responses. Conversely, physical practices like exercise, yoga, and relaxation techniques can improve mood, enhance mental clarity, and reduce anxiety. Strengthening the mind-body connection is crucial for promoting holistic health and achieving balance between mental and physical wellness."
+        ],
+            "images": [
             "/images/mind-body-connection-card.jpg"
         ],
         "strategies": [
