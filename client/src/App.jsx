@@ -24,6 +24,7 @@ import { AuthProvider } from "./auth/AuthProvider.jsx";
 
 import { ProtectedRoute } from "./auth/ProtectedRoute.jsx";
 import { EducationalResourcePage } from "./pages/EducationalResourcesPage/EducationalResourcePage/EducationalResourcePage.jsx";
+import { CopingStrategyPage } from "./pages/CopingStrategiesPage/CopingStrategyPage/CopingStrategyPage.jsx";
 
 function App() {
 
@@ -41,6 +42,7 @@ function App() {
           <Route path="/educational-resources" element={ <EducationalResourcesPage /> } />
           <Route path="/educational-resources/:id" element={ <EducationalResourcePage /> } />
           <Route path="/coping-strategies" element={ <CopingStrategiesPage /> } />
+          <Route path="/coping-strategies/:id" element={ <CopingStrategyPage /> } />
           <Route path="/login" element={ <LoginPage /> } />
           <Route path="/register" element={ <RegisterPage /> } />
           <Route 
