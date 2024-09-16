@@ -63,6 +63,12 @@
         transition: color .45s ease;
     }
 
+    &__img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
     &__text {
         opacity: 0;
         color: #FFFFFF;
