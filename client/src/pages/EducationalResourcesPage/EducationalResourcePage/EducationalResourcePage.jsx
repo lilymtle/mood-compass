@@ -114,17 +114,18 @@ export function EducationalResourcePage() {
                             Learn More
                         </h2>
 
-                        <div className="learn__more-box">
+                        <div className="learn-more__box">
                             <p className="learn-more__text">
                                 Did you know MoodCompass has resources on coping strategies? These
                                 coping strategies can be applied to many different negative emotional
                                 states.
                             </p>
-                            <Button
-                            className="learn-more__btn"
-                            type="button"
-                            text="Let's Go!" />
                         </div>
+                        
+                        <Button
+                        className="learn-more__btn"
+                        type="button"
+                        text="Let's Go!" />
                     </div>
                 </section>
             </section>
