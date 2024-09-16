@@ -1,0 +1,131 @@
+[
+    {
+        "id": "1",
+        "strategy": "Mindfulness",
+        "shortDescription": "Focus on the present to reduce stress and enhance awareness.",
+        "descriptions": [
+            "Mindfulness is the practice of intentionally focusing your attention on the present moment, acknowledging your thoughts and feelings without judgment. This practice has roots in ancient meditation traditions and has been shown to reduce stress, improve focus, and enhance emotional regulation.",
+            "By cultivating mindfulness, you become more aware of your mental and emotional patterns, which can help prevent reactive behaviors. Regular mindfulness practice helps create a sense of inner calm and can be a powerful tool in managing anxiety, depression, and chronic stress."
+        ],
+        "images": [
+            "/images/mindfulness-card.jpg",
+            "/images/conifer-sapling.jpg"
+        ],
+        "steps": [
+            "Sit comfortably and close your eyes.",
+            "Focus on your breathing or the sensations in your body.",
+            "Gently bring your attention back if your mind wanders."
+        ]
+    },
+    {
+    "id": 2,
+    "strategy": "Deep Breathing",
+    "shortDescription": "Use controlled breathing to calm the mind and body.",
+    "descriptions": [
+        "Deep breathing exercises help activate the parasympathetic nervous system, which triggers a relaxation response in the body. This technique is often used to alleviate the physical symptoms of stress, such as rapid heartbeat, shallow breathing, and muscle tension.", 
+        "By slowing down your breath, you allow more oxygen into your lungs and bloodstream, which reduces anxiety and promotes a sense of calm. Deep breathing can be particularly helpful during moments of panic, stress, or overwhelm and is a quick and easy way to reset both the mind and body."
+    ],
+    "images": [
+        "/images/deep-breathing-card.jpg",
+        "/images/cloud-jpg"
+    ],
+    "steps": [
+    "Inhale deeply through your nose for 4 counts.",
+    "Hold your breath for 4 counts.",
+    "Exhale slowly through your mouth for 6 counts.",
+    "Repeat until you feel calmer."
+    ]
+    },
+    {
+    "id": 3,
+    "strategy": "Progressive Muscle Relaxation",
+    "shortDescription": "Release tension by tensing and relaxing muscle groups.",
+    "descriptions": [
+        "Progressive muscle relaxation (PMR) is a technique used to reduce physical tension and mental stress. It involves systematically tensing and then relaxing different muscle groups, which helps bring awareness to areas of tension in your body.", 
+        "By relaxing these muscles, you can release built-up stress and feel a greater sense of physical and emotional relief. PMR is often used to manage stress, anxiety, and even chronic pain, as it encourages a deep sense of relaxation throughout the body. Practicing this technique regularly can help you become more aware of tension and develop a stronger mind-body connection.",
+    ],
+    "images": [
+        "/images/progressive-muscle-relaxation-card.jpg",
+        "/images/park-trail.jpg"
+    ],
+    "steps": [
+    "Start by tensing your toes and feet for 5 seconds.",
+    "Release and feel the relaxation spread.",
+    "Move progressively up your body, tensing and relaxing each muscle group."
+    ]
+    },
+    {
+    "id": 4,
+    "strategy": "Grounding",
+    "shortDescription": "Reconnect with the present moment through sensory awareness.",
+    "descriptions": [
+        "Grounding techniques are used to bring your attention back to the present moment when you are feeling overwhelmed by anxiety, panic, or stress. By focusing on your five senses—sight, sound, touch, smell, and taste—you can detach from distressing thoughts and reconnect with the immediate environment.", 
+        "Grounding is particularly useful during times of emotional distress or when experiencing dissociation, as it helps bring you back to the here and now. Grounding techniques can be simple, quick to practice, and highly effective at reducing emotional overwhelm."
+    ],
+    "images": [
+        "/images/grounding-card.jpg",
+        "/images/lotus.jpg"
+    ],
+    "steps": [
+    "Look around and name 5 things you can see.",
+    "Focus on 4 things you can touch.",
+    "Identify 3 sounds you can hear.",
+    "Notice 2 things you can smell.",
+    "Recognize 1 thing you can taste."
+    ]
+    },
+    {
+    "id": 5,
+    "strategy": "Cognitive Restructuring",
+    "shortDescription": "Challenge negative thoughts and reframe them positively.",
+    "descriptions": [
+        "Cognitive restructuring is a core technique in cognitive-behavioral therapy (CBT) that helps people identify and challenge distorted or unhelpful thoughts. This process involves analyzing negative thought patterns, understanding the cognitive distortions at play (e.g., black-and-white thinking, catastrophizing), and replacing them with more realistic and balanced alternatives.", 
+        "By rethinking automatic negative thoughts, you can reduce the impact of stress, anxiety, and depression. Over time, cognitive restructuring helps develop healthier thinking habits, which leads to more positive emotions and better coping strategies."
+    ],
+    "images": [
+        "/images/cognitive-restructuring-card.jpg",
+        "/images/leaf.jpg"
+    ],
+    "steps": [
+    "Identify a negative thought you're having.",
+    "Examine the evidence for and against this thought.",
+    "Consider a more balanced perspective or alternative thought."
+    ]
+    },
+    {
+    "id": 6,
+    "strategy": "Behavioural Activation",
+    "shortDescription": "Engage in positive activities to improve mood.",
+    "descriptions": [
+        "Behavioural activation is a therapeutic strategy that encourages individuals to engage in activities they enjoy or find meaningful, especially during times of low mood or depression. The idea is that by increasing your participation in positive, rewarding activities, your mood will begin to improve.", 
+        "Negative mental health states, such as depression, often leads to inactivity and isolation, which reinforces feelings of sadness and worthlessness. By taking small, intentional steps toward re-engaging in life, behavioural activation helps break this cycle and boosts both motivation and mood."
+    ],
+    "images": [
+        "/images/behavioural-activitation-card.jpg",
+        "/images/forest.jpg"
+    ],
+    "steps": [
+    "Identify a small, enjoyable activity (e.g., walking, reading).",
+    "Schedule time to do this activity, even if you don’t feel like it.",
+    "Gradually increase the frequency of activities that improve your mood."
+    ]
+    },
+    {
+    "id": 7,
+    "strategy": "Distress Tolerance",
+    "shortDescription": "Cope with emotional pain using specific techniques.",
+    "descriptions": [
+        "Distress tolerance involves learning to survive and cope with painful emotions in the short term without making the situation worse. It is especially helpful during times of crisis or extreme emotional distress.", 
+        "Instead of trying to eliminate the pain, distress tolerance skills focus on getting through the moment. Techniques may include distraction, self-soothing, or using acronyms like 'TIPP' (Temperature, Intense exercise, Paced breathing, and Progressive muscle relaxation) to help manage overwhelming emotions. Distress tolerance is a key part of Dialectical Behavior Therapy (DBT) and helps individuals prevent impulsive, harmful reactions."
+    ],
+    "images": [
+        "/images/distress-tolerance-card.jpg",
+        "/images/water-waves.jpg"
+    ],
+    "steps": [
+    "Use distraction techniques like listening to music or doing a hobby.",
+    "Practice self-soothing with comforting activities (e.g., warm bath).",
+    "Try 'TIPP' skills: Temperature change, Intense exercise, Paced breathing, Progressive relaxation."
+    ]
+    }
+]
