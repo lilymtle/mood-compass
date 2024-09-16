@@ -18,6 +18,9 @@ app.use(cors({ origin: CORS_ORIGIN }))
 // parses JSON bodies
 app.use(express.json());
 
+app.use("/images", express.static("public/images"));
+
+
 // app.get("/", (req, res) => {
 //     res.send("Get works!");
 // });
