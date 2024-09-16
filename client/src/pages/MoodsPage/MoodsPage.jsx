@@ -11,15 +11,15 @@ import axios from "axios";
 
 // import hooks
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 
 // import component
 import { MoodCard } from "../../components/Cards/MoodCard/MoodCard";
 
 export function MoodsPage() {
     const [moodsData, setMoodsData] = useState([]);
-    const [selectedMood, setSelectedMood] = useState({});
-    const { moodId } = useParams();
+    // const [selectedMood, setSelectedMood] = useState({});
+    // const { moodId } = useParams();
 
     useEffect(() => {
         const getMoods = async () => {
