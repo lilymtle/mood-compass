@@ -14,6 +14,8 @@ import { useParams } from "react-router-dom";
 // import environmental variable
 const baseURL = import.meta.env.VITE_API_BASE_URL;
 
+import FavoriteIcon from "@mui/icons-material/Favorite";
+
 export function MoodPage() {
     const { id } = useParams();
     const [mood, setMood] = useState({
@@ -39,6 +41,12 @@ export function MoodPage() {
         getMood();
     }, [id])
 
+    const [isFavorited, setIsFavorited] = useState(false);
+
+    const handleFavoriteClick = () => {
+        setIsFavorited(!isFavorited);
+    };
+
     return (
         <main>
             <section className="mood">
@@ -50,10 +58,9 @@ export function MoodPage() {
                                 {mood.name}
                             </h1>
 
-                            <img
-                            className="mood__favorite-icon"
-                            src="/src/assets/icons/favorite-icon.svg"
-                            alt="heart favorite icon" />
+                        <FavoriteIcon 
+                        sx={{ color: isFavorited ? "#557153" : "#FFFFFF", cursor: "pointer" }} 
+                        onClick={handleFavoriteClick} />
                         </div>
 
                         {mood.descriptions.map((description, index) => (
