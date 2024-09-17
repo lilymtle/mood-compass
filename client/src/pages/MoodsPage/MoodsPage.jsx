@@ -58,7 +58,7 @@ return (
                     id={mood.id}
                     name={mood.name}
                     images={mood.images}
-                    shortDescription={mood.shortDescription} />
+                    shortDescription={mood.short_description} />
                 ))}
             </ul>
         </section>
