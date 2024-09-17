@@ -41,13 +41,12 @@ export function FavoritesPage() {
                 </div>
 
                 <div className="favorites__list-container">
-                    <div className="favorites__list-box">
                         <ul className="favorites__list">
                             {favorites.map((mood, index) => (
                                 <li key={mood.id} className="favorites__list-item">
                                 <Link to={`/moods/${mood.id}`} className="favorites__card-link">
                                     <div 
-                                    className={`favorites__card
+                                    className={`favorites__card favorites__card-box
                                     ${index === favorites.length - 1 ? "remove-border" : ""}`} >
                                         {/* <img 
                                         className="favorites__card-img"
@@ -75,7 +74,6 @@ export function FavoritesPage() {
                             </li>
                             ))}
                         </ul>
-                    </div>
                 </div>
             </section>
         </main>
