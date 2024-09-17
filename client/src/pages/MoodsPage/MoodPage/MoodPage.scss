@@ -3,11 +3,23 @@
 @use "../../../styles/partials/mixins" as *;
 
 .mood { 
+    &__header-icon-container {
+        @include flex-box(flex, row);
+        justify-content: space-between;
+        align-items: center;
+    }
+
     &__header {
         color: $white;
         font-family: "Brittany Signature", sans-serif;
-        font-size: 48px;
+        font-size: 40px;
         margin: 0.5rem 0 2rem 0;
+    }
+
+    &__favorite-icon {
+        .shape-fill {
+            fill: $forest-green;
+        }
     }
 
     &__subheader {
