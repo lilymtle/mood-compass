@@ -11,6 +11,7 @@ import { useNavigate } from "react-router-dom";
 
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../auth/firebaseAuth.js";
+import { registerUser } from "../../utils/authServices.js";
 
 export function RegisterPage() {
     const [name, setName] = useState("");
@@ -29,7 +30,11 @@ export function RegisterPage() {
         }
 
         try {
-            await createUserWithEmailAndPassword(auth, email, password);
+            // await createUserWithEmailAndPassword(auth, email, password);
+
+            const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+            const idToken = await userCredential.user.getIdToken();
+            await registerUser(idToken, name, email);
             navigate("/profile");
         } catch (error) {
             console.error("Registration Error:", error);

@@ -5,9 +5,10 @@ import "./LoginPage.scss";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
-// import authentication
+// import Firebase and backend API functions
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../auth/firebaseAuth.js";
+import { loginUser } from "../../utils/authServices.js";
 
 // import components
 import { Button } from "../../components/Button/Button";
@@ -23,8 +24,15 @@ export function LoginPage() {
         e.preventDefault();
 
         try {
-            await signInWithEmailAndPassword(auth, email, password);
-            navigate("/profile");
+            // await signInWithEmailAndPassword(auth, email, password);
+
+            const userCredential = await signInWithEmailAndPassword(auth, email, password);
+            const idToken = await userCredential.user.getIdToken();
+            const userData = loginUser(idToken);
+
+            if (userData) {
+                navigate("/profile");
+            }
         } catch (error) {
             setError(error.message);
         };
