@@ -7,8 +7,11 @@ import "./MoodPage.scss";
 // import dependency
 import axios from "axios";
 
+// import user authentication/authorization context
+import { AuthContext } from "../../../auth/AuthProvider";
+
 // import hooks
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 // import environmental variable
@@ -18,6 +21,7 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 
 export function MoodPage() {
     const { id } = useParams();
+    const { user } = useContext(AuthContext);
     const [mood, setMood] = useState({
         descriptions: [],
         images: [],
@@ -27,6 +31,7 @@ export function MoodPage() {
         treatment_options: [],
         when_to_seek_help: ""
     });
+    const [isFavorited, setIsFavorited] = useState(false);
     const [error, setError] = useState(null);
 
     useEffect(() => {
@@ -34,18 +39,37 @@ export function MoodPage() {
             try {
                 const { data } = await axios.get(`${baseURL}/api/moods/${id}`)
                 setMood(data);
+
+                if (user) {
+                    const { data }= await axios.get(`${baseURL}/api/favorites/check`, {
+                        params: { user_id: user.uid, mood_id: id }
+                    });             
+                    setIsFavorited(data.isFavorited);
+                }
             } catch (error) {
                 console.error("Error fetching mood data:", error);
                 setError("Failed to fetch mood data.");
             };
         };
         getMood();
-    }, [id])
+    }, [id, user])
 
-    const [isFavorited, setIsFavorited] = useState(false);
-
-    const handleFavoriteClick = () => {
-        setIsFavorited(!isFavorited);
+    const handleFavoriteClick = async () => {
+        if (user) {
+            try {
+                if (isFavorited) {
+                    await axios.delete(`${baseURL}/api/favorites/delete`, {
+                        data: { user_id: user.uid, mood_id: id }
+                    });
+                    setIsFavorited(false);
+                } else {
+                    await axios.post(`${baseURL}/api/favorites/add`, { user_id: user.uid, mood_id: id });
+                    setIsFavorited(true);
+                }
+            } catch (error) {
+                console.error("Error updating favorite status:", error);
+            }
+        }
     };
 
     return (
