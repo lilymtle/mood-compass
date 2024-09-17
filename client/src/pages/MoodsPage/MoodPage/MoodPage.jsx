@@ -45,9 +45,16 @@ export function MoodPage() {
 
                 <section className="mood__description">
                     <div className="mood__description-container">
-                        <h1 className="mood__header">
-                            {mood.name}
-                        </h1>
+                        <div className="mood__header-icon-container">
+                            <h1 className="mood__header">
+                                {mood.name}
+                            </h1>
+
+                            <img
+                            className="mood__favorite-icon"
+                            src="/src/assets/icons/favorite-icon.svg"
+                            alt="heart favorite icon" />
+                        </div>
 
                         {mood.descriptions.map((description, index) => (
                             <p key={index} className="mood__description-text">
