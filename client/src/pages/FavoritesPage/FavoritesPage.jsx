@@ -1,9 +1,34 @@
 // import styling
+import { useContext, useEffect, useState } from "react";
 import "./FavoritesPage.scss";
+import { AuthContext } from "../../auth/AuthProvider.jsx";
 
 import { Link } from "react-router-dom";
+import axios from "axios";
+
+// import environmental variable
+const baseURL = import.meta.env.VITE_API_BASE_URL;
 
 export function FavoritesPage() {
+    const { user } = useContext(AuthContext);
+    const [favorites, setFavorites] = useState([]);
+
+    useEffect(() => {
+        async function getFavorites() {
+        if (user) {
+            try {
+                const { data } = await axios.get(`${baseURL}/api/favorites/get`, {
+                params: { user_id: user.uid }
+            });
+            setFavorites(data)
+            } catch(error) {
+                console.error("Error fetching favorites:", error);
+            };
+        }
+    }
+    getFavorites();
+    }, [user]);
+
     return (
         <main>
             <section className="favorites">
@@ -16,19 +41,20 @@ export function FavoritesPage() {
                 <div className="favorites__list-container">
                     <div className="favorites__list-box">
                         <ul className="favorites__list">
-                            <li className="favorites__list-item">
-                                <Link to="/" className="favorites__card-link">
+                            {favorites.map(mood=> (
+                                <li key={mood.id} className="favorites__list-item">
+                                <Link to={`/moods/${mood.id}`} className="favorites__card-link">
                                     <div className="favorites__card">
                                         <img 
                                         className="favorites__card-img"
-                                        src="/"
+                                        src={`${baseURL}${mood.images[0]}`}
                                         alt="card image of article favorited" />
                                         <div className="favorites__card-container">
                                             <p className="favorites__card-title">
-                                                Title
+                                                {mood.name}
                                             </p>
                                             <p className="favorites__card-description">
-                                                Description
+                                                {mood.short_description}
                                             </p>
                                         </div>
                                         <img
@@ -38,6 +64,7 @@ export function FavoritesPage() {
                                     </div>
                                 </Link>
                             </li>
+                            ))}
                         </ul>
                     </div>
                 </div>
