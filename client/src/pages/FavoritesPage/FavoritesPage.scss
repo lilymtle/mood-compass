@@ -52,13 +52,27 @@
             font-family: "Garet Book", sans-serif;
             font-size: 24px;
             margin: 0;
-
         }
         
         &-description {
             color: $global-text;
             font-size: 11px;
             margin: 0;
+        }
+
+        &-link {
+            &:hover {
+                text-decoration: none;
+            }
+            &:hover .favorites__card-box {
+                opacity: 100%;
+                transition: 0.3s ease-in-out;
+            }
+
+            &:hover .favorites__card-title {
+                color: $forest-green;
+                transition: 0.3s ease-in-out;
+            }
         }
     }
 }
