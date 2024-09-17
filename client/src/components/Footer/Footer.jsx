@@ -1,4 +1,7 @@
+// import styling
 import "./Footer.scss";
+
+import { Link } from "react-router-dom";
 
 export function Footer() {
     return (
@@ -10,15 +13,19 @@ export function Footer() {
                     </p>
                 </div>
                 <div className="footer__left-container">
-                    <img
-                    className="footer__social-icon"
-                    src="/src/assets/logos/linkedin-logo.png"
-                    alt="linkedin icon" />
+                    <Link to="https://www.linkedin.com/in/lilymtle/">
+                        <img
+                        className="footer__social-icon"
+                        src="/src/assets/logos/linkedin-logo.png"
+                        alt="linkedin icon" />
+                    </Link>
 
-                    <img 
-                    className="footer__social-icon"
-                    src="/src/assets/logos/github-logo.svg"
-                    alt="github icon" />
+                    <Link to="https://github.com/lilymtle">
+                        <img 
+                        className="footer__social-icon"
+                        src="/src/assets/logos/github-logo.svg"
+                        alt="github icon" />
+                    </Link>
                 </div>
             </section>
             <section className="footer__right">
