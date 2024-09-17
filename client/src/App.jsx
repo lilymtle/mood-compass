@@ -25,6 +25,7 @@ import { AuthProvider } from "./auth/AuthProvider.jsx";
 import { ProtectedRoute } from "./auth/ProtectedRoute.jsx";
 import { EducationalResourcePage } from "./pages/EducationalResourcesPage/EducationalResourcePage/EducationalResourcePage.jsx";
 import { CopingStrategyPage } from "./pages/CopingStrategiesPage/CopingStrategyPage/CopingStrategyPage.jsx";
+import { FavoritesPage } from "./pages/FavoritesPage/FavoritesPage.jsx";
 
 function App() {
 
@@ -46,12 +47,13 @@ function App() {
           <Route path="/login" element={ <LoginPage /> } />
           <Route path="/register" element={ <RegisterPage /> } />
           <Route 
-          path="profile"
+          path="/profile"
           element={
             <ProtectedRoute>
               <ProfilePage />
             </ProtectedRoute>
           } />
+          <Route path="/favorites" element={ <FavoritesPage /> } />
           <Route path="*" element={ <NotFoundPage /> } />
         </Routes>
 
