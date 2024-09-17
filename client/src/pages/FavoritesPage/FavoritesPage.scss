@@ -1,2 +1,77 @@
-@use "../../styles/partials/variables" as *;
-@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/fonts.scss" as *;
+@use "../../styles/partials/variables.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+
+.favorites {
+    &__container {
+        background-color: $pale-green;
+        position: relative;
+        padding: 1rem;
+    }
+
+    &__header {
+        color: $white;
+        font-family: "Brittany Signature", sans-serif;
+        font-size: 40px;
+        margin: 0;
+    }
+
+    &__divider {
+        &-arrow {
+            position: absolute;
+            top: 0;
+            left: 1rem;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+
+            svg { 
+                position: relative;
+                display: block;
+                width: calc(100% + 1.3px);
+                height: 80px;
+            }
+
+            .shape-fill {
+                fill: $light-grey;
+            }
+        }
+    }
+
+    &__list {
+        list-style-type: none;
+        padding: 0;
+
+        &-container {
+            background-image: url("../../assets/images/favorites-page-bg.jpg");
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+            padding: 1rem;
+        }
+
+        &-box {
+            background-color: $white;
+            border-radius: 1.25rem;
+            width: 100%;
+            height: 100%;
+            opacity: 80%;
+            padding: 1rem;
+        }
+    }
+
+    &__card {
+        @include flex-box(flex, row);
+        gap: 1rem;
+
+        &-title, &-description {
+            margin: 0;
+        }
+
+        &-icon {
+            .shape-fill {
+                fill: $forest-green;
+            }
+        }
+    }
+}
