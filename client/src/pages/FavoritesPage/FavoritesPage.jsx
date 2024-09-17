@@ -9,6 +9,8 @@ import axios from "axios";
 // import environmental variable
 const baseURL = import.meta.env.VITE_API_BASE_URL;
 
+import Avatar from "@mui/material/Avatar";
+
 export function FavoritesPage() {
     const { user } = useContext(AuthContext);
     const [favorites, setFavorites] = useState([]);
@@ -41,18 +43,25 @@ export function FavoritesPage() {
                 <div className="favorites__list-container">
                     <div className="favorites__list-box">
                         <ul className="favorites__list">
-                            {favorites.map(mood=> (
+                            {favorites.map((mood, index) => (
                                 <li key={mood.id} className="favorites__list-item">
                                 <Link to={`/moods/${mood.id}`} className="favorites__card-link">
-                                    <div className="favorites__card">
-                                        <img 
+                                    <div 
+                                    className={`favorites__card
+                                    ${index === favorites.length - 1 ? "remove-border" : ""}`} >
+                                        {/* <img 
                                         className="favorites__card-img"
                                         src={`${baseURL}${mood.images[0]}`}
-                                        alt="card image of article favorited" />
+                                        alt="card image of article favorited" /> */}
+
+                                        <Avatar
+                                        alt="card image of article favorited"
+                                        src={`${baseURL}${mood.images[0]}`}
+                                        sx={{ width: 56, height: 56 }}/>
                                         <div className="favorites__card-container">
-                                            <p className="favorites__card-title">
+                                            <h2 className="favorites__card-title">
                                                 {mood.name}
-                                            </p>
+                                            </h2>
                                             <p className="favorites__card-description">
                                                 {mood.short_description}
                                             </p>
