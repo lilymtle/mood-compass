@@ -16,28 +16,6 @@
         margin: 0;
     }
 
-    &__divider {
-        &-arrow {
-            position: absolute;
-            top: 0;
-            left: 1rem;
-            width: 100%;
-            overflow: hidden;
-            line-height: 0;
-
-            svg { 
-                position: relative;
-                display: block;
-                width: calc(100% + 1.3px);
-                height: 80px;
-            }
-
-            .shape-fill {
-                fill: $light-grey;
-            }
-        }
-    }
-
     &__list {
         list-style-type: none;
         padding: 0;
@@ -45,6 +23,7 @@
         &-container {
             background-image: url("../../assets/images/favorites-page-bg.jpg");
             background-size: cover;
+            position: relative;
             width: 100%;
             height: 100%;
             padding: 1rem;
@@ -63,14 +42,17 @@
     &__card {
         @include flex-box(flex, row);
         gap: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: .0625rem solid $forest-green;
 
         &-title, &-description {
+            color: $global-text;
             margin: 0;
         }
 
         &-icon {
-            .shape-fill {
-                fill: $forest-green;
+            &:hover {
+                
             }
         }
     }
