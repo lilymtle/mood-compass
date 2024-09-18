@@ -16,6 +16,8 @@ const baseURL = import.meta.env.VITE_API_BASE_URL;
 
 // import component
 import { Button } from "../../../components/Button/Button.jsx";
+import { FavoriteToggleIcon } from "../../../components/FavoriteToggleIcon/FavoriteToggleIcon.jsx";
+
 
 export function CopingStrategyPage() {
     const { id } = useParams();
@@ -55,6 +57,22 @@ export function CopingStrategyPage() {
                         <h1 className="coping__header">
                             {strategy.name}
                         </h1>
+
+                        {/* <FavoriteToggleIcon
+    resource={{
+        coping_strategy_id: strategy.id,
+        educational_resource_id: null,
+        mood_id: null,
+    }}
+/> */}
+
+<FavoriteToggleIcon
+    resource={{
+        coping_strategy_id: strategy.id,
+        educational_resource_id: null,
+        mood_id: null,
+    }}
+/>
 
                         {strategy.descriptions.map((description, index) => (
                             <p key={index} className="coping__description-text">

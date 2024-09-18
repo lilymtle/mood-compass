@@ -115,7 +115,14 @@ export function MoodPage() {
                                 {mood.name}
                             </h1>
 
-                            <FavoriteToggleIcon resource={resource} />
+                            <FavoriteToggleIcon
+    resource={{
+        mood_id: mood.id,
+        educational_resource_id: null,
+        coping_strategy_id: null,
+    }}
+/>
+
                         </div>
 
                         {mood.descriptions.map((descriptions, index) => (
