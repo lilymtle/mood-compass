@@ -53,9 +53,6 @@ export function FavoriteToggleIcon({ resource }) {
                 await axios.post(`${baseURL}/api/favorites/add`, favoriteData);
                 setIsFavorited(true);
             }
-
-            // await checkFavorites();
-            await getFavorites(); 
         } catch (error) {
             console.error('Error toggling favorite:', error);
         }
