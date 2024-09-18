@@ -32,7 +32,7 @@ export const deleteFavorite = async (req, res) => {
     }
 
     try {
-        const result = await knex('favorites')
+        const result = await db('favorites')
             .where({ user_id, mood_id })
             .del();
 
