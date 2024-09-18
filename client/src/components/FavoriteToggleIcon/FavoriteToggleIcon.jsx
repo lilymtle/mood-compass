@@ -25,8 +25,10 @@ export function FavoriteToggleIcon({ resource }) {
                     coping_strategy_id: resource.coping_strategy_id
                 }
             });
-            console.log("Favorite status:", data.favorites ? true : false); // debug - see if favorite status is true or false
-            setIsFavorited(!!data.favorites);
+            // console.log("Favorite status:", data.favorites ? true : false); // debug - see if favorite status is true or false
+            // setIsFavorited(!!data.favorites);
+            console.log("Favorite status:", data.favorites.length > 0); // debug - see if favorite status is true or false
+            setIsFavorited(data.favorites.length > 0);
         };
         getFavorites();
     }, [user, resource]);
@@ -52,7 +54,8 @@ export function FavoriteToggleIcon({ resource }) {
                 setIsFavorited(true);
             }
 
-            await checkFavorites();
+            // await checkFavorites();
+            await getFavorites(); 
         } catch (error) {
             console.error('Error toggling favorite:', error);
         }
