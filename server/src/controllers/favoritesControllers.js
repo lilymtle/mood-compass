@@ -6,7 +6,7 @@ export const addFavorite = async (req, res) => {
     const { user_id, mood_id, educational_resource_id, coping_strategy_id } = req.body;
     try {
         const existingFavorite = await db("favorites")
-        .where({ user_id, mood_id })
+        .where({ user_id, mood_id, educational_resource_id, coping_strategy_id })
         .first();
 
         if (existingFavorite) {
@@ -67,20 +67,42 @@ export const getFavorites = async (req, res) => {
     console.log('get favs body:', req.body); // debug - see incoming req body
 
     const { user_id } = req.query;
+    // try {
+    //     const favorites = await db('favorites')
+    //     .join('moods', 'favorites.mood_id', 'moods.id') // joins mood table with favorites table so that mood table data can be accessed
+    //     .select(
+    //         'favorites.id AS favorite_id',
+    //         'favorites.user_id',
+    //         'favorites.mood_id',
+    //         'moods.images',
+    //         'moods.name',
+    //         'moods.short_description'
+    //     )
+    //     .where({ 'favorites.user_id': user_id }); // filters favorites based on user id
+
+    // res.json({ favorites });
     try {
         const favorites = await db('favorites')
-        .join('moods', 'favorites.mood_id', 'moods.id') // joins mood table with favorites table so that mood table data can be accessed
+        .leftJoin('moods', 'favorites.mood_id', 'moods.id')
+        .leftJoin('educational_resources', 'favorites.educational_resource_id', 'educational_resources.id')
+        .leftJoin('coping_strategies', 'favorites.coping_strategy_id', 'coping_strategies.id')
         .select(
             'favorites.id AS favorite_id',
             'favorites.user_id',
             'favorites.mood_id',
-            'moods.images',
-            'moods.name',
-            'moods.short_description'
+            'favorites.educational_resource_id',
+            'favorites.coping_strategy_id',
+            'moods.images AS mood_images',
+            'moods.name AS mood_name',
+            'moods.short_description AS mood_description',
+            'educational_resources.title AS resource_title',
+            'educational_resources.description AS resource_description',
+            'coping_strategies.title AS strategy_title',
+            'coping_strategies.description AS strategy_description'
         )
-        .where({ 'favorites.user_id': user_id }); // filters favorites based on user id
+        .where({ 'favorites.user_id': user_id }); // Filters favorites based on user_id
 
-    res.json({ favorites });
+        res.json({ favorites });
     } catch (error) {
         console.error('Error fetching favorites:', error);
         res.status(500).json({ error: 'Failed to get favorites' });
