@@ -66,7 +66,7 @@ export const deleteFavorite = async (req, res) => {
 export const getFavorites = async (req, res) => {
     console.log('get favs body:', req.body); // debug - see incoming req body
 
-    const { user_id } = req.query;
+    const { user_id, mood_id, educational_resource_id, coping_strategy_id } = req.query;
     // try {
     //     const favorites = await db('favorites')
     //     .join('moods', 'favorites.mood_id', 'moods.id') // joins mood table with favorites table so that mood table data can be accessed
@@ -82,7 +82,7 @@ export const getFavorites = async (req, res) => {
 
     // res.json({ favorites });
     try {
-        const favorites = await db('favorites')
+        const query = db('favorites')
         .leftJoin('moods', 'favorites.mood_id', 'moods.id')
         .leftJoin('educational_resources', 'favorites.educational_resource_id', 'educational_resources.id')
         .leftJoin('coping_strategies', 'favorites.coping_strategy_id', 'coping_strategies.id')
@@ -107,6 +107,7 @@ export const getFavorites = async (req, res) => {
         if (educational_resource_id) query.where('favorites.educational_resource_id', educational_resource_id);
         if (coping_strategy_id) query.where('favorites.coping_strategy_id', coping_strategy_id);
 
+        const favorites = await query;
         res.json({ favorites });
     } catch (error) {
         console.error('Error fetching favorites:', error);
