@@ -96,17 +96,7 @@ const educationalResourcesData = [
 export async function seed(knex) {
   try {
     await db("educational_resources").del();
-    await db("educational_resources").insert(
-      educationalResourcesData(resource => ({
-        id: resource.id,
-        name: resource.name,
-        short_description: resource.short_description,
-        descriptions: resource.descriptions,
-        images: resource.images,
-        strategies: resource.strategies,
-        resources: resource.resources        
-      }))
-    )
+    await db("educational_resources").insert(educationalResourcesData);
     console.log("Seed data inserted successfully.");
   } catch (error) {
     console.error("Error seeding data:", error);
