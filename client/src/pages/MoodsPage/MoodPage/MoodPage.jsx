@@ -19,9 +19,62 @@ const baseURL = import.meta.env.VITE_API_BASE_URL;
 
 import FavoriteIcon from "@mui/icons-material/Favorite";
 
+import { FavoriteToggleIcon } from "../../../components/FavoriteToggleIcon/FavoriteToggleIcon.jsx";
+
 export function MoodPage() {
+    // const { id } = useParams();
+    // const { user } = useContext(AuthContext);
+    // const [mood, setMood] = useState({
+    //     descriptions: [],
+    //     images: [],
+    //     types: [],
+    //     signs_symptoms: [],
+    //     causes: [],
+    //     treatment_options: [],
+    //     when_to_seek_help: ""
+    // });
+    // const [isFavorited, setIsFavorited] = useState(false);
+    // const [error, setError] = useState(null);
+
+    // useEffect(() => {
+    //     const getMood = async () => {
+    //         try {
+    //             const { data } = await axios.get(`${baseURL}/api/moods/${id}`)
+    //             setMood(data);
+
+    //             if (user) {
+    //                 const { data }= await axios.get(`${baseURL}/api/favorites/check`, {
+    //                     params: { user_id: user.uid, mood_id: id }
+    //                 });             
+    //                 setIsFavorited(data.isFavorited);
+    //             }
+    //         } catch (error) {
+    //             console.error("Error fetching mood data:", error);
+    //             setError("Failed to fetch mood data.");
+    //         };
+    //     };
+    //     getMood();
+    // }, [id, user])
+
+    // const handleFavoriteClick = async () => {
+    //     if (user) {
+    //         try {
+    //             if (isFavorited) {
+    //                 await axios.delete(`${baseURL}/api/favorites/delete`, {
+    //                     data: { user_id: user.uid, mood_id: id }
+    //                 });
+    //                 setIsFavorited(false);
+    //             } else {
+    //                 await axios.post(`${baseURL}/api/favorites/add`, { user_id: user.uid, mood_id: id });
+    //                 setIsFavorited(true);
+    //             }
+    //         } catch (error) {
+    //             console.error("Error updating favorite status:", error);
+    //         }
+    //     }
+    // };
+
     const { id } = useParams();
-    const { user } = useContext(AuthContext);
     const [mood, setMood] = useState({
         descriptions: [],
         images: [],
@@ -31,46 +84,25 @@ export function MoodPage() {
         treatment_options: [],
         when_to_seek_help: ""
     });
-    const [isFavorited, setIsFavorited] = useState(false);
-    const [error, setError] = useState(null);
 
     useEffect(() => {
         const getMood = async () => {
             try {
-                const { data } = await axios.get(`${baseURL}/api/moods/${id}`)
+                const { data } = await axios.get(`${baseURL}/api/moods/${id}`);
                 setMood(data);
-
-                if (user) {
-                    const { data }= await axios.get(`${baseURL}/api/favorites/check`, {
-                        params: { user_id: user.uid, mood_id: id }
-                    });             
-                    setIsFavorited(data.isFavorited);
-                }
             } catch (error) {
                 console.error("Error fetching mood data:", error);
-                setError("Failed to fetch mood data.");
-            };
-        };
-        getMood();
-    }, [id, user])
-
-    const handleFavoriteClick = async () => {
-        if (user) {
-            try {
-                if (isFavorited) {
-                    await axios.delete(`${baseURL}/api/favorites/delete`, {
-                        data: { user_id: user.uid, mood_id: id }
-                    });
-                    setIsFavorited(false);
-                } else {
-                    await axios.post(`${baseURL}/api/favorites/add`, { user_id: user.uid, mood_id: id });
-                    setIsFavorited(true);
-                }
-            } catch (error) {
-                console.error("Error updating favorite status:", error);
             }
         }
-    };
+        getMood();
+    }, [id])
+
+    const resource = {
+        mood_id: mood.id,
+        educational_resource_id: mood.educational_resource_id || null,
+        coping_strategy_id: mood.coping_strategy_id || null
+    }
+
 
     return (
         <main>
@@ -83,9 +115,7 @@ export function MoodPage() {
                                 {mood.name}
                             </h1>
 
-                        <FavoriteIcon 
-                        sx={{ color: isFavorited ? "#557153" : "#FFFFFF", cursor: "pointer" }} 
-                        onClick={handleFavoriteClick} />
+                            <FavoriteToggleIcon resource={resource} />
                         </div>
 
                         {mood.descriptions.map((descriptions, index) => (
