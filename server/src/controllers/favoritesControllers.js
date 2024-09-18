@@ -95,10 +95,10 @@ export const getFavorites = async (req, res) => {
             'moods.images AS mood_images',
             'moods.name AS mood_name',
             'moods.short_description AS mood_description',
-            'educational_resources.title AS resource_title',
-            'educational_resources.description AS resource_description',
-            'coping_strategies.title AS strategy_title',
-            'coping_strategies.description AS strategy_description'
+            'educational_resources.name AS resource_name',
+            'educational_resources.descriptions AS resource_descriptions',
+            'coping_strategies.name AS strategy_name',
+            'coping_strategies.descriptions AS strategy_descriptions'
         )
         .where({ 'favorites.user_id': user_id }); // Filters favorites based on user_id
 
