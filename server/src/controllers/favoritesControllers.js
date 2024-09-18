@@ -102,6 +102,11 @@ export const getFavorites = async (req, res) => {
         )
         .where({ 'favorites.user_id': user_id }); // Filters favorites based on user_id
 
+
+        if (mood_id) query.where('favorites.mood_id', mood_id);
+        if (educational_resource_id) query.where('favorites.educational_resource_id', educational_resource_id);
+        if (coping_strategy_id) query.where('favorites.coping_strategy_id', coping_strategy_id);
+
         res.json({ favorites });
     } catch (error) {
         console.error('Error fetching favorites:', error);
