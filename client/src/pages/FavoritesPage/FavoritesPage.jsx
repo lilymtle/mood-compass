@@ -3,6 +3,8 @@ import { useContext, useEffect, useState } from "react";
 import "./FavoritesPage.scss";
 import { AuthContext } from "../../auth/AuthProvider.jsx";
 
+import FavoriteIcon  from "@mui/icons-material/Favorite";
+
 import { Link } from "react-router-dom";
 import axios from "axios";
 
@@ -31,6 +33,23 @@ export function FavoritesPage() {
     getFavorites();
     }, [user]);
 
+    const handleUnfavoriteClick = async (e, moodId) => {
+        e.stopPropagation();
+        e.preventDefault();
+        if (user) {
+            try {
+                await axios.delete(`${baseURL}/api/favorites/delete`, {
+                    data: { user_id: user.uid, mood_id: moodId },
+                });
+                setFavorites((prevFavorites) =>
+                    prevFavorites.filter((mood) => mood.id !== moodId)
+                );
+            } catch (error) {
+                console.error("Error unfavoriting resource:", error);
+            }
+        }
+    };
+
     return (
         <main>
             <section className="favorites">
@@ -48,10 +67,6 @@ export function FavoritesPage() {
                                     <div 
                                     className={`favorites__card favorites__card-box
                                     ${index === favorites.length - 1 ? "remove-border" : ""}`} >
-                                        {/* <img 
-                                        className="favorites__card-img"
-                                        src={`${baseURL}${mood.images[0]}`}
-                                        alt="card image of article favorited" /> */}
 
                                         <Avatar
                                         alt="card image of article favorited"
@@ -65,10 +80,9 @@ export function FavoritesPage() {
                                                 {mood.short_description}
                                             </p>
                                         </div>
-                                        <img
-                                        className="favorites__card-icon"
-                                        src="/src/assets/icons/favorite-icon.svg"
-                                        alt="heart icon" />
+
+                                        <FavoriteIcon 
+                                        onClick={(e) => handleUnfavoriteClick(e, mood.id)} />        
                                     </div>
                                 </Link>
                             </li>
