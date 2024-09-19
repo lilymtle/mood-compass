@@ -1,0 +1,41 @@
+@use "../../styles/partials/fonts.scss" as *;
+@use "../../styles/partials/variables.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+
+.react-calendar {
+    background: $pale-green;
+    font-family: "Garet Book", sans-serif;
+    border: none;
+    width: 100%;
+    border-radius: 1.25rem;
+
+    &__navigation {
+        font-family: "Garet Book", sans-serif;
+        button {
+            font-family: "Garet Book", sans-serif;
+        }
+    }
+
+    &__month-view__days__day {
+        font-family: "Garet Book", sans-serif;
+        color: $global-text;
+        background-color: #f0f0f0;
+        border: none;
+        box-shadow: none;
+
+        &:hover {
+            background-color: #e0e0e0;
+        }
+    }
+
+    &__tile--active {
+        font-family: "Garet Book", sans-serif;
+        background-color: $forest-green;
+        color: white;
+    }
+
+    &__month-view__days__day--neighboringMonth {
+        font-family: "Garet Book", sans-serif;
+        color: $grey;
+    }
+}
