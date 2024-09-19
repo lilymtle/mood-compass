@@ -7,7 +7,7 @@ import { AuthContext } from "../../auth/AuthProvider.jsx";
 // import environmental variable
 const baseURL = import.meta.env.VITE_API_BASE_URL;
 
-export function FavoriteToggleIcon({ resource }) {
+export function FavoriteToggleIcon({ resource, onToggle }) {
     const { user } = useContext(AuthContext);
     const [isFavorited, setIsFavorited] = useState(false);
 
@@ -33,7 +33,10 @@ export function FavoriteToggleIcon({ resource }) {
         getFavorites();
     }, [user, resource]);
 
-    const handleToggleFavorite = async () => {
+    const handleToggleFavorite = async (e) => {
+        e.stopPropagation();
+        e.preventDefault(); 
+        
         if (!user) return;
 
         const favoriteData = {
@@ -53,6 +56,8 @@ export function FavoriteToggleIcon({ resource }) {
                 await axios.post(`${baseURL}/api/favorites/add`, favoriteData);
                 setIsFavorited(true);
             }
+
+            onToggle();
         } catch (error) {
             console.error('Error toggling favorite:', error);
         }
