@@ -10,10 +10,21 @@
     }
 
     &__header {
-        color: $white;
-        font-family: "Brittany Signature", sans-serif;
-        font-size: 40px;
-        margin: 0.5rem 0 2rem 0;
+        @include m-page-header;
+        margin: 0;
+        padding-bottom: 1rem;
+
+        @include tablet {
+            @include td-page-header;
+            padding-bottom: 1.5rem;
+
+        }
+
+        @include desktop {
+            @include td-page-header;
+            padding-bottom: 1.5rem;
+
+        }
     }
 
     &__favorite-icon {
@@ -23,21 +34,11 @@
     }
 
     &__subheader {
-        font-family: "Garet Book", sans-serif;
-        font-size: 24px;
+        @include m-sub-header($global-text);
         margin: 0;
 
         &--white {
-            font-family: "Garet Book", sans-serif;
-            font-size: 24px;
-            color: $white;
-            margin: 0;
-        }
-
-        &--green {
-            font-family: "Garet Book", sans-serif;
-            font-size: 24px;
-            color: $forest-green;
+            @include m-sub-header($white);
             margin: 0;
         }
     }
@@ -53,7 +54,8 @@
     }
 
     &__list {
-        padding: 0 1rem;
+        padding: 0 1.3rem;
+        margin-top: 1rem;
     }
 
     &__item {
@@ -111,8 +113,24 @@
         }
 
         &-text {
-            color: $white;
-            margin-bottom: 0;
+            @include m-body($white);
+            width: 100%;
+            margin: 0;
+            padding-top: 1rem;
+    
+            @include tablet {
+                @include td-body($white);
+                width: 100%;
+                margin: 0;
+                padding-top: 1.5rem;
+            }
+    
+            @include desktop {
+                @include td-body($white);
+                width: 100%;
+                margin: 0;
+                padding-top: 1.5rem;
+            }
         }
     }
 
@@ -133,12 +151,48 @@
                 z-index: 1;
             }
         }
+
+        &-text {
+            @include m-body($global-text);
+            width: 100%;
+            margin: 0;
+    
+            @include tablet {
+                @include td-body($global-text);
+                width: 100%;
+                margin: 0;
+            }
+    
+            @include desktop {
+                @include td-body($global-text);
+                width: 100%;
+                margin: 0;
+            }
+        }
     }
 
     &__signs-symptoms {
         &-container {
             background-color: $beige;
             padding: 1rem;
+        }
+
+        &-text {
+            @include m-body($global-text);
+            width: 100%;
+            margin: 0;
+    
+            @include tablet {
+                @include td-body($global-text);
+                width: 100%;
+                margin: 0;
+            }
+    
+            @include desktop {
+                @include td-body($global-text);
+                width: 100%;
+                margin: 0;
+            }
         }
     }
 
@@ -150,7 +204,21 @@
         }
 
         &-text {
-            color: $white; 
+            @include m-body($white);
+            width: 100%;
+            margin: 0;
+    
+            @include tablet {
+                @include td-body($white);
+                width: 100%;
+                margin: 0;
+            }
+    
+            @include desktop {
+                @include td-body($white);
+                width: 100%;
+                margin: 0;
+            }
         }
     }
 
@@ -171,6 +239,24 @@
                 z-index: 1;
             }
         }
+
+        &-text {
+            @include m-body($global-text);
+            width: 100%;
+            margin: 0;
+    
+            @include tablet {
+                @include td-body($global-text);
+                width: 100%;
+                margin: 0;
+            }
+    
+            @include desktop {
+                @include td-body($global-text);
+                width: 100%;
+                margin: 0;
+            }
+        }
     }
 
     &__help {
@@ -180,7 +266,24 @@
         }
 
         &-text {
-            color: $white;
+            @include m-body($white);
+            width: 100%;
+            margin: 0;
+            padding-top: 1rem;
+    
+            @include tablet {
+                @include td-body($white);
+                width: 100%;
+                margin: 0;
+                padding-top: 1.5rem;
+            }
+    
+            @include desktop {
+                @include td-body($white);
+                width: 100%;
+                margin: 0;
+                padding-top: 1.5rem;
+            }
         }
     }
 
@@ -188,11 +291,28 @@
         &-container {
             background-color: $silver;
             position: relative;
-            padding: 9rem 1rem 1rem 1rem;
+            padding: 9.2rem 1rem 1rem 1rem;
         }
 
         &-text {
-            color: $forest-green;
+            @include m-body($white);
+            width: 100%;
+            margin: 0;
+            padding-top: 1rem;
+    
+            @include tablet {
+                @include td-body($white);
+                width: 100%;
+                margin: 0;
+                padding-top: 1rem;
+            }
+    
+            @include desktop {
+                @include td-body($white);
+                width: 100%;
+                margin: 0;
+                padding-top: 1rem;
+            }
         }
     }
 }
