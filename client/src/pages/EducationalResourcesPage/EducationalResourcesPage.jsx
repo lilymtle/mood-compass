@@ -64,7 +64,7 @@ return (
                     id={resource.id}
                     name={resource.name}
                     images={resource.images}
-                    shortDescription={resource.shortDescription} />
+                    shortDescription={resource.short_description} />
                 ))}
             </ul>
         </section>
