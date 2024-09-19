@@ -6,18 +6,50 @@
     &__container {
         background-color: $forest-green;
         padding: 1rem;
+
+        @include tablet {
+            height: 100%;
+            padding: 2rem;
+        }
+
+        @include desktop {
+            height: 100%;
+            padding: 2.5rem;
+        }
     }
 
     &__header {
-        font-family: "Brittany Signature", sans-serif;
-        color: $white;
-        font-size: 48px;
+        @include m-page-header;
         margin: 0;
+
+        @include tablet {
+            @include td-page-header;
+        }
+
+        @include desktop {
+            @include td-page-header;
+        }
     }
 
     &__text {
-        color: $white;
-        margin-top: 1.5rem;
+        @include m-body($white);
+        width: 100%;
+        margin: 0;
+        padding-top: 1rem;
+
+        @include tablet {
+            @include td-body($white);
+            width: 100%;
+            margin: 0;
+            padding-top: 1.5rem;
+        }
+
+        @include desktop {
+            @include td-body($white);
+            width: 100%;
+            margin: 0;
+            padding-top: 1.5rem;
+        }
     }
     
 }
@@ -26,6 +58,21 @@
     list-style: none;
     margin: 0;
     padding: 1rem;
+
+    @include tablet {
+        @include flex-box(flex, row);
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    @include desktop {
+        @include flex-box(flex, row);
+        flex-wrap: wrap;
+        gap: 2.5rem; 
+        padding: 2.5rem;
+    }
     
     &__container {
         background-image: url("src/assets/images/strategies-page-bg.jpg");
@@ -46,6 +93,18 @@
         margin-bottom: 1rem;
         box-shadow: 0 1.5em 2.5em -.5em rgba(#000000, .1);
         transition: transform .45s ease, background .45s ease;
+
+        @include tablet {
+            width: 47%;
+            padding: 2rem;
+            margin-bottom: 0;
+        }
+
+        @include desktop {
+            width: 30%;
+            padding: 2.5rem;
+            margin-bottom: 0;
+        }
 
         &:hover {
             background: $forest-green;
@@ -108,6 +167,16 @@
         margin: 0 0 1.25em;
         transform: translateY(-1em);
         transition: opacity .45s ease, transform .5s ease;
+
+        @include tablet {
+            @include td-body($white);
+            padding-top: 1rem;
+        }
+
+        @include desktop {
+            @include td-body($white);
+            padding-top: 1rem;
+        }
     }
 
     &__link {
