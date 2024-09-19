@@ -1,8 +1,15 @@
-import { Link } from "react-router-dom";
+// import styling
+import "./FavoriteCard.scss";
+
+// import components
 import { Avatar } from "@mui/material";
 import { FavoriteToggleIcon } from "../../FavoriteToggleIcon/FavoriteToggleIcon";
+
+// import util
 import { replaceUnderscoreWithHyphen } from "../../../utils/formatUtils";
 
+// import dependency
+import { Link } from "react-router-dom";
 
 // import environmental variable
 const baseURL = import.meta.env.VITE_API_BASE_URL;
@@ -43,6 +50,7 @@ export function FavoriteCard({ resource, type, onToggle }) {
     }
 
     const formattedType = replaceUnderscoreWithHyphen(type);
+    
     return (
         <li className="favorites__list-item">
         <Link 
