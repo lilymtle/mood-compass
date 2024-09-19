@@ -1,34 +1,43 @@
-@use "../../styles/partials/variables" as *;
-@use "../../styles/partials/mixins" as *;
-
-main {
-    font-size: .8125rem;
-    // box-sizing: border-box;
-}
+@use "../../styles/partials/variables.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
 
 .home {
-    &__welcome {
-        
+    &__wrapper {
+        @include tablet {
+            @include flex-box(flex, row);
+        }
+    }
+
+    &__welcome {        
         &-container {
             background-color: $pale-green;
-            color: $white;
             padding: 1rem;
+
+            @include tablet {
+                height: 100%;
+                padding: 2rem;
+            }
         }
 
         &-header {
-            font-family: "Brittany Signature", sans-serif;
-            font-size: 48px;
-            margin: 0;
+            @include m-page-header;
+            margin: 1rem 0;
+
+            @include tablet {
+                @include td-page-header;
+            }
+
         }
 
         &-message {
             width: 100%;
+            color: $white;
+            font-size: .8125rem;
             margin-bottom: 0;
-        }
 
-        &-img {
-            width: auto;
-            height: 200px;
+            @include tablet {
+                @include td-body($white);
+            }
         }
     }
 
@@ -44,6 +53,11 @@ main {
             position: relative;
             padding: 1rem;
 
+            @include tablet {
+                height: 100%;
+                padding: 2rem;
+            }
+
             &::before {
                 content: "";
                 position: absolute;
@@ -53,7 +67,6 @@ main {
                 height: 100%;
                 background-color: rgba(0, 0, 0, 0.2);
                 z-index: 1;
-                // box-sizing: border-box;
             }
         }
 
@@ -67,17 +80,29 @@ main {
             height: 100%;
             z-index: 2;
             padding: 1rem;
+
+            @include tablet {
+                padding: 2rem;
+            }
         }
 
         &-header {
-            font-family: "Brittany Signature", sans-serif;
-            font-size: 24px;
+            @include m-sub-header-medium($global-text);
             text-align: right;
             margin: 0;
+
+            @include tablet {
+                @include td-sub-header-medium($global-text);
+            }
         }
 
         &-message { 
+            font-size: .8125rem;
             margin-top: 1.5rem;
+
+            @include tablet {
+                @include td-body($global-text);
+            }
         }
 
         &-btn {
@@ -95,19 +120,26 @@ main {
     }
 
     &__education {
-        
         &-container {
             background-color: $beige;
             padding: 1rem;
         }
 
         &-header {
-            font-family: "Garet Book", sans-serif;
-            font-size: 24px;
+            @include m-sub-header-medium($global-text);
 
-            &--script {
-                font-family: "Brittany Signature", sans-serif;
-                font-size: 24px;
+            @include tablet {
+                @include td-sub-header-medium($global-text);
+            }
+
+            @include tablet {
+                padding-left: 1rem;
+            }
+        }
+
+        &-cards {
+            @include tablet {
+                padding-inline: 1.3rem;
             }
         }
     }
@@ -120,25 +152,37 @@ main {
             background-size:contain;
             background-repeat: no-repeat;
             background-position: right;
-            height: 20vh;
+            height: 25vh;
             padding: 1rem;
+
+            @include tablet {
+                padding: 2rem;
+            }
         }
 
         &-text {
-            font-family: "Garet Book", sans-serif;
-            color: $white;
-            font-size: 14px;
+            @include m-quote-body($white);
             width: 50%;
             text-align: center;
             margin-top: 1rem;
+
+            @include tablet {
+                width: 80%;
+                @include td-quote-body($white);
+                margin-top: 2.5rem;
+            }
         }
 
         &-author {
             width: 50%;
-            font-family: "Garet Book", sans-serif;
-            font-size: 11px;
+            @include m-quote-author($global-text);
             font-style: italic;
             text-align: center;
+
+            @include tablet {
+                width: 80%;
+                @include td-quote-author($global-text);
+            }
         }
     }
 }
@@ -149,13 +193,19 @@ main {
     border-radius: 1.25rem;
     padding: 1rem;
 
-    &__list {
-        @include flex-box(flex, column);
-        gap: 1rem;
+    @include tablet { 
+        padding: 2rem;
+        width: 50%;
     }
 
     &__header {
-        font-size: 14px;
+        @include m-card-header($forest-green);
+        margin: 0;
+        padding-top: 1rem;
+
+        @include tablet {
+            @include td-card-header($forest-green);
+        }
     }
 
     &__container {
@@ -164,13 +214,32 @@ main {
     }
 
     &__list {
-        // align-items: center;
+        @include flex-box(flex, column);
+        gap: 1rem;
         list-style-type: none;
         padding: 0;
+
+        @include tablet {
+            @include flex-box(flex, row);
+            justify-content: space-between;
+        }
+    }
+
+    &__text {
+        @include m-body($global-text);
+
+        @include tablet {
+            @include td-body($global-text);
+        }
     }
 
     &__icon {
         width: 1.5rem;
         height: 1.5rem;
+
+        @include tablet {
+            width: 2rem;
+            height: 2rem;
+        }
     }
 }
