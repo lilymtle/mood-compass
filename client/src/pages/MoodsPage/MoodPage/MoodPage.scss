@@ -16,14 +16,12 @@
 
         @include tablet {
             @include td-page-header;
-            padding-bottom: 1.5rem;
-
+            padding-bottom: 1rem;
         }
 
         @include desktop {
             @include td-page-header;
-            padding-bottom: 1.5rem;
-
+            padding-bottom: 1rem;
         }
     }
 
@@ -50,12 +48,28 @@
             border-radius: 1.25rem;
             z-index: 2;
             padding: 1rem;
+
+            @include tablet {
+                padding: 2rem;
+            }
+        }
+    }
+
+    &__wrapper {
+        @include tablet {
+            width: 100%;
+            height: 100%;
+            @include flex-box(flex, row);
         }
     }
 
     &__list {
         padding: 0 1.3rem;
         margin-top: 1rem;
+
+        @include tablet {
+            margin-bottom: 0;
+        }
     }
 
     &__item {
@@ -82,6 +96,30 @@
     
             .shape-fill {
                 fill: $beige;
+            }
+
+            @include tablet {
+                display: none;
+            }
+
+            &--tablet {
+                @include tablet {
+                    display: visible;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    overflow: hidden;
+                    line-height: 0;
+                    z-index: 3;
+            
+                    svg { 
+                        position: relative;
+                        display: block;
+                        width: calc(100% + 1.3px);
+                        height: 150px;
+                    }
+                }
             }
         }
 
@@ -110,6 +148,10 @@
         &-container {
             background-color: $pale-green;
             padding: 1rem;
+
+            @include tablet {
+                padding: 2rem;
+            }
         }
 
         &-text {
@@ -122,14 +164,14 @@
                 @include td-body($white);
                 width: 100%;
                 margin: 0;
-                padding-top: 1.5rem;
+                padding-top: 1rem;
             }
     
             @include desktop {
                 @include td-body($white);
                 width: 100%;
                 margin: 0;
-                padding-top: 1.5rem;
+                padding-top: 1rem;
             }
         }
     }
@@ -149,6 +191,10 @@
                 height: 100%;
                 background-color: rgba(0, 0, 0, 0.2);
                 z-index: 1;
+            }
+
+            @include tablet {
+                padding: 2rem;
             }
         }
 
@@ -172,9 +218,18 @@
     }
 
     &__signs-symptoms {
+        @include tablet {
+            width: 50%;
+            height: 100%;
+        }
+
         &-container {
             background-color: $beige;
             padding: 1rem;
+
+            @include tablet {
+                padding: 2rem;
+            }
         }
 
         &-text {
@@ -197,10 +252,19 @@
     }
 
     &__causes {
+        @include tablet {
+            width: 50%;
+        }
+
         &-container {
             background-color: $sage-green;
             position: relative;
             padding: 6rem 1rem 1rem 1rem;
+
+            @include tablet {
+                padding: 2rem;
+                height: 100%;
+            }
         }
 
         &-text {
@@ -227,6 +291,10 @@
             background-size: cover;
             position: relative;
             padding: 1rem;
+
+            @include tablet {
+                padding: 7rem 2rem 2rem 2rem;
+            }
 
             &::before {
                 content: "";
@@ -263,6 +331,10 @@
         &-container {
             background-color: $forest-green;
             padding: 1rem;
+
+            @include tablet {
+                padding: 2rem;
+            }
         }
 
         &-text {
@@ -292,6 +364,10 @@
             background-color: $silver;
             position: relative;
             padding: 9.2rem 1rem 1rem 1rem;
+
+            @include tablet {
+                padding: 9.2rem 2rem 2rem 2rem;
+            }
         }
 
         &-text {
