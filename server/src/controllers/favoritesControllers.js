@@ -55,8 +55,20 @@ export const deleteFavorite = async (req, res) => {
     console.log('deletefav body:', req.body); // Log incoming request body
 
     const { user_id, mood_id, educational_resource_id, coping_strategy_id } = req.body;
+    // try {
+    //     await db('favorites').where({ user_id, mood_id, educational_resource_id, coping_strategy_id }).del();
+    //     res.json({ message: 'Favorite deleted' });
     try {
-        await db('favorites').where({ user_id, mood_id, educational_resource_id, coping_strategy_id }).del();
+        const existingFavorite = await db('favorites').where({ user_id, mood_id, educational_resource_id, coping_strategy_id }).first();
+        if (!existingFavorite) {
+            return res.status(404).json({ error: 'Favorite not found' });
+        }
+
+        const result = await db('favorites').where({ user_id, mood_id, educational_resource_id, coping_strategy_id }).del();
+        if (result === 0) {
+            return res.status(404).json({ error: 'Favorite not found or already deleted' });
+        }
+
         res.json({ message: 'Favorite deleted' });
     } catch (error) {
         res.status(500).json({ error: 'Failed to delete favorite' });
