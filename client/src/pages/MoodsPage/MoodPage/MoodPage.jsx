@@ -22,58 +22,6 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import { FavoriteToggleIcon } from "../../../components/FavoriteToggleIcon/FavoriteToggleIcon.jsx";
 
 export function MoodPage() {
-    // const { id } = useParams();
-    // const { user } = useContext(AuthContext);
-    // const [mood, setMood] = useState({
-    //     descriptions: [],
-    //     images: [],
-    //     types: [],
-    //     signs_symptoms: [],
-    //     causes: [],
-    //     treatment_options: [],
-    //     when_to_seek_help: ""
-    // });
-    // const [isFavorited, setIsFavorited] = useState(false);
-    // const [error, setError] = useState(null);
-
-    // useEffect(() => {
-    //     const getMood = async () => {
-    //         try {
-    //             const { data } = await axios.get(`${baseURL}/api/moods/${id}`)
-    //             setMood(data);
-
-    //             if (user) {
-    //                 const { data }= await axios.get(`${baseURL}/api/favorites/check`, {
-    //                     params: { user_id: user.uid, mood_id: id }
-    //                 });             
-    //                 setIsFavorited(data.isFavorited);
-    //             }
-    //         } catch (error) {
-    //             console.error("Error fetching mood data:", error);
-    //             setError("Failed to fetch mood data.");
-    //         };
-    //     };
-    //     getMood();
-    // }, [id, user])
-
-    // const handleFavoriteClick = async () => {
-    //     if (user) {
-    //         try {
-    //             if (isFavorited) {
-    //                 await axios.delete(`${baseURL}/api/favorites/delete`, {
-    //                     data: { user_id: user.uid, mood_id: id }
-    //                 });
-    //                 setIsFavorited(false);
-    //             } else {
-    //                 await axios.post(`${baseURL}/api/favorites/add`, { user_id: user.uid, mood_id: id });
-    //                 setIsFavorited(true);
-    //             }
-    //         } catch (error) {
-    //             console.error("Error updating favorite status:", error);
-    //         }
-    //     }
-    // };
-
     const { id } = useParams();
     const [mood, setMood] = useState({
         descriptions: [],
@@ -97,17 +45,16 @@ export function MoodPage() {
         getMood();
     }, [id])
 
-    const resource = {
-        mood_id: mood.id,
-        educational_resource_id: mood.educational_resource_id || null,
-        coping_strategy_id: mood.coping_strategy_id || null
-    }
+    // const resource = {
+    //     mood_id: mood.id,
+    //     educational_resource_id: mood.educational_resource_id || null,
+    //     coping_strategy_id: mood.coping_strategy_id || null
+    // }
 
 
     return (
         <main>
             <section className="mood">
-
                 <section className="mood__description">
                     <div className="mood__description-container">
                         <div className="mood__header-icon-container">
@@ -116,13 +63,11 @@ export function MoodPage() {
                             </h1>
 
                             <FavoriteToggleIcon
-    resource={{
-        mood_id: mood.id,
-        educational_resource_id: null,
-        coping_strategy_id: null,
-    }}
-/>
-
+                            resource={{
+                                mood_id: mood.id,
+                                educational_resource_id: null,
+                                coping_strategy_id: null,
+                            }} />
                         </div>
 
                         {mood.descriptions.map((descriptions, index) => (
@@ -145,7 +90,7 @@ export function MoodPage() {
                             <ul className="mood__list">
                                 {mood.types.map((type, index) => (
                                     <li key={index} className="mood__item">
-                                        <p className="mood__type-text">
+                                        <p className="mood__types-text">
                                             {type}
                                         </p>
                                     </li>
@@ -164,7 +109,7 @@ export function MoodPage() {
                         <ul className="mood__list">
                             {mood.signs_symptoms.map((sign_symptom, index) => (
                                 <li key={index} className="mood__item">
-                                    <p className="mood__sign-symptom-text">
+                                    <p className="mood__signs-symptoms-text">
                                         {sign_symptom}
                                     </p>
                                 </li>
@@ -220,7 +165,7 @@ export function MoodPage() {
                 
                 <section className="mood__help">
                     <div className="mood__help-container">
-                        <h3 className="mood__subheader--h3 mood__subheader--white">
+                        <h3 className="mood__subheader--white">
                             When to Seek Help
                         </h3>
 
@@ -240,7 +185,7 @@ export function MoodPage() {
                             </svg>
                         </div>
                         <div className="mood__box-resources">
-                            <h3 className="mood__subheader--green">
+                            <h3 className="mood__subheader--white">
                                 Additional Resources
                             </h3>
                             <p className="mood__resources-text">
