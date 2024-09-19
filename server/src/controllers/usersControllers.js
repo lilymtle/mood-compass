@@ -45,3 +45,21 @@ export const loginUser = async (req, res) => {
         res.status(500).send("Error logging in user.");
     };
 };
+
+export const getUserName = async (req, res) => {
+    const { email } = req.query;
+
+    try {
+        const user = await db("users")
+        .where({ email })
+        .first();
+
+        if (user) {
+            res.status(200).json({ name: user.name });
+        } else {
+            res.status(404).json({ error: "User not found." });
+        }
+    } catch (error) {
+        res.status(500).json({ error: "Database error." });
+    }
+};
