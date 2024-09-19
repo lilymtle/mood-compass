@@ -14,24 +14,22 @@ import { useEffect, useState } from "react";
 // import { useParams } from "react-router-dom";
 
 // import component
-import { MoodCard } from "../../components/Cards/MoodCard/MoodCard";
+import { Card } from "../../components/Cards/Card";
 
 export function MoodsPage() {
-    const [moodsData, setMoodsData] = useState([]);
-    // const [selectedMood, setSelectedMood] = useState({});
-    // const { moodId } = useParams();
+    const [resourcesData, setResourcesData] = useState([]);
+
 
     useEffect(() => {
-        const getMoods = async () => {
+        const getMoodsData= async () => {
             try {
-                const response = await axios.get(`${baseURL}/api/moods`);
-                console.log(response.data); 
-                setMoodsData(response.data);
+                const { data } = await axios.get(`${baseURL}/api/moods`);
+                setResourcesData(data);
             } catch (error) {
-                console.error("Error retrieving moods:", error);
+                console.error("Error retrieving educational resources:", error);
             };
         };
-        getMoods();
+        getMoodsData();
     }, []);
 
 return (
@@ -51,14 +49,23 @@ return (
 
         <section className="moods-list__container">
             <ul className="moods-list">
-                {moodsData.map((mood) => (
-                    <MoodCard
+            {resourcesData.map((resource) => (
+                    <Card
+                    listItemClassname="moods-list__card"
+                    h2ClassName="moods-list__number"
+                    h3ClassName="moods-list__title"
+                    divClassName="moods-list__content"
+                    imgClassName="moods-list__img"
+                    pClassName="moods-list__text"
+                    linkClassName="moods-list__link"
+                    linkPath={`/moods/${resource.id}`}
+                    iconClassName="moods-list__icon"
                     baseURL={baseURL}
-                    key={mood.id}
-                    id={mood.id}
-                    name={mood.name}
-                    images={mood.images}
-                    shortDescription={mood.short_description} />
+                    key={resource.id}
+                    id={resource.id}
+                    name={resource.name}
+                    images={resource.images}
+                    shortDescription={resource.short_description} />
                 ))}
             </ul>
         </section>
