@@ -93,49 +93,59 @@ export function CopingStrategyPage() {
                     </div>
                 </section>
 
-                <section className="coping__benefits">
-                    <div className="coping__benefits-container">
-                    <div className="coping__divider-curve">
-                        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                            <path d="M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z" className="shape-fill"></path>
-                        </svg>
-                    </div>
+                <div className="coping__wrapper">
+                <div className="coping__divider-curve--tablet-desktop">
+                    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                        <path d="M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z" class="shape-fill"></path>
+                    </svg>
+                </div>
 
-                        <h1 className="coping__subheader--white">
-                            Benefits
-                        </h1>
+                    <section className="coping__benefits">
+                        <div className="coping__benefits-container">
+                        <div className="coping__divider-curve">
+                            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                                <path d="M0,0V7.23C0,65.52,600,65.52,600,7.23V0Z" className="shape-fill" fill="#557153"></path>
+                                <path d="M600,0V7.23C600,65.52,1200,65.52,1200,7.23V0Z" className="shape-fill" fill="#F8EDE3"></path>
+                            </svg>
+                        </div>
 
-                        <ul className="coping__list">
-                                {strategy.benefits.map((benefit, index) => (
-                                    <li key={index} className="coping__item--white">
-                                        <p className="coping__benefits-text">
-                                            {benefit}
-                                        </p>
+
+                            <h1 className="coping__subheader--white">
+                                Benefits
+                            </h1>
+
+                            <ul className="coping__list">
+                                    {strategy.benefits.map((benefit, index) => (
+                                        <li key={index} className="coping__item--white">
+                                            <p className="coping__benefits-text">
+                                                {benefit}
+                                            </p>
+                                        </li>
+                                    ))}
+                                </ul>
+                        </div>
+                    </section>
+
+                    <section className="coping__extra-resources">
+                        <div className="coping__extra-resources-container">
+                            <h2 className="coping__subheader">
+                                Additional Resources
+                            </h2>
+
+                            <ul className="coping__list">
+                                {strategy.resources.map((extraResource, index) => (
+                                    <li key={index} className="coping__item">
+                                        <Link to={extraResource.link}>
+                                            <p className="coping__extra-resources-text">
+                                                {extraResource.title}
+                                            </p>
+                                        </Link>
                                     </li>
                                 ))}
                             </ul>
-                    </div>
-                </section>
-
-                <section className="coping__extra-resources">
-                    <div className="coping__extra-resources-container">
-                        <h2 className="coping__subheader--green">
-                            Additional Resources
-                        </h2>
-
-                        <ul className="coping__list">
-                            {strategy.resources.map((extraResource, index) => (
-                                <li key={index} className="coping__item">
-                                    <Link to={extraResource.link}>
-                                        <p className="coping__extra-resources-text">
-                                            {extraResource.title}
-                                        </p>
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                </section>
+                        </div>
+                    </section>
+                </div>
 
                 <section className="learn-more">
                     <div className="learn-more__container">
