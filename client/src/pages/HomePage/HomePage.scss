@@ -30,7 +30,7 @@
 
         &-header {
             @include m-page-header;
-            margin: 1rem 0;
+            margin: 0;
 
             @include tablet {
                 @include td-page-header;
@@ -49,10 +49,12 @@
 
             @include tablet {
                 @include td-body($white);
+                margin-top: 1rem;
             }
 
             @include desktop {
                 @include td-body($white);
+                margin-top: 1rem;
             }
         }
     }
