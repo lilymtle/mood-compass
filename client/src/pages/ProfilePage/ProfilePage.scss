@@ -1,3 +1,82 @@
 @use "../../styles/partials/fonts.scss" as *;
 @use "../../styles/partials/variables.scss" as *;
 @use "../../styles/partials/mixins.scss" as *;
+
+.profile {
+    &__header {
+        @include m-page-header;
+        margin: 0;
+        padding: 1rem;
+
+        &-container {
+            background-color: $sage-green;
+            @include flex-box(flex, column);
+            gap: 1rem;
+            align-items: center;
+            position: relative;
+            padding: 5rem 1rem 1rem 1rem;
+        }
+    }
+
+    &__subheader {
+        @include m-sub-header-medium($forest-green);
+        text-align: center;
+        margin: 0;
+    }
+
+    &__divider {
+        &-multi-waves {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+
+            svg {
+                position: relative;
+                display: block;
+                width: calc(100% + 1.3px);
+                height: 150px;
+            }
+
+            .shape-fill {
+                fill: $light-grey;
+            }
+        }
+    }
+
+    &__box {
+        @include box($white, 100%, 100%, 1.25rem, 80%);
+        padding: 0.5rem;
+    }
+
+    &__btn {
+        &-container {
+            @include flex-box(flex, row);
+        }
+        
+        &-favorite {
+            padding: 0.5rem 1rem;
+            margin: 0;
+
+            &-wrapper {
+                @include btn($pale-green, .8125rem, $white);
+
+                &:hover {
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        &-logout {
+            @include btn($pale-green, .8125rem, $white);
+            padding: 0.5rem 1rem;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
