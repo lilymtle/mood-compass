@@ -52,6 +52,10 @@
             @include tablet {
                 padding: 2rem;
             }
+
+            @include desktop {
+                padding: 2.5rem;
+            }
         }
     }
 
@@ -61,11 +65,21 @@
             height: 100%;
             @include flex-box(flex, row);
         }
+
+        @include desktop{
+            width: 100%;
+            height: 100%;
+            @include flex-box(flex, row);
+        }
     }
 
     &__list {
         padding: 0 1.3rem;
         margin-top: 1rem;
+
+        @include tablet {
+            margin-bottom: 0;
+        }
 
         @include tablet {
             margin-bottom: 0;
@@ -102,8 +116,30 @@
                 display: none;
             }
 
+            @include desktop {
+                display: none;
+            }
+
             &--tablet {
                 @include tablet {
+                    display: visible;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    overflow: hidden;
+                    line-height: 0;
+                    z-index: 3;
+            
+                    svg { 
+                        position: relative;
+                        display: block;
+                        width: calc(100% + 1.3px);
+                        height: 150px;
+                    }
+                }
+
+                @include desktop {
                     display: visible;
                     position: absolute;
                     top: 0;
@@ -152,6 +188,10 @@
             @include tablet {
                 padding: 2rem;
             }
+
+            @include desktop {
+                padding: 2.5rem;
+            }
         }
 
         &-text {
@@ -196,6 +236,10 @@
             @include tablet {
                 padding: 2rem;
             }
+
+            @include desktop {
+                padding: 2.5rem;
+            }
         }
 
         &-text {
@@ -223,12 +267,21 @@
             height: 100%;
         }
 
+        @include desktop {
+            width: 50%;
+            height: 100%;
+        }
+
         &-container {
             background-color: $beige;
             padding: 1rem;
 
             @include tablet {
                 padding: 2rem;
+            }
+
+            @include desktop {
+                padding: 2.5rem;
             }
         }
 
@@ -256,6 +309,10 @@
             width: 50%;
         }
 
+        @include desktop {
+            width: 50%;
+        }
+
         &-container {
             background-color: $sage-green;
             position: relative;
@@ -263,6 +320,11 @@
 
             @include tablet {
                 padding: 2rem;
+                height: 100%;
+            }
+
+            @include desktop {
+                padding: 2.5rem;
                 height: 100%;
             }
         }
@@ -294,6 +356,10 @@
 
             @include tablet {
                 padding: 7rem 2rem 2rem 2rem;
+            }
+
+            @include desktop {
+                padding: 7rem 2.5rem 2.5rem 2.5rem;
             }
 
             &::before {
@@ -335,6 +401,10 @@
             @include tablet {
                 padding: 2rem;
             }
+
+            @include desktop {
+                padding: 2.5rem;
+            }
         }
 
         &-text {
@@ -367,6 +437,10 @@
 
             @include tablet {
                 padding: 9.2rem 2rem 2rem 2rem;
+            }
+
+            @include desktop {
+                padding: 9.2rem 2.5rem 2.5rem 2.5rem;
             }
         }
 
