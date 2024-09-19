@@ -6,6 +6,10 @@
         @include tablet {
             @include flex-box(flex, row);
         }
+
+        @include desktop {
+            @include flex-box(flex, row);
+        }
     }
 
     &__welcome {        
@@ -17,6 +21,11 @@
                 height: 100%;
                 padding: 2rem;
             }
+
+            @include desktop {
+                height: 100%;
+                padding: 2.5rem;
+            }
         }
 
         &-header {
@@ -27,6 +36,9 @@
                 @include td-page-header;
             }
 
+            @include desktop {
+                @include td-page-header;
+            }
         }
 
         &-message {
@@ -36,6 +48,10 @@
             margin-bottom: 0;
 
             @include tablet {
+                @include td-body($white);
+            }
+
+            @include desktop {
                 @include td-body($white);
             }
         }
@@ -56,6 +72,11 @@
             @include tablet {
                 height: 100%;
                 padding: 2rem;
+            }
+
+            @include desktop {
+                height: 100%;
+                padding: 2.5rem;
             }
 
             &::before {
@@ -84,6 +105,10 @@
             @include tablet {
                 padding: 2rem;
             }
+
+            @include desktop {
+                padding: 2.5rem;
+            }
         }
 
         &-header {
@@ -94,6 +119,10 @@
             @include tablet {
                 @include td-sub-header-medium($global-text);
             }
+
+            @include desktop {
+                @include td-sub-header-medium($global-text);
+            }
         }
 
         &-message { 
@@ -101,6 +130,10 @@
             margin-top: 1.5rem;
 
             @include tablet {
+                @include td-body($global-text);
+            }
+
+            @include desktop {
                 @include td-body($global-text);
             }
         }
@@ -130,16 +163,21 @@
 
             @include tablet {
                 @include td-sub-header-medium($global-text);
+                padding-left: 1rem;
             }
 
-            @include tablet {
-                padding-left: 1rem;
+            @include desktop {
+                padding-left: 1.5rem;
             }
         }
 
         &-cards {
             @include tablet {
                 padding-inline: 1.3rem;
+            }
+
+            @include desktop {
+                padding-inline: 1.5rem;
             }
         }
     }
@@ -152,11 +190,17 @@
             background-size:contain;
             background-repeat: no-repeat;
             background-position: right;
-            height: 25vh;
+            height: 20vh;
             padding: 1rem;
 
             @include tablet {
+                height: 25vh;
                 padding: 2rem;
+            }
+
+            @include desktop {
+                height: 30vh;
+                padding: 2.5rem;
             }
         }
 
@@ -171,6 +215,12 @@
                 @include td-quote-body($white);
                 margin-top: 2.5rem;
             }
+
+            @include desktop {
+                width: 85%;
+                @include td-quote-body($white);
+                margin-top: 2.5rem;
+            }
         }
 
         &-author {
@@ -181,6 +231,11 @@
 
             @include tablet {
                 width: 80%;
+                @include td-quote-author($global-text);
+            }
+
+            @include desktop {
+                width: 85%;
                 @include td-quote-author($global-text);
             }
         }
@@ -198,12 +253,21 @@
         width: 50%;
     }
 
+    @include desktop {
+        padding: 2.5rem;
+        width: 50%;
+    }
+
     &__header {
         @include m-card-header($forest-green);
         margin: 0;
         padding-top: 1rem;
 
         @include tablet {
+            @include td-card-header($forest-green);
+        }
+
+        @include desktop {
             @include td-card-header($forest-green);
         }
     }
@@ -223,12 +287,21 @@
             @include flex-box(flex, row);
             justify-content: space-between;
         }
+
+        @include desktop {
+            @include flex-box(flex, row);
+            justify-content: space-between;
+        }
     }
 
     &__text {
         @include m-body($global-text);
 
         @include tablet {
+            @include td-body($global-text);
+        }
+
+        @include desktop {
             @include td-body($global-text);
         }
     }
@@ -238,6 +311,11 @@
         height: 1.5rem;
 
         @include tablet {
+            width: 2rem;
+            height: 2rem;
+        }
+
+        @include desktop {
             width: 2rem;
             height: 2rem;
         }
