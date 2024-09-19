@@ -1,0 +1,47 @@
+@use "../../../styles/partials/fonts.scss" as *;
+@use "../../../styles/partials/variables.scss" as *;
+@use "../../../styles/partials/mixins.scss" as *;
+
+.favorites {
+    &__list {
+        &-item {
+            padding-bottom: 2rem;
+        }
+    }
+    &__card {
+        @include flex-box(flex, row);
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 1rem 0;
+
+        &-box {
+            @include box($white, 100%, 100%, 1.25rem, 80%);
+            padding: 1rem;
+        }
+
+        &-title {
+            @include m-sub-header-medium($forest-green);
+            margin: 0;
+        }
+        
+        &-description {
+            @include m-body-small($global-text);
+            margin: 0;
+        }
+
+        &-link {
+            &:hover {
+                text-decoration: none;
+            }
+            &:hover .favorites__card-box {
+                opacity: 100%;
+                transition: 0.3s ease-in-out;
+            }
+
+            &:hover .favorites__card-title {
+                color: $forest-green;
+                transition: 0.3s ease-in-out;
+            }
+        }
+    }
+}

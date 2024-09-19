@@ -10,10 +10,45 @@
     }
 
     &__header {
-        color: $white;
-        font-family: "Brittany Signature", sans-serif;
-        font-size: 40px;
-        margin: 0;
+        @include m-page-header;
+        text-align: center;
+        margin: 0.5rem 0 0 0;
+    }
+
+    &__divider {
+        &-multi-waves {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+
+            svg {
+                position: relative;
+                display: block;
+                width: calc(100% + 1.3px);
+                height: 150px;
+            }
+
+            .shape-fill {
+                fill: $pale-green;
+            }
+        }
+    }
+
+    &__section {
+        &-subheader {
+            @include m-sub-header($global-text);
+            margin: 0;
+
+            &-container {
+                @include box($white, 100%, 100%, 1.25rem, 80%);
+                text-align: center;
+                padding: 0.5rem;
+                margin-bottom: 1rem;
+            }
+        }
     }
 
     &__list {
@@ -28,51 +63,58 @@
             position: relative;
             width: 100%;
             height: 100%;
-            padding: 1rem;
+            padding: 10rem 1rem 1rem 1rem;
         }
     }
 
-    &__card {
-        @include flex-box(flex, row);
-        align-items: flex-start;
-        gap: 1rem;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
+    &__empty-message {
+        @include box($white, 100%, 100%, 1.25rem, 80%);
+        text-align: center;
+        padding: 1rem;
+        margin-bottom: 2rem;
+    }
 
-        &-box {
-            background-color: $white;
-            border-radius: 1.25rem;
-            width: 100%;
-            height: 100%;
-            opacity: 80%;
-            padding: 1rem;
-        }
+    // &__card {
+    //     @include flex-box(flex, row);
+    //     align-items: flex-start;
+    //     gap: 1rem;
+    //     padding-top: 1rem;
+    //     padding-bottom: 1rem;
 
-        &-title {
-            font-family: "Garet Book", sans-serif;
-            font-size: 24px;
-            margin: 0;
-        }
+    //     &-box {
+    //         background-color: $white;
+    //         border-radius: 1.25rem;
+    //         width: 100%;
+    //         height: 100%;
+    //         opacity: 80%;
+    //         padding: 1rem;
+    //     }
+
+    //     &-title {
+    //         font-family: "Garet Book", sans-serif;
+    //         font-size: 24px;
+    //         margin: 0;
+    //     }
         
-        &-description {
-            color: $global-text;
-            font-size: 11px;
-            margin: 0;
-        }
+    //     &-description {
+    //         color: $global-text;
+    //         font-size: 11px;
+    //         margin: 0;
+    //     }
 
-        &-link {
-            &:hover {
-                text-decoration: none;
-            }
-            &:hover .favorites__card-box {
-                opacity: 100%;
-                transition: 0.3s ease-in-out;
-            }
+    //     &-link {
+    //         &:hover {
+    //             text-decoration: none;
+    //         }
+    //         &:hover .favorites__card-box {
+    //             opacity: 100%;
+    //             transition: 0.3s ease-in-out;
+    //         }
 
-            &:hover .favorites__card-title {
-                color: $forest-green;
-                transition: 0.3s ease-in-out;
-            }
-        }
-    }
+    //         &:hover .favorites__card-title {
+    //             color: $forest-green;
+    //             transition: 0.3s ease-in-out;
+    //         }
+    //     }
+    // }
 }
