@@ -3,22 +3,43 @@
 @use "../../../styles/partials/mixins.scss" as *;
 
 .coping{ 
+    &__header-icon-container {
+        @include flex-box(flex, row);
+        justify-content: space-between;
+        align-items: center;
+    }
     &__header {
-        color: $white;
-        font-family: "Brittany Signature", sans-serif;
-        font-size: 48px;
-        margin: 0.5rem 0 2rem 0;
+        // color: $white;
+        // font-family: "Brittany Signature", sans-serif;
+        // font-size: 48px;
+        // margin: 0.5rem 0 2rem 0;
+
+        @include m-page-header;
+        margin: 0;
+        padding-bottom: 1rem;
+
+        @include tablet {
+            @include td-page-header;
+            padding-bottom: 1rem;
+        }
+
+        @include desktop {
+            @include td-page-header;
+            padding-bottom: 1rem;
+        }
     }
 
     &__subheader {
-        font-family: "Garet Book", sans-serif;
-        font-size: 24px;
+        @include m-sub-header($global-text);
         margin: 0;
 
         &--green {
-            font-family: "Garet Book", sans-serif;
-            font-size: 24px;
-            color: $forest-green;
+            @include m-sub-header($forest-green);
+            margin: 0;
+        }
+
+        &--white {
+            @include m-sub-header($white);
             margin: 0;
         }
     }
@@ -29,10 +50,15 @@
         border-radius: 1.25rem;
         z-index: 2;
         padding: 1rem;
+
+        @include tablet {
+            padding: 2rem;
+        }
     }
 
     &__list {
         padding: 0 1rem;
+        margin: 0;
     }
 
     &__item {
@@ -82,27 +108,6 @@
                 fill: $beige;
             }
         }
-
-        &-book {
-            position: absolute;
-            top: 0;
-            left: 4rem;
-            width: 100%;
-            overflow: hidden;
-            line-height: 0;
-            transform: rotate(180deg);
-
-            svg {
-            position: relative;
-            display: block;
-            width: calc(100% + 1.3px);
-            height: 30px;
-            }
-
-            .shape-fill {
-                fill: $light-grey;
-            }
-        }
     }
 
     &__description {
@@ -113,8 +118,24 @@
         }
 
         &-text {
-            color: $white;
-            margin-bottom: 0;
+            @include m-body($white);
+            width: 100%;
+            margin: 0;
+            padding-top: 1rem;
+    
+            @include tablet {
+                @include td-body($white);
+                width: 100%;
+                margin: 0;
+                padding-top: 1rem;
+            }
+    
+            @include desktop {
+                @include td-body($white);
+                width: 100%;
+                margin: 0;
+                padding-top: 1rem;
+            }
         }
     }
 
@@ -135,6 +156,27 @@
                 z-index: 1;
             }
         }
+
+        &-text {
+            @include m-body($global-text);
+            width: 100%;
+            margin: 0;
+            padding-top: 1rem;
+    
+            @include tablet {
+                @include td-body($global-text);
+                width: 100%;
+                margin: 0;
+                padding-top: 1rem;
+            }
+    
+            @include desktop {
+                @include td-body($white);
+                width: 100%;
+                margin: 0;
+                padding-top: ($global-text);
+            }
+        }
     }
 
     &__benefits {
@@ -145,7 +187,24 @@
         }
 
         &-text {
-            color: $white;
+            @include m-body($white);
+            width: 100%;
+            margin: 0;
+            padding-top: 1rem;
+    
+            @include tablet {
+                @include td-body($white);
+                width: 100%;
+                margin: 0;
+                padding-top: 1rem;
+            }
+    
+            @include desktop {
+                @include td-body($white);
+                width: 100%;
+                margin: 0;
+                padding-top: 1rem;
+            }
         }
     }
 
@@ -154,6 +213,27 @@
             background-color: $beige;
             padding: 0 1rem 0.1rem 1rem;
         }
+
+        &-text {
+            @include m-body($forest-green);
+            width: 100%;
+            margin: 0;
+            padding-top: 1rem;
+    
+            @include tablet {
+                @include td-body($forest-green);
+                width: 100%;
+                margin: 0;
+                padding-top: 1rem;
+            }
+    
+            @include desktop {
+                @include td-body($forest-green);
+                width: 100%;
+                margin: 0;
+                padding-top: 1rem;
+            }
+        }
     }
 }
 
@@ -161,7 +241,7 @@
     &__container {
         background-color: $sage-green;
         position: relative;
-        padding: 9rem 1rem 1rem 1rem;
+        padding: 10rem 1rem 1rem 1rem;
     }
 
     &__subheader {
@@ -181,7 +261,21 @@
     }
 
     &__text {
-        color: $forest-green; 
+        @include m-body($forest-green);
+        width: 100%;
+        margin: 0;
+
+        @include tablet {
+            @include td-body($forest-green);
+            width: 100%;
+            margin: 0;
+        }
+
+        @include desktop {
+            @include td-body($forest-green);
+            width: 100%;
+            margin: 0;
+        }
     }
 
     &__btn {
