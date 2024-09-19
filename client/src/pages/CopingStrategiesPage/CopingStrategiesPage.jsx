@@ -1,4 +1,4 @@
-/* this page displays a list of educational resources 
+/* this page displays a list of coping strategy 
 users can select to learn more about */
 
 // import styling
@@ -64,7 +64,7 @@ return (
                     id={strategy.id}
                     name={strategy.name}
                     images={strategy.images}
-                    shortDescription={strategy.shortDescription} />
+                    shortDescription={strategy.short_description} />
                 ))}
             </ul>
         </section>
