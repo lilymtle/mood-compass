@@ -49,30 +49,19 @@ export function CopingStrategyPage() {
 
                 <section className="coping__description">
                     <div className="coping__description-container">
-                    <div className="coping__divider-book">
-                        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                            <path d="M602.45,3.86h0S572.9,116.24,281.94,120H923C632,116.24,602.45,3.86,602.45,3.86Z" className="shape-fill"></path>
-                        </svg>
-                    </div>
-                        <h1 className="coping__header">
-                            {strategy.name}
-                        </h1>
+                        <div className="coping__header-icon-container">
+                            <h1 className="coping__header">
+                                {strategy.name}
+                            </h1>
 
-                        {/* <FavoriteToggleIcon
-    resource={{
-        coping_strategy_id: strategy.id,
-        educational_resource_id: null,
-        mood_id: null,
-    }}
-/> */}
-
-<FavoriteToggleIcon
-    resource={{
-        coping_strategy_id: strategy.id,
-        educational_resource_id: null,
-        mood_id: null,
-    }}
-/>
+                            <FavoriteToggleIcon
+                                resource={{
+                                    coping_strategy_id: strategy.id,
+                                    educational_resource_id: null,
+                                    mood_id: null,
+                                }} 
+                            />
+                        </div>
 
                         {strategy.descriptions.map((description, index) => (
                             <p key={index} className="coping__description-text">
@@ -112,7 +101,7 @@ export function CopingStrategyPage() {
                         </svg>
                     </div>
 
-                        <h1 className="coping__header">
+                        <h1 className="coping__subheader--white">
                             Benefits
                         </h1>
 
