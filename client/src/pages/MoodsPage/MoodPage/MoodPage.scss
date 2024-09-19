@@ -121,6 +121,10 @@
             }
 
             &--tablet {
+                @include mobile {
+                    display: none;
+                }
+                
                 @include tablet {
                     display: visible;
                     position: absolute;
