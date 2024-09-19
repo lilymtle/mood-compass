@@ -2,6 +2,9 @@
 @use "../../../styles/partials/variables.scss" as *;
 @use "../../../styles/partials/mixins.scss" as *;
 
+main {
+    background-color: $sage-green;
+}
 .coping{ 
     &__header-icon-container {
         @include flex-box(flex, row);
@@ -9,11 +12,6 @@
         align-items: center;
     }
     &__header {
-        // color: $white;
-        // font-family: "Brittany Signature", sans-serif;
-        // font-size: 48px;
-        // margin: 0.5rem 0 2rem 0;
-
         @include m-page-header;
         margin: 0;
         padding-bottom: 1rem;
@@ -32,12 +30,7 @@
     &__subheader {
         @include m-sub-header($global-text);
         margin: 0;
-
-        &--green {
-            @include m-sub-header($forest-green);
-            margin: 0;
-        }
-
+        
         &--white {
             @include m-sub-header($white);
             margin: 0;
@@ -53,6 +46,16 @@
 
         @include tablet {
             padding: 2rem;
+        }
+
+    }
+
+    &__wrapper {
+        @include tablet {
+            @include flex-box(flex, row);
+            position: relative;
+            padding-bottom: 5rem;
+            height: 100%;
         }
     }
 
@@ -81,6 +84,10 @@
                 display: block;
                 width: calc(100% + 1.3px);
                 height: 150px;
+
+                @include tablet {
+                    height: 200px;
+                }
             }
 
             .shape-fill {
@@ -97,6 +104,14 @@
             line-height: 0;
             transform: rotate(180deg);
 
+            @include tablet {
+                display: none;
+            }
+
+            @include desktop {
+                display: none;
+            }
+
             svg {
                 position: relative;
                 display: block;
@@ -107,6 +122,35 @@
             .shape-fill {
                 fill: $beige;
             }
+
+            &--tablet-desktop {
+                @include mobile {
+                    display: none;
+                }
+
+                @include tablet {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    overflow: hidden;
+                    line-height: 0;
+                    transform: rotate(180deg);
+                    z-index: 1;
+
+
+                    svg {
+                        position: relative;
+                        display: block;
+                        width: calc(100% + 1.3px);
+                        height: 150px;
+                    }
+
+                    .shape-fill {
+                        fill: #F8EDE3;
+                    }
+                }
+            }
         }
     }
 
@@ -115,6 +159,10 @@
             background-color: $pale-green;
             position: relative;
             padding: 1rem;
+
+            @include tablet {
+                padding: 2rem;
+            }
         }
 
         &-text {
@@ -144,6 +192,10 @@
             background-size: cover;
             position: relative;
             padding: 1rem;
+
+            @include tablet {
+                padding: 2rem;
+            }
 
             &::before {
                 content: "";
@@ -180,10 +232,18 @@
     }
 
     &__benefits {
+        @include tablet {
+            width: 50%;
+        }
         &-container {
             background-color: $forest-green;
             position: relative;
             padding: 1rem 1rem 6rem 1rem;
+
+            @include tablet {
+                height: 100%;
+                padding: 2rem 2rem 6rem 2rem;
+            }
         }
 
         &-text {
@@ -209,26 +269,35 @@
     }
 
     &__extra-resources {
+        @include tablet {
+            width: 50%;
+        }
+
         &-container {
-            background-color: $beige;
-            padding: 0 1rem 0.1rem 1rem;
+            background-color: $light-grey;
+            padding: 0 1rem 1rem 1rem;
+
+            @include tablet {
+                height: 100%;
+                padding: 2rem;
+            }
         }
 
         &-text {
-            @include m-body($forest-green);
+            @include m-body($global-text);
             width: 100%;
             margin: 0;
             padding-top: 1rem;
     
             @include tablet {
-                @include td-body($forest-green);
+                @include td-body($global-text);
                 width: 100%;
                 margin: 0;
                 padding-top: 1rem;
             }
     
             @include desktop {
-                @include td-body($forest-green);
+                @include td-body($global-text);
                 width: 100%;
                 margin: 0;
                 padding-top: 1rem;
@@ -242,6 +311,12 @@
         background-color: $sage-green;
         position: relative;
         padding: 10rem 1rem 1rem 1rem;
+
+        @include tablet {
+            @include flex-box(flex, column);
+            align-items: center;
+            padding: 13rem 2rem 2rem 2rem;
+        }
     }
 
     &__subheader {
@@ -258,6 +333,11 @@
         border-radius: 1.25rem;
         opacity: 80%;
         margin: 1rem 0;
+
+        @include tablet {
+            width: 50%;
+            padding: 2rem;
+        }
     }
 
     &__text {
@@ -284,6 +364,10 @@
         border: none;
         border-radius: 1.25rem;
         padding: 0.5rem 0;
+
+        @include tablet {
+            width: 50%;
+        }
 
         &:hover {
             background-color: $pale-green;
