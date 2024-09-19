@@ -7,7 +7,7 @@ import { replaceUnderscoreWithHyphen } from "../../../utils/formatUtils";
 // import environmental variable
 const baseURL = import.meta.env.VITE_API_BASE_URL;
 
-export function FavoriteCard({ resource, type }) {
+export function FavoriteCard({ resource, type, onToggle }) {
     // console.log('Resource in FavoriteCard:', resource);
 
     // if (resource.images === undefined) {
@@ -45,7 +45,14 @@ export function FavoriteCard({ resource, type }) {
     const formattedType = replaceUnderscoreWithHyphen(type);
     return (
         <li className="favorites__list-item">
-        <Link to={`/${formattedType}/${id}`} className="favorites__card-link">
+        <Link 
+        to={`/${formattedType}/${id}`} 
+        className="favorites__card-link"
+        onClick={(e) => {
+            if (e.target.closest('svg')) {
+                e.preventDefault(); 
+            }
+        }}>
             <div className={`favorites__card favorites__card-box`}>
                 <Avatar
                     alt="card image of article favorited"
@@ -57,8 +64,14 @@ export function FavoriteCard({ resource, type }) {
                     <p className="favorites__card-description">{description}</p>
                 </div>
                 <FavoriteToggleIcon 
-                    resource={{ id: resource.favorite_id, type }} 
-                    onClick={(e) => handleUnfavoriteClick(e, `${type}_id`, resource.favorite_id)} 
+                    // resource={{ id: resource.favorite_id, type }}
+                    resource={{ 
+                        mood_id: resource.mood_id, 
+                        educational_resource_id: resource.educational_resource_id, 
+                        coping_strategy_id: resource.coping_strategy_id 
+                    }} 
+                    onToggle={onToggle}
+                    // onClick={(e) => handleUnfavoriteClick(e, `${type}_id`, resource.favorite_id)} 
                 />
             </div>
         </Link>
