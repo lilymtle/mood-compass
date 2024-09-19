@@ -41,6 +41,8 @@ export function FavoritesPage() {
 
                 if (data.favorites) {
                     data.favorites.forEach(favorite => {
+                        console.log('Processing favorite:', favorite);
+
                         if (favorite.mood_id) {
                             processedFavorites.moods.push(favorite);
                         }
@@ -115,7 +117,7 @@ export function FavoritesPage() {
                             {/* renders mood cards */} 
                             {favorites.moods.map(mood => (
                                 <FavoriteCard
-                                key={mood.favorite_id}
+                                key={mood.favorite_i ?? "fallback-id" }
                                 resource={mood}
                                 type="moods" />
                             ))}
@@ -123,7 +125,7 @@ export function FavoritesPage() {
                             {/* renders educational resource cards */}
                             {favorites.educational_resources.map(resource => (
                                 <FavoriteCard
-                                key={resource.favorite_id}
+                                key={resource.favorite_id ?? "fallback-id"}
                                 resource={resource}
                                 type="educational_resources" />
                             ))}
@@ -131,7 +133,7 @@ export function FavoritesPage() {
                             {/* renders coping strategy cards */}
                             {favorites.coping_strategies.map(strategy => (
                                 <FavoriteCard
-                                key={strategy.favorite.id}
+                                key={strategy.favorite_id ?? "fallback-id"}
                                 resource={strategy}
                                 type="coping_strategies" />
                             ))}
