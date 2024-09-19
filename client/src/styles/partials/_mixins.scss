@@ -29,7 +29,18 @@
 
 @mixin m-sub-header-medium($font-color) {
     font-family: "Garet Book", sans-serif;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    color: $font-color;
+}
+
+@mixin m-card-header($font-color) {
+    font-size: 1rem;
+    color: $font-color;
+    text-align: center;
+}
+
+@mixin m-body($font-color) {
+    font-size: .8125rem;
     color: $font-color;
 }
 
@@ -37,6 +48,61 @@
     font-size: .75rem;
     color: $font-color;
 }
+
+@mixin m-quote-body($font-color) {
+    font-family: "Garet Book", sans-serif;
+    font-size: .875rem;
+    color: $font-color;
+}
+
+@mixin m-quote-author($font-color) {
+    font-family: "Garet Book", sans-serif;
+    font-size: .6875rem;
+    color: $font-color;
+}
+
+/* tablet and desktop text style mixins */
+@mixin td-page-header {
+    font-family: "Brittany Signature", sans-serif;
+    font-size: 3rem;
+    color: $white;
+}
+
+@mixin td-sub-header($font-color) {
+    font-family: "Garet Book", sans-serif;
+    font-size: 2rem;
+    color: $font-color;
+}
+
+@mixin td-sub-header-medium($font-color) {
+    font-family: "Garet Book", sans-serif;
+    font-size: 1.5rem;
+    color: $font-color;
+}
+
+@mixin td-card-header($font-color) {
+    font-size: 1.2rem;
+    color: $font-color;
+    text-align: center;
+}
+
+@mixin td-body($font-color) {
+    font-size: .875rem;
+    color: $font-color;
+}
+
+@mixin td-quote-body($font-color) {
+    font-family: "Garet Book", sans-serif;
+    font-size: .9375rem;
+    color: $font-color;
+}
+
+@mixin td-quote-author($font-color) {
+    font-family: "Garet Book", sans-serif;
+    font-size: .8125rem;
+    color: $font-color;
+}
+
 
 
 
