@@ -64,6 +64,33 @@ export function FavoritesPage() {
         checkFavorites();
     }, [user]);
     
+    const getUpdatedFavorites = async () => {
+        if (user) {
+            try {
+                const { data } = await axios.get(`${baseURL}/api/favorites/get`, {
+                    params: { user_id: user.uid }
+                });
+
+                const processedFavorites = {
+                    moods: [],
+                    educational_resources: [],
+                    coping_strategies: []
+                };
+
+                if (data.favorites) {
+                    data.favorites.forEach(favorite => {
+                        if (favorite.mood_id) processedFavorites.moods.push(favorite);
+                        if (favorite.educational_resource_id) processedFavorites.educational_resources.push(favorite);
+                        if (favorite.coping_strategy_id) processedFavorites.coping_strategies.push(favorite);
+                    });
+                }
+
+                setFavorites(processedFavorites);
+            } catch (error) {
+                console.error("Error fetching updated favorites:", error);
+            }
+        }
+    }
 
 
     // const { user } = useContext(AuthContext);
@@ -119,7 +146,8 @@ export function FavoritesPage() {
                                 <FavoriteCard
                                 key={mood.favorite_i ?? "fallback-id" }
                                 resource={mood}
-                                type="moods" />
+                                type="moods"
+                                onToggle={getUpdatedFavorites} />
                             ))}
 
                             {/* renders educational resource cards */}
@@ -127,7 +155,8 @@ export function FavoritesPage() {
                                 <FavoriteCard
                                 key={resource.favorite_id ?? "fallback-id"}
                                 resource={resource}
-                                type="educational_resources" />
+                                type="educational_resources"
+                                onToggle={getUpdatedFavorites} />
                             ))}
 
                             {/* renders coping strategy cards */}
@@ -135,7 +164,9 @@ export function FavoritesPage() {
                                 <FavoriteCard
                                 key={strategy.favorite_id ?? "fallback-id"}
                                 resource={strategy}
-                                type="coping_strategies" />
+                                type="coping_strategies"
+                                onToggle={getUpdatedFavorites} />
+
                             ))}
 
                             {/* {favorites.moods.map((mood, index) => (
