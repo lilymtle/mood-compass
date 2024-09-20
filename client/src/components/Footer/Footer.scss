@@ -3,12 +3,20 @@
 
 .footer {
     background-color: $white;
-    font-size: 12px;
+    font-size: .75rem;
     text-align: center;
     @include flex-box(flex, row);
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem 1rem;
+
+    @include tablet {
+        font-size: .8125rem;
+    }
+
+    @include desktop {
+        font-size: .8125rem;
+    }
 
     &__left {
         @include flex-box(flex, row);
