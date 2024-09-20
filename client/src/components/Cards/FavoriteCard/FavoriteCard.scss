@@ -3,30 +3,69 @@
 @use "../../../styles/partials/mixins.scss" as *;
 
 .favorites {
-    &__list {
-        &-item {
-            padding-bottom: 2rem;
-        }
-    }
     &__card {
         @include flex-box(flex, row);
         align-items: flex-start;
-        gap: 1rem;
+        justify-content: space-between;
         padding: 1rem 0;
+
+        @include tablet {
+            padding: 2rem 0;
+        }
+
+        @include desktop {
+            padding: 2.5rem 0;
+        }
+
+        &-container {
+            width: 50%;
+
+            @include tablet {
+                width: 60%;
+            }
+
+            @include desktop {
+                width: 60%;
+            }
+        }
 
         &-box {
             @include box($white, 100%, 100%, 1.25rem, 80%);
             padding: 1rem;
+
+            @include tablet {
+                padding: 2rem;
+            }
+
+            @include desktop {
+                padding: 2.5rem;
+            }
         }
 
         &-title {
             @include m-sub-header-medium($forest-green);
             margin: 0;
+
+            @include tablet {
+                @include td-sub-header($forest-green);
+            }
+
+            @include desktop {
+                @include td-sub-header($forest-green);
+            }
         }
         
         &-description {
             @include m-body-small($global-text);
             margin: 0;
+
+            @include tablet {
+                @include td-body($global-text);
+            }
+
+            @include desktop {
+                @include td-body($global-text);
+            }
         }
 
         &-link {
