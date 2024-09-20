@@ -56,22 +56,23 @@ export function ProfilePage() {
     return (
         <main>
             <section className="profile">
+                <div className="profile__wrapper">
                 <div className="profile__header-container">
                     <h1 className="profile__header">
                         Dashboard
                     </h1>
 
-                    <Avatar
-                    sx={{width: 100, height: 100 }}>
-                        <AccountCircleIcon 
-                        sx={{width: 50, height: 50}} />
-                    </Avatar>
+                        <Avatar
+                        sx={{width: 100, height: 100 }}>
+                            <AccountCircleIcon 
+                            sx={{width: 50, height: 50}} />
+                        </Avatar>
 
-                    <div className="profile__box--welcome">
-                        <h2 className="profile__subheader">
-                            Welcome back, {userName}!
-                        </h2>
-                    </div>
+                        <div className="profile__box--welcome">
+                            <h2 className="profile__subheader">
+                                Welcome back, {userName}!
+                            </h2>
+                        </div>
 
                     <div className="profile__btn-container">
                     <Link to="/favorites" className="profile__btn-favorite-wrapper">
@@ -87,8 +88,7 @@ export function ProfilePage() {
                         onClick={handleLogout} />
                     </div>
                 </div>
-
-
+ 
                     <section className="profile__mood-tracker">
                         <div className="profile__mood-tracker-container">
                             <div className="profile__divider-curve">
@@ -112,11 +112,12 @@ export function ProfilePage() {
                                     className="profile__btn-submit"
                                     type="submit"
                                     text={<AddReactionIcon 
-                                    sx={{color: "#557153" }} />} />
+                                    sx={{color: "#557153" }}/>} />
                                 </form>
                                 </div>
                         </div>
                     </section>
+                    </div>
 
                         <section className="profile__mood-log">
                             <div className="profile__mood-log-container">
