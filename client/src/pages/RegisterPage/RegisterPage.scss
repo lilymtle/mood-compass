@@ -6,17 +6,33 @@
     @include flex-box(flex, column);
 
     &__header {
-        color: $white;
-        font-family: "Brittany Signature", sans-serif;
-        font-size: 48px;
+        @include m-page-header;
         text-align: center;
         margin: 0;
+
+        @include tablet {
+            @include td-page-header;
+        }
+
+        @include desktop {
+            @include td-page-header;
+        }
+    }
+
+    &__wrapper {
+        @include tablet {
+            @include flex-box(flex, row);
+        }
+
+        @include desktop {
+            @include flex-box(flex, row);
+        }
     }
 
     &__form {
         background-color: $white;
         opacity: 80%;
-        height: 100%;
+        // height: 100%;
         border-radius: 1.25rem;
         padding: 1rem;
         position: relative;
@@ -24,12 +40,32 @@
         margin-top: 1.5rem;
         z-index: 2;
 
+        @include tablet {
+            padding: 2rem;
+            margin-top: 2.5rem;
+        }
+
+        @include desktop {
+            padding: 2.5rem;
+            margin-top: 2.5rem;
+        }
+
         &-container{
             background-image: url("src/assets/images/register-page-img-1.jpg");
             background-size: cover;
             position: relative;
             padding: 1rem;
             order: 1;
+
+            @include tablet {
+                width: 50%;
+                padding: 2rem;
+            }
+
+            @include desktop {
+                width: 50%;
+                padding: 2rem;
+            }
 
             &::before {
                 content: "";
@@ -53,7 +89,6 @@
     }
 
     &__input {
-
         &-name, &-email, &-password {
             width: 100%;
             background-color: $forest-green;
@@ -65,10 +100,26 @@
             border: .125rem solid transparent;
             margin-bottom: 1rem;
 
+            @include tablet {
+                font-size: .875rem;
+            }
+
+            @include desktop {
+                font-size: .875rem
+            }
+
             &::placeholder {
                 font-family: "Garet Book", sans-serif;
                 color: $white;
                 font-size: .8125rem;
+
+                @include tablet {
+                    font-size: .875rem;
+                }
+    
+                @include desktop {
+                    font-size: .875rem
+                }
             }
 
             &:focus {
@@ -83,6 +134,14 @@
             background-repeat: no-repeat;
             background-position: right 1rem center;
             background-size: 1.2rem;
+
+            @include tablet {
+                background-size: 1.5rem;
+            }
+
+            @include desktop {
+                background-size: 1.5rem;
+            }
         }
 
         &-email {
@@ -90,6 +149,14 @@
             background-repeat: no-repeat;
             background-position: right 1rem center;
             background-size: 1.2rem;
+
+            @include tablet {
+                background-size: 1.5rem;
+            }
+
+            @include desktop {
+                background-size: 1.5rem;
+            }
         }
 
         &-password {
@@ -97,6 +164,14 @@
             background-repeat: no-repeat;
             background-position: right 1rem center;
             background-size: 1.2rem;
+
+            @include tablet {
+                background-size: 1.5rem;
+            }
+
+            @include desktop {
+                background-size: 1.5rem;
+            }
         }
     }
 
@@ -109,6 +184,14 @@
         border-radius: 1.25rem;
         border: 0;
         padding: 0.5rem 0;
+
+        @include tablet {
+            font-size: .875rem;
+        }
+
+        @include desktop {
+            font-size: .875rem;
+        }
 
         &:hover {
             background-color: $sage-green;
@@ -125,20 +208,46 @@
         padding: 1rem;
         order: 2;
 
+        @include tablet {
+            width: 50%;
+            padding: 2rem;
+        }
+
+        @include desktop {
+            width: 50%;
+            padding: 2.5rem;
+        }
+
         &-header {
-            color: $white;
-            font-family: "Brittany Signature", sans-serif;
-            font-size: 32px;
-            margin: 1rem 0;
+            @include m-sub-header($white);
+            margin: 0;
+
+            @include tablet {
+                @include td-sub-header($white);
+                margin: 0;
+            }
+
+            @include desktop {
+                @include td-sub-header($white);
+                margin: 0;
+            }
         }
 
         &-box {
             background-color: $white;
             width: 100%;
-            margin-top: 1.5rem;
+            margin-top: 1rem;
             padding: 1rem;
             border-radius: 1.25rem;
             position: relative;
+
+            @include tablet {
+                padding: 2rem;
+            }
+
+            @include desktop {
+                padding: 2.5rem;
+            }
 
             &::before {
                 content: "";
@@ -154,9 +263,16 @@
         }
 
         &-text {
-            font-family: "Garet Book", sans-serif;
-            font-size: .8125rem;
+            @include m-body($global-text);
             margin: 0;
+
+            @include tablet {
+                @include td-body($global-text);
+            }
+
+            @include desktop {
+                @include td-body($global-text);
+            }
         }
     }
 }
