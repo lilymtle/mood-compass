@@ -35,27 +35,6 @@
                 fill: $pale-green;
             }
         }
-
-        &-curve {
-            position: absolute;
-            bottom: 7.5rem;
-            left: 10rem;
-            width: 50%;
-            overflow: hidden;
-            line-height: 0;
-            transform: rotate(180deg);
-
-            svg { 
-                position: relative;
-                display: block;
-                width: calc(60% + 40px);
-                height: 50px;
-            }
-
-            .shape-fill {
-                fill: $pale-green;
-            }
-        }
     }
 
     &__section {
@@ -94,48 +73,4 @@
         padding: 1rem;
         margin-bottom: 2rem;
     }
-
-    // &__card {
-    //     @include flex-box(flex, row);
-    //     align-items: flex-start;
-    //     gap: 1rem;
-    //     padding-top: 1rem;
-    //     padding-bottom: 1rem;
-
-    //     &-box {
-    //         background-color: $white;
-    //         border-radius: 1.25rem;
-    //         width: 100%;
-    //         height: 100%;
-    //         opacity: 80%;
-    //         padding: 1rem;
-    //     }
-
-    //     &-title {
-    //         font-family: "Garet Book", sans-serif;
-    //         font-size: 24px;
-    //         margin: 0;
-    //     }
-        
-    //     &-description {
-    //         color: $global-text;
-    //         font-size: 11px;
-    //         margin: 0;
-    //     }
-
-    //     &-link {
-    //         &:hover {
-    //             text-decoration: none;
-    //         }
-    //         &:hover .favorites__card-box {
-    //             opacity: 100%;
-    //             transition: 0.3s ease-in-out;
-    //         }
-
-    //         &:hover .favorites__card-title {
-    //             color: $forest-green;
-    //             transition: 0.3s ease-in-out;
-    //         }
-    //     }
-    // }
 }
