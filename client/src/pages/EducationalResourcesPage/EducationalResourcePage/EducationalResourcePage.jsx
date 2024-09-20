@@ -33,7 +33,6 @@ export function EducationalResourcePage() {
     //     const getResource = async () => {
     //         try {
     //             const { data } = await axios.get(`${baseURL}/api/educational-resources/${id}`)
-    //             setResource(data);
     //         } catch (error) {
     //             console.error("Error fetching educational resource data:", error);
     //             setError("Failed to fetch educational resource datadata.");

@@ -18,15 +18,23 @@ a {
     &__container {
         background-color: $pale-green;
         padding: 1rem;
-        order: 2;
     }
 
     &__header {
-        color: $white;
-        font-family: "Brittany Signature", sans-serif;
-        font-size: 32px;
+        @include m-page-header;
         text-align: center;
         margin: 0;
+        padding-bottom: 1rem;
+
+        @include tablet {
+            @include td-page-header;
+            padding-bottom: 1rem;
+        }
+
+        @include desktop {
+            @include td-page-header;
+            padding-bottom: 1rem;
+        }
     }
 
     &__form {
@@ -107,7 +115,6 @@ a {
             height: 100%;
             position: relative;
             padding: 1rem;
-            order: 1;
             // box-sizing: border-box;
 
             &::before {
@@ -135,12 +142,21 @@ a {
         }
 
         &-header {
-            font-family: "Brittany Signature", sans-serif;
-            font-size: 48px;
+            @include m-sub-header($white);
             margin: 0;
+    
+            @include tablet {
+                @include td-sub-header($white);
+            }
+    
+            @include desktop {
+                @include td-sub-header($white);
+            }
         }
 
         &-text {
+            font-family: "Garet Book", sans-serif;
+            font-size: .8125rem;
             margin-top: 1rem;
             margin-bottom: 0;
         }
