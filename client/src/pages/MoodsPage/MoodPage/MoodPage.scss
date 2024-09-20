@@ -35,9 +35,21 @@
         @include m-sub-header($global-text);
         margin: 0;
 
+        @include tablet {
+            @include td-sub-header($global-text);
+        }
+
+        @include desktop {
+            @include td-sub-header($global-text);
+        }
+
         &--white {
             @include m-sub-header($white);
             margin: 0;
+
+            @include desktop {
+                @include td-sub-header($white)
+            }
         }
     }
 
@@ -124,7 +136,7 @@
                 @include mobile {
                     display: none;
                 }
-                
+
                 @include tablet {
                     display: visible;
                     position: absolute;
