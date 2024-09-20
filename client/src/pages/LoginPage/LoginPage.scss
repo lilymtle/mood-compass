@@ -13,12 +13,35 @@ a {
 }
 
 .login {
-    @include flex-box(flex, column);
-
     &__container {
+        @include flex-box(flex, column);
         background-color: $pale-green;
         padding: 1rem;
         order: 2;
+
+        @include tablet {
+            width: 50%;
+            padding: 2rem;
+            order: 2;
+        }
+
+        @include desktop {
+            width: 50%;
+            padding: 2rem;
+            order: 2;
+        }
+    }
+
+    &__wrapper {
+        @include flex-box(flex, column);
+
+        @include tablet {
+            @include flex-box(flex, row);
+        }
+
+        @include desktop {
+            @include flex-box(flex, row);
+        }
     }
 
     &__header {
@@ -52,7 +75,6 @@ a {
     }
 
     &__input {
-
         &-email, &-password {
             width: 100%;
             font-family: "Garet Book", sans-serif;
@@ -62,10 +84,26 @@ a {
             border-radius: 1.25rem;
             border: .125rem solid transparent;
             margin-bottom: 1rem;
+
+            @include tablet {
+                font-size: .875rem;
+            }
+
+            @include desktop {
+                font-size: .875rem;
+            }
     
             &::placeholder {
                 font-family: "Garet Book", sans-serif;
                 font-size: .8125rem;
+
+                @include tablet {
+                    font-size: .875rem;
+                }
+
+                @include desktop {
+                    font-size: .875rem;
+                }
             }
     
             &:focus {
@@ -79,6 +117,14 @@ a {
             background-repeat: no-repeat;
             background-position: right 1rem center;
             background-size: 1.2rem;
+
+            @include tablet {
+                background-size: 1.5rem;
+            }
+
+            @include desktop {
+                background-size: 1.5rem;
+            }
         }
 
         &-password {
@@ -86,6 +132,14 @@ a {
             background-repeat: no-repeat;
             background-position: right 1rem center;
             background-size: 1.2rem;
+
+            @include tablet {
+                background-size: 1.5rem;
+            }
+
+            @include desktop {
+                background-size: 1.5rem;
+            }
         }
     }
 
@@ -99,6 +153,14 @@ a {
         border: 0;
         padding: 0.5rem 0;
 
+        @include tablet {
+            font-size: .875rem;
+        }
+
+        @include desktop {
+            font-size: .875rem;
+        }
+
         &:hover {
             background-color: $white;
             transition: 0.3s ease-in-out;
@@ -107,7 +169,15 @@ a {
     }
     
     &__message {
-        min-width: 100%;
+        // min-width: 100%;
+
+        @include tablet {
+            width: 50%;
+        }
+
+        @include desktop {
+            width: 50%;
+        }
 
         &-container {
             background-image: url("src/assets/images/login-page-img.jpg");
@@ -118,6 +188,16 @@ a {
             padding: 1rem;
             // box-sizing: border-box;
             order: 1;
+
+            @include tablet {
+                padding: 2rem;
+                order: 1;
+            }
+
+            @include desktop {
+                padding: 2.5rem;
+                order: 1;
+            }
 
             &::before {
                 content: "";
@@ -141,6 +221,14 @@ a {
             color: $white;
             text-align: center;
             // box-sizing: border-box;
+
+            @include tablet {
+                padding: 2rem;
+            }
+
+            @include desktop {
+                padding: 2rem;
+            }
         }
 
         &-header {
@@ -157,19 +245,33 @@ a {
         }
 
         &-text {
-            font-family: "Garet Book", sans-serif;
-            font-size: .8125rem;
+            @include m-body($white);
             margin-top: 1rem;
             margin-bottom: 0;
+
+            @include tablet {
+                @include td-body($white);
+            }
+
+            @include desktop { 
+                @include td-body($white);
+            }
         }
     }
 }
 
 .register {
     &__text {
-        color: $white;
-        font-size: .8125rem;
+        @include m-body($white);
         text-align: center;
         margin: 0;
+
+        @include tablet {
+            @include td-body($white);
+        }
+
+        @include desktop {
+            @include td-body($white);
+        }
     }
 }
