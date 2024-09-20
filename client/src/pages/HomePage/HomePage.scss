@@ -119,11 +119,11 @@
             margin: 0;
 
             @include tablet {
-                @include td-sub-header-medium($global-text);
+                @include td-sub-header($global-text);
             }
 
             @include desktop {
-                @include td-sub-header-medium($global-text);
+                @include td-sub-header($global-text);
             }
         }
 
@@ -164,7 +164,7 @@
             @include m-sub-header-medium($global-text);
 
             @include tablet {
-                @include td-sub-header-medium($global-text);
+                @include td-sub-header($global-text);
                 padding-left: 1rem;
             }
 
