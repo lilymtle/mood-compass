@@ -110,7 +110,6 @@ export function FavoritesPage() {
                     </svg>
                 </div>
                         <ul className="favorites__list">
-
                             <section className="favorites__section">
                                 <div className="favorites__section-subheader-container">
                                     <h2 className="favorites__section-subheader">
