@@ -92,44 +92,6 @@ export function FavoritesPage() {
         }
     }
 
-
-    // const { user } = useContext(AuthContext);
-    // const [favorites, setFavorites] = useState({ moods: [], educational_resources: [], coping_strategies: [] });
-
-    // useEffect(() => {
-    //     async function getFavorites() {
-    //     if (user) {
-    //         try {
-    //             const { data } = await axios.get(`${baseURL}/api/favorites/get`, {
-    //             params: { user_id: user.uid }
-    //         });
-    //         setFavorites(data)
-    //         } catch(error) {
-    //             console.error("Error fetching favorites:", error);
-    //         };
-    //     }
-    // }
-    // getFavorites();
-    // }, [user]);
-
-    // const handleUnfavoriteClick = async (e, type, id) => {
-    //     e.stopPropagation();
-    //     e.preventDefault();
-    //     if (user) {
-    //         try {
-    //             await axios.delete(`${baseURL}/api/favorites/delete`, {
-    //                 data: { user_id: user.uid, [type]: id},
-    //             });
-    //             setFavorites((prevFavorites) => ({
-    //                 ...prevFavorites,
-    //                 [type]: prevFavorites[type].filter(item => item.id !== id)
-    //             }));
-    //         } catch (error) {
-    //             console.error("Error unfavoriting resource:", error);
-    //         }
-    //     }
-    // };
-
     return (
         <main>
             <section className="favorites">
