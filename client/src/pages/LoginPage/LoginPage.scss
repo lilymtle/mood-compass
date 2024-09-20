@@ -18,6 +18,7 @@ a {
     &__container {
         background-color: $pale-green;
         padding: 1rem;
+        order: 2;
     }
 
     &__header {
@@ -116,6 +117,7 @@ a {
             position: relative;
             padding: 1rem;
             // box-sizing: border-box;
+            order: 1;
 
             &::before {
                 content: "";
