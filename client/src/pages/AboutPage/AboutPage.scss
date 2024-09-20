@@ -13,7 +13,7 @@
         }
 
         @include desktop {
-            padding: 2rem;
+            padding: 2.5rem;
         }
     }
 
@@ -26,6 +26,12 @@
             padding: 0.5rem 1rem;
             border-radius: 1.25rem;
             opacity: 80%;
+        }
+    }
+
+    &__wrapper {
+        @include desktop {
+            @include flex-box(flex, row);
         }
     }
 
@@ -48,11 +54,27 @@
         font-style: italic;
         margin: 1.5rem 0 0.5rem 0;
 
+        @include tablet {
+            font-size: 1.125rem;
+        }
+
+        @include desktop {
+            font-size: 1.125rem;
+        }
+
         &--box {
             font-family: "Garet Book", sans-serif;
             font-size: 1rem;
             font-style: italic;
             margin: 1rem 0 0.5rem 0;
+
+            @include tablet {
+                font-size: 1.125rem;
+            }
+
+            @include desktop {
+                font-size: 1.125rem;
+            }
         }
     }
 
@@ -61,12 +83,28 @@
             @include m-body($white);
             margin: 0;
             padding-bottom: 1rem;
+
+            @include tablet {
+                @include td-body($white);
+            }
+
+            @include desktop {
+                @include td-body($white);
+            }
         }
 
         &--grey {
             @include m-body($global-text);
             margin: 0;
             padding-bottom: 1rem;
+
+            @include tablet {
+                @include td-body($global-text);
+            }
+
+            @include desktop {
+                @include td-body($global-text);
+            }
         }
     }
 
@@ -77,6 +115,17 @@
             background-size: cover;
             height: 100%;
             padding: 1rem;
+
+            @include tablet {
+                width: 100%;
+                padding: 2rem;
+            }
+
+            @include desktop {
+                @include flex-box(flex, row);
+                align-items: center;
+                padding: 2.5rem;
+            }
         }
 
         &-img {
