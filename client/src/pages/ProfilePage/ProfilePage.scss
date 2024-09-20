@@ -45,7 +45,9 @@
         }
 
         @include desktop {
-            // add 
+            width: 100%;
+            @include flex-box(flex, row);
+            justify-content: space-evenly;
         }
     }
 
@@ -131,6 +133,8 @@
             }
 
             @include desktop {
+                width: 18rem;
+                height: 18rem;
                 padding: 2.5rem;
             }
         }
@@ -141,13 +145,18 @@
             height: 100%;
             @include flex-box(flex, column);
             justify-content: center;
-            gap: 1rem;
             align-items: center;
+            gap: 1rem;
             margin-top: 4rem;
             padding: 1rem;
 
             @include tablet {
                 padding: 2rem;
+            }
+
+            @include desktop {
+                width: 50%;
+                padding: 2.5rem;
             }
         }
     }
@@ -173,6 +182,10 @@
                     font-size: .875rem;
                 }
 
+                @include desktop {
+                    font-size: .875rem;
+                }
+
                 &:hover {
                     background-color: $light-grey;
                     text-decoration: none;
@@ -186,6 +199,10 @@
             padding: 0.5rem 1rem;
 
             @include tablet {
+                font-size: .875rem;
+            }
+
+            @include desktop {
                 font-size: .875rem;
             }
 
@@ -227,6 +244,13 @@
                 padding: 2rem;
                 margin-top: 2rem;
             }
+
+            @include desktop {
+                width: 100%;
+                height: 52vh;
+                padding: 2.5rem;
+                margin-top: 2.5rem;
+            }
         }
 
         &-subheader {
@@ -234,6 +258,10 @@
             text-align: center;
 
             @include tablet {
+                @include td-sub-header($forest-green);
+            }
+
+            @include desktop {
                 @include td-sub-header($forest-green);
             }
         }
@@ -257,6 +285,10 @@
                 @include td-body($forest-green);
             }
 
+            @include desktop {
+                @include td-body($forest-green);
+            }
+
             &::placeholder {
                 font-family: "Garet Book", sans-serif;
                 font-size: .6875rem;
@@ -264,6 +296,10 @@
                 font-style: italic;
 
                 @include tablet {
+                    font-size: .75rem;
+                }
+
+                @include desktop {
                     font-size: .75rem;
                 }
             }
@@ -286,6 +322,12 @@
                 padding: 6rem 2rem 2rem 2rem;
                 height: 100%;
             }
+
+            @include desktop {
+                padding: 6rem 2.5rem 2.5rem 2.5rem;
+                height: 100%;
+                align-items: center;
+            }
         }
 
         &-subheader {
@@ -293,6 +335,10 @@
             margin: 0;
 
             @include tablet {
+                @include td-sub-header($forest-green);
+            }
+
+            @include desktop {
                 @include td-sub-header($forest-green);
             }
         }
