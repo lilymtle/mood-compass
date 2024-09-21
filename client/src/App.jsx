@@ -27,12 +27,14 @@ import { EducationalResourcePage } from "./pages/EducationalResourcesPage/Educat
 import { CopingStrategyPage } from "./pages/CopingStrategiesPage/CopingStrategyPage/CopingStrategyPage.jsx";
 import { FavoritesPage } from "./pages/FavoritesPage/FavoritesPage.jsx";
 import { FloatingActionButton } from "./components/FloatingActionButton/FloatingActionButton.jsx";
+import { ScrollToTop } from "./components/ScrollToTop/ScrollToTop.js";
 
 function App() {
 
   return (
     <AuthProvider>
       <Router>
+        <ScrollToTop />
         <Header />
         <Hero />
 
