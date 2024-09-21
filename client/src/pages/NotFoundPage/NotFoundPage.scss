@@ -1,2 +1,80 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
+
+.not-found {
+    &__container {
+        text-align: center;
+        padding: 1rem;
+
+        @include tablet {
+            padding: 2rem;
+        }
+
+        @include desktop {
+            padding: 2.5rem;
+        }
+    }
+
+    &__box {
+        background-color: $white;
+        position: relative;
+        border-radius: 1.25rem;
+        z-index: 2;
+        padding: 1rem;
+
+        @include tablet {
+            padding: 2rem;
+        }
+
+        @include desktop {
+            padding: 2.5rem;
+        }
+    }
+
+    &__header {
+        color: $forest-green;
+        font-size: 2.5rem;
+
+        @include tablet {
+            font-size: 3rem;
+        }
+
+        @include desktop {
+            font-size: 3rem;
+        }
+    }
+
+    &__emoji {
+        font-size: 2rem;
+
+        @include tablet {
+            font-size: 2.5rem;
+        }
+
+        @include desktop {
+            font-size: 2.5rem;
+        }
+    }
+
+    &__text {
+        @include m-body($global-text);
+
+        @include tablet {
+            @include td-body($global-text);
+        }
+
+        @include desktop {
+            @include td-body($global-text);
+        }
+    }
+
+    &__link {
+        color: $forest-green;
+        text-decoration: underline;
+
+        &:hover {
+            color: $pale-green;
+            transition: 0.3s ease-in-out;
+        }
+    }
+}
