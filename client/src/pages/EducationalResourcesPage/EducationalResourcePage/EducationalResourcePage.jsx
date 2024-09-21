@@ -29,18 +29,6 @@ export function EducationalResourcePage() {
     });
     const [error, setError] = useState(null);
 
-    // useEffect(() => {
-    //     const getResource = async () => {
-    //         try {
-    //             const { data } = await axios.get(`${baseURL}/api/educational-resources/${id}`)
-    //         } catch (error) {
-    //             console.error("Error fetching educational resource data:", error);
-    //             setError("Failed to fetch educational resource datadata.");
-    //         };
-    //     };
-    //     getResource();
-    // }, [id])
-
     useEffect(() => {
         const getResource = async () => {
             try {
