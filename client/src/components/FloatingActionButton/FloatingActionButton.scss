@@ -1,0 +1,19 @@
+@use "../../styles/partials/variables.scss" as *;
+
+.MuiSpeedDial-fab {
+    background-color: $primary-color !important;
+    &:hover {
+        background-color: $primary-hover !important;
+    }
+}
+
+.MuiSpeedDialAction-fab {
+    background-color: $action-color !important;
+    &:hover {
+        background-color: $action-hover !important;
+    }
+    
+    .MuiSvgIcon-root {
+        color: $white;
+    }
+}
