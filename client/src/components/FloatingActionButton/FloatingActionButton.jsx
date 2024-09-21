@@ -5,6 +5,7 @@ import "./FloatingActionButton.scss";
 import { useEffect, useState } from "react";
 
 // import components
+import { Link } from "react-router-dom";
 import Box from '@mui/material/Box';
 import SpeedDial from '@mui/material/SpeedDial';
 import SpeedDialIcon from '@mui/material/SpeedDialIcon';
@@ -17,11 +18,11 @@ import LightbulbIcon from '@mui/icons-material/Lightbulb';
 
 export function FloatingActionButton() {
     const actions = [
-        { icon: <HomeIcon />, name: "Home" },
-        { icon: <AccountCircleIcon />, name: "Profile" },
-        { icon: <EmojiEmotionsIcon />, name: "Moods" },
-        { icon: <BookIcon/>, name: "Educational Resources" },
-        { icon: <LightbulbIcon />, name: "Coping Strategies" }
+        { icon: <HomeIcon />, name: "Home", to: "/" },
+        { icon: <AccountCircleIcon />, name: "Profile", to: "/profile" },
+        { icon: <EmojiEmotionsIcon />, name: "Moods", to: "/moods" },
+        { icon: <BookIcon/>, name: "Educational Resources", to: "/educational-resources" },
+        { icon: <LightbulbIcon />, name: "Coping Strategies", to: "/coping-strategies" }
     ];
 
     const [showSpeedDial, setSpeedDial] = useState(false);
@@ -64,6 +65,8 @@ export function FloatingActionButton() {
                 key={action.name}
                 icon={action.icon}
                 tooltipTitle={action.name}
+                component={Link}
+                to={action.to}
             />
             ))}
         </SpeedDial>
