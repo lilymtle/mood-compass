@@ -5,6 +5,7 @@
 main {
     background-color: $sage-green;
 }
+
 .coping{ 
     &__header-icon-container {
         @include flex-box(flex, row);
@@ -65,20 +66,36 @@ main {
         @include desktop {
             padding: 2.5rem;
         }
+
+        &--learn {
+            background-color: $white;
+            padding: 1rem;
+            border-radius: 1.25rem;
+            opacity: 80%;
+            margin: 1rem 0;
+    
+            @include tablet {
+                width: 50%;
+                padding: 2rem;
+            }
+    
+            @include desktop {
+                width: 50%;
+                padding: 2rem;
+            }
+        }
     }
 
     &__wrapper {
         @include tablet {
             @include flex-box(flex, row);
             position: relative;
-            padding-bottom: 5rem;
             height: 100%;
         }
 
         @include desktop {
             @include flex-box(flex, row);
             position: relative;
-            padding-bottom: 5rem;
             height: 100%;
         }
     }
@@ -120,87 +137,6 @@ main {
 
             .shape-fill {
                 fill: $beige;
-            }
-        }
-
-        &-curve {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            overflow: hidden;
-            line-height: 0;
-            transform: rotate(180deg);
-
-            @include tablet {
-                display: none;
-            }
-
-            @include desktop {
-                display: none;
-            }
-
-            svg {
-                position: relative;
-                display: block;
-                width: calc(100% + 1.3px);
-                height: 60px;
-            }
-    
-            .shape-fill {
-                fill: $beige;
-            }
-
-            &--tablet-desktop {
-                @include mobile {
-                    display: none;
-                }
-
-                @include tablet {
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    width: 100%;
-                    overflow: hidden;
-                    line-height: 0;
-                    transform: rotate(180deg);
-                    z-index: 1;
-
-
-                    svg {
-                        position: relative;
-                        display: block;
-                        width: calc(100% + 1.3px);
-                        height: 150px;
-                    }
-
-                    .shape-fill {
-                        fill: #F8EDE3;
-                    }
-                }
-
-                @include desktop {
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    width: 100%;
-                    overflow: hidden;
-                    line-height: 0;
-                    transform: rotate(180deg);
-                    z-index: 1;
-
-
-                    svg {
-                        position: relative;
-                        display: block;
-                        width: calc(100% + 1.3px);
-                        height: 150px;
-                    }
-
-                    .shape-fill {
-                        fill: #F8EDE3;
-                    }
-                }
             }
         }
     }
@@ -382,99 +318,81 @@ main {
             }
         }
     }
-}
 
-.learn-more {
-    &__container {
-        background-color: $sage-green;
-        position: relative;
-        padding: 10rem 1rem 1rem 1rem;
-
-        @include tablet {
-            @include flex-box(flex, column);
-            align-items: center;
-            padding: 13rem 2rem 2rem 2rem;
+    &__learn-more {
+        &-container {
+            background-color: $sage-green;
+            position: relative;
+            padding: 10rem 1rem 1rem 1rem;
+    
+            @include tablet {
+                @include flex-box(flex, column);
+                align-items: center;
+                padding: 13rem 2rem 2rem 2rem;
+            }
+    
+            @include desktop {
+                @include flex-box(flex, column);
+                align-items: center;
+                padding: 15rem 2rem 2rem 2rem;
+            }
         }
-
-        @include desktop {
-            @include flex-box(flex, column);
-            align-items: center;
-            padding: 15rem 2rem 2rem 2rem;
+    
+        &-subheader {
+            @include m-sub-header($white);
+            text-align: center;
+            margin: 0;
+    
+            @include tablet {
+                @include td-sub-header($white);
+            }
+    
+            @include desktop {
+                @include td-sub-header($white);
+            }
         }
-    }
-
-    &__subheader {
-        @include m-sub-header($white);
-        text-align: center;
-        margin: 0;
-
-        @include tablet {
-            @include td-sub-header($white);
-        }
-
-        @include desktop {
-            @include td-sub-header($white);
-        }
-    }
-
-    &__box {
-        background-color: $white;
-        padding: 1rem;
-        border-radius: 1.25rem;
-        opacity: 80%;
-        margin: 1rem 0;
-
-        @include tablet {
-            width: 50%;
-            padding: 2rem;
-        }
-
-        @include desktop {
-            width: 50%;
-            padding: 2rem;
-        }
-    }
-
-    &__text {
-        @include m-body($global-text);
-        width: 100%;
-        margin: 0;
-
-        @include tablet {
-            @include td-body($global-text);
+    
+        &-text {
+            @include m-body($global-text);
             width: 100%;
             margin: 0;
+    
+            @include tablet {
+                @include td-body($global-text);
+                width: 100%;
+                margin: 0;
+            }
+    
+            @include desktop {
+                @include td-body($global-text);
+                width: 100%;
+                margin: 0;
+            }
         }
-
-        @include desktop {
-            @include td-body($global-text);
+    
+        &-btn {
+            @include btn($light-grey, .8125rem, $global-text);
             width: 100%;
-            margin: 0;
-        }
-    }
-
-    &__btn {
-        @include btn($light-grey, .8125rem, $global-text);
-        width: 100%;
-        border: none;
-        border-radius: 1.25rem;
-        padding: 0.5rem 0;
-
-        @include tablet {
-            font-size: .875rem;
-            width: 50%;
-        }
-
-        @include desktop {
-            font-size: .875rem;
-            width: 50%;
-        }
-
-        &:hover {
-            background-color: $pale-green;
-            color: $white;
-            transition: 0.3s ease-in-out;
-            cursor: pointer;
+            border: none;
+            border-radius: 1.25rem;
+            padding: 0.5rem 0;
+    
+            @include tablet {
+                font-size: .875rem;
+                width: 50%;
+            }
+    
+            @include desktop {
+                font-size: .875rem;
+                width: 50%;
+            }
+    
+            &:hover {
+                background-color: $pale-green;
+                color: $white;
+                transition: 0.3s ease-in-out;
+                cursor: pointer;
+            }
         }
     }
 }
