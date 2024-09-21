@@ -160,8 +160,8 @@
     }
 
     &__text {
+        @include m-body($white);
         opacity: 0;
-        color: #FFFFFF;
         font-weight: 600;
         line-height: 1.8;
         margin: 0 0 1.25em;
@@ -185,7 +185,6 @@
         align-items: center;
         gap: 0.5rem;
         color: $pale-green;
-        font-size: 1.125em;
         font-weight: 600;
         line-height: 1.2;
         margin: auto 0 0;

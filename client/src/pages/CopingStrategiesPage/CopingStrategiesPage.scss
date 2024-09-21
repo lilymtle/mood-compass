@@ -35,20 +35,20 @@
         @include m-body($white);
         width: 100%;
         margin: 0;
-        padding-top: 1rem;
+        padding-top: 1.5rem;
 
         @include tablet {
             @include td-body($white);
             width: 100%;
             margin: 0;
-            padding-top: 1.5rem;
+            padding-top: 2rem;
         }
 
         @include desktop {
             @include td-body($white);
             width: 100%;
             margin: 0;
-            padding-top: 1.5rem;
+            padding-top: 2rem;
         }
     }
     
@@ -162,11 +162,13 @@
     &__text {
         opacity: 0;
         color: #FFFFFF;
+        @include m-body($white);
         font-weight: 600;
         line-height: 1.8;
         margin: 0 0 1.25em;
         transform: translateY(-1em);
         transition: opacity .45s ease, transform .5s ease;
+        padding-top: 1rem;
 
         @include tablet {
             @include td-body($white);
@@ -184,7 +186,6 @@
         align-items: center;
         gap: 0.5rem;
         color: $pale-green;
-        font-size: 1.125em;
         font-weight: 600;
         line-height: 1.2;
         margin: auto 0 0;
