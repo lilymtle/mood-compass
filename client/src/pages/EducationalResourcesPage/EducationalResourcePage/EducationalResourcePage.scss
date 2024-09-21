@@ -3,11 +3,23 @@
 @use "../../../styles/partials/mixins.scss" as *;
 
 .resource { 
+    &__header-icon-container {
+        @include flex-box(flex, row);
+        justify-content: space-between;
+        align-items: center;
+    }
+
     &__header {
-        color: $white;
-        font-family: "Brittany Signature", sans-serif;
-        font-size: 48px;
+        @include m-page-header;
         margin: 0.5rem 0 2rem 0;
+
+        @include tablet {
+            @include td-page-header;
+        }
+
+        @include desktop {
+            @include td-page-header;
+        }
     }
 
     &__subheader {
@@ -15,28 +27,58 @@
         font-size: 24px;
         margin: 0;
 
-        &--white {
-            font-family: "Garet Book", sans-serif;
-            font-size: 24px;
-            color: $white;
-            margin: 0;
+        @include tablet {
+            @include td-sub-header($global-text);
         }
 
-        &--green {
-            font-family: "Garet Book", sans-serif;
-            font-size: 24px;
-            color: $forest-green;
-            margin: 0;
+        @include desktop {
+            @include td-sub-header($global-text);
         }
     }
 
     &__box {
-        &--types, &--treatment {
+        background-color: $white;
+        position: relative;
+        border-radius: 1.25rem;
+        z-index: 2;
+        padding: 1rem;
+
+        @include tablet {
+            padding: 2rem;
+        }
+
+        @include desktop {
+            padding: 2.5rem;
+        }
+
+        &--learn {
             background-color: $white;
-            position: relative;
-            border-radius: 1.25rem;
-            z-index: 2;
             padding: 1rem;
+            border-radius: 1.25rem;
+            opacity: 80%;
+            margin: 1rem 0;
+    
+            @include tablet {
+                width: 50%;
+                padding: 2rem;
+            }
+    
+            @include desktop {
+                width: 50%;
+                padding: 2rem;
+            }
+        }
+    }
+
+    &__wrapper {
+        @include tablet {
+            @include flex-box(flex, row);
+            justify-content: space-between;
+        }
+
+        @include desktop {
+            @include flex-box(flex, row);
+            justify-content: space-between;
         }
     }
 
@@ -64,6 +106,14 @@
                 display: block;
                 width: calc(100% + 1.3px);
                 height: 150px;
+
+                @include tablet {
+                    height: 200px;
+                }
+
+                @include desktop {
+                    height: 250px;
+                }
             }
 
             .shape-fill {
@@ -77,19 +127,47 @@
             background-color: $pale-green;
             position: relative;
             padding: 1rem;
+
+            @include tablet {
+                padding: 2rem;
+            }
+
+            @include desktop {
+                padding: 2.5rem;
+            }
         }
 
         &-text {
-            color: $white;
+            @include m-body($white);
             margin-bottom: 0;
+
+            @include tablet {
+                @include td-body($white);
+            }
+
+            @include desktop {
+                @include td-body($white);
+            }
         }
     }
 
     &__strategies{
+        @include desktop {
+            width: 50%;
+        }
+
         &-container {
             background-size: cover;
             position: relative;
             padding: 1rem;
+
+            @include tablet {
+                padding: 2rem;
+            }
+
+            @include desktop {
+                padding: 2.5rem;
+            }
 
             &::before {
                 content: "";
@@ -102,55 +180,127 @@
                 z-index: 1;
             }
         }
+
+        &-text {
+            @include m-body($global-text);
+
+            @include tablet {
+                @include td-body($global-text);
+            }
+
+            @include desktop {
+                @include td-body($global-text);
+            }
+        }
     }
 
     &__extra-resources {
+        @include desktop {
+            width: 50%;
+        }
+
         &-container {
             background-color: $beige;
             padding: 1rem;
+
+            @include tablet {
+                height: 100%;
+                padding: 2rem;
+            }
+
+            @include desktop {
+                height: 100%;
+                padding: 2.5rem;
+            }
+        }
+
+        &-text {
+            @include m-body($global-text);
+
+            @include tablet {
+                @include td-body($global-text);
+            }
+
+            @include desktop {
+                @include td-body($global-text);
+            }
         }
     }
-}
 
-.learn-more {
-    &__container {
-        background-color: $sage-green;
-        position: relative;
-        padding: 9rem 1rem 1rem 1rem;
-    }
+    &__learn-more {
+        &-container {
+            background-color: $sage-green;
+            position: relative;
+            padding: 10rem 1rem 1rem 1rem;
+    
+            @include tablet {
+                @include flex-box(flex, column);
+                align-items: center;
+                padding: 13rem 2rem 2rem 2rem;
+            }
+    
+            @include desktop {
+                @include flex-box(flex, column);
+                align-items: center;
+                padding: 15rem 2rem 2rem 2rem;
+            }
+        }
 
-    &__subheader {
-        font-family: "Garet Book", sans-serif;
-        font-size: 24px;
-        color: $white;
-        text-align: center;
-        margin: 0;
-    }
+        &-subheader {
+            @include m-sub-header($white);
+            text-align: center;
+            margin: 0;
+    
+            @include tablet {
+                @include td-sub-header($white);
+            }
+    
+            @include desktop {
+                @include td-sub-header($white);
+            }
+        }
 
-    &__box {
-        background-color: $white;
-        padding: 1rem;
-        border-radius: 1.25rem;
-        opacity: 80%;
-        margin: 1rem 0;
-    }
-
-    &__text {
-        color: $forest-green; 
-    }
-
-    &__btn {
-        @include btn($light-grey, .8125rem, $global-text);
-        width: 100%;
-        border: none;
-        border-radius: 1.25rem;
-        padding: 0.5rem 0;
-
-        &:hover {
-            background-color: $pale-green;
-            color: $white;
-            transition: 0.3s ease-in-out;
-            cursor: pointer;
+        &-text {
+            @include m-body($global-text);
+            width: 100%;
+            margin: 0;
+    
+            @include tablet {
+                @include td-body($global-text);
+                width: 100%;
+                margin: 0;
+            }
+    
+            @include desktop {
+                @include td-body($global-text);
+                width: 100%;
+                margin: 0;
+            }
+        }
+    
+        &-btn {
+            @include btn($light-grey, .8125rem, $global-text);
+            width: 100%;
+            border: none;
+            border-radius: 1.25rem;
+            padding: 0.5rem 0;
+    
+            @include tablet {
+                font-size: .875rem;
+                width: 50%;
+            }
+    
+            @include desktop {
+                font-size: .875rem;
+                width: 50%;
+            }
+    
+            &:hover {
+                background-color: $pale-green;
+                color: $white;
+                transition: 0.3s ease-in-out;
+                cursor: pointer;
+            }
         }
     }
 }
