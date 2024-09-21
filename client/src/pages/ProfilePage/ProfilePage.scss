@@ -104,6 +104,14 @@
                 display: block;
                 width: calc(100% + .0813rem);
                 height: 9.375rem;
+
+                @include tablet {
+                    height: 12.5rem;
+                }
+
+                @include desktop {
+                    height: 15.625rem;
+                }
             }
 
             .shape-fill {
@@ -119,10 +127,12 @@
 
             @include tablet {
                 padding: 1rem;
+                margin-bottom: 2rem;
             }
             
             @include desktop {
                 padding: 1rem;
+                margin-bottom: 2.5rem;
             }
         }
 
@@ -185,7 +195,7 @@
             margin: 0;
 
             &-wrapper {
-                @include btn($pale-green, .8125rem, $white);
+                @include btn($sage-green, .8125rem, $white);
 
                 @include tablet {
                     font-size: .875rem;
@@ -204,7 +214,7 @@
         }
 
         &-logout {
-            @include btn($pale-green, .8125rem, $white);
+            @include btn($sage-green, .8125rem, $white);
             padding: 0.5rem 1rem;
 
             @include tablet {
@@ -249,14 +259,14 @@
 
             @include tablet {
                 width: 100%;
-                height: 54vh;
+                height: 62vh;
                 padding: 2rem;
                 margin-top: 2rem;
             }
 
             @include desktop {
                 width: 100%;
-                height: 52vh;
+                height: 63vh;
                 padding: 2.5rem;
                 margin-top: 2.5rem;
             }
@@ -328,12 +338,12 @@
             position: relative;
 
             @include tablet {
-                padding: 6rem 2rem 2rem 2rem;
+                padding: 10rem 2rem 2rem 2rem;
                 height: 100%;
             }
 
             @include desktop {
-                padding: 6rem 2.5rem 2.5rem 2.5rem;
+                padding: 12rem 2.5rem 2.5rem 2.5rem;
                 height: 100%;
                 align-items: center;
             }
@@ -391,10 +401,9 @@
 }
 
 .MuiAvatar-circular {
-
     @include tablet {
         margin-bottom: 2rem;
-        
+
     }
     @include desktop {
         margin-bottom: 2.5rem;
