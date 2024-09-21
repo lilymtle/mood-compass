@@ -47,26 +47,19 @@ export function EducationalResourcePage() {
 
                 <section className="resource__description">
                     <div className="resource__description-container">
-                        <h1 className="resource__header">
-                            {resource.name}
-                        </h1>
+                        <div className="resource__header-icon-container">
+                            <h1 className="resource__header">
+                                {resource.name}
+                            </h1>
 
-                        {/* <FavoriteToggleIcon
-    resource={{
-        educational_resource_id: resource.id,
-        mood_id: null, // or pass a mood ID if relevant
-        coping_strategy_id: null,
-    }}
-/> */}
-
-<FavoriteToggleIcon
-    resource={{
-        educational_resource_id: resource.id,
-        mood_id: null,
-        coping_strategy_id: null,
-    }}
-/>
-
+                            <FavoriteToggleIcon
+                                resource={{
+                                    educational_resource_id: resource.id,
+                                    mood_id: null,
+                                    coping_strategy_id: null,
+                                }}
+                            />
+                        </div>
 
                         {resource.descriptions.map((description, index) => (
                             <p key={index} className="resource__description-text">
@@ -76,50 +69,52 @@ export function EducationalResourcePage() {
                     </div>
                 </section>
                 
-                <section className="resource__strategies">
-                    <div 
-                    className="resource__strategies-container"
-                    style={{ backgroundImage: `url(${baseURL}${resource.images[1]})` }}>
-                        <div className="resource__box--types">
+                <div className="resource__wrapper">
+                    <section className="resource__strategies">
+                        <div 
+                        className="resource__strategies-container"
+                        style={{ backgroundImage: `url(${baseURL}${resource.images[1]})` }}>
+                            <div className="resource__box">
+                                <h2 className="resource__subheader">
+                                    Strategies
+                                </h2>
+
+                                <ul className="resource__list">
+                                    {resource.strategies.map((strategy, index) => (
+                                        <li key={index} className="resource__item">
+                                            <p className="resource__strategies-text">
+                                                {strategy}
+                                            </p>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section className="resource__extra-resources">
+                        <div className="resource__extra-resources-container">
                             <h2 className="resource__subheader">
-                                Strategies
+                                Additional Resources
                             </h2>
 
                             <ul className="resource__list">
-                                {resource.strategies.map((strategy, index) => (
+                                {resource.resources.map((extraResource, index) => (
                                     <li key={index} className="resource__item">
-                                        <p className="resource__strategy-text">
-                                            {strategy}
-                                        </p>
+                                        <Link to={extraResource.link}>
+                                            <p className="resource__extra-resources-text">
+                                                {extraResource.title}
+                                            </p>
+                                        </Link>
                                     </li>
                                 ))}
                             </ul>
                         </div>
-                    </div>
-                </section>
+                    </section>
+                </div>
 
-                <section className="resource__extra-resources">
-                    <div className="resource__extra-resources-container">
-                        <h2 className="resource__subheader">
-                            Additional Resources
-                        </h2>
-
-                        <ul className="resource__list">
-                            {resource.resources.map((extraResource, index) => (
-                                <li key={index} className="resource__item">
-                                    <Link to={extraResource.link}>
-                                        <p className="resource__extra-resources-text">
-                                            {extraResource.title}
-                                        </p>
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                </section>
-
-                <section className="learn-more">
-                    <div className="learn-more__container">
+                <section className="resource__learn-more">
+                    <div className="resource__learn-more-container">
                     <div className="resource__divider-multi-waves">
                         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                             <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" className="shape-fill"></path>
@@ -128,12 +123,12 @@ export function EducationalResourcePage() {
                         </svg>
                     </div>
 
-                        <h2 className="learn-more__subheader">
+                        <h2 className="resource__learn-more-subheader">
                             Learn More
                         </h2>
 
-                        <div className="learn-more__box">
-                            <p className="learn-more__text">
+                        <div className="resource__box--learn">
+                            <p className="resource__learn-more-text">
                                 Did you know MoodCompass has resources on coping strategies? These
                                 coping strategies can be applied to many different negative emotional
                                 states.
@@ -141,7 +136,7 @@ export function EducationalResourcePage() {
                         </div>
                         
                         <Button
-                        className="learn-more__btn"
+                        className="resource__learn-more-btn"
                         type="button"
                         text="Let's Go!" />
                     </div>
