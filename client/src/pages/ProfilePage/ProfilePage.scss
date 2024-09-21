@@ -3,6 +3,8 @@
 @use "../../styles/partials/mixins.scss" as *;
 
 .profile {
+    background-color: $pale-green;
+    
     &__header {
         @include m-page-header;
         margin: 0;
@@ -19,7 +21,7 @@
         }
 
         &-container {
-            background-color: $sage-green;
+            background-color: $pale-green;
             @include flex-box(flex, column);
             gap: 1rem;
             align-items: center;
@@ -85,7 +87,7 @@
             }
 
             .shape-fill {
-                fill: $sage-green;
+                fill: $pale-green;
             }
         }
 
