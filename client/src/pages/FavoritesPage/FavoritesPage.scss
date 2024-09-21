@@ -72,14 +72,22 @@
                 @include box($white, 100%, 100%, 1.25rem, 80%);
                 text-align: center;
                 padding: 0.5rem;
+                margin-top: 1rem;
                 margin-bottom: 1rem;
+
+                @include tablet {
+                    margin-bottom: 1.5rem;
+                }
+
+                @include desktop {
+                    margin-bottom: 1.5rem;
+                }
             }
         }
     }
 
     &__list {
         @include flex-box(flex, column);
-        gap: 3rem;
         list-style-type: none;
         padding: 0;
 
@@ -93,7 +101,19 @@
             width: 100%;
             padding-inline: 10rem;
             padding-block: 2rem;
-            margin: 0;
+            margin: 0;        
+        }
+
+        &-item {
+            margin-bottom: 1rem;
+
+            @include tablet {
+                margin-bottom: 2rem;
+            }
+            
+            @include desktop {
+                margin-bottom: 2.5rem;
+            }
         }
 
         &-container {
