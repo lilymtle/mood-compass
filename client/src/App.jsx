@@ -26,6 +26,7 @@ import { ProtectedRoute } from "./auth/ProtectedRoute.jsx";
 import { EducationalResourcePage } from "./pages/EducationalResourcesPage/EducationalResourcePage/EducationalResourcePage.jsx";
 import { CopingStrategyPage } from "./pages/CopingStrategiesPage/CopingStrategyPage/CopingStrategyPage.jsx";
 import { FavoritesPage } from "./pages/FavoritesPage/FavoritesPage.jsx";
+import { FloatingActionButton } from "./components/FloatingActionButton/FloatingActionButton.jsx";
 
 function App() {
 
@@ -56,6 +57,8 @@ function App() {
           <Route path="/favorites" element={ <FavoritesPage /> } />
           <Route path="*" element={ <NotFoundPage /> } />
         </Routes>
+
+        <FloatingActionButton />
 
         <Footer />
       </Router>
