@@ -10,3 +10,10 @@ $forest-green: #557153;
 
 
 $global-text: $grey;
+
+
+/* floating action button color variables */
+$primary-color: $sage-green;
+$primary-hover: darken($primary-color, 10%);
+$action-color: $pale-green;
+$action-hover: darken($action-color, 10%);
