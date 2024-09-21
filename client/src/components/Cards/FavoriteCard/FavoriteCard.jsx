@@ -57,7 +57,18 @@ export function FavoriteCard({ resource, type, onToggle }) {
                 <Avatar
                     alt="card image of article favorited"
                     src={`${baseURL}${image}`}
-                    sx={{ width: 56, height: 56 }}
+                    sx={{ 
+                        width: {
+                            xs: 56,
+                            sm: 80,
+                            md: 100
+                        },
+                        height: {
+                            xs: 56,
+                            sm: 80,
+                            md: 100
+                        },
+                    }}
                 />
                 <div className="favorites__card-container">
                     <h2 className="favorites__card-title">{name}</h2>
