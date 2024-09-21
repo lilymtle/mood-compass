@@ -4,7 +4,7 @@
 
 .profile {
     background-color: $pale-green;
-    
+
     &__header {
         @include m-page-header;
         margin: 0;
@@ -62,7 +62,6 @@
             @include td-sub-header($forest-green);
         }
 
-
         @include desktop {
             @include td-sub-header($forest-green);
         }
@@ -117,6 +116,14 @@
         &--welcome {
             @include box($white, 100%, 100%, 1.25rem, 80%);
             padding: 0.5rem;
+
+            @include tablet {
+                padding: 1rem;
+            }
+            
+            @include desktop {
+                padding: 1rem;
+            }
         }
 
         &--mood-tracker {
@@ -380,5 +387,16 @@
                 @include td-body($white);
             }
         }
+    }
+}
+
+.MuiAvatar-circular {
+
+    @include tablet {
+        margin-bottom: 2rem;
+        
+    }
+    @include desktop {
+        margin-bottom: 2.5rem;
     }
 }
