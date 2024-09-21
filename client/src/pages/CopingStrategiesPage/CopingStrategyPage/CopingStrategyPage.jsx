@@ -94,22 +94,8 @@ export function CopingStrategyPage() {
                 </section>
 
                 <div className="coping__wrapper">
-                <div className="coping__divider-curve--tablet-desktop">
-                    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                        <path d="M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z" class="shape-fill"></path>
-                    </svg>
-                </div>
-
                     <section className="coping__benefits">
                         <div className="coping__benefits-container">
-                        <div className="coping__divider-curve">
-                            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                                <path d="M0,0V7.23C0,65.52,600,65.52,600,7.23V0Z" className="shape-fill" fill="#557153"></path>
-                                <path d="M600,0V7.23C600,65.52,1200,65.52,1200,7.23V0Z" className="shape-fill" fill="#F8EDE3"></path>
-                            </svg>
-                        </div>
-
-
                             <h1 className="coping__subheader--white">
                                 Benefits
                             </h1>
@@ -147,8 +133,8 @@ export function CopingStrategyPage() {
                     </section>
                 </div>
 
-                <section className="learn-more">
-                    <div className="learn-more__container">
+                <section className="coping__learn-more">
+                    <div className="coping__learn-more-container">
                     <div className="coping__divider-multi-waves">
                         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                             <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" className="shape-fill"></path>
@@ -157,12 +143,12 @@ export function CopingStrategyPage() {
                         </svg>
                     </div>
 
-                        <h2 className="learn-more__subheader">
+                        <h2 className="coping__learn-more-subheader">
                             Learn More
                         </h2>
 
-                        <div className="learn-more__box">
-                            <p className="learn-more__text">
+                        <div className="coping__box--learn">
+                            <p className="coping__learn-more-text">
                                 Did you know MoodCompass has resources on coping strategies? These
                                 coping strategies can be applied to many different negative emotional
                                 states.
@@ -170,7 +156,7 @@ export function CopingStrategyPage() {
                         </div>
                         
                         <Button
-                        className="learn-more__btn"
+                        className="coping__learn-more-btn"
                         type="button"
                         text="Let's Go!" />
                     </div>
