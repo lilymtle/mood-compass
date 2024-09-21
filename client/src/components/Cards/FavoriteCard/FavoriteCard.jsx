@@ -15,14 +15,6 @@ import { Link } from "react-router-dom";
 const baseURL = import.meta.env.VITE_API_BASE_URL;
 
 export function FavoriteCard({ resource, type, onToggle }) {
-    // console.log('Resource in FavoriteCard:', resource);
-
-    // if (resource.images === undefined) {
-    //     console.log('resource.images is undefined');
-    // } else {
-    //     console.log('resource.images:', resource.images);
-    // }
-
     let id = "";
     let image = "";
     let name = "";
@@ -72,7 +64,6 @@ export function FavoriteCard({ resource, type, onToggle }) {
                     <p className="favorites__card-description">{description}</p>
                 </div>
                 <FavoriteToggleIcon 
-                    // resource={{ id: resource.favorite_id, type }}
                     resource={{ 
                         mood_id: resource.mood_id, 
                         educational_resource_id: resource.educational_resource_id, 
