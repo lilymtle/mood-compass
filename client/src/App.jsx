@@ -54,7 +54,11 @@ function App() {
               <ProfilePage />
             </ProtectedRoute>
           } />
-          <Route path="/favorites" element={ <FavoritesPage /> } />
+          <Route path="/favorites" element={ 
+            <ProtectedRoute>
+              <FavoritesPage /> 
+            </ProtectedRoute> 
+          } />
           <Route path="*" element={ <NotFoundPage /> } />
         </Routes>
 
