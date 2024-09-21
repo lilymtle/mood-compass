@@ -13,6 +13,9 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../auth/firebaseAuth.js";
 import { registerUser } from "../../utils/authServices.js";
 
+import { Helmet, HelmetProvider } from "react-helmet-async";
+
+
 export function RegisterPage() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -50,6 +53,11 @@ export function RegisterPage() {
 
     return (
         <main>
+            <HelmetProvider>
+                <Helmet>
+                    <title>Register</title>
+                </Helmet>
+            </HelmetProvider>
             <section className="register">
                 <div className="register__wrapper">
                     <div className="register__form-container">

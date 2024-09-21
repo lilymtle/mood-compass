@@ -15,6 +15,7 @@ import { useEffect, useState } from "react";
 
 // import component
 import { Card } from "../../components/Cards/Card";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 export function MoodsPage() {
     const [resourcesData, setResourcesData] = useState([]);
@@ -34,6 +35,11 @@ export function MoodsPage() {
 
 return (
     <main>
+        <HelmetProvider>
+            <Helmet>
+                <title>Moods</title>
+            </Helmet>
+        </HelmetProvider>
         <section className="moods">
             <div className="moods__container">
                 <h1 className="moods__header">

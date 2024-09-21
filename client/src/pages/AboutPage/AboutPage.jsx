@@ -1,9 +1,17 @@
 //import styling
 import "./AboutPage.scss";
 
+// import component
+import { Helmet, HelmetProvider } from "react-helmet-async";
+
 export function AboutPage() {
     return (
         <main>
+            <HelmetProvider>
+                <Helmet>
+                    <title>About MoodCompass</title>
+                </Helmet>
+            </HelmetProvider>
             <div className="about__wrapper">
                 <section className="about">
                     <div className="about__container">

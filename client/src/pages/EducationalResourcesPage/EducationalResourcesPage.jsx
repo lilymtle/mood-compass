@@ -15,6 +15,8 @@ import { useEffect, useState } from "react";
 
 // import component
 import { Card } from "../../components/Cards/Card.jsx";
+import { Helmet, HelmetProvider } from "react-helmet-async";
+
 
 export function EducationalResourcesPage() {
     const [resourcesData, setResourcesData] = useState([]);
@@ -33,6 +35,11 @@ export function EducationalResourcesPage() {
 
 return (
     <main>
+        <HelmetProvider>
+            <Helmet>
+                <title>Educational Resources</title>
+            </Helmet>
+        </HelmetProvider>
         <section className="resources">
             <div className="resources__container">
                 <h1 className="resources__header">

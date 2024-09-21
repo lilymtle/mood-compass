@@ -6,6 +6,8 @@ import { navigationHandler } from "../../utils/navigationHandler";
 
 // import component
 import { Button } from "../../components/Button/Button";
+import { Helmet, HelmetProvider } from "react-helmet-async";
+
 
 export function HomePage() {
     const navigateTo = navigationHandler();
@@ -15,6 +17,11 @@ export function HomePage() {
 
     return (
         <main>
+            <HelmetProvider>
+                <Helmet>
+                    <title>MoodCompass</title>
+                </Helmet>
+            </HelmetProvider>
             <div className="home__wrapper">
                 <section className="home__welcome">
                     <div className="home__welcome-container">

@@ -25,6 +25,7 @@ import Avatar from '@mui/material/Avatar';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import AddReactionIcon from '@mui/icons-material/AddReaction';
 import BasicCalendar from "../../components/Calendar/Calendar.jsx";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 export function ProfilePage() {
     const { user } = useContext(AuthContext);
@@ -55,6 +56,11 @@ export function ProfilePage() {
 
     return (
         <main>
+            <HelmetProvider>
+                <Helmet>
+                    <title>Profile</title>
+                </Helmet>
+            </HelmetProvider>
             <section className="profile">
                 <div className="profile__wrapper">
                 <div className="profile__header-container">

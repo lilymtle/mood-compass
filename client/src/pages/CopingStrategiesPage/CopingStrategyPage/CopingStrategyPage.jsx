@@ -17,7 +17,7 @@ const baseURL = import.meta.env.VITE_API_BASE_URL;
 // import component
 import { Button } from "../../../components/Button/Button.jsx";
 import { FavoriteToggleIcon } from "../../../components/FavoriteToggleIcon/FavoriteToggleIcon.jsx";
-
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 export function CopingStrategyPage() {
     const { id } = useParams();
@@ -45,6 +45,11 @@ export function CopingStrategyPage() {
 
     return (
         <main>
+            <HelmetProvider>
+                <Helmet>
+                    <title>{strategy.name}</title>
+                </Helmet>
+            </HelmetProvider>
             <section className="coping">
 
                 <section className="coping__description">

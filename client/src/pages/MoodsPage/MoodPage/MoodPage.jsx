@@ -20,6 +20,7 @@ const baseURL = import.meta.env.VITE_API_BASE_URL;
 import FavoriteIcon from "@mui/icons-material/Favorite";
 
 import { FavoriteToggleIcon } from "../../../components/FavoriteToggleIcon/FavoriteToggleIcon.jsx";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 export function MoodPage() {
     const { id } = useParams();
@@ -47,6 +48,11 @@ export function MoodPage() {
 
     return (
         <main>
+            <HelmetProvider>
+                <Helmet>
+                    <title>{mood.name}</title>
+                </Helmet>
+            </HelmetProvider>
             <section className="mood">
                 <section className="mood__description">
                     <div className="mood__description-container">

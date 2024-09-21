@@ -1,19 +1,21 @@
 // import styling
-import { useContext, useEffect, useState } from "react";
 import "./FavoritesPage.scss";
-import { AuthContext } from "../../auth/AuthProvider.jsx";
 
-import FavoriteIcon  from "@mui/icons-material/Favorite";
-
-import { Link } from "react-router-dom";
+// import dependency
 import axios from "axios";
 
 // import environmental variable
 const baseURL = import.meta.env.VITE_API_BASE_URL;
 
-import Avatar from "@mui/material/Avatar";
-import { FavoriteToggleIcon } from "../../components/FavoriteToggleIcon/FavoriteToggleIcon.jsx";
+// import hooks
+import { useContext, useEffect, useState } from "react";
+
+// import auth
+import { AuthContext } from "../../auth/AuthProvider.jsx";
+
+// import components
 import { FavoriteCard } from "../../components/Cards/FavoriteCard/FavoriteCard.jsx";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 export function FavoritesPage() {
     const { user } = useContext(AuthContext);
@@ -94,6 +96,11 @@ export function FavoritesPage() {
 
     return (
         <main>
+            <HelmetProvider>
+                <Helmet>
+                    <title>Favorites</title>
+                </Helmet>
+            </HelmetProvider>
             <section className="favorites">
                 <div className="favorites__container">
                     <h1 className="favorites__header">
