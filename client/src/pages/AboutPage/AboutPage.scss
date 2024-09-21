@@ -3,6 +3,13 @@
 @use "../../styles/partials/mixins" as *;
 
 .about {
+    @include tablet {
+        width: 65%;
+    }
+
+    @include desktop {
+        width: 50%;
+    }
     &__container {
         background-color: $sage-green;
         color: $white;
@@ -13,6 +20,7 @@
         }
 
         @include desktop {
+            width: 100%;
             padding: 2.5rem;
         }
     }
@@ -30,8 +38,15 @@
     }
 
     &__wrapper {
-        @include desktop {
+        @include tablet {
+            width: 100%;
             @include flex-box(flex, row);
+            
+        }
+        @include desktop {
+            width: 100%;
+            @include flex-box(flex, row);
+            justify-content: space-between;
         }
     }
 
@@ -123,6 +138,7 @@
 
             @include desktop {
                 @include flex-box(flex, row);
+                width: 100%;
                 align-items: center;
                 padding: 2.5rem;
             }
