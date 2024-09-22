@@ -1,3 +1,4 @@
+// import styling
 @use "../../styles/partials/variables.scss" as *;
 @use "../../styles/partials/mixins.scss" as *;
 
@@ -61,7 +62,7 @@
 
     &__about {
         &-container {
-            background-image: url("src/assets/images/home-about-bg.jpg");
+            background-image: url("/src/assets/images/home-about-bg.jpg");
             background-size: cover;
             background-repeat: no-repeat;
             height: 30vh;
@@ -185,10 +186,9 @@
     }
 
     &__quote {
-
         &-container {
             background-color: $pale-green;
-            background-image: url("src/assets/images/home-quote-img.jpg");
+            background-image: url("/src/assets/images/home-quote-img.jpg");
             background-size:contain;
             background-repeat: no-repeat;
             background-position: right;

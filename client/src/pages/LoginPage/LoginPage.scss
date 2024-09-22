@@ -1,3 +1,4 @@
+// import styling
 @use "../../styles/partials/fonts.scss" as *;
 @use "../../styles/partials/variables.scss" as *;
 @use "../../styles/partials/mixins.scss" as *;
@@ -113,7 +114,7 @@ a {
         }
 
         &-email {
-            background-image: url("src/assets/icons/login-email-icon.svg");
+            background-image: url("/src/assets/icons/login-email-icon.svg");
             background-repeat: no-repeat;
             background-position: right 1rem center;
             background-size: 1.2rem;
@@ -169,8 +170,6 @@ a {
     }
     
     &__message {
-        // min-width: 100%;
-
         @include tablet {
             width: 50%;
         }
@@ -186,7 +185,6 @@ a {
             height: 100%;
             position: relative;
             padding: 1rem;
-            // box-sizing: border-box;
             order: 1;
 
             @include tablet {
@@ -208,7 +206,6 @@ a {
                 height: 100%;
                 background-color: rgba(0, 0, 0, 0.1);
                 z-index: 1;
-                // box-sizing: border-box;
             }
         }
 
@@ -220,7 +217,6 @@ a {
             z-index: 2;
             color: $white;
             text-align: center;
-            // box-sizing: border-box;
 
             @include tablet {
                 padding: 2rem;

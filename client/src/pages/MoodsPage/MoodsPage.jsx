@@ -11,7 +11,6 @@ import axios from "axios";
 
 // import hooks
 import { useEffect, useState } from "react";
-// import { useParams } from "react-router-dom";
 
 // import component
 import { Card } from "../../components/Cards/Card";
@@ -19,7 +18,6 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 
 export function MoodsPage() {
     const [resourcesData, setResourcesData] = useState([]);
-
 
     useEffect(() => {
         const getMoodsData= async () => {

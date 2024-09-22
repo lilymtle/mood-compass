@@ -17,8 +17,7 @@ import { useParams } from "react-router-dom";
 // import environmental variable
 const baseURL = import.meta.env.VITE_API_BASE_URL;
 
-import FavoriteIcon from "@mui/icons-material/Favorite";
-
+// import components
 import { FavoriteToggleIcon } from "../../../components/FavoriteToggleIcon/FavoriteToggleIcon.jsx";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 
@@ -44,7 +43,7 @@ export function MoodPage() {
             }
         }
         getMood();
-    }, [id])
+    }, [id]);
 
     return (
         <main>

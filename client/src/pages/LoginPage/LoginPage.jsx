@@ -116,4 +116,4 @@ export function LoginPage() {
             </section>
         </main>
     )
-}
+};

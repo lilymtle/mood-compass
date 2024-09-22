@@ -13,7 +13,7 @@ import axios from "axios";
 // import hooks
 import { useEffect, useState } from "react";
 
-// import component
+// import components
 import { Card } from "../../components/Cards/Card.jsx";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 

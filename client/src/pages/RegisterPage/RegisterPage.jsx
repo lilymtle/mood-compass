@@ -1,20 +1,19 @@
 // import styling
 import "./RegisterPage.scss";
 
-// import components
-import { InputFormField } from "../../components/FormFields/InputFormField/InputFormField";
-import { Button } from "../../components/Button/Button";
-
-// import libraries/hooks
+// import hooks
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+// import firebase auth
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../auth/firebaseAuth.js";
 import { registerUser } from "../../utils/authServices.js";
 
+// import components
+import { InputFormField } from "../../components/FormFields/InputFormField/InputFormField";
+import { Button } from "../../components/Button/Button";
 import { Helmet, HelmetProvider } from "react-helmet-async";
-
 
 export function RegisterPage() {
     const [name, setName] = useState("");
@@ -33,8 +32,6 @@ export function RegisterPage() {
         }
 
         try {
-            // await createUserWithEmailAndPassword(auth, email, password);
-
             const userCredential = await createUserWithEmailAndPassword(auth, email, password);
             const idToken = await userCredential.user.getIdToken();
             await registerUser(idToken, name, email);

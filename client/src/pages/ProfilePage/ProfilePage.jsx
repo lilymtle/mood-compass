@@ -35,7 +35,7 @@ export function ProfilePage() {
     const handleLogout = () => {
         logoutUser();
         navigateTo("/");
-    }
+    };
 
     useEffect(() => {
         const getUserName = async () => {
@@ -94,7 +94,7 @@ export function ProfilePage() {
                         onClick={handleLogout} />
                     </div>
                 </div>
- 
+
                     <section className="profile__mood-tracker">
                         <div className="profile__mood-tracker-container">
                             <div className="profile__divider-curve">
@@ -159,5 +159,5 @@ export function ProfilePage() {
                         </section>
             </section>
         </main>
-    )
+    );
 };
