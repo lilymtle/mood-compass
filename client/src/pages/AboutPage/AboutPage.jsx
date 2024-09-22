@@ -1,7 +1,7 @@
 //import styling
 import "./AboutPage.scss";
 
-// import component
+// import components
 import { Helmet, HelmetProvider } from "react-helmet-async";
 
 export function AboutPage() {
@@ -61,4 +61,4 @@ export function AboutPage() {
             </div>
         </main>
     )
-}
+};
