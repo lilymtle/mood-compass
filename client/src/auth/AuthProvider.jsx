@@ -1,3 +1,4 @@
+// import hooks and createContext function
 import { createContext, useEffect, useState } from "react";
 
 // import authentication
@@ -20,7 +21,7 @@ export const AuthProvider = ({ children }) => {
 
     return (
         <AuthContext.Provider value={{ user, loading}}>
-            {loading ? <div>Loading...</div> : children }
+            {loading ? "": children }
         </AuthContext.Provider>
     );
 };
