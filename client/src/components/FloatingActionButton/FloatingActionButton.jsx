@@ -25,14 +25,14 @@ export function FloatingActionButton() {
         { icon: <LightbulbIcon />, name: "Coping Strategies", to: "/coping-strategies" }
     ];
 
-    const [showSpeedDial, setSpeedDial] = useState(false);
-    const scrollThreshold = 200;
+    const [showSpeedDial, setShowSpeedDial] = useState(false);
+    const scrollThreshold = 200; // unit of measurement is px
 
     const handleScroll = () => {
         if (window.scrollY > scrollThreshold) {
-            setSpeedDial(true);
+            setShowSpeedDial(true);
         } else {
-            setSpeedDial(false);
+            setShowSpeedDial(false);
         };
     };
 
@@ -50,11 +50,11 @@ export function FloatingActionButton() {
             position: "fixed", 
             bottom: 16, 
             right: 16, 
-            zIndex: 1000,
+            zIndex: 1000, // keeps the floating action button at the uppermost level
             display: showSpeedDial ? "block" : "none"
         }}>
         <SpeedDial
-            ariaLabel="Floating action button with navigation that will render when a user scrolls away from the navigation bar"
+            ariaLabel="Floating action button with navigation"
             sx={{ 
                 transform: "scale(0.8)",
             }}
