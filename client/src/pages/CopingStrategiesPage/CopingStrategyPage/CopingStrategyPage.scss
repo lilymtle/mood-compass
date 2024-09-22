@@ -6,7 +6,7 @@ main {
     background-color: $sage-green;
 }
 
-.coping{ 
+.coping { 
     &__header-icon-container {
         @include flex-box(flex, row);
         justify-content: space-between;
@@ -123,15 +123,15 @@ main {
             svg {
                 position: relative;
                 display: block;
-                width: calc(100% + 1.3px);
-                height: 150px;
+                width: calc(100% + .0813rem);
+                height: 9.375rem;
 
                 @include tablet {
-                    height: 200px;
+                    height: 12.5rem;
                 }
 
                 @include desktop {
-                    height: 250px;
+                    height: 15.625rem;
                 }
             }
 
