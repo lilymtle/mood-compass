@@ -4,6 +4,9 @@ detailed information on it */
 // import styling
 import "./CopingStrategyPage.scss";
 
+// import environmental variable
+const baseURL = import.meta.env.VITE_API_BASE_URL;
+
 // import dependency
 import axios from "axios";
 
@@ -11,8 +14,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
-// import environmental variable
-const baseURL = import.meta.env.VITE_API_BASE_URL;
+// import utils
+import { navigationHandler } from "../../../utils/navigationHandler.js";
 
 // import component
 import { Button } from "../../../components/Button/Button.jsx";
@@ -41,7 +44,9 @@ export function CopingStrategyPage() {
             };
         };
         getStrategy();
-    }, [id])
+    }, [id]);
+
+    const navigateTo = navigationHandler();
 
     return (
         <main>
@@ -154,16 +159,17 @@ export function CopingStrategyPage() {
 
                         <div className="coping__box--learn">
                             <p className="coping__learn-more-text">
-                                Did you know MoodCompass has resources on coping strategies? These
-                                coping strategies can be applied to many different negative emotional
-                                states.
+                                Did you know MoodCompass also focuses on health promotion by
+                                providing resources on self-care and healthy living? These resources
+                                can help you gain better control over your health!
                             </p>
                         </div>
                         
                         <Button
                         className="coping__learn-more-btn"
                         type="button"
-                        text="Let's Go!" />
+                        text="Let's Go!"
+                        onClick={() => navigateTo("/educational-resources")} />
                     </div>
                 </section>
             </section>
