@@ -1,11 +1,17 @@
-import axios from "axios";
-import FavoriteIcon  from "@mui/icons-material/Favorite";
-import { useActionData } from "react-router-dom";
-import { useContext, useEffect, useState } from "react";
-import { AuthContext } from "../../auth/AuthProvider.jsx";
-
 // import environmental variable
 const baseURL = import.meta.env.VITE_API_BASE_URL;
+
+// import context
+import { AuthContext } from "../../auth/AuthProvider.jsx";
+
+// import dependency
+import axios from "axios";
+
+// import hooks
+import { useContext, useEffect, useState } from "react";
+
+// import component
+import FavoriteIcon  from "@mui/icons-material/Favorite";
 
 export function FavoriteToggleIcon({ resource, onToggle }) {
     const { user } = useContext(AuthContext);
@@ -15,8 +21,6 @@ export function FavoriteToggleIcon({ resource, onToggle }) {
         const getFavorites = async () => {
             if (!user) return;
 
-            console.log("Resource data:", resource); // debug - see resource data being passed
-
             const { data } = await axios.get(`${baseURL}/api/favorites/get`, {
                 params: {
                     user_id: user.uid,
@@ -25,16 +29,13 @@ export function FavoriteToggleIcon({ resource, onToggle }) {
                     coping_strategy_id: resource.coping_strategy_id
                 }
             });
-            // console.log("Favorite status:", data.favorites ? true : false); // debug - see if favorite status is true or false
-            // setIsFavorited(!!data.favorites);
-            console.log("Favorite status:", data.favorites.length > 0); // debug - see if favorite status is true or false
             setIsFavorited(data.favorites.length > 0);
         };
         getFavorites();
     }, [user, resource]);
 
     const handleToggleFavorite = async (e) => {
-        e.stopPropagation();
+        e.stopPropagation(); // prevents parent event handlers from trigger when this function runs
         e.preventDefault(); 
         
         if (!user) return;
@@ -46,8 +47,6 @@ export function FavoriteToggleIcon({ resource, onToggle }) {
             coping_strategy_id: resource.coping_strategy_id
         };
 
-        console.log("Sending favorite data:", favoriteData);
-
         try {
             if (isFavorited) {
                 await axios.delete(`${baseURL}/api/favorites/delete`, { data: favoriteData });
@@ -56,16 +55,15 @@ export function FavoriteToggleIcon({ resource, onToggle }) {
                 await axios.post(`${baseURL}/api/favorites/add`, favoriteData);
                 setIsFavorited(true);
             }
-
             onToggle();
         } catch (error) {
             console.error('Error toggling favorite:', error);
         }
-}
+    };
 
     return (
         <FavoriteIcon 
         sx={{ color: isFavorited ? "#557153" : "#FFFFFF", cursor: "pointer" }} 
         onClick={handleToggleFavorite} />
     )
-}
+};

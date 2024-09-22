@@ -1,4 +1,4 @@
-// import dependency
+// import component
 import { Link } from "react-router-dom";
 
 export function Card({ 
