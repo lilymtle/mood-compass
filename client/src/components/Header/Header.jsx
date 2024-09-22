@@ -1,18 +1,20 @@
 // import styling
 import "./Header.scss";
 
+// import auth
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "../../auth/firebaseAuth.js";
+
+// import hooks
+import { useEffect, useState } from "react";
+
+// import util function
+import { navigationHandler } from "../../utils/navigationHandler";
+
 // import components
 import { Button } from "../Button/Button";
 import { NavBar } from "../NavBar/NavBar";
-
-import { navigationHandler } from "../../utils/navigationHandler";
-
-
-import { useEffect, useState } from "react";
-import { onAuthStateChanged } from "firebase/auth";
-import { auth } from "../../auth/firebaseAuth.js";
-import { Link, useNavigate } from "react-router-dom";
-
+import { Link } from "react-router-dom";
 
 export function Header() {
     const [user, setUser] = useState(null);
