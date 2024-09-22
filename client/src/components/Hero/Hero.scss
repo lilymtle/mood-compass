@@ -1,3 +1,4 @@
+// import styling
 @use "../../styles/partials/fonts" as *;
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
@@ -20,7 +21,7 @@
     }
 
     &__overlay {
-        width: 100px;
+        width: 6.25rem;
         height: auto;
         position: relative;
         top: 1.5rem;
@@ -28,14 +29,14 @@
         z-index: 2;
 
         @include tablet {
-            width: 220px;
+            width: 13.75rem;
             height: auto;
             top: 2.5rem;
             left: 7rem;
         }
 
         @include desktop {
-            width: 220px;
+            width: 13.75rem;
             height: auto;
             top: 2.25rem;
             left: 7rem;
@@ -50,30 +51,29 @@
         &::before {
             content: "";
             position: absolute; 
-            top: -12px;
-            left: -25px;
-            width: calc(100% + 20px);
-            height: calc(100% + 20px);
-            border: 2px solid white;
+            top: -.75rem;
+            left: -1.5625rem;
+            width: calc(100% + 1.25rem);
+            height: calc(100% + 1.25rem);
+            border: .125rem solid white;
             box-sizing: border-box;
             z-index: 1;
 
             @include tablet {
-                left: -30px;
+                left: -1.875rem;
             }
 
             @include desktop {
-                left: -30px;
+                left: -1.875rem;
             }
         }
     }
 
     &__text {
-        
         &-container {
             font-family: "Garet Book", sans-serif;
             color: $sage-green;
-            font-size: 15px;
+            font-size: .9375rem;
             position: absolute;
             top: 2rem;
             left: 11rem;

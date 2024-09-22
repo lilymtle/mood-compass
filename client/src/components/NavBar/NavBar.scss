@@ -1,3 +1,4 @@
+// import styling
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 
@@ -77,7 +78,7 @@
         position: absolute;
         background-color: $pale-green;
         font-size: .8125rem;
-        min-width: 10px;
+        min-width: .625rem;
         padding: 0.5rem;
         box-shadow: 0 .5rem 1rem $sage-green;
         z-index: 1;
@@ -112,4 +113,8 @@
         list-style-type: none;
         padding: 0;
     }
+}
+
+.active {
+    color: $pale-green
 }
