@@ -1,10 +1,9 @@
 // import styling
 import "./NavBar.scss";
 
-import { NavLink } from "react-router-dom";
-
 // import components
 import { Button } from "../Button/Button";
+import { NavLink } from "react-router-dom";
 
 export function NavBar() {
     return (

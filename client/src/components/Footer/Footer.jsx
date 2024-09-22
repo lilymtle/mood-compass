@@ -1,6 +1,7 @@
 // import styling
 import "./Footer.scss";
 
+// import component
 import { Link } from "react-router-dom";
 
 export function Footer() {
@@ -35,4 +36,4 @@ export function Footer() {
             </section>
         </footer>
     )
-}
+};

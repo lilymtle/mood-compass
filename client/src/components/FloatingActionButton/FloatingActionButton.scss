@@ -1,5 +1,7 @@
+// import styling
 @use "../../styles/partials/variables.scss" as *;
 
+// styles the speed dial floating action button
 .MuiSpeedDial-fab {
     background-color: $primary-color !important;
     &:hover {
@@ -7,6 +9,7 @@
     }
 }
 
+// styles the action buttons within
 .MuiSpeedDialAction-fab {
     background-color: $action-color !important;
     &:hover {

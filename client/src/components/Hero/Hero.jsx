@@ -1,3 +1,4 @@
+// import styling 
 import "./Hero.scss";
 
 export function Hero() {
@@ -19,4 +20,4 @@ export function Hero() {
             </div>
         </section>
     )
-}
+};

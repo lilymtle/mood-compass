@@ -1,4 +1,4 @@
-import "./InputFormField.scss";
+// styling applied in the component it will be imported into
 
 export function InputFormField({ className, type, value, placeholder, onChange }) {
     return (
