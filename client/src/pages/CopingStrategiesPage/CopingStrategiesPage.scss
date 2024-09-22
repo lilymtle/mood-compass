@@ -75,7 +75,7 @@
     }
     
     &__container {
-        background-image: url("src/assets/images/strategies-page-bg.jpg");
+        background-image: url("/src/assets/images/strategies-page-bg.jpg");
         background-size: cover;
         background-position: bottom;
     }
@@ -137,7 +137,7 @@
         line-height: 1;
         padding-bottom: .5em;
         margin: 0 0 0.142857143em;
-        border-bottom: 2px solid $pale-green;
+        border-bottom: .125rem solid $pale-green;
         transition: color .45s ease, border .45s ease;
     }
 

@@ -1,3 +1,4 @@
+// import styling
 @use "../../styles/partials/fonts" as *;
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
@@ -137,7 +138,7 @@
         line-height: 1;
         padding-bottom: .5em;
         margin: 0 0 0.142857143em;
-        border-bottom: 2px solid $pale-green;
+        border-bottom: .125rem solid $pale-green;
         transition: color .45s ease, border .45s ease;
     }
 
