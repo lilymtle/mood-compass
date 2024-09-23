@@ -11,6 +11,9 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
+// import utils
+import { navigationHandler } from "../../../utils/navigationHandler.js";
+
 // import environmental variable
 const baseURL = import.meta.env.VITE_API_BASE_URL;
 
@@ -39,7 +42,9 @@ export function EducationalResourcePage() {
             }
         }
         getResource();
-    }, [id])
+    }, [id]);
+
+    const navigateTo = navigationHandler();
 
     return (
         <main>
@@ -143,7 +148,8 @@ export function EducationalResourcePage() {
                         <Button
                         className="resource__learn-more-btn"
                         type="button"
-                        text="Let's Go!" />
+                        text="Let's Go!"
+                        onClick={() => navigateTo("/coping-strategies")} />
                     </div>
                 </section>
             </section>
