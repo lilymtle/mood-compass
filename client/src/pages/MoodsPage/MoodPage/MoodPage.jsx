@@ -14,6 +14,9 @@ import { Link, useParams } from "react-router-dom";
 // import environmental variable
 const baseURL = import.meta.env.VITE_API_BASE_URL;
 
+// import util
+import { navigationHandler } from "../../../utils/navigationHandler.js";
+
 // import components
 import { FavoriteToggleIcon } from "../../../components/FavoriteToggleIcon/FavoriteToggleIcon.jsx";
 import { Helmet, HelmetProvider } from "react-helmet-async";
@@ -29,6 +32,7 @@ export function MoodPage() {
         treatment_options: [],
         when_to_seek_help: ""
     });
+    const navigateTo = navigationHandler();
 
     useEffect(() => {
         const getMood = async () => {
@@ -36,7 +40,7 @@ export function MoodPage() {
                 const { data } = await axios.get(`${baseURL}/api/moods/${id}`);
                 setMood(data);
             } catch (error) {
-                console.error("Error fetching mood data:", error);
+                navigateTo("/not-found");
             };
         };
         getMood();

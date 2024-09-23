@@ -30,7 +30,6 @@ export function EducationalResourcePage() {
         strategies: [],
         resources: []
     });
-    const [error, setError] = useState(null);
 
     useEffect(() => {
         const getResource = async () => {
@@ -38,11 +37,12 @@ export function EducationalResourcePage() {
                 const { data } = await axios.get(`${baseURL}/api/educational-resources/${id}`);
                 setResource(data);
             } catch (error) {
-                console.error("Error fetching mood data:", error);
-            }
-        }
+                navigateTo("/not-found");
+            };
+        };
         getResource();
     }, [id]);
+
 
     const navigateTo = navigationHandler();
 

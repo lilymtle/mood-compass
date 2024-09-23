@@ -31,7 +31,6 @@ export function CopingStrategyPage() {
         benefits: [],
         resources: []
     });
-    const [error, setError] = useState(null);
 
     useEffect(() => {
         const getStrategy = async () => {
@@ -39,8 +38,7 @@ export function CopingStrategyPage() {
                 const { data } = await axios.get(`${baseURL}/api/coping-strategies/${id}`)
                 setStrategy(data);
             } catch (error) {
-                console.error("Error fetching coping strategies data:", error);
-                setError("Failed to fetch coping strategies data.");
+                navigateTo("/not-found");
             };
         };
         getStrategy();
