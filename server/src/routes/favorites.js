@@ -1,8 +1,8 @@
-// import dependency
+// import express
 import express from "express";
-import { addFavorite, checkFavorites, deleteFavorite, getFavorites } from "../controllers/favoritesControllers.js";
 
 // import controllers
+import { addFavorite, checkFavorites, deleteFavorite, getFavorites } from "../controllers/favoritesControllers.js";
 
 const router = express.Router();
 

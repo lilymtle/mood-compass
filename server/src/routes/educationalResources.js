@@ -1,4 +1,4 @@
-// import dependency
+// import express
 import express from "express";
 
 // import controllers
