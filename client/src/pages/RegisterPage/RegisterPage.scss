@@ -33,7 +33,6 @@
     &__form {
         background-color: $white;
         opacity: 80%;
-        // height: 100%;
         border-radius: 1.25rem;
         padding: 1rem;
         position: relative;
@@ -276,6 +275,28 @@
 
             @include desktop {
                 @include td-body($global-text);
+            }
+        }
+    }
+
+    &__error {
+        &-text {
+            background-color: $white;
+            @include m-body($pale-red);
+            text-align:center;
+            margin-top: 2rem;
+            padding: 0.5rem 1rem;
+            border-radius: 1.25rem;
+            opacity: 80%;
+
+            @include tablet {
+                @include td-body($pale-red);
+                padding: 0.5rem 2rem;
+            }
+
+            @include desktop {
+                @include td-body($pale-red);
+                padding: 0.5rem 2.5rem;
             }
         }
     }
