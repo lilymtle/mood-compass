@@ -67,6 +67,7 @@ function App() {
             </ProtectedRoute>
           } />
           <Route path="*" element={<NotFoundPage />} />
+          <Route path="/not-found" element={<NotFoundPage />} /> {/* redirects users to this page if they manually enter a non-existing param */}
         </Routes>
         <FloatingActionButton />
         <Footer />
