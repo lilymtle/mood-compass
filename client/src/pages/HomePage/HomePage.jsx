@@ -4,16 +4,12 @@ import "./HomePage.scss";
 // import util
 import { navigationHandler } from "../../utils/navigationHandler";
 
-// import component
+// import components
 import { Button } from "../../components/Button/Button";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 
-
 export function HomePage() {
     const navigateTo = navigationHandler();
-    const handleClick = () => {
-        navigateTo("/about");
-    };
 
     return (
         <main>
@@ -54,7 +50,7 @@ export function HomePage() {
                             <Button
                             className="home__about-btn"
                             text="Learn more"
-                            onClick={handleClick}/>
+                            onClick={() => navigateTo("/about")}/>
                         </div>
                     </div>
                 </section>
@@ -142,4 +138,4 @@ export function HomePage() {
             </section>
         </main>
     )
-}
+};
