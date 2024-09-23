@@ -8,5 +8,5 @@ export function InputFormField({ className, type, value, placeholder, onChange }
         value={value}
         placeholder={placeholder}
         onChange={onChange} />
-    )
+    );
 };

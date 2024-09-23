@@ -13,7 +13,7 @@
         }
     }
 
-    &__welcome {        
+    &__welcome {
         &-container {
             background-color: $pale-green;
             padding: 1rem;
@@ -128,7 +128,7 @@
             }
         }
 
-        &-message { 
+        &-message {
             font-size: .8125rem;
             margin-top: 1.5rem;
 
@@ -189,7 +189,7 @@
         &-container {
             background-color: $pale-green;
             background-image: url("/src/assets/images/home-quote-img.jpg");
-            background-size:contain;
+            background-size: contain;
             background-repeat: no-repeat;
             background-position: right;
             height: 20vh;
@@ -250,7 +250,7 @@
     border-radius: 1.25rem;
     padding: 1rem;
 
-    @include tablet { 
+    @include tablet {
         padding: 2rem;
         width: 50%;
     }

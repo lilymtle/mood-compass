@@ -12,22 +12,22 @@ export function NavBar() {
                 <ul className="nav-bar__list">
                     <li className="nav-bar__item">
                         <NavLink
-                        to="/"
-                        className={({ isActive }) => `nav-bar__link ${isActive ? "active" : ""}`}>
+                            to="/"
+                            className={({ isActive }) => `nav-bar__link ${isActive ? "active" : ""}`}>
                             Home
                         </NavLink>
                     </li>
                     <li className="nav-bar__item">
                         <NavLink
-                        to="/about"
-                        className={({ isActive}) => `nav-bar__link ${isActive ? "active" : ""}`}>
+                            to="/about"
+                            className={({ isActive }) => `nav-bar__link ${isActive ? "active" : ""}`}>
                             About
                         </NavLink>
                     </li>
                     <li className="nav-bar__item">
                         <NavLink
-                        to="/moods"
-                        className={({ isActive }) => `nav-bar__link ${isActive ? "active" : ""}`}>
+                            to="/moods"
+                            className={({ isActive }) => `nav-bar__link ${isActive ? "active" : ""}`}>
                             Moods
                         </NavLink>
                     </li>
@@ -38,17 +38,17 @@ export function NavBar() {
                                 <ul className="dropdown__list">
                                     <li className="dropdown__item">
                                         <NavLink
-                                        to="/educational-resources"
-                                        className={({ isActive }) => `nav-bar__link-dropdown ${isActive ? "active" : ""}`}>
+                                            to="/educational-resources"
+                                            className={({ isActive }) => `nav-bar__link-dropdown ${isActive ? "active" : ""}`}>
                                             Educational Resources
                                         </NavLink>
                                     </li>
                                     <li className="dropdown__item">
                                         <NavLink
-                                        to="/coping-strategies"
-                                        className={({ isActive }) => `nav-bar__link-dropdown ${isActive ? "active" : ""}`}>
+                                            to="/coping-strategies"
+                                            className={({ isActive }) => `nav-bar__link-dropdown ${isActive ? "active" : ""}`}>
                                             Coping Strategies
-                                        </NavLink>                                    
+                                        </NavLink>
                                     </li>
                                 </ul>
                             </div>
@@ -57,5 +57,5 @@ export function NavBar() {
                 </ul>
             </div>
         </nav>
-    )
+    );
 };

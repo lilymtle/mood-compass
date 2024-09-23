@@ -33,13 +33,13 @@ export function AboutPage() {
 
                         <div className="about__content-container--box">
                             <h2 className="about__subheader--box">
-                                    Why MoodCompass?
+                                Why MoodCompass?
                             </h2>
                             <p className="about__text--grey">
                                 I worked as a registered nurse for over 5 years and I specialized in
                                 mental health and addictions. As someone who worked with individuals
-                                who experienced mental health issues, and as someone with lived 
-                                experience, advocating for mental health is close to my heart. 
+                                who experienced mental health issues, and as someone with lived
+                                experience, advocating for mental health is close to my heart.
                             </p>
                             <p className="about__text--grey">
                                 One of my goals with MoodCompass is to create a safe space where
@@ -60,5 +60,5 @@ export function AboutPage() {
                 </section>
             </div>
         </main>
-    )
+    );
 };

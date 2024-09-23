@@ -20,7 +20,7 @@ export function MoodsPage() {
     const [resourcesData, setResourcesData] = useState([]);
 
     useEffect(() => {
-        const getMoodsData= async () => {
+        const getMoodsData = async () => {
             try {
                 const { data } = await axios.get(`${baseURL}/api/moods`);
                 setResourcesData(data);
@@ -31,48 +31,48 @@ export function MoodsPage() {
         getMoodsData();
     }, []);
 
-return (
-    <main>
-        <HelmetProvider>
-            <Helmet>
-                <title>Moods</title>
-            </Helmet>
-        </HelmetProvider>
-        <section className="moods">
-            <div className="moods__container">
-                <h1 className="moods__header">
-                    Moods
-                </h1>
+    return (
+        <main>
+            <HelmetProvider>
+                <Helmet>
+                    <title>Moods</title>
+                </Helmet>
+            </HelmetProvider>
+            <section className="moods">
+                <div className="moods__container">
+                    <h1 className="moods__header">
+                        Moods
+                    </h1>
 
-                <p className="moods__text">
-                    Here you will find a list of different moods you can
-                    learn more about here on MoodCompass.
-                </p>
-            </div>
-        </section>
+                    <p className="moods__text">
+                        Here you will find a list of different moods you can
+                        learn more about here on MoodCompass.
+                    </p>
+                </div>
+            </section>
 
-        <section className="moods-list__container">
-            <ul className="moods-list">
-            {resourcesData.map((resource) => (
-                    <Card
-                    listItemClassname="moods-list__card"
-                    h2ClassName="moods-list__number"
-                    h3ClassName="moods-list__title"
-                    divClassName="moods-list__content"
-                    imgClassName="moods-list__img"
-                    pClassName="moods-list__text"
-                    linkClassName="moods-list__link"
-                    linkPath={`/moods/${resource.id}`}
-                    iconClassName="moods-list__icon"
-                    baseURL={baseURL}
-                    key={resource.id}
-                    id={resource.id}
-                    name={resource.name}
-                    images={resource.images}
-                    shortDescription={resource.short_description} />
-                ))}
-            </ul>
-        </section>
-    </main>
+            <section className="moods-list__container">
+                <ul className="moods-list">
+                    {resourcesData.map((resource) => (
+                        <Card
+                            listItemClassname="moods-list__card"
+                            h2ClassName="moods-list__number"
+                            h3ClassName="moods-list__title"
+                            divClassName="moods-list__content"
+                            imgClassName="moods-list__img"
+                            pClassName="moods-list__text"
+                            linkClassName="moods-list__link"
+                            linkPath={`/moods/${resource.id}`}
+                            iconClassName="moods-list__icon"
+                            baseURL={baseURL}
+                            key={resource.id}
+                            id={resource.id}
+                            name={resource.name}
+                            images={resource.images}
+                            shortDescription={resource.short_description} />
+                    ))}
+                </ul>
+            </section>
+        </main>
     );
 };

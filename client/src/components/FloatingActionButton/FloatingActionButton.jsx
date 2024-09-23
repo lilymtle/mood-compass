@@ -21,7 +21,7 @@ export function FloatingActionButton() {
         { icon: <HomeIcon />, name: "Home", to: "/" },
         { icon: <AccountCircleIcon />, name: "Profile", to: "/profile" },
         { icon: <EmojiEmotionsIcon />, name: "Moods", to: "/moods" },
-        { icon: <BookIcon/>, name: "Educational Resources", to: "/educational-resources" },
+        { icon: <BookIcon />, name: "Educational Resources", to: "/educational-resources" },
         { icon: <LightbulbIcon />, name: "Coping Strategies", to: "/coping-strategies" }
     ];
 
@@ -42,34 +42,34 @@ export function FloatingActionButton() {
             window.removeEventListener("scroll", handleScroll)
         };
     }, []);
-    
+
     return (
-        <Box sx={{ 
-            transform: 'translateZ(0px)', 
+        <Box sx={{
+            transform: 'translateZ(0px)',
             flexGrow: 1,
-            position: "fixed", 
-            bottom: 16, 
-            right: 16, 
+            position: "fixed",
+            bottom: 16,
+            right: 16,
             zIndex: 1000, // keeps the floating action button at the uppermost level
             display: showSpeedDial ? "block" : "none"
         }}>
-        <SpeedDial
-            ariaLabel="Floating action button with navigation"
-            sx={{ 
-                transform: "scale(0.8)",
-            }}
-            icon={<SpeedDialIcon />}
-        >
-            {actions.map((action) => (
-            <SpeedDialAction
-                key={action.name}
-                icon={action.icon}
-                tooltipTitle={action.name}
-                component={Link}
-                to={action.to}
-            />
-            ))}
-        </SpeedDial>
+            <SpeedDial
+                ariaLabel="Floating action button with navigation"
+                sx={{
+                    transform: "scale(0.8)",
+                }}
+                icon={<SpeedDialIcon />}
+            >
+                {actions.map((action) => (
+                    <SpeedDialAction
+                        key={action.name}
+                        icon={action.icon}
+                        tooltipTitle={action.name}
+                        component={Link}
+                        to={action.to}
+                    />
+                ))}
+            </SpeedDial>
         </Box>
-    )
+    );
 };

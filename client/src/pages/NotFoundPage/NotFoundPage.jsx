@@ -19,7 +19,7 @@ export function NotFoundPage() {
                 <div className="not-found__container">
                     <div className="not-found__box">
                         <h2 className="not-found__emoji">
-                        Σ(°ロ°)
+                            Σ(°ロ°)
                         </h2>
 
                         <h1 className="not-found__header">
@@ -32,11 +32,11 @@ export function NotFoundPage() {
                         </p>
 
                         <p className="not-found__text">
-                        That's okay, you can go back by clicking <span className="not-found__link" onClick={() => navigateTo(-1)}>here</span>!
+                            That's okay, you can go back by clicking <span className="not-found__link" onClick={() => navigateTo(-1)}>here</span>!
                         </p>
                     </div>
                 </div>
             </section>
         </main>
-    )
+    );
 };

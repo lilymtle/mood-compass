@@ -76,7 +76,9 @@ a {
     }
 
     &__input {
-        &-email, &-password {
+
+        &-email,
+        &-password {
             width: 100%;
             font-family: "Garet Book", sans-serif;
             font-size: .8125rem;
@@ -93,7 +95,7 @@ a {
             @include desktop {
                 font-size: .875rem;
             }
-    
+
             &::placeholder {
                 font-family: "Garet Book", sans-serif;
                 font-size: .8125rem;
@@ -106,7 +108,7 @@ a {
                     font-size: .875rem;
                 }
             }
-    
+
             &:focus {
                 border: .125rem solid $grey;
                 outline: none;
@@ -168,7 +170,7 @@ a {
             cursor: pointer;
         }
     }
-    
+
     &__message {
         @include tablet {
             width: 50%;
@@ -230,11 +232,11 @@ a {
         &-header {
             @include m-sub-header($white);
             margin: 0;
-    
+
             @include tablet {
                 @include td-sub-header($white);
             }
-    
+
             @include desktop {
                 @include td-sub-header($white);
             }
@@ -249,7 +251,7 @@ a {
                 @include td-body($white);
             }
 
-            @include desktop { 
+            @include desktop {
                 @include td-body($white);
             }
         }

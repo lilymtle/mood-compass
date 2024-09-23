@@ -44,33 +44,31 @@ function App() {
         <Header />
         <Hero />
         <Routes>
-          <Route path="/" element={ <HomePage /> } />
-          <Route path="/about" element={ <AboutPage /> } />
-          <Route path="/moods" element={ <MoodsPage /> } />
-          <Route path="/moods/:id" element={ <MoodPage /> } />
-          <Route path="/educational-resources" element={ <EducationalResourcesPage /> } />
-          <Route path="/educational-resources/:id" element={ <EducationalResourcePage /> } />
-          <Route path="/coping-strategies" element={ <CopingStrategiesPage /> } />
-          <Route path="/coping-strategies/:id" element={ <CopingStrategyPage /> } />
-          <Route path="/login" element={ <LoginPage /> } />
-          <Route path="/register" element={ <RegisterPage /> } />
-          <Route 
-          path="/profile"
-          element={
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/moods" element={<MoodsPage />} />
+          <Route path="/moods/:id" element={<MoodPage />} />
+          <Route path="/educational-resources" element={<EducationalResourcesPage />} />
+          <Route path="/educational-resources/:id" element={<EducationalResourcePage />} />
+          <Route path="/coping-strategies" element={<CopingStrategiesPage />} />
+          <Route path="/coping-strategies/:id" element={<CopingStrategyPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} />
+          <Route
+            path="/profile"
+            element={
+              <ProtectedRoute>
+                <ProfilePage />
+              </ProtectedRoute>
+            } />
+          <Route path="/favorites" element={
             <ProtectedRoute>
-              <ProfilePage />
+              <FavoritesPage />
             </ProtectedRoute>
           } />
-          <Route path="/favorites" element={ 
-            <ProtectedRoute>
-              <FavoritesPage /> 
-            </ProtectedRoute> 
-          } />
-          <Route path="*" element={ <NotFoundPage /> } />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
-
         <FloatingActionButton />
-
         <Footer />
       </Router>
     </AuthProvider>

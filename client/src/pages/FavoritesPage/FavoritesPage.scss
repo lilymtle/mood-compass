@@ -101,7 +101,7 @@
             width: 100%;
             padding-inline: 10rem;
             padding-block: 2rem;
-            margin: 0;        
+            margin: 0;
         }
 
         &-item {
@@ -110,7 +110,7 @@
             @include tablet {
                 margin-bottom: 2rem;
             }
-            
+
             @include desktop {
                 margin-bottom: 2.5rem;
             }
@@ -124,7 +124,7 @@
             height: 100%;
             padding: 10rem 1rem 1rem 1rem;
 
-            @include tablet { 
+            @include tablet {
                 padding: 10rem 2rem 2rem 2rem;
             }
 

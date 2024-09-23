@@ -31,7 +31,7 @@
         @include desktop {
             order: 1;
         }
-        
+
         &-img {
             width: auto;
             height: 7rem;
@@ -68,7 +68,7 @@
         order: 2;
         margin-top: 0.5rem;
 
-        @include tablet { 
+        @include tablet {
             width: 9rem;
             order: 3;
             padding-top: 1rem;

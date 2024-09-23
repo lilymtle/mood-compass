@@ -91,7 +91,7 @@ const educationalResourcesData = [
       }
     ])
   }
-]
+];
 
 export async function seed() {
   try {

@@ -7,7 +7,6 @@ const { PORT } = process.env;
 const port = PORT || 8080;
 
 export const registerUser = async (req, res) => {
-    console.log("Register request body:", req.body);
     const { idToken, name, email } = req.body;
 
     try {
@@ -30,16 +29,16 @@ export const loginUser = async (req, res) => {
         const decodedToken = await admin.auth().verifyIdToken(idToken);
         const firebaseUid = decodedToken.uid;
 
-        const user = 
-        await db("users")
-        .where( {firebase_uid: firebaseUid })
-        .first();
+        const user =
+            await db("users")
+                .where({ firebase_uid: firebaseUid })
+                .first();
 
         if (user) {
             res.status(200).json(user);
         } else {
             res.status(404).send("User not found.");
-        }
+        };
     } catch (error) {
         console.error("Error logging in user:", error);
         res.status(500).send("Error logging in user.");
@@ -51,15 +50,15 @@ export const getUserName = async (req, res) => {
 
     try {
         const user = await db("users")
-        .where({ email })
-        .first();
+            .where({ email })
+            .first();
 
         if (user) {
             res.status(200).json({ name: user.name });
         } else {
             res.status(404).json({ error: "User not found." });
-        }
+        };
     } catch (error) {
         res.status(500).json({ error: "Database error." });
-    }
+    };
 };

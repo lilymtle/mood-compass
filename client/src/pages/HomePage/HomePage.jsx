@@ -43,14 +43,14 @@ export function HomePage() {
                             <div className="home__about-content">
                                 <h2 className="home__about-header">My name is Lily.</h2>
                                 <p className="home__about-message">
-                                    As for me, I am a <span className="home__about-message--italics">registered nurse </span> 
-                                    studying software engineering at BrainStation in Toronto. 
+                                    As for me, I am a <span className="home__about-message--italics">registered nurse </span>
+                                    studying software engineering at BrainStation in Toronto.
                                 </p>
                             </div>
                             <Button
-                            className="home__about-btn"
-                            text="Learn more"
-                            onClick={() => navigateTo("/about")}/>
+                                className="home__about-btn"
+                                text="Learn more"
+                                onClick={() => navigateTo("/about")} />
                         </div>
                     </div>
                 </section>
@@ -67,28 +67,28 @@ export function HomePage() {
                             <li className="card">
                                 <div className="card__container">
                                     <img
-                                    className="card__icon"
-                                    src="src/assets/icons/potted-plant.svg"
-                                    alt="potted plant icon" />
+                                        className="card__icon"
+                                        src="src/assets/icons/potted-plant.svg"
+                                        alt="potted plant icon" />
 
                                     <h3 className="card__header">
                                         Supports Growth and Resilience
                                     </h3>
 
                                     <p className="card__text">
-                                            Mental health education provides tools like mindfulness and stress
-                                            management, enabling individuals to handle emotions effectively.
-                                            This proactive approach builds resilience, improves well-being,
-                                            and reduces the risk of severe issues.
+                                        Mental health education provides tools like mindfulness and stress
+                                        management, enabling individuals to handle emotions effectively.
+                                        This proactive approach builds resilience, improves well-being,
+                                        and reduces the risk of severe issues.
                                     </p>
                                 </div>
                             </li>
                             <li className="card">
                                 <div className="card__container">
                                     <img
-                                    className="card__icon"
-                                    src="src/assets/icons/lightbulb.svg"
-                                    alt="lightbulb icon" />
+                                        className="card__icon"
+                                        src="src/assets/icons/lightbulb.svg"
+                                        alt="lightbulb icon" />
 
                                     <h3 className="card__header">
                                         Increases Understanding
@@ -105,11 +105,11 @@ export function HomePage() {
                             <li className="card">
                                 <div className="card__container">
                                     <img
-                                    className="card__icon"
-                                    src="src/assets/icons/sentiment-calm.svg"
-                                    alt="smiling emoji with eyes closed icon" />
+                                        className="card__icon"
+                                        src="src/assets/icons/sentiment-calm.svg"
+                                        alt="smiling emoji with eyes closed icon" />
 
-                                    <h3 className="card__header"> 
+                                    <h3 className="card__header">
                                         Promotes Effective Coping
                                     </h3>
 
@@ -128,7 +128,7 @@ export function HomePage() {
             <section className="home__quote">
                 <div className="home__quote-container">
                     <p className="home__quote-text">
-                        Healing takes time, and asking for help is a 
+                        Healing takes time, and asking for help is a
                         courageous step.
                     </p>
                     <p className="home__quote-author">

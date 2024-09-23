@@ -40,9 +40,9 @@ export function Header() {
             <div className="header__logo">
                 <Link to="/">
                     <img
-                    className="header__logo-img"
-                    src="/src/assets/logos/mood-compass-logo.png"
-                    alt="moodcompass logo" />
+                        className="header__logo-img"
+                        src="/src/assets/logos/mood-compass-logo.png"
+                        alt="moodcompass logo" />
                 </Link>
             </div>
 
@@ -51,11 +51,11 @@ export function Header() {
             </section>
 
             <div className="header__login">
-                <Button 
-                className="header__login-btn"
-                text={user ? "Profile" : "Login"}
-                onClick={handleClick} />
+                <Button
+                    className="header__login-btn"
+                    text={user ? "Profile" : "Login"}
+                    onClick={handleClick} />
             </div>
         </header>
-    )
+    );
 };

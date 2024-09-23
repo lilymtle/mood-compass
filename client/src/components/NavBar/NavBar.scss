@@ -59,7 +59,7 @@
         padding: 0;
         margin-bottom: 0.5rem;
 
-        @include tablet { 
+        @include tablet {
             font-size: .9375rem;
         }
 
@@ -72,6 +72,7 @@
             transition: 0.3s ease-in-out;
         }
     }
+
     &__content {
         opacity: 0;
         visibility: hidden;

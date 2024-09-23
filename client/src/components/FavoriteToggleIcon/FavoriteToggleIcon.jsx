@@ -11,7 +11,7 @@ import axios from "axios";
 import { useContext, useEffect, useState } from "react";
 
 // import component
-import FavoriteIcon  from "@mui/icons-material/Favorite";
+import FavoriteIcon from "@mui/icons-material/Favorite";
 
 export function FavoriteToggleIcon({ resource, onToggle }) {
     const { user } = useContext(AuthContext);
@@ -36,8 +36,8 @@ export function FavoriteToggleIcon({ resource, onToggle }) {
 
     const handleToggleFavorite = async (e) => {
         e.stopPropagation(); // prevents parent event handlers from trigger when this function runs
-        e.preventDefault(); 
-        
+        e.preventDefault();
+
         if (!user) return;
 
         const favoriteData = {
@@ -54,16 +54,16 @@ export function FavoriteToggleIcon({ resource, onToggle }) {
             } else {
                 await axios.post(`${baseURL}/api/favorites/add`, favoriteData);
                 setIsFavorited(true);
-            }
+            };
             onToggle();
         } catch (error) {
             console.error('Error toggling favorite:', error);
-        }
+        };
     };
 
     return (
-        <FavoriteIcon 
-        sx={{ color: isFavorited ? "#557153" : "#FFFFFF", cursor: "pointer" }} 
-        onClick={handleToggleFavorite} />
-    )
+        <FavoriteIcon
+            sx={{ color: isFavorited ? "#557153" : "#FFFFFF", cursor: "pointer" }}
+            onClick={handleToggleFavorite} />
+    );
 };

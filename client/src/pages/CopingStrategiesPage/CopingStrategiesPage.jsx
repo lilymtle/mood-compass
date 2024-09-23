@@ -1,5 +1,4 @@
-/* this page displays a list of coping strategy 
-users can select to learn more about */
+/* this page displays a list of coping strategies users can select to learn more about */
 
 // import styling
 import "./CopingStrategiesPage.scss";
@@ -32,48 +31,48 @@ export function CopingStrategiesPage() {
         getStrategiesData();
     }, []);
 
-return (
-    <main>
-        <HelmetProvider>
-            <Helmet>
-                <title>Coping Strategies</title>
-            </Helmet>
-        </HelmetProvider>
-        <section className="strategies">
-            <div className="strategies__container">
-                <h1 className="strategies__header">
-                    Coping Strategies
-                </h1>
+    return (
+        <main>
+            <HelmetProvider>
+                <Helmet>
+                    <title>Coping Strategies</title>
+                </Helmet>
+            </HelmetProvider>
+            <section className="strategies">
+                <div className="strategies__container">
+                    <h1 className="strategies__header">
+                        Coping Strategies
+                    </h1>
 
-                <p className="strategies__text">
-                    Here you will find a list of different educational resources you can
-                    learn more about here on MoodCompass.
-                </p>
-            </div>
-        </section>
+                    <p className="strategies__text">
+                        Here you will find a list of different educational resources you can
+                        learn more about here on MoodCompass.
+                    </p>
+                </div>
+            </section>
 
-        <section className="strategies-list__container">
-            <ul className="strategies-list">
-                {strategiesData.map((strategy) => (
-                    <Card
-                    listItemClassname="strategies-list__card"
-                    h2ClassName="strategies-list__number"
-                    h3ClassName="strategies-list__title"
-                    divClassName="strategies-list__content"
-                    imgClassName="strategies-list__img"
-                    pClassName="strategies-list__text"
-                    linkClassName="strategies-list__link"
-                    linkPath={`/coping-strategies/${strategy.id}`}
-                    iconClassName="strategies-list__icon"
-                    baseURL={baseURL}
-                    key={strategy.id}
-                    id={strategy.id}
-                    name={strategy.name}
-                    images={strategy.images}
-                    shortDescription={strategy.short_description} />
-                ))}
-            </ul>
-        </section>
-    </main>
+            <section className="strategies-list__container">
+                <ul className="strategies-list">
+                    {strategiesData.map((strategy) => (
+                        <Card
+                            listItemClassname="strategies-list__card"
+                            h2ClassName="strategies-list__number"
+                            h3ClassName="strategies-list__title"
+                            divClassName="strategies-list__content"
+                            imgClassName="strategies-list__img"
+                            pClassName="strategies-list__text"
+                            linkClassName="strategies-list__link"
+                            linkPath={`/coping-strategies/${strategy.id}`}
+                            iconClassName="strategies-list__icon"
+                            baseURL={baseURL}
+                            key={strategy.id}
+                            id={strategy.id}
+                            name={strategy.name}
+                            images={strategy.images}
+                            shortDescription={strategy.short_description} />
+                    ))}
+                </ul>
+            </section>
+        </main>
     );
 };

@@ -2,7 +2,7 @@
 @use "../../../styles/partials/variables.scss" as *;
 @use "../../../styles/partials/mixins.scss" as *;
 
-.resource { 
+.resource {
     &__header-icon-container {
         @include flex-box(flex, row);
         justify-content: space-between;
@@ -56,12 +56,12 @@
             border-radius: 1.25rem;
             opacity: 80%;
             margin: 1rem 0;
-    
+
             @include tablet {
                 width: 50%;
                 padding: 2rem;
             }
-    
+
             @include desktop {
                 width: 50%;
                 padding: 2rem;
@@ -150,11 +150,11 @@
         }
     }
 
-    &__strategies{
+    &__strategies {
         @include tablet {
             width: 50%;
         }
-        
+
         @include desktop {
             width: 50%;
         }
@@ -239,13 +239,13 @@
             background-color: $sage-green;
             position: relative;
             padding: 10rem 1rem 1rem 1rem;
-    
+
             @include tablet {
                 @include flex-box(flex, column);
                 align-items: center;
                 padding: 13rem 2rem 2rem 2rem;
             }
-    
+
             @include desktop {
                 @include flex-box(flex, column);
                 align-items: center;
@@ -257,11 +257,11 @@
             @include m-sub-header($white);
             text-align: center;
             margin: 0;
-    
+
             @include tablet {
                 @include td-sub-header($white);
             }
-    
+
             @include desktop {
                 @include td-sub-header($white);
             }
@@ -271,37 +271,37 @@
             @include m-body($global-text);
             width: 100%;
             margin: 0;
-    
+
             @include tablet {
                 @include td-body($global-text);
                 width: 100%;
                 margin: 0;
             }
-    
+
             @include desktop {
                 @include td-body($global-text);
                 width: 100%;
                 margin: 0;
             }
         }
-    
+
         &-btn {
             @include btn($light-grey, .8125rem, $global-text);
             width: 100%;
             border: none;
             border-radius: 1.25rem;
             padding: 0.5rem 0;
-    
+
             @include tablet {
                 font-size: .875rem;
                 width: 50%;
             }
-    
+
             @include desktop {
                 font-size: .875rem;
                 width: 50%;
             }
-    
+
             &:hover {
                 background-color: $pale-green;
                 color: $white;

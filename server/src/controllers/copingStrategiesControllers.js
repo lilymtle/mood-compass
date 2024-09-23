@@ -6,7 +6,7 @@ export const getStrategies = async (req, res) => {
         res.status(200).json(strategies)
     } catch (error) {
         console.error("Error retrieving coping strategies:", error);
-        res.status(500).json({message: "Unable to retrieve coping strategies data at this time."})
+        res.status(500).json({ message: "Unable to retrieve coping strategies data at this time." })
     };
 };
 
@@ -19,9 +19,9 @@ export const getStrategyById = async (req, res) => {
             res.status(200).json(strategy);
         } else {
             res.status(404).json({ message: "No coping strategy with that id was found." });
-        }
+        };
     } catch (error) {
         console.error("Error retrieving coping strategy with that id.");
-        res.status(500).json({message: "Unable to retrieve coping strategy data at this time."})
+        res.status(500).json({ message: "Unable to retrieve coping strategy data at this time." })
     };
 };

@@ -2,7 +2,7 @@
 @use "../../../styles/partials/variables.scss" as *;
 @use "../../../styles/partials/mixins" as *;
 
-.mood { 
+.mood {
     &__header-icon-container {
         @include flex-box(flex, row);
         justify-content: space-between;
@@ -54,7 +54,9 @@
     }
 
     &__box {
-        &--types, &--treatment {
+
+        &--types,
+        &--treatment {
             background-color: $white;
             position: relative;
             border-radius: 1.25rem;
@@ -78,7 +80,7 @@
             @include flex-box(flex, row);
         }
 
-        @include desktop{
+        @include desktop {
             width: 100%;
             height: 100%;
             @include flex-box(flex, row);
@@ -112,14 +114,14 @@
             width: 100%;
             overflow: hidden;
             line-height: 0;
-    
-            svg { 
+
+            svg {
                 position: relative;
                 display: block;
                 width: calc(100% + .0813rem);
                 height: 9.375rem;
             }
-    
+
             .shape-fill {
                 fill: $beige;
             }
@@ -146,8 +148,8 @@
                     overflow: hidden;
                     line-height: 0;
                     z-index: 3;
-            
-                    svg { 
+
+                    svg {
                         position: relative;
                         display: block;
                         width: calc(100% + .0813rem);
@@ -164,8 +166,8 @@
                     overflow: hidden;
                     line-height: 0;
                     z-index: 3;
-            
-                    svg { 
+
+                    svg {
                         position: relative;
                         display: block;
                         width: calc(100% + .0813rem);
@@ -183,7 +185,7 @@
             overflow: hidden;
             line-height: 0;
 
-            svg { 
+            svg {
                 position: relative;
                 display: block;
                 width: calc(100% + .0813rem);
@@ -215,14 +217,14 @@
             width: 100%;
             margin: 0;
             padding-top: 1rem;
-    
+
             @include tablet {
                 @include td-body($white);
                 width: 100%;
                 margin: 0;
                 padding-top: 1rem;
             }
-    
+
             @include desktop {
                 @include td-body($white);
                 width: 100%;
@@ -262,13 +264,13 @@
             @include m-body($global-text);
             width: 100%;
             margin: 0;
-    
+
             @include tablet {
                 @include td-body($global-text);
                 width: 100%;
                 margin: 0;
             }
-    
+
             @include desktop {
                 @include td-body($global-text);
                 width: 100%;
@@ -305,13 +307,13 @@
             @include m-body($global-text);
             width: 100%;
             margin: 0;
-    
+
             @include tablet {
                 @include td-body($global-text);
                 width: 100%;
                 margin: 0;
             }
-    
+
             @include desktop {
                 @include td-body($global-text);
                 width: 100%;
@@ -349,13 +351,13 @@
             @include m-body($white);
             width: 100%;
             margin: 0;
-    
+
             @include tablet {
                 @include td-body($white);
                 width: 100%;
                 margin: 0;
             }
-    
+
             @include desktop {
                 @include td-body($white);
                 width: 100%;
@@ -394,13 +396,13 @@
             @include m-body($global-text);
             width: 100%;
             margin: 0;
-    
+
             @include tablet {
                 @include td-body($global-text);
                 width: 100%;
                 margin: 0;
             }
-    
+
             @include desktop {
                 @include td-body($global-text);
                 width: 100%;
@@ -428,14 +430,14 @@
             width: 100%;
             margin: 0;
             padding-top: 1rem;
-    
+
             @include tablet {
                 @include td-body($white);
                 width: 100%;
                 margin: 0;
                 padding-top: 1.5rem;
             }
-    
+
             @include desktop {
                 @include td-body($white);
                 width: 100%;
@@ -465,14 +467,14 @@
             width: 100%;
             margin: 0;
             padding-top: 1rem;
-    
+
             @include tablet {
                 @include td-body($white);
                 width: 100%;
                 margin: 0;
                 padding-top: 1rem;
             }
-    
+
             @include desktop {
                 @include td-body($white);
                 width: 100%;

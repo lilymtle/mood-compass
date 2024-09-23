@@ -47,7 +47,7 @@
         @include tablet {
             width: 100%;
             @include flex-box(flex, row);
-            
+
         }
 
         @include desktop {

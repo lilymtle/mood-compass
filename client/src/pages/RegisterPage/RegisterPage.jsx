@@ -29,7 +29,7 @@ export function RegisterPage() {
         if (password !== confirmPassword) {
             setError("Passwords do not match.");
             return;
-        }
+        };
 
         try {
             const userCredential = await createUserWithEmailAndPassword(auth, email, password);
@@ -62,18 +62,18 @@ export function RegisterPage() {
                             Register Now
                         </h2>
                         {error && <p>Error</p>}
-                        <form 
-                        className="register__form"
-                        onSubmit={handleRegister}>
+                        <form
+                            className="register__form"
+                            onSubmit={handleRegister}>
                             <div className="register__name-container">
                                 <label htmlFor="name">
                                     <p className="register__label">Name</p>
                                     <InputFormField
-                                    className="register__input-name"
-                                    type="text"
-                                    value={name}
-                                    placeholder="Name"
-                                    onChange={handleNameChange} />
+                                        className="register__input-name"
+                                        type="text"
+                                        value={name}
+                                        placeholder="Name"
+                                        onChange={handleNameChange} />
                                 </label>
                             </div>
 
@@ -81,11 +81,11 @@ export function RegisterPage() {
                                 <label htmlFor="email">
                                     <p className="register__label">Email</p>
                                     <InputFormField
-                                    className="register__input-email"
-                                    type="email"
-                                    value={email}
-                                    placeholder="Email"
-                                    onChange={handleEmailChange} />
+                                        className="register__input-email"
+                                        type="email"
+                                        value={email}
+                                        placeholder="Email"
+                                        onChange={handleEmailChange} />
                                 </label>
                             </div>
 
@@ -93,11 +93,11 @@ export function RegisterPage() {
                                 <label htmlFor="password">
                                     <p className="register__label">Password</p>
                                     <InputFormField
-                                    className="register__input-password"
-                                    type="password"
-                                    value={password}
-                                    placeholder="Password"
-                                    onChange={handlePasswordChange} />
+                                        className="register__input-password"
+                                        type="password"
+                                        value={password}
+                                        placeholder="Password"
+                                        onChange={handlePasswordChange} />
                                 </label>
                             </div>
 
@@ -105,19 +105,19 @@ export function RegisterPage() {
                                 <label htmlFor="confirm-password">
                                     <p className="register__label">Confirm Password</p>
                                     <InputFormField
-                                    className="register__input-password"
-                                    type="password"
-                                    value={confirmPassword}
-                                    placeholder="Password"
-                                    onChange={handleConfirmPasswordChange} />
+                                        className="register__input-password"
+                                        type="password"
+                                        value={confirmPassword}
+                                        placeholder="Password"
+                                        onChange={handleConfirmPasswordChange} />
                                 </label>
                             </div>
 
                             <div className="register__btn-container">
                                 <Button
-                                className="register__btn"
-                                type="submit"
-                                text="Register" />
+                                    className="register__btn"
+                                    type="submit"
+                                    text="Register" />
                             </div>
                         </form>
                     </div>
@@ -131,7 +131,7 @@ export function RegisterPage() {
                             <div className="register__message-box">
                                 <p className="register__message-text">
                                     One of the hardest things to do is taking that first step.
-                                    You showed tremendous strength by registering today. That is 
+                                    You showed tremendous strength by registering today. That is
                                     something you should be proud of, and I hope you are.
                                 </p>
                             </div>
@@ -140,5 +140,5 @@ export function RegisterPage() {
                 </div>
             </section>
         </main>
-    )
-}
+    );
+};

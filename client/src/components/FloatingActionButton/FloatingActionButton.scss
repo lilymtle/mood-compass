@@ -4,6 +4,7 @@
 // styles the speed dial floating action button
 .MuiSpeedDial-fab {
     background-color: $primary-color !important;
+
     &:hover {
         background-color: $primary-hover !important;
     }
@@ -12,10 +13,11 @@
 // styles the action buttons within
 .MuiSpeedDialAction-fab {
     background-color: $action-color !important;
+
     &:hover {
         background-color: $action-hover !important;
     }
-    
+
     .MuiSvgIcon-root {
         color: $white;
     }

@@ -270,7 +270,7 @@ const copingStrategiesData = [
             }
         ])
     }
-]
+];
 
 export async function seed() {
     try {

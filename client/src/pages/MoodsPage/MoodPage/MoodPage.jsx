@@ -61,11 +61,11 @@ export function MoodPage() {
                             </h1>
 
                             <FavoriteToggleIcon
-                            resource={{
-                                mood_id: mood.id,
-                                educational_resource_id: null,
-                                coping_strategy_id: null,
-                            }} />
+                                resource={{
+                                    mood_id: mood.id,
+                                    educational_resource_id: null,
+                                    coping_strategy_id: null,
+                                }} />
                         </div>
 
                         {mood.descriptions.map((descriptions, index) => (
@@ -75,11 +75,11 @@ export function MoodPage() {
                         ))}
                     </div>
                 </section>
-                
+
                 <section className="mood__types">
-                    <div 
-                    className="mood__types-container"
-                    style={{ backgroundImage: `url(${baseURL}${mood.images[1]})` }}>
+                    <div
+                        className="mood__types-container"
+                        style={{ backgroundImage: `url(${baseURL}${mood.images[1]})` }}>
                         <div className="mood__box--types">
                             <h2 className="mood__subheader">
                                 Types of {mood.name}
@@ -99,52 +99,52 @@ export function MoodPage() {
                 </section>
 
                 <div className="mood__wrapper">
-                <section className="mood__signs-symptoms">
-                    <div className="mood__signs-symptoms-container">
-                        <h2 className="mood__subheader">
-                            Signs and Symptoms
-                        </h2>
+                    <section className="mood__signs-symptoms">
+                        <div className="mood__signs-symptoms-container">
+                            <h2 className="mood__subheader">
+                                Signs and Symptoms
+                            </h2>
 
-                        <ul className="mood__list">
-                            {mood.signs_symptoms.map((sign_symptom, index) => (
-                                <li key={index} className="mood__item">
-                                    <p className="mood__signs-symptoms-text">
-                                        {sign_symptom}
-                                    </p>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                </section>
-
-                <section className="mood__causes">
-                    <div className="mood__causes-container">
-                        <div className="mood__divider-wavy">
-                            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="shape-fill"></path>
-                            </svg>
+                            <ul className="mood__list">
+                                {mood.signs_symptoms.map((sign_symptom, index) => (
+                                    <li key={index} className="mood__item">
+                                        <p className="mood__signs-symptoms-text">
+                                            {sign_symptom}
+                                        </p>
+                                    </li>
+                                ))}
+                            </ul>
                         </div>
+                    </section>
 
-                        <h2 className="mood__subheader--white">
-                            Causes
-                        </h2>
+                    <section className="mood__causes">
+                        <div className="mood__causes-container">
+                            <div className="mood__divider-wavy">
+                                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="shape-fill"></path>
+                                </svg>
+                            </div>
 
-                        <ul className="mood__list">
-                            {mood.causes.map((cause, index) => (
-                                <li key={index} className="mood__item--white">
-                                    <p className="mood__causes-text">
-                                        {cause}
-                                    </p>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                </section>
+                            <h2 className="mood__subheader--white">
+                                Causes
+                            </h2>
+
+                            <ul className="mood__list">
+                                {mood.causes.map((cause, index) => (
+                                    <li key={index} className="mood__item--white">
+                                        <p className="mood__causes-text">
+                                            {cause}
+                                        </p>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </section>
                 </div>
-                
+
                 <section className="mood__treatment">
                     <div className="mood__treatment-container"
-                    style={{ backgroundImage: `url(${baseURL}${mood.images[2]})` }}>
+                        style={{ backgroundImage: `url(${baseURL}${mood.images[2]})` }}>
                         <div className="mood__divider-wavy--tablet">
                             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                                 <defs>
@@ -174,7 +174,7 @@ export function MoodPage() {
                         </div>
                     </div>
                 </section>
-                
+
                 <section className="mood__help">
                     <div className="mood__help-container">
                         <h3 className="mood__subheader--white">
@@ -186,7 +186,7 @@ export function MoodPage() {
                         </p>
                     </div>
                 </section>
-                
+
                 <section className="mood__resources">
                     <div className="mood__resources-container">
                         <div className="mood__divider-multi-waves">

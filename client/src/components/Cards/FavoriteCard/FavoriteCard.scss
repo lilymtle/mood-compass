@@ -54,7 +54,7 @@
                 @include td-sub-header($forest-green);
             }
         }
-        
+
         &-description {
             @include m-body-small($global-text);
             margin: 0;
@@ -72,6 +72,7 @@
             &:hover {
                 text-decoration: none;
             }
+
             &:hover .favorites__card-box {
                 opacity: 100%;
                 transition: 0.3s ease-in-out;

@@ -16,24 +16,24 @@ export function Footer() {
                 <div className="footer__left-container">
                     <Link to="https://www.linkedin.com/in/lilymtle/">
                         <img
-                        className="footer__social-icon"
-                        src="/src/assets/logos/linkedin-logo.png"
-                        alt="linkedin icon" />
+                            className="footer__social-icon"
+                            src="/src/assets/logos/linkedin-logo.png"
+                            alt="linkedin icon" />
                     </Link>
 
                     <Link to="https://github.com/lilymtle">
-                        <img 
-                        className="footer__social-icon"
-                        src="/src/assets/logos/github-logo.svg"
-                        alt="github icon" />
+                        <img
+                            className="footer__social-icon"
+                            src="/src/assets/logos/github-logo.svg"
+                            alt="github icon" />
                     </Link>
                 </div>
             </section>
             <section className="footer__right">
                 <p className="footer__text">
-                © 2024, MoodCompass
+                    © 2024, MoodCompass
                 </p>
             </section>
         </footer>
-    )
+    );
 };

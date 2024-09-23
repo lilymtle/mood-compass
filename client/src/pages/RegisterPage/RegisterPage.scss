@@ -51,8 +51,8 @@
             margin-top: 2.5rem;
         }
 
-        &-container{
-            background-image: url("src/assets/images/register-page-img-1.jpg");
+        &-container {
+            background-image: url("/src/assets/images/register-page-img-1.jpg");
             background-size: cover;
             position: relative;
             padding: 1rem;
@@ -90,7 +90,10 @@
     }
 
     &__input {
-        &-name, &-email, &-password {
+
+        &-name,
+        &-email,
+        &-password {
             width: 100%;
             background-color: $forest-green;
             font-family: "Garet Book", sans-serif;
@@ -117,7 +120,7 @@
                 @include tablet {
                     font-size: .875rem;
                 }
-    
+
                 @include desktop {
                     font-size: .875rem
                 }
