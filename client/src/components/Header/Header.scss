@@ -71,12 +71,15 @@
         @include tablet {
             width: 9rem;
             order: 3;
+            margin-top: 0;
             padding-top: 1rem;
         }
 
         @include desktop {
             width: 9rem;
             order: 3;
+            margin-top: 0;
+            padding-top: 1rem;
         }
 
         &-btn {
@@ -88,12 +91,12 @@
 
             @include tablet {
                 width: 100%;
-                font-size: .9375rem;
+                // font-size: .9375rem;
             }
 
             @include desktop {
                 width: 100%;
-                font-size: 0.9375rem;
+                // font-size: 0.9375rem;
             }
 
             &:hover {
