@@ -9,7 +9,7 @@ import axios from "axios";
 
 // import hooks
 import { useEffect, useState } from "react";
-import { Link, Navigate, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 // import environmental variable
 const baseURL = import.meta.env.VITE_API_BASE_URL;
