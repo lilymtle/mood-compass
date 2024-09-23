@@ -33,7 +33,6 @@ export function FavoritesPage() {
                 const { data } = await axios.get(`${baseURL}/api/favorites/get`, {
                     params: { user_id: user.uid }
                 });
-                console.log('Favorites data:', data);
     
                 const processedFavorites = {
                     moods: [],
@@ -55,13 +54,11 @@ export function FavoritesPage() {
                             processedFavorites.coping_strategies.push(favorite);
                         }
                     });
-                }
-        
+                };
                 setFavorites(processedFavorites);
-                console.log('Processed favorites:', processedFavorites); 
             } catch (error) {
                 console.error("Error fetching favorites:", error);
-            }
+            };
         };
         checkFavorites();
     }, [user]);
@@ -86,13 +83,12 @@ export function FavoritesPage() {
                         if (favorite.coping_strategy_id) processedFavorites.coping_strategies.push(favorite);
                     });
                 }
-
                 setFavorites(processedFavorites);
             } catch (error) {
                 console.error("Error fetching updated favorites:", error);
-            }
-        }
-    }
+            };
+        };
+    };
 
     return (
         <main>
@@ -126,14 +122,16 @@ export function FavoritesPage() {
                             {/* renders mood cards */} 
                             {favorites.moods.length > 0 ? (favorites.moods.map(mood => (
                                 <FavoriteCard
-                                key={mood.favorite_i ?? "fallback-id" }
+                                key={mood.favorite_id}
                                 resource={mood}
                                 type="moods"
                                 onToggle={getUpdatedFavorites} />
                                 ))
                             ) : (
                                 <div className="favorites__empty-message">
-                                    Nothing favorited yet.
+                                    <p className="favorites__empty-message-text">
+                                        Nothing favorited yet.
+                                    </p>
                                 </div>
                             )}
                             </section>
@@ -148,14 +146,16 @@ export function FavoritesPage() {
                             {favorites.educational_resources.length > 0 ? (
                                 favorites.educational_resources.map(resource => (
                                 <FavoriteCard
-                                key={resource.favorite_id ?? "fallback-id"}
+                                key={resource.favorite_id}
                                 resource={resource}
                                 type="educational_resources"
                                 onToggle={getUpdatedFavorites} />
                                 ))
                             ) : (
                                 <div className="favorites__empty-message">
-                                    Nothing favorited yet.
+                                    <p className="favorites__empty-message-text">
+                                        Nothing favorited yet.
+                                    </p>
                                 </div>
                             )}
                             </section>
@@ -170,14 +170,16 @@ export function FavoritesPage() {
                             {favorites.coping_strategies.length > 0 ? (
                                 favorites.coping_strategies.map(strategy => (
                                 <FavoriteCard
-                                key={strategy.favorite_id ?? "fallback-id"}
+                                key={strategy.favorite_id}
                                 resource={strategy}
                                 type="coping_strategies"
                                 onToggle={getUpdatedFavorites} />
                                 ))
                             ) : (
                                 <div className="favorites__empty-message">
-                                    Nothing favorited yet.
+                                    <p className="favorites__empty-message-text">
+                                        Nothing favorited yet.
+                                    </p>
                                 </div>
                             )}
                             </section>
@@ -186,4 +188,4 @@ export function FavoritesPage() {
             </section>
         </main>
     )
-}
+};
