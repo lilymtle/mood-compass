@@ -1,6 +1,8 @@
-import axios from "axios";
-
+// import environmental variable
 const baseURL = import.meta.env.VITE_API_BASE_URL;
+
+// import dependency
+import axios from "axios";
 
 export async function registerUser(idToken, name, email) {
     try {
@@ -10,9 +12,9 @@ export async function registerUser(idToken, name, email) {
             email,
         });
 
-        console.log("Registration successful:", data); // delete
+        console.log("Registration successful:", data);
     } catch (error) {
-        console.error("Error registering user:", error); // delete
+        console.error("Error registering user:", error);
     };
 };
 

@@ -1,3 +1,4 @@
+// import styling
 @use "./fonts.scss" as *;
 @use "./variables.scss" as *;
 
@@ -74,12 +75,6 @@
     color: $white;
 }
 
-// @mixin td-sub-header($font-color) {
-//     font-family: "Garet Book", sans-serif;
-//     font-size: 2rem;
-//     color: $font-color;
-// }
-
 @mixin td-sub-header($font-color) {
     font-family: "Garet Book", sans-serif;
     font-size: 1.5rem;
@@ -108,9 +103,6 @@
     font-size: .8125rem;
     color: $font-color;
 }
-
-
-
 
 /* flex-box mixin */
 @mixin flex-box($flex, $direction) {
