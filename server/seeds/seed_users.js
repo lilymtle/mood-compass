@@ -1,3 +1,5 @@
+import { db } from "../src/config/db.js"
+
 const usersData = [
   {
     id: 1,
@@ -31,8 +33,7 @@ const usersData = [
   }
 ];
 
-
-export async function seed(knex) {
-  await knex("users").del();
-  await knex("users").insert(usersData);
+export async function seed() {
+  await db("users").del();
+  await db("users").insert(usersData);
 };

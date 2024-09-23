@@ -272,12 +272,12 @@ const copingStrategiesData = [
     }
 ]
 
-export async function seed(knex) {
-  try {
-    await db("coping_strategies").del();
-    await db("coping_strategies").insert(copingStrategiesData);
-    console.log("Seed data inserted successfully.");
-  } catch (error) {
-    console.error("Error seeding data:", error);
-  }
-}
+export async function seed() {
+    try {
+        await db("coping_strategies").del();
+        await db("coping_strategies").insert(copingStrategiesData);
+        console.log("Seed data inserted successfully.");
+    } catch (error) {
+        console.error("Error seeding data:", error);
+    };
+};

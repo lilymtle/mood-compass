@@ -96,10 +96,7 @@ const moodsData = [
   }
 ];
 
-export async function seed(knex) {
-  // await knex("users").del();
-  // await knex("users").insert(usersData);
-
+export async function seed() {
   try {
     await db("moods").del();
     await db("moods").insert(
@@ -119,5 +116,5 @@ export async function seed(knex) {
     console.log("Seed data inserted successfully.");
   } catch (error) {
     console.error("Error seeding data:", error);
-  }
+  };
 };
