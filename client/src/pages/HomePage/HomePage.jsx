@@ -88,7 +88,7 @@ export function HomePage() {
                                     <img
                                     className="card__icon"
                                     src="src/assets/icons/lightbulb.svg"
-                                    alt="potted plant icon" />
+                                    alt="lightbulb icon" />
 
                                     <h3 className="card__header">
                                         Increases Understanding
@@ -107,7 +107,7 @@ export function HomePage() {
                                     <img
                                     className="card__icon"
                                     src="src/assets/icons/sentiment-calm.svg"
-                                    alt="potted plant icon" />
+                                    alt="smiling emoji with eyes closed icon" />
 
                                     <h3 className="card__header"> 
                                         Promotes Effective Coping
