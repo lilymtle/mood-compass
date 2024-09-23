@@ -482,5 +482,27 @@
                 padding-top: 1rem;
             }
         }
+        
+        &-list {
+            margin: 0;
+            padding-top: 1rem;
+        }
+
+        &-link {
+            @include m-body($forest-green);
+
+            @include tablet {
+                @include td-body($forest-green);
+            }
+
+            @include desktop {
+                @include td-body($forest-green);
+            }
+
+            &:hover {
+                color: $white;
+                transition: 0.3s ease-in-out;
+            }
+        }
     }
 }

@@ -7,12 +7,9 @@ import "./MoodPage.scss";
 // import dependency
 import axios from "axios";
 
-// import user authentication/authorization context
-import { AuthContext } from "../../../auth/AuthProvider";
-
 // import hooks
-import { useContext, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
 
 // import environmental variable
 const baseURL = import.meta.env.VITE_API_BASE_URL;
@@ -201,8 +198,21 @@ export function MoodPage() {
                                 Additional Resources
                             </h3>
                             <p className="mood__resources-text">
-                                Add resources here.
+                                Did you now MoodCompass also has educational resources on health and wellness,
+                                as well as coping strategies?
                             </p>
+                            <ul className="mood__resources-list">
+                                <Link className="mood__resources-link">
+                                    <li className="mood__resources-item">
+                                        Educational Resources
+                                    </li>
+                                </Link>
+                                <Link className="mood__resources-link" to="/coping-strategies">
+                                    <li className="mood__resources-item">
+                                        Coping Strategies
+                                    </li>
+                                </Link>
+                            </ul>
                         </div>
                     </div>
                 </section>
