@@ -161,6 +161,7 @@
     }
 
     &__text {
+        @include m-body($white);
         opacity: 0;
         color: #FFFFFF;
         font-weight: 600;
@@ -168,6 +169,7 @@
         margin: 0 0 1.25em;
         transform: translateY(-1em);
         transition: opacity .45s ease, transform .5s ease;
+        padding-top: 1rem;
 
         @include tablet {
             @include td-body($white);
