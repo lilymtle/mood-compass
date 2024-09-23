@@ -8,9 +8,9 @@ export function up(knex) {
         table.json("steps").notNullable();
         table.json("benefits").notNullable();
         table.json("resources").notNullable();
-    })
-}
+    });
+};
 
 export function down(knex) {
     return knex.schema.dropTableIfExists("coping_strategies");
-}
+};

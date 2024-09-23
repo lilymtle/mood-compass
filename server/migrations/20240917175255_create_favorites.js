@@ -8,8 +8,8 @@ export function up(knex) {
         table.foreign("user_id").references("id").inTable("users").onDelete("CASCADE");
         table.foreign("mood_id").references("id").inTable("moods").onDelete("CASCADE");
     });
-}
+};
 
 export function down(knex) {
     return knex.schema.dropTableIfExists("favorites");
-}
+};

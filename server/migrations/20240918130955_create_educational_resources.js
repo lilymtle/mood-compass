@@ -7,9 +7,9 @@ export function up(knex) {
         table.json("images").notNullable();
         table.json("strategies").notNullable();
         table.json("resources").notNullable();
-    })
-}
+    });
+};
 
 export function down(knex) {
     return knex.schema.dropTableIfExists("educational_resources");
-}
+};
