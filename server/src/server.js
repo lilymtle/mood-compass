@@ -14,7 +14,7 @@ import favoritesRoute from "./routes/favorites.js";
 const app = express();
 
 // import environment variables
-const { PORT, CORS_ORIGIN, FIREBASE_SERVICE_ACCOUNT } = process.env;
+const { PORT, CORS_ORIGIN } = process.env;
 
 const port = PORT || 8080;
 
@@ -29,17 +29,11 @@ app.use(express.json());
 
 app.use("/images", express.static("public/images"));
 
-
-// app.get("/", (req, res) => {
-//     res.send("Get works!");
-// });
-
 app.use("/api/moods", moodsRoute);
 app.use("/api/educational-resources", educationalResourcesRoute);
 app.use("/api/coping-strategies", copingStrategiesRoute);
 app.use("/api/users", usersRoute);
 app.use("/api/favorites", favoritesRoute);
-
 
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
