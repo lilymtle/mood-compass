@@ -9,7 +9,7 @@ import axios from "axios";
 
 // import hooks
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, Navigate, useParams } from "react-router-dom";
 
 // import environmental variable
 const baseURL = import.meta.env.VITE_API_BASE_URL;
@@ -37,8 +37,8 @@ export function MoodPage() {
                 setMood(data);
             } catch (error) {
                 console.error("Error fetching mood data:", error);
-            }
-        }
+            };
+        };
         getMood();
     }, [id]);
 
