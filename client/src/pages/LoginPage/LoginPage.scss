@@ -256,6 +256,28 @@ a {
             }
         }
     }
+
+    &__error {
+        &-text {
+            background-color: $white;
+            @include m-body($pale-red);
+            text-align:center;
+            margin-top: 2rem;
+            padding: 0.5rem 1rem;
+            border-radius: 1.25rem;
+            opacity: 80%;
+
+            @include tablet {
+                @include td-body($pale-red);
+                padding: 0.5rem 2rem;
+            }
+
+            @include desktop {
+                @include td-body($pale-red);
+                padding: 0.5rem 2.5rem;
+            }
+        }
+    }
 }
 
 .register {

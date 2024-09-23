@@ -42,7 +42,9 @@ export function LoginPage() {
                 navigate("/profile");
             }
         } catch (error) {
-            setError(error.message);
+            if (!email || !password) {
+                setError("All fields are required.");
+            };
         };
     };
 
@@ -63,7 +65,9 @@ export function LoginPage() {
                         <h1 className="login__header">
                             Login
                         </h1>
-                        {error && <p>Error</p>}
+                        {error && <p className="login__error-text">
+                            {error}
+                            </p>}
                         <form
                             className="login__form"
                             onSubmit={handleLogin}>
