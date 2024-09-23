@@ -2,13 +2,14 @@
 import "./RegisterPage.scss";
 
 // import hooks
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 // import firebase auth
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../auth/firebaseAuth.js";
 import { registerUser } from "../../utils/authServices.js";
+import { AuthContext } from "../../auth/AuthProvider.jsx";
 
 // import components
 import { InputFormField } from "../../components/FormFields/InputFormField/InputFormField";
@@ -16,6 +17,7 @@ import { Button } from "../../components/Button/Button";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 
 export function RegisterPage() {
+    const { user } = useContext(AuthContext);
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -23,13 +25,32 @@ export function RegisterPage() {
     const [error, setError] = useState("");
     const navigate = useNavigate();
 
+    // redirects users if they try to access the register page manually
+    useEffect(() => {
+        if (user) {
+            navigate("/");
+        };
+    });
+
     const handleRegister = async (e) => {
         e.preventDefault();
+
+        if (!name || !email || !password || !confirmPassword) {
+            setError("All fields are required.");
+            return;
+        };
 
         if (password !== confirmPassword) {
             setError("Passwords do not match.");
             return;
         };
+
+        if (password.length < 6) {
+            setError("Password must be at least 6 characters long.");
+            return;
+        }
+
+        setError(""); // clears previous errors
 
         try {
             const userCredential = await createUserWithEmailAndPassword(auth, email, password);
@@ -61,7 +82,9 @@ export function RegisterPage() {
                         <h2 className="register__header">
                             Register Now
                         </h2>
-                        {error && <p>Error</p>}
+                        {error && <p className="register__error-text">
+                                {error}
+                            </p>}
                         <form
                             className="register__form"
                             onSubmit={handleRegister}>
@@ -96,7 +119,7 @@ export function RegisterPage() {
                                         className="register__input-password"
                                         type="password"
                                         value={password}
-                                        placeholder="Password"
+                                        placeholder="Password 6+ characters"
                                         onChange={handlePasswordChange} />
                                 </label>
                             </div>
@@ -108,7 +131,7 @@ export function RegisterPage() {
                                         className="register__input-password"
                                         type="password"
                                         value={confirmPassword}
-                                        placeholder="Password"
+                                        placeholder="Password 6+ characters"
                                         onChange={handleConfirmPasswordChange} />
                                 </label>
                             </div>

@@ -3,12 +3,13 @@ import "./LoginPage.scss";
 
 // import libraries/hooks
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 // import Firebase and backend API functions
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../auth/firebaseAuth.js";
 import { loginUser } from "../../utils/authServices.js";
+import { AuthContext } from "../../auth/AuthProvider.jsx";
 
 // import components
 import { Button } from "../../components/Button/Button";
@@ -16,10 +17,18 @@ import { InputFormField } from "../../components/FormFields/InputFormField/Input
 import { Helmet, HelmetProvider } from "react-helmet-async";
 
 export function LoginPage() {
+    const { user } = useContext(AuthContext);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
     const navigate = useNavigate();
+
+    // redirects users who manually go to the login page back to the home page
+    useEffect(() => {
+        if (user) {
+            navigate("/");
+        };
+    }, [user, navigate]);
 
     const handleLogin = async (e) => {
         e.preventDefault();
