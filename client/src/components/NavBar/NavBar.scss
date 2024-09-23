@@ -89,12 +89,10 @@
         transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 
         @include tablet {
-            font-size: .9375rem;
             left: auto;
         }
 
         @include desktop {
-            font-size: .9375rem;
             left: auto;
         }
 
