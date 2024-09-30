@@ -1,6 +1,11 @@
 // import styling
 import "./HomePage.scss";
 
+// import icons
+import pottedPlantIcon from "../../assets/icons/potted-plant.svg";
+import lightBulbIcon from "../../assets/icons/lightbulb.svg";
+import sentimentCalmIcon from "../../assets/icons/sentiment-calm.svg";
+
 // import util
 import { navigationHandler } from "../../utils/navigationHandler";
 
@@ -68,7 +73,7 @@ export function HomePage() {
                                 <div className="card__container">
                                     <img
                                         className="card__icon"
-                                        src="src/assets/icons/potted-plant.svg"
+                                        src={pottedPlantIcon}
                                         alt="potted plant icon" />
 
                                     <h3 className="card__header">
@@ -87,7 +92,7 @@ export function HomePage() {
                                 <div className="card__container">
                                     <img
                                         className="card__icon"
-                                        src="src/assets/icons/lightbulb.svg"
+                                        src={lightBulbIcon}
                                         alt="lightbulb icon" />
 
                                     <h3 className="card__header">
@@ -106,7 +111,7 @@ export function HomePage() {
                                 <div className="card__container">
                                     <img
                                         className="card__icon"
-                                        src="src/assets/icons/sentiment-calm.svg"
+                                        src={sentimentCalmIcon}
                                         alt="smiling emoji with eyes closed icon" />
 
                                     <h3 className="card__header">

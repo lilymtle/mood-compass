@@ -51,7 +51,7 @@
         }
 
         &-container {
-            background-image: url("/src/assets/images/register-page-img-1.jpg");
+            background-image: url("../../assets/images/register-page-img-1.jpg");
             background-size: cover;
             position: relative;
             padding: 1rem;
@@ -133,7 +133,7 @@
         }
 
         &-name {
-            background-image: url("src/assets/icons/register-name-icon.svg");
+            background-image: url("../../assets/icons/register-name-icon.svg");
             background-repeat: no-repeat;
             background-position: right 1rem center;
             background-size: 1.2rem;
@@ -148,7 +148,7 @@
         }
 
         &-email {
-            background-image: url("src/assets/icons/register-email-icon.svg");
+            background-image: url("../../assets/icons/register-email-icon.svg");
             background-repeat: no-repeat;
             background-position: right 1rem center;
             background-size: 1.2rem;
@@ -163,7 +163,7 @@
         }
 
         &-password {
-            background-image: url("src/assets/icons/register-password-icon.svg");
+            background-image: url("../../assets/icons/register-password-icon.svg");
             background-repeat: no-repeat;
             background-position: right 1rem center;
             background-size: 1.2rem;

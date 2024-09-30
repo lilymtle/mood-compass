@@ -1,6 +1,9 @@
 // import styling
 import "./Header.scss";
 
+// import logo
+import logo from "../..//assets/logos/mood-compass-logo.png";
+
 // import auth
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../../auth/firebaseAuth.js";
@@ -41,7 +44,7 @@ export function Header() {
                 <Link to="/">
                     <img
                         className="header__logo-img"
-                        src="/src/assets/logos/mood-compass-logo.png"
+                        src={logo}
                         alt="moodcompass logo" />
                 </Link>
             </div>

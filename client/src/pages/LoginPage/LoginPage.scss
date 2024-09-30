@@ -116,7 +116,7 @@ a {
         }
 
         &-email {
-            background-image: url("/src/assets/icons/login-email-icon.svg");
+            background-image: url("../../assets/icons/login-email-icon.svg");
             background-repeat: no-repeat;
             background-position: right 1rem center;
             background-size: 1.2rem;
@@ -131,7 +131,7 @@ a {
         }
 
         &-password {
-            background-image: url("src/assets/icons/login-password-icon.svg");
+            background-image: url("../..//assets/icons/login-password-icon.svg");
             background-repeat: no-repeat;
             background-position: right 1rem center;
             background-size: 1.2rem;
@@ -181,7 +181,7 @@ a {
         }
 
         &-container {
-            background-image: url("src/assets/images/login-page-img.jpg");
+            background-image: url("../../assets/images/login-page-img.jpg");
             background-size: cover;
             background-position: bottom;
             height: 100%;

@@ -1,6 +1,10 @@
 // import styling
 import "./Footer.scss";
 
+// import icons
+import linkedinLogo from "../../assets/logos/linkedin-logo.png";
+import githubLogo from "../../assets/logos/github-logo.svg";
+
 // import component
 import { Link } from "react-router-dom";
 
@@ -17,14 +21,14 @@ export function Footer() {
                     <Link to="https://www.linkedin.com/in/lilymtle/">
                         <img
                             className="footer__social-icon"
-                            src="/src/assets/logos/linkedin-logo.png"
+                            src={linkedinLogo}
                             alt="linkedin icon" />
                     </Link>
 
                     <Link to="https://github.com/lilymtle">
                         <img
                             className="footer__social-icon"
-                            src="/src/assets/logos/github-logo.svg"
+                            src={githubLogo}
                             alt="github icon" />
                     </Link>
                 </div>

@@ -1,5 +1,8 @@
-//import styling
+// import styling
 import "./AboutPage.scss";
+
+// import image 
+import valuesImage from "../../assets/images/mood-compass-values.png";
 
 // import components
 import { Helmet, HelmetProvider } from "react-helmet-async";
@@ -54,7 +57,7 @@ export function AboutPage() {
                     <div className="about__values-container">
                         <img
                             className="about__values-img"
-                            src="/src/assets/images/mood-compass-values.png"
+                            src={valuesImage}
                             alt="moodcompass values" />
                     </div>
                 </section>

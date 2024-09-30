@@ -1,6 +1,9 @@
 // import component
 import { Link } from "react-router-dom";
 
+// import icons
+import forwardArrowIcon from "../../assets/icons/arrow-forward.svg";
+
 export function Card({
     listItemClassname, h2ClassName, h3ClassName, divClassName, imgClassName, pClassName,
     linkClassName, linkPath, iconClassName, baseURL, id, name, images, shortDescription }) {
@@ -26,7 +29,7 @@ export function Card({
                 Read More
                 <img
                     className={iconClassName}
-                    src="/src/assets/icons/arrow-forward.svg"
+                    src={forwardArrowIcon}
                     alt="forward arrow icon" />
             </Link>
         </li>
