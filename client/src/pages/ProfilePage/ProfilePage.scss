@@ -1,0 +1,414 @@
+// import styling
+@use "../../styles/partials/fonts.scss" as *;
+@use "../../styles/partials/variables.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+
+.profile {
+    background-color: $pale-green;
+
+    &__header {
+        @include m-page-header;
+        margin: 0;
+        padding: 1rem;
+
+        @include tablet {
+            @include td-page-header;
+            padding: 2rem;
+        }
+
+        @include desktop {
+            @include td-page-header;
+            padding: 2.5rem;
+        }
+
+        &-container {
+            background-color: $pale-green;
+            @include flex-box(flex, column);
+            gap: 1rem;
+            align-items: center;
+            position: relative;
+            padding: 1rem;
+
+            @include tablet {
+                width: 50%;
+                padding: 2rem;
+            }
+
+            @include desktop {
+                width: 50%;
+                padding: 2.5rem;
+            }
+        }
+    }
+
+    &__wrapper {
+        @include tablet {
+            width: 100%;
+            @include flex-box(flex, row);
+        }
+
+        @include desktop {
+            width: 100%;
+            @include flex-box(flex, row);
+            justify-content: space-evenly;
+        }
+    }
+
+    &__subheader {
+        @include m-sub-header-medium($forest-green);
+        text-align: center;
+        margin: 0;
+
+        @include tablet {
+            @include td-sub-header($forest-green);
+        }
+
+        @include desktop {
+            @include td-sub-header($forest-green);
+        }
+    }
+
+    &__divider {
+        &-curve {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            transform: rotate(180deg);
+            pointer-events: none;
+
+            svg {
+                position: relative;
+                display: block;
+                width: calc(100% + .0813rem);
+                height: 9.375rem;
+            }
+
+            .shape-fill {
+                fill: $pale-green;
+            }
+        }
+
+        &-multi-waves {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            pointer-events: none;
+
+            svg {
+                position: relative;
+                display: block;
+                width: calc(100% + .0813rem);
+                height: 9.375rem;
+
+                @include tablet {
+                    height: 12.5rem;
+                }
+
+                @include desktop {
+                    height: 15.625rem;
+                }
+            }
+
+            .shape-fill {
+                fill: $beige;
+            }
+        }
+    }
+
+    &__box {
+        &--welcome {
+            @include box($white, 100%, 100%, 1.25rem, 80%);
+            padding: 0.5rem;
+
+            @include tablet {
+                height: 13%;
+                padding: 1rem;
+                margin-bottom: 2rem;
+            }
+
+            @include desktop {
+                padding: 1rem;
+                margin-bottom: 2.5rem;
+            }
+        }
+
+        &--mood-tracker {
+            @include box($white, 100%, 100%, 50%, 80%);
+            width: 15rem;
+            height: 15rem;
+            @include flex-box(flex, column);
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+
+            @include tablet {
+                width: 18rem;
+                height: 18rem;
+                padding: 2rem;
+            }
+
+            @include desktop {
+                width: 18rem;
+                height: 18rem;
+                padding: 2.5rem;
+            }
+        }
+
+        &--mood-log-calendar {
+            @include box($white, 100%, 100%, 1.25rem, 80%);
+            width: 100%;
+            height: 100%;
+            @include flex-box(flex, column);
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 4rem;
+            padding: 1rem;
+
+            @include tablet {
+                padding: 2rem;
+            }
+
+            @include desktop {
+                width: 50%;
+                padding: 2.5rem;
+            }
+        }
+    }
+
+    &__btn {
+        &-container {
+            @include flex-box(flex, row);
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            opacity: 100%;
+            margin: 0 auto;
+        }
+
+        &-favorite {
+            padding: 0.5rem 1rem;
+            margin: 0;
+
+            &-wrapper {
+                @include btn($sage-green, .8125rem, $white);
+
+                @include tablet {
+                    font-size: .875rem;
+                }
+
+                @include desktop {
+                    font-size: .875rem;
+                }
+
+                &:hover {
+                    background-color: $light-grey;
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        &-logout {
+            @include btn($sage-green, .8125rem, $white);
+            padding: 0.5rem 1rem;
+
+            @include tablet {
+                font-size: .875rem;
+            }
+
+            @include desktop {
+                font-size: .875rem;
+            }
+
+            &:hover {
+                background-color: $light-grey;
+                color: $pale-green;
+                cursor: pointer;
+            }
+        }
+
+        &-submit {
+            width: 100%;
+            border: none;
+            background: none;
+
+            &:hover {
+                .MuiSvgIcon-root {
+                    color: $pale-green;
+                    transition: 0.3s ease-in-out;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    &__mood-tracker {
+        &-container {
+            background-color: $beige;
+            width: 100vw;
+            height: 34vh;
+            position: relative;
+            @include flex-box(flex, row);
+            justify-content: center;
+            padding: 2rem 1rem;
+
+            @include tablet {
+                width: 100%;
+                height: 62vh;
+                padding: 2rem;
+                margin-top: 2rem;
+            }
+
+            @include desktop {
+                width: 100%;
+                height: 63vh;
+                padding: 2.5rem;
+                margin-top: 2.5rem;
+            }
+        }
+
+        &-subheader {
+            @include m-sub-header-medium($forest-green);
+            text-align: center;
+
+            @include tablet {
+                @include td-sub-header($forest-green);
+            }
+
+            @include desktop {
+                @include td-sub-header($forest-green);
+            }
+        }
+
+        &-form {
+            @include flex-box(flex, column);
+            gap: 1rem;
+        }
+
+        &-input {
+            width: 100%;
+            font-family: "Garet Book", sans-serif;
+            font-size: .6875rem;
+            color: $forest-green;
+            border-radius: 1.25rem;
+            border: .0625rem solid $forest-green;
+            padding: 0.5rem 1rem;
+            outline: none;
+
+            @include tablet {
+                @include td-body($forest-green);
+            }
+
+            @include desktop {
+                @include td-body($forest-green);
+            }
+
+            &::placeholder {
+                font-family: "Garet Book", sans-serif;
+                font-size: .6875rem;
+                color: $forest-green;
+                font-style: italic;
+
+                @include tablet {
+                    font-size: .75rem;
+                }
+
+                @include desktop {
+                    font-size: .75rem;
+                }
+            }
+        }
+    }
+
+    &__mood-log {
+        &-container {
+            background-image: url("../../assets/images/profile-page-bg.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            @include flex-box(flex, column);
+            gap: 1rem;
+            width: 100%;
+            height: 55vh;
+            padding: 6rem 1rem 1rem 1rem;
+            position: relative;
+
+            @include tablet {
+                padding: 10rem 2rem 2rem 2rem;
+                height: 100%;
+            }
+
+            @include desktop {
+                padding: 12rem 2.5rem 2.5rem 2.5rem;
+                height: 100%;
+                align-items: center;
+            }
+        }
+
+        &-subheader {
+            @include m-sub-header($forest-green);
+            margin: 0;
+
+            @include tablet {
+                @include td-sub-header($forest-green);
+            }
+
+            @include desktop {
+                @include td-sub-header($forest-green);
+            }
+        }
+
+        &-card {
+            background-color: $forest-green;
+        }
+
+        &-list {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        &-item {
+            padding: 1rem;
+
+            @include tablet {
+                padding: 2rem;
+            }
+
+            @include desktop {
+                padding: 2.5rem;
+            }
+        }
+
+        &-text {
+            @include m-body($white);
+            text-align: center;
+            margin: 0;
+
+            @include tablet {
+                @include td-body($white);
+            }
+
+            @include desktop {
+                @include td-body($white);
+            }
+        }
+    }
+}
+
+.MuiAvatar-circular {
+    @include tablet {
+        margin-bottom: 2rem;
+
+    }
+
+    @include desktop {
+        margin-bottom: 2.5rem;
+    }
+}
