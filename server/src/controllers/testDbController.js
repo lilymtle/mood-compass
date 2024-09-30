@@ -3,7 +3,7 @@ import { db } from "../config/db.js";
 export const testDb = async (req, res) => {
     try {
         const connection = await db();
-        const result = await connection.query("SELECT 1");
+        const result = await connection.query("SELECT * FROM moods");
 
         res.status(200).json({ message: "Database connection successful", result });
     } catch (error) {
