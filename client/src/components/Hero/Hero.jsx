@@ -8,7 +8,7 @@ export function Hero() {
                 <div className="hero__overlay">
                     <img
                         className="hero__overlay-img"
-                        src="/src/assets/images/hero-img.jpg"
+                        src="../../assets/images/hero-img.jpg"
                         alt="close up of a bouqet of dried white flowers" />
                 </div>
 
