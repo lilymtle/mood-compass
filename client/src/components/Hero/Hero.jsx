@@ -1,6 +1,9 @@
 // import styling 
 import "./Hero.scss";
 
+// import image
+import heroImage from "../../assets/images/hero-img.jpg";
+
 export function Hero() {
     return (
         <section className="hero">
@@ -8,7 +11,7 @@ export function Hero() {
                 <div className="hero__overlay">
                     <img
                         className="hero__overlay-img"
-                        src="../../assets/images/hero-img.jpg"
+                        src={heroImage}
                         alt="close up of a bouqet of dried white flowers" />
                 </div>
 
