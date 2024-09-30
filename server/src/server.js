@@ -20,7 +20,7 @@ const { PORT, CORS_ORIGIN } = process.env;
 const port = PORT || 3000 ;
 
 app.use(cors({
-    origin: "*",
+    origin: "https://mood-compass.up.railway.app",
     credentials: true,
     methods: "GET,POST,PUT,DELETE"
 }));
