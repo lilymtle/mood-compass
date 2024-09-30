@@ -9,6 +9,7 @@ import educationalResourcesRoute from "./routes/educationalResources.js";
 import copingStrategiesRoute from "./routes/copingStrategies.js";
 import usersRoute from "./routes/users.js";
 import favoritesRoute from "./routes/favorites.js";
+import testRoute from "./routes/testDb.js";
 
 // instantiate express
 const app = express();
@@ -34,6 +35,7 @@ app.use("/api/educational-resources", educationalResourcesRoute);
 app.use("/api/coping-strategies", copingStrategiesRoute);
 app.use("/api/users", usersRoute);
 app.use("/api/favorites", favoritesRoute);
+app.use("/api/test-database", testRoute);
 
 app.listen(port, "0.0.0.0", () => {
     console.log(`Listening on port ${port}`);
