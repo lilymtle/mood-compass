@@ -20,7 +20,7 @@ const { PORT, CORS_ORIGIN } = process.env;
 const port = PORT || 3000 ;
 
 app.use(cors({
-    origin: CORS_ORIGIN,
+    origin: "*",
     credentials: true,
     methods: "GET,POST,PUT,DELETE"
 }));
