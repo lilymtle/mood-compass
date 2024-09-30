@@ -16,7 +16,7 @@ const app = express();
 // import environment variables
 const { PORT, CORS_ORIGIN } = process.env;
 
-const port = PORT || 8080;
+const port = PORT || 3000 ;
 
 app.use(cors({
     origin: CORS_ORIGIN,
@@ -35,6 +35,6 @@ app.use("/api/coping-strategies", copingStrategiesRoute);
 app.use("/api/users", usersRoute);
 app.use("/api/favorites", favoritesRoute);
 
-app.listen(port, () => {
+app.listen(port, "0.0.0.0", () => {
     console.log(`Listening on port ${port}`);
 });
