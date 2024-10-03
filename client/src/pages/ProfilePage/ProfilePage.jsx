@@ -24,8 +24,10 @@ import { Button } from "../../components/Button/Button";
 import Avatar from '@mui/material/Avatar';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import AddReactionIcon from '@mui/icons-material/AddReaction';
+import Alert from '@mui/material/Alert';
 import BasicCalendar from "../../components/Calendar/Calendar.jsx";
 import { Helmet, HelmetProvider } from "react-helmet-async";
+
 
 export function ProfilePage() {
     const { user } = useContext(AuthContext);
@@ -93,6 +95,13 @@ export function ProfilePage() {
                                 text="Logout"
                                 onClick={handleLogout} />
                         </div>
+
+                        <Alert className="alert" severity="info">
+                            <p className="alert__text">
+                                Hi folks, Lily here! 😊 I'm working on adding functionality to the mood
+                                tracker and log. Please stay tuned!
+                            </p>
+                        </Alert>
                     </div>
 
                     <section className="profile__mood-tracker">
