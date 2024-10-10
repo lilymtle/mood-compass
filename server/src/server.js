@@ -9,6 +9,8 @@ import educationalResourcesRoute from "./routes/educationalResources.js";
 import copingStrategiesRoute from "./routes/copingStrategies.js";
 import usersRoute from "./routes/users.js";
 import favoritesRoute from "./routes/favorites.js";
+import moodOptionsRoute from "./routes/moodOptions.js";
+import moodTrackerRoute from "./routes/moodTracker.js";
 
 // instantiate express
 const app = express();
@@ -34,7 +36,8 @@ app.use("/api/educational-resources", educationalResourcesRoute);
 app.use("/api/coping-strategies", copingStrategiesRoute);
 app.use("/api/users", usersRoute);
 app.use("/api/favorites", favoritesRoute);
-
+app.use("/api/mood-options", moodOptionsRoute);
+app.use("/api/mood-tracker", moodTrackerRoute);
 
 app.listen(port, "0.0.0.0", () => {
     console.log(`Listening on port ${port}`);
