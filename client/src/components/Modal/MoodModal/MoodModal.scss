@@ -1,0 +1,64 @@
+// import styling
+@use "../../../styles/partials/variables" as *;
+@use "../../../styles/partials/mixins" as *;
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+
+    &__content {
+        background: white;
+        padding: 1.25rem;
+        border-radius: .5rem;
+        width: 90%;
+        max-width: 25rem;
+        height: 50%;
+        overflow-y: scroll;
+        position: relative;
+    }
+
+    &__close {
+        position: absolute;
+        top: .625rem;
+        right: .625rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        font-size: 1.5rem;
+    }
+}
+
+.mood {
+    &__options {
+        width: 100%;
+        @include flex-box(flex, column);
+        justify-content: center;
+        margin: 0 auto;
+        gap: 1rem;
+    }
+
+    &__option {
+        background-color: #EEE;
+        @include m-body($global-text);
+        @include flex-box(flex, column);
+        justify-content: center;
+        align-items: center;
+        border-radius: .50rem;
+        padding: .625rem;
+
+        &:hover {
+            background-color: $forest-green;
+            color: $white;
+            cursor: pointer;
+            transition: 0.5s ease-in-out;
+        }
+    }
+}
