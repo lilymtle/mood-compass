@@ -27,6 +27,7 @@ import AddReactionIcon from '@mui/icons-material/AddReaction';
 import Alert from '@mui/material/Alert';
 import BasicCalendar from "../../components/Calendar/Calendar.jsx";
 import { Helmet, HelmetProvider } from "react-helmet-async";
+import { MoodTracker } from "../../components/MoodTracker/MoodTracker.jsx";
 
 
 export function ProfilePage() {
@@ -103,6 +104,10 @@ export function ProfilePage() {
                             </p>
                         </Alert>
                     </div>
+
+                    <section>
+                        <MoodTracker />
+                    </section>
 
                     <section className="profile__mood-tracker">
                         <div className="profile__mood-tracker-container">
