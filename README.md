@@ -71,29 +71,29 @@ As a user, I want to be able to...
 ### <a name="tech-stack"></a> Tech Stack
 
 - React
+- Node.js
 - Express
 - MySQL
+
 <details>
-  <summary>Client Libraries</summary>
-    - react
-    - react-router
-    - axios
-    - react-helmet-async
-    - sass
-    - joi
-    - dayjs
-    - react-redux
-    - jest
+  <summary>Client Libraries/Tools</summary>
+    <ul>
+      <li>SASS</li>
+      <li>Material UI</li>
+      <li>Axios</li>
+      <li>react-router-dom</li>
+      <li>react-helmet-async</li>
+      <li>Firebase</li>
+    </ul>
 </details>
 
 <details>
-  <summary>Server Libraries</summary>
-    - Express.js
-    - Knex.js
-    - joi
-    - bcryptjs for password hashing
-    - jest
-    - helmet
+  <summary>Server Libraries/Tools</summary>
+  <ul>
+    <li>Express</li>
+    <li>Knex</li>
+    <li>Firebase</li>
+  </ul>
 </details>
 
 ---
