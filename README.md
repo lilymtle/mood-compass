@@ -1,5 +1,9 @@
 ![moodcompass banner](assets/images/mood-compass-banner.png)
 
+<h1 align="center">
+  <strong>MoodCompass</strong> is now live! You can check it out <a href="https://mood-compass.vercel.app">here</a>. 
+</h1>
+
 There has been a sharp decline in mental health worldwide since the COVID-19 pandemic. The increased prevalence of anxiety, depression, and stress has led to a high demand for mental health services. However, there is a well-documented shortage of such services.
 
 Currently, there are online resources available to help users learn about their negative moods, coping strategies, and more. However, many of these apps do not allow users to save educational resources in a centralized location for easy retrieval. As a result, users often need to search for these resources repeatedly, which can be time-consuming and discouraging.
