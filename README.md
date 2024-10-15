@@ -6,16 +6,27 @@ Currently, there are online resources available to help users learn about their 
 
 That's where **MoodCompass** comes in. MoodCompass is a safe space where individuals can learn more about their negative emotional states, as well as relevant coping strategies and therapy options to help them.
 
-**Features include**:
+**Features include:**
 
 <ul>
-  <li>User Authentication & Authorization: Secure login and logout functionality, ensuring users can access personalized content.</li>
-  <li>Favorite Resources: Users can easily mark resources as favorites and remove them from favorites at any time.</li>
-  <li>Persistent Data Storage: All user data, including favorites, is stored in a database, ensuring it's available across sessions.</li>
-  <li>Fully Responsive Design: The application is optimized for a seamless user experience across all devices, from desktop to mobile.</li>
+  <li> <strong>User Authentication & Authorization:</strong> Secure login and logout functionality, ensuring users can access personalized content.</li>
+  <li> <strong>Favorite Resources:</strong> Users can easily mark resources as favorites and remove them from favorites at any time.</li>
+  <li> <strong>Persistent Data Storage:</strong> All user data, including favorites, is stored in a database, ensuring it's available across sessions.</li>
+  <li> <strong>Fully Responsive Design:</strong> The application is optimized for a seamless user experience across all devices, from desktop to mobile.</li>
 </ul>
 
-Lastly, MoodCompass is rooted in the following values:
+**Current Updates:**
+
+<blockquote>
+  <strong>October 10, 2024:</strong>
+    <ul>
+      <li> Created migration table on database and seed files for mood options</li>
+      <li> Set up test endpoints for mood options</li>
+      <li> Create modal for mood options selection</li>
+    </ul>
+</blockquote>
+
+Finally, MoodCompass is rooted in the following values:
 
 ![moodcompass values](assets/images/mood-compass-values.png)
 
