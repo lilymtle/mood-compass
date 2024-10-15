@@ -1,74 +1,29 @@
-# <a name="top"></a> Table of Contents
-
-## Overview
-
-  - [Problem](#problem)
-  - [User Profile](#user-profile)
-  - [Features](#features)
-
-## Implementation
-
-  - [Tech Stack](#tech-stack)
-  - [APIs](#apis)
-  - [Endpoints](#endpoints)
-
-## Roadmap
-
-  - [Initial Setup](#part-1-initial-setup)
-  - [Data Prep](#part-2-data-prep)
-  - [Create Features](#part-3-create-features)
-  - [Bug Fixes](#part-4-bug-fixes)
-  - [Demo Day](#part-5-demo-day)
-
-## Last but not least...
-
-  - [Nice-to-haves](#nice-to-haves)
-
-# Project Title
-
 ![moodcompass banner](assets/images/mood-compass-banner.png)
-
-**MoodCompass** is a safe space where individuals can learn more about their negative emotional states, as well as relevant coping strategies and therapy options to help them.
-
-MoodCompass is rooted in the following values:
-
-![moodcompass values](assets/images/mood-compass-values.png)
-
-### <a name="problem"></a>Problem
 
 There has been a sharp decline in mental health worldwide since the COVID-19 pandemic. The increased prevalence of anxiety, depression, and stress has led to a high demand for mental health services. However, there is a well-documented shortage of such services.
 
 Currently, there are online resources available to help users learn about their negative moods, coping strategies, and more. However, many of these apps do not allow users to save educational resources in a centralized location for easy retrieval. As a result, users often need to search for these resources repeatedly, which can be time-consuming and discouraging.
 
----
+That's where **MoodCompass** comes in. MoodCompass is a safe space where individuals can learn more about their negative emotional states, as well as relevant coping strategies and therapy options to help them.
 
-### <a name="user-profile"></a> User Profile
+**Features include**:
 
-- Individuals who want to learn more about their mood(s) or mood(s) in general.
+<ul>
+  <li>User Authentication & Authorization: Secure login and logout functionality, ensuring users can access personalized content.</li>
+  <li>Favorite Resources: Users can easily mark resources as favorites and remove them from favorites at any time.</li>
+  <li>Persistent Data Storage: All user data, including favorites, is stored in a database, ensuring it's available across sessions.</li>
+  <li>Fully Responsive Design: The application is optimized for a seamless user experience across all devices, from desktop to mobile.</li>
+</ul>
 
-- Individuals who want to learn about the different coping strategies and therapy options relevant to negative moods.
+Lastly, MoodCompass is rooted in the following values:
 
-- Individuals who want to keep track of the different educational resources they acess on MoodCompass.
-
----
-
-### <a name="features"></a> Features
-
-As a user, I want to be able to...
-
-- Learn about the mental and physical signs and symptoms related to my negative mood.
-
-- Learn about the relevant coping strategies to address my negative mood.
-
-- Save different educational resources so I can easily come back to them as needed.
-
-*[Back to the top](#top)*
+![moodcompass values](assets/images/mood-compass-values.png)
 
 ---
 
 ![implementation banner](assets/images/implementation-banner.png)
 
-### <a name="tech-stack"></a> Tech Stack
+### Tech Stack
 
 - React
 - Node.js
@@ -98,7 +53,7 @@ As a user, I want to be able to...
 
 ---
 
-### <a name="apis"></a> APIs
+### APIs
 
 - No external APIs will be used for this. I will be making my own API.
 
@@ -106,7 +61,7 @@ As a user, I want to be able to...
 
 
 
-### <a name="endpoints"></a> Endpoints
+### Endpoints
 
 <details>
 <summary>GET</summary><br>
@@ -400,163 +355,11 @@ Response body example:
 }
 ```
 </details>
-
-*[Back to the top](#top)*
-
 ---
 
-![## Roadmap](assets/images/roadmap-banner.png)
-
-### <a name="part-1-initial-setup"></a> Part 1: Initial Setup
-
-<details>
-<summary>Steps</summary>
-
-  - Create repository
-    - Within the root directory is:
-      - Client directory
-      - Server directory
-  - Create relavant folders and files in client and server directory (e.g., components, styles, controllers, middlewares, etc)
-  - Delete generated Vite files and folders that will not be used
-  - Implement boilerplate codes
-  - Create components *(informed by visual chunking)*
-  - Set up BrowserRouter and routes in client
-  - Set up routes and placeholder 200 responses in server
-</details>
-
-### <a name="part-2-data-prep"></a> Part 2: Data Prep
-
-<details>
-<summary>Steps</summary>
-
-  - Create migration tables
-
-  ![alt text](assets/images/data-collection-plan.png)
-
-  - Create seeds with sample data
-</details>
-
-### <a name="part-3-create-features"></a> Part 3: Create Features
-
-<details>
-  <summary>Steps</summary>
-  
-  - Feature: Home page
-
-  - Feature: My Story page
-
-  <details>
-      <summary>Feature: Mood list</summary>
-
-      - Implement moods list page
-      - Create ```GET /api/moods```
-  </details>
-
-  <details>
-      <summary>Feature: View mood</summary>
-
-      - Implement view mood page
-      - Create ```GET /api/moods/:id```
-  </details>
-
-  <details>
-      <summary>Feature: Educational resource list</summary>
-
-      - Implement educational resource list page
-      - Create ```GET /api/educational-resources```
-  </details>
-
-  <details>
-    <summary>Feature: View educational resource</summary>
-
-      - Implement view educational resource page
-      - Create ```GET /api/educational-resources/:id```
-  </details>
-
-  <details>
-    <summary>Feature: View coping strategies</summary>
-
-      - Implement view coping strategies page
-      - Create ```GET /api/coping-strategies```
-  </details>
-
-  <details>
-    <summary>Feature: View coping strategy</summary>
-
-      - Implement view coping strategy page
-      - Create ```GET /api/coping-strategies/:id```
-  </details>
-
-  <details>
-    <summary>Feature: Create account</summary>
-
-      - Implement register page and form
-      - Create ```POST /users/register```
-  </details>
-
-  <details>
-    <summary>Feature: Login</summary>
-
-      - Implement login page + form
-      - Create ```POST /users/login```
-  </details>
-
-  <details>
-    <summary>Feature: Implement JWT tokens</summary>
-
-      - Implement bryptjs for password hashing
-  </details>
-
-  <details>
-    <summary>Feature: Add favorite</summary>
-
-      - Implement function for a user to favorite a resource or coping strategy
-      - Create ```POST /api/users/:id/favorites```
-  </details>
-
-  <details>
-    <summary>Feature: View favorites</summary>
-
-      - Implement a view favorites page
-      - Create ```GET /api/users/:id/favorites```
-  </details>
-
-  <details>
-    <summary>Feature: Delete favorite</summary>
-
-      - Implement function for a user to delete an item from their favorites page
-      - Create ```DELETE /api/users/:id/favorites/:itemId```
-  </details>
-</details>
-
-### <a name="part-4-bug-fixes"></a> Step 4: Bug fixes
-
-<details>
-  <summary>Steps</summary>
-
-    - Test web app links/navigation
-    - Test web app functionality
-    - Refactor and organize code
-</details>
-
-### <a name="part-5-demo-day"></a> Step 5: DEMO DAY
-
-<details>
-  <summary>Details</summary>
-
-    Finally! Demo day! So excited. :D
-</details>
-
-*[Back to the top](#top)*
-
-<a name="nice-to-haves"></a> ![## Nice-to-haves](assets/images/nice-to-haves-banner.png)
+![## Nice-to-haves](assets/images/nice-to-haves-banner.png)
 
 Below are a few things I would like to implement in the future:
-<details>
-<summary>Log Out Functionality</summary>
-
-  It makes sense for users to be able to log out if they can log in. I am hoping to implement this during my capstone, but if not I will implement it afterwards.
-</details>
 
 <details>
   <summary>Contact Page</summary>
@@ -589,12 +392,6 @@ Below are a few things I would like to implement in the future:
 </details>
 
 <details>
-  <summary>Deploy on Netlify or Heroku</summary>
-
-  I would love to deploy my web app for others to use. However, before that, I would like to gather feedback from key stakeholders within the healthcare and mental health sector. I think it would be helpful to deploy my web app and provide them with the URL so that they can review it.
-</details>
-
-<details>
   <summary>Google Maps (or another relevant API)</summary>
 
   I would love to add a page where users can input their location to find the closest mental health supports. I think this would be a great feature and make MoodCompass more of a "one-stop-shop" for mental health education and resources.
@@ -609,5 +406,3 @@ Below are a few things I would like to implement in the future:
 
   However, this may be a late feature due to legislation surrounding the privacy and confidentiality of patient health information. A lot of care will need to go into implementing this.
 </details>
-
-*[Back to the top](#top)*
