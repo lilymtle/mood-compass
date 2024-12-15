@@ -22,6 +22,16 @@ That's where **MoodCompass** comes in. MoodCompass is a safe space where individ
 **Current Updates:**
 
 <blockquote>
+  <strong>December 14, 2024:</strong>
+    <p>
+      Initially, I planned to include a mood tracker/log as part of MoodCompass. However, I decided this feature would fit better within my other project, Koru, an online gratitude journal. Incorporating a daily mood prompt alongside reflective prompts feels more cohesive for Koru's purpose. As a result, MoodCompass will focus exclusively on providing mental health resources and education.
+    </p>
+    <p>
+      So, what’s next for MoodCompass? My plans include adding more resources and features for users, such as search and sharing capabilities. I’m also eager to revamp the entire front-end. Over the past three months, I’ve grown significantly as a developer, and I’m excited to give MoodCompass the refresh it deserves. 😊
+    </p>
+    <p>
+      For now, my primary focus is on completing Koru. Once that's done, I’ll return to MoodCompass to enhance its features and redesign its interface. Stay tuned!
+    </p>
   <strong>October 10, 2024:</strong>
     <ul>
       <li> Created migration table on database and seed files for mood options</li>
@@ -77,55 +87,3 @@ Finally, MoodCompass is rooted in the following values:
 ### Endpoints
 
 **To be updated.**
-
----
-
-![## Nice-to-haves](assets/images/nice-to-haves-banner.png)
-
-Below are a few things I would like to implement in the future:
-
-<details>
-  <summary>Contact Page</summary>
-
-  Although users can connect with me via socials, it would be more convenient if there is a page with a form they can use to contact me when they have questions, feedback, etc.
-</details>
-
-<details>
-  <summary>Search Functionality</summary>
-
-  It would be great if users can search for resources available. This would be useful when more content is added. It would make things more accessible as the web app grows larger.
-</details>
-
-<details>
-  <summary>Share Functionality</summary>
-
-  Mental health education and resources should be available for <i>everyone</i>. One way to spread available education and resources is to add a share button. By clicking that, users can share it with others through things such as social media, email, etc.
-</details>
-
-<details>
-  <summary>Sort Functionality</summary>
-
-  It would be useful for users to be able to sort moods and resources (alphabetically, newest to oldest, oldest to newest, etc). I would also like to add an option for users to reorganize and sort their favorites list.
-</details>
-
-<details>
-  <summary>Forgot Password</summary>
-
-  I do not want users to *ever* lose access to their saves resources. Therefore, it would be useful to have way for them to retrieve their lost password.
-</details>
-
-<details>
-  <summary>Google Maps (or another relevant API)</summary>
-
-  I would love to add a page where users can input their location to find the closest mental health supports. I think this would be a great feature and make MoodCompass more of a "one-stop-shop" for mental health education and resources.
-</details>
-
-<details>
-  <summary>Mood Tracker <i>(currently being worked on)</i></summary>
-
-  A feature where users can track their mood would be useful in establishing patterns (e.g., triggers, negative thinking, protective factors, etc). Users can also share this data with their healthcare provider.
-
-  To encourage daily use of a mood tracker, it would be beneficial to add an incentive. For example, medals or even a game! A fun game would be growing your own garden. For example, every mood a user tracks will take care of a plant in their garden.
-
-  However, this may be a late feature due to legislation surrounding the privacy and confidentiality of patient health information. A lot of care will need to go into implementing this.
-</details>
